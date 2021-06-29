@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="ARMAWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="BaseStatWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="BasicForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="BasicForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="BasicForm3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="BinaryTestWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="DataInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="DecForecastWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="DotPlotDemo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FunctionList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GOFChi2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GOFKS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GrowthModelWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="H2Wizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="HypTestWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Introduction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ItemAnalysis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="LogistReg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="MDSWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="MulRegWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="NISTANOVA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="NISTIntro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="NISTNonLinear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="OrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ParetoDemo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="PCAWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="PCRWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="QCCAttribute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="QCCEWMA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="QCCPChart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="QCCVariable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="QCLevey.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="QQPlotDemo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="QuickStart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="RandGen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="RModels.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ShowARMAWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ShowBTWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ShowDecForWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ShowGMWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ShowH2Wizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ShowHTWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ShowMDSWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ShowPCAWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ShowPCRWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ShowRegWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Steema_BiPlot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Steema_BoxPlot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="TeeChartIntro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="TSACF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="TSARAR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="TSARIMASim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="TSExpSmooth.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="WhatsNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>

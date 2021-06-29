@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<distributions>
+  <dist title="Beta" name="Beta">
+    <description></description>
+  </dist>
+  <dist title="Bernoulli" name="Bernoulli">
+    <description></description>
+  </dist>
+  <dist title="Binomial" name="Binom">
+    <description></description>
+  </dist>
+  <dist title="Bose-Einstein" name="BoseEinstein">
+    <description></description>
+  </dist>
+  <dist title="Cauchy" name="Cauchy">
+    <description></description>
+  </dist>
+  <dist title="Chi-Squared" name="ChiSquare">
+    <description></description>
+  </dist>
+  <dist title="Erlang" name="Erlang">
+    <description></description>
+  </dist>
+  <dist title="Exponential" name="Exp">
+    <description></description>
+  </dist>
+  <dist title="Fatigue-Life" name="FatigueLife">
+    <description></description>
+  </dist>
+  <dist title="Fisher" name="F">
+    <description></description>
+  </dist>
+  <dist title="Fermi-Dirac" name="FermiDirac">
+    <description></description>
+  </dist>
+  <dist title="Gamma" name="Gamma">
+    <description></description>
+  </dist>
+  <dist title="GEV" name="GenExtValue">
+    <description></description>
+  </dist>
+  <dist title="Generalized Pareto" name="GenPareto">
+    <description></description>
+  </dist>
+  <dist title="Geometric" name="Geometric">
+    <description></description>
+  </dist>
+  <dist title="Gumbel (minimum)" name="Gumbel">
+    <description></description>
+  </dist>
+  <dist title="Hypergeometric" name="HypGeometric">
+    <description></description>
+  </dist>
+  <dist title="Inverse Chi-Squared" name="InverseChiSquare">
+    <description></description>
+  </dist>
+  <dist title="Inverse Gaussian (Wald)" name="InverseGaussian">
+    <description></description>
+  </dist>
+  <dist title="Johnson SB" name="JohnsonSB">
+    <description></description>
+  </dist>
+  <dist title="Johnson UB" name="JohnsonUB">
+    <description></description>
+  </dist>
+  <dist title="Laplace" name="Laplace">
+    <description></description>
+  </dist>
+  <dist title="Logistic" name="Logistic">
+    <description></description>
+  </dist>
+  <dist title="Log-normal" name="LogNormal">
+    <description></description>
+  </dist>
+  <dist title="Log-Weibull" name="LogWeibull">
+    <description></description>
+  </dist>
+  <dist title="Maxwell" name="Maxwell">
+    <description></description>
+  </dist>
+  <dist title="Negative binomial" name="NegBinom">
+    <description></description>
+  </dist>
+  <dist title="Normal" name="Normal">
+    <description></description>
+  </dist>
+  <dist title="Pareto" name="Pareto">
+    <description></description>
+  </dist>
+  <dist title="Poisson" name="Poisson">
+    <description></description>
+  </dist>
+  <dist title="Power" name="Power">
+    <description></description>
+  </dist>
+  <dist title="Rayleigh" name="Rayleigh">
+    <description></description>
+  </dist>
+  <dist title="Student-T" name="Student">
+    <description></description>
+  </dist>
+  <dist title="Triangular" name="Triangular">
+    <description></description>
+  </dist>
+  <dist title="Uniform" name="Uniform">
+    <description></description>
+  </dist>
+  <dist title="Uniform (discrete)" name="UniformD">
+    <description></description>
+  </dist>
+  <dist title="Weibull" name="Weibull">
+    <description></description>
+  </dist>
+  <dist title="Zipf" name="Zipf">
+    <description></description>
+  </dist>
+</distributions>

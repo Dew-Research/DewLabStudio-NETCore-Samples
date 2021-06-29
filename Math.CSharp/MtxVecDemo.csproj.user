@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="BasicForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="BasicForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="BenchmarkX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="BlockProcessing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="CalcSqrtMtx.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="CalculatorPad.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="clBenchmarkForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="clCustomFunctionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ClipboardMSOffice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="clMultiDeviceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="CopyCompare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="DataSetDemo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="DirichletTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="EigenVectors1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FloatEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FunctionList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GCProcessing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Interpolation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Introduction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="IntroExport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="IntroMatrices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="IntroMemory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="IntroOpenCL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="IntroParser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="IntroPolynoms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="IntroSparse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="IntroVectors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="IntroWhyMtxVec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="InverseMtx.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="LPDemo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="LQRDemo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="MathParser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="MatrixSeries.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="MemoryCompare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="MtxFastlineDemo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="MtxGridViewDemo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="MtxOptim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Multiply1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="NumInt1D.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Optim_Bounded.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ParserVectorized.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="PixelDownSample.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Precision.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ProbCalculator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ProgressDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="QRPoly.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="QuickStart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="RegisterMtxVec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SavingLoading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Scripting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SparseTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SysLinear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="WhatsNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="YuleLevinson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>

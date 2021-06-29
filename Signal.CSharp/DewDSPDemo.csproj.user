@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="AmpltRatiosForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="AsioPlaybackForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="AsioRecordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="AutoRegressDemoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="BasicForm3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="BicoherenceTestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="BiSpectrumGridForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="BispectrumSurface.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="BispectrumTestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="BrowseDemoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="CepstrumDemoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="CircularBufferForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="CoherenceTestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="CZTDemoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="DemodulatorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="DifferentiatorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="DiscreteSeriesDemoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="EnvelopeDemoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FilterEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrequencyBandsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GeneratorDemoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="IIRFilteringForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="IIRGroupDelayForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="IIRZerosForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="InputBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="InterpolateDecimateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="IntroApplicationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="IntroAsioForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="IntroComponentsListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="IntroDesignForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="IntroForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="IntroFunctionListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="IntroHigherSpectralForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="IntroKalmanForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="IntroPeakSpectralForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="IntroPerformanceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="IntroPlaybackForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="IntroSignalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="IntroSignalRateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="IntroSpectralForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="KalmanBasicForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="KalmanExtExampleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="KalmanStdExampleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="LissajousScopeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="MedianDemoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ModulatorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="MonitorDemoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="NarrowBandpassForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="OnlineBicoherenceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="OnlineCoherenceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="OptimalFiltersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="OrderTrackingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="PeakFilteringForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="PeakInterpolateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="PeakMarkingBasicForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="PeakMarkingFormattingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="PhaseDemoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="PhaseScopeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="PhaseShifterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="PlaybackDemoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="RateConvertForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="RegisterSignalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SavGolayDemoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SignalAnalysisDemoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SpectrogramDemoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="TriggerDemoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="WhatIsNewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="WindowFiltersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="WindowsDemoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>
