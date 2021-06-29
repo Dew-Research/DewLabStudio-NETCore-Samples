@@ -17,4 +17,8 @@
     <PackageReference Include="Dew.Signal" Version="6.0.4" />
   </ItemGroup>
 
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="mkdir .\$(OutDir)\Data\&#xD;&#xA;copy .\Data\*.* .\$(OutDir)\Data\" />
+  </Target>
+
 </Project>
