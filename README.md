@@ -1,1 +1,1 @@
-# DewLabStudio-NETCore-Winform-CSharp-samples
+# DewLabStudio-NETCore
