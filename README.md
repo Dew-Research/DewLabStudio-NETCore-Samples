@@ -3,7 +3,6 @@
 </a>  
 
 # Dew Lab Studio .NET Core samples.
-=============================================================
   
 Sample programs showing how to use Dew Lab Studio for .NET Core. 
 
