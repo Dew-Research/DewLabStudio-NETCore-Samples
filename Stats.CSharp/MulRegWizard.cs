@@ -569,7 +569,7 @@ namespace StatsMasterDemo
                 // calculate histogram
                 Vector tvec1 = new Vector(0);
                 Statistics.Histogram(tMtxMulLinReg1.RegressResult.Residuals, 10, tmpV, tvec1, true);
-                TeeChart.DrawValues(tvec1, tmpV, bar, false);
+                MtxVecTee.DrawValues(tvec1, tmpV, bar, false);
                 CopyToRichBox(richTextBox);
                 richTextBox.SelectedText = "\n";
 
@@ -585,7 +585,7 @@ namespace StatsMasterDemo
                 y.Size(x);
                 x.Copy(tMtxMulLinReg1.RegressResult.Residuals, 1, 0, x.Length);
                 y.Copy(tMtxMulLinReg1.RegressResult.Residuals, 0, 0, x.Length);
-                TeeChart.DrawValues(y, x, Chart.Series[0], false);
+                MtxVecTee.DrawValues(y, x, Chart.Series[0], false);
                 CopyToRichBox(richTextBox);
                 richTextBox.SelectedText = "\n";
 
@@ -595,7 +595,7 @@ namespace StatsMasterDemo
                 Chart.Axes.Left.Title.Text = "Residuals";
                 Chart.Axes.Bottom.Title.Text = "Predicted";
                 Chart.Series.Add(new Steema.TeeChart.Styles.Points());
-                TeeChart.DrawValues(tMtxMulLinReg1.RegressResult.Residuals, tMtxMulLinReg1.RegressResult.YCalc, Chart.Series[0], false);
+                MtxVecTee.DrawValues(tMtxMulLinReg1.RegressResult.Residuals, tMtxMulLinReg1.RegressResult.YCalc, Chart.Series[0], false);
                 CopyToRichBox(richTextBox);
                 richTextBox.SelectedText = "\n";
             }
@@ -679,7 +679,7 @@ namespace StatsMasterDemo
                     bplot.Title = "Column " + i.ToString();
                     bplot.PlotStyle = Dew.Stats.Tee.BoxPlotStyle.bpDiamond;
                     tmpV.SortAscend();
-                    Dew.Math.Tee.TeeChart.DrawValues(tmpV, bplot, 0, 1, false);
+                    Dew.Math.Tee.MtxVecTee.DrawValues(tmpV, bplot, 0, 1, false);
                 }
             }
 
@@ -773,7 +773,7 @@ namespace StatsMasterDemo
                 Chart.Axes.Bottom.Title.Text = "Lag";
                 Chart.Series.Add(new Steema.TeeChart.Styles.Line());
                 tmpV.SetSubRange(1, tmpV.Length - 1);
-                TeeChart.DrawValues(tmpV, Chart.Series[0], 1, 1, false);
+                MtxVecTee.DrawValues(tmpV, Chart.Series[0], 1, 1, false);
                 tmpV.SetSubRange();
                 CopyToRichBox(richTextBox);
                 richTextBox.SelectedText = "\n";
@@ -853,7 +853,7 @@ namespace StatsMasterDemo
                 ser.maxX = maxx;
                 ser.minY = miny;
                 ser.maxY = maxy;
-                TeeChart.DrawValues(x, y, ser, false);
+                MtxVecTee.DrawValues(x, y, ser, false);
                 CopyToRichBox(richTextBox);
                 richTextBox.SelectedText = "\n";
             }

@@ -99,12 +99,12 @@ namespace DSPDemo
                 P.Values[i] = (1 - K.Values[i]) * pMinus.Values[i];
             }
            
-            TeeChart.DrawValues(z,fastLine1, 0, 1, false);
-            TeeChart.DrawValues(xhat, fastLine2, 0, 1, false);
-            TeeChart.DrawValues(truthValue, fastLine3, 0, 1, false);
+            MtxVecTee.DrawValues(z,fastLine1, 0, 1, false);
+            MtxVecTee.DrawValues(xhat, fastLine2, 0, 1, false);
+            MtxVecTee.DrawValues(truthValue, fastLine3, 0, 1, false);
 
             pMinus.SetSubRange(2,n_iter-2);
-            TeeChart.DrawValues(pMinus, fastLine4, 0, 1, false);
+            MtxVecTee.DrawValues(pMinus, fastLine4, 0, 1, false);
         }
 
 

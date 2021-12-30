@@ -388,8 +388,8 @@ namespace StatsMasterDemo
                 Chart.Series.Add(new Steema.TeeChart.Styles.Line());
                 Chart[0].Title = "Transformed data";
                 Chart[1].Title = "Estimates";
-                TeeChart.DrawValues(nlr.X, nlr.Y, Chart[0], false);
-                TeeChart.DrawValues(nlr.X, nlr.YCalc, Chart[1], false);
+                MtxVecTee.DrawValues(nlr.X, nlr.Y, Chart[0], false);
+                MtxVecTee.DrawValues(nlr.X, nlr.YCalc, Chart[1], false);
                 CopyToRichBox(richTextBox);
                 richTextBox.SelectedText = "\n";
 
@@ -404,10 +404,10 @@ namespace StatsMasterDemo
                 Chart.Axes.Bottom.Title.Text = "x";
                 // Data
                 ytrans.DoInverseTransformation(nlr.Y, yuntr);
-                TeeChart.DrawValues(xuntr, yuntr, Chart[0], false);
+                MtxVecTee.DrawValues(xuntr, yuntr, Chart[0], false);
                 // Model
                 ytrans.DoInverseTransformation(nlr.YCalc, yuntr);
-                TeeChart.DrawValues(xuntr, yuntr, Chart[1], false);
+                MtxVecTee.DrawValues(xuntr, yuntr, Chart[1], false);
                 CopyToRichBox(richTextBox);
                 richTextBox.SelectedText = "\n";
             }
@@ -500,7 +500,7 @@ namespace StatsMasterDemo
                 Vector tvec1 = new Vector(0);
                 Vector tvec = new Vector(0);
                 Statistics.Histogram(residuals, 10, tvec, tvec1, true);
-                TeeChart.DrawValues(tvec1, tvec, bar, false);
+                MtxVecTee.DrawValues(tvec1, tvec, bar, false);
                 CopyToRichBox(richTextBox);
                 richTextBox.SelectedText = "\n";
 
@@ -522,7 +522,7 @@ namespace StatsMasterDemo
                 ser.maxX = maxx;
                 ser.minY = miny;
                 ser.maxY = maxy;
-                TeeChart.DrawValues(tvec1, tvec, ser, false);
+                MtxVecTee.DrawValues(tvec1, tvec, ser, false);
                 CopyToRichBox(richTextBox);
                 richTextBox.SelectedText = "\n";
             }

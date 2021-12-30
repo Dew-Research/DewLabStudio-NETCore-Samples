@@ -1447,7 +1447,7 @@ namespace DSPDemo
 				phase.Scale(180/Math.PI);
 				SignalUtils.PhaseUnwrap(phase,amplt,TRunningPhase.rpConstPhase,actualZeroPadding*h.Length/(h.Length-1),false,180);
 				SignalChart1.Series[0].Clear();
-				TeeChart.DrawValues(amplt,SignalChart1.Series[0],0,1,false);
+				MtxVecTee.DrawValues(amplt,SignalChart1.Series[0],0,1,false);
 			} finally {
 				MtxVec.FreeIt(ref h,ref resp,ref amplt,ref phase);
 			}

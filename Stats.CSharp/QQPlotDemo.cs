@@ -1452,7 +1452,7 @@ namespace StatsMasterDemo
             probseries.maxX = maxX;
             probseries.minY = minY;
             probseries.maxY = maxY;
-            TeeChart.DrawValues(x, y, probseries, false);
+            MtxVecTee.DrawValues(x, y, probseries, false);
         }
 
         private void QQPlotDemo_Load(object sender, EventArgs e)

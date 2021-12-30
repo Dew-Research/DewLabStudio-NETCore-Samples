@@ -1424,7 +1424,7 @@ namespace StatsMasterDemo
                 s.CL = cl;
                 s.UCL = ucl;
                 s.LCL = lcl;
-                TeeChart.DrawValues(drawvec, tChart1.Series[0], 0, 1, false);
+                MtxVecTee.DrawValues(drawvec, tChart1.Series[0], 0, 1, false);
             }
             else
             {
@@ -1442,9 +1442,9 @@ namespace StatsMasterDemo
                 tChart1.Series[1].Title = "UCL";
                 tChart1.Series[2].Color = Color.Red;
                 tChart1.Series[2].Title = "LCL";
-                TeeChart.DrawValues(drawvec, tChart1.Series[0], 0, 1, false);
-                TeeChart.DrawValues(vucl, tChart1.Series[1], 0, 1, false);
-                TeeChart.DrawValues(vlcl, tChart1.Series[2], 0, 1, false);
+                MtxVecTee.DrawValues(drawvec, tChart1.Series[0], 0, 1, false);
+                MtxVecTee.DrawValues(vucl, tChart1.Series[1], 0, 1, false);
+                MtxVecTee.DrawValues(vlcl, tChart1.Series[2], 0, 1, false);
               }
         }
 

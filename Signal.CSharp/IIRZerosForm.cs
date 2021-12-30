@@ -86,11 +86,11 @@ namespace DSPDemo
 				if (!z.Complex) z.ExtendToComplex(true);
 				z.CartToPolar(r, phi);
 				phi.Scale(180.0 / Math.PI);
-				TeeChart.DrawValues(phi, r, tChart1.Series[0], false);
+				MtxVecTee.DrawValues(phi, r, tChart1.Series[0], false);
 				if (!p.Complex) p.ExtendToComplex(true);
 				p.CartToPolar(r, phi);
 				phi.Scale(180.0 / Math.PI);
-				TeeChart.DrawValues(phi, r, tChart1.Series[1], false);
+				MtxVecTee.DrawValues(phi, r, tChart1.Series[1], false);
 			} finally {
 				MtxVec.FreeIt(ref z, ref p, ref r, ref phi);
 			}

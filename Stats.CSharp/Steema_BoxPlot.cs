@@ -1538,7 +1538,7 @@ namespace StatsMasterDemo
                 wrk1.GetCol(data, i);
                 wrk1.SortAscend();
                 tChart1.Axes.Bottom.Labels.Items.Add(i, boxplot.Title);
-                TeeChart.DrawValues(wrk1, boxplot, 0, 1, false);
+                MtxVecTee.DrawValues(wrk1, boxplot, 0, 1, false);
             }
         }
 

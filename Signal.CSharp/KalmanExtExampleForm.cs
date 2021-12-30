@@ -151,11 +151,11 @@ A -> df1/dx1 = 0    df1/dx2 = cos(x2*time)*time
                 P.Values[i,1] = KalmanFilter.P[1,1];
             }
            
-            TeeChart.DrawValues(zV,fastLine1, 0, 1, false);
-            TeeChart.DrawValues(MtxExpr.Col(xhat,0), fastLine2, 0, 1, false);
-            TeeChart.DrawValues(xV, fastLine3, 0, 1, false);
+            MtxVecTee.DrawValues(zV,fastLine1, 0, 1, false);
+            MtxVecTee.DrawValues(MtxExpr.Col(xhat,0), fastLine2, 0, 1, false);
+            MtxVecTee.DrawValues(xV, fastLine3, 0, 1, false);
            
-            TeeChart.DrawValues(MtxExpr.Select(MtxExpr.Col(P,0),1,P.Rows-1), fastLine4, 0, 1, false);
+            MtxVecTee.DrawValues(MtxExpr.Select(MtxExpr.Col(P,0),1,P.Rows-1), fastLine4, 0, 1, false);
         }
 
         protected void Add(String s)

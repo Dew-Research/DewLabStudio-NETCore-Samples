@@ -1864,13 +1864,13 @@ namespace StatsMasterDemo
 			if (plotres) // plot residuals
             {
                 points1.Active = false;
-                TeeChart.DrawValues(x, residuals, line1, false);
+                MtxVecTee.DrawValues(x, residuals, line1, false);
             }
             else
             {
                 points1.Active = true;
-                TeeChart.DrawValues(x, y, points1, false);
-                TeeChart.DrawValues(x, yhat, line1, false);
+                MtxVecTee.DrawValues(x, y, points1, false);
+                MtxVecTee.DrawValues(x, yhat, line1, false);
             }
         }
         

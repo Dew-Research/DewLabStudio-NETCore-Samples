@@ -1797,21 +1797,21 @@ namespace StatsMasterDemo
                     {
                         tChart1.Axes.Bottom.Visible = true;
                         tChart1.Axes.Left.Automatic = true;
-                        TeeChart.DrawValues(timeseries, tChart1.Series[0], 0, 1, false);
+                        MtxVecTee.DrawValues(timeseries, tChart1.Series[0], 0, 1, false);
                         tChart1.Series[0].Title = "Time Series";
                     }; break;
                 case 1: // ACF
                     {
                         StatTimeSerAnalysis.ACF(timeseries,vacf,timeseries.Length / 2);
                         tChart1.Series[0].Title = "Time Series ACF";
-                        TeeChart.DrawValues(vacf, tChart1.Series[0], 0, 1, false);
+                        MtxVecTee.DrawValues(vacf, tChart1.Series[0], 0, 1, false);
                     }; break;
                 case 2: // PACF
                     {
                         StatTimeSerAnalysis.ACF(timeseries, vacf, timeseries.Length / 2);
                         StatTimeSerAnalysis.PACF(vacf, vpacf);
                         tChart1.Series[0].Title = "Time Series PACF";
-                        TeeChart.DrawValues(vpacf, tChart1.Series[0], 0, 1, false);
+                        MtxVecTee.DrawValues(vpacf, tChart1.Series[0], 0, 1, false);
                     }; break;
             }
         }

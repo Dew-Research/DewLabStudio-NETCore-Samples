@@ -1727,7 +1727,7 @@ namespace StatsMasterDemo
             vdraw.Copy(data);
             // that's all there is to Pareto
             vdraw.SortDescend();
-            TeeChart.DrawValues(vdraw, tChart1.Series[0], 0, 1, false);
+            MtxVecTee.DrawValues(vdraw, tChart1.Series[0], 0, 1, false);
             if (radioButton2.Checked)
             {
                 // Cumulative pareto
@@ -1737,7 +1737,7 @@ namespace StatsMasterDemo
                 // draw cumulatiove pareto chart
                 tChart1.Series[0].GetVertAxis.SetMinMax(0,vdraw.Sum());
                 tChart1.Series[1].GetVertAxis.SetMinMax(0,100);
-                TeeChart.DrawValues(cumsum, tChart1.Series[1], 0, 1, false);
+                MtxVecTee.DrawValues(cumsum, tChart1.Series[1], 0, 1, false);
             }
             else tChart1.Series[0].GetVertAxis.Automatic = true;
         }

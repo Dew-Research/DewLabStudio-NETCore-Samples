@@ -496,7 +496,7 @@ namespace StatsMasterDemo
                     bplot.Title = "Column " + i.ToString();
                     bplot.PlotStyle = Dew.Stats.Tee.BoxPlotStyle.bpDiamond;
                     tvec.SortAscend();
-                    Dew.Math.Tee.TeeChart.DrawValues(tvec, bplot, 0, 1, false);
+                    Dew.Math.Tee.MtxVecTee.DrawValues(tvec, bplot, 0, 1, false);
                 }
             }
 
@@ -620,7 +620,7 @@ namespace StatsMasterDemo
                 Vector tv1 = new Vector(0);
                 Vector tv2 = new Vector(0);
                 Statistics.Histogram(res, 10, tv1, tv2, true);
-                Dew.Math.Tee.TeeChart.DrawValues(tv2, tv1, bar, false);
+                Dew.Math.Tee.MtxVecTee.DrawValues(tv2, tv1, bar, false);
                 CopyToRichBox(richTextBox);
                 richTextBox.SelectedText = "\n";
 
@@ -640,7 +640,7 @@ namespace StatsMasterDemo
                 ppseries.SlopePen.Visible = true;
                 ppseries.SlopePen.Color = Color.Black;
                 ppseries.SlopePen.Style = Steema.TeeChart.Drawing.DashStyle.Dot;
-                Dew.Math.Tee.TeeChart.DrawValues(tv1, tv2, ppseries, false);
+                Dew.Math.Tee.MtxVecTee.DrawValues(tv1, tv2, ppseries, false);
                 CopyToRichBox(richTextBox);
                 richTextBox.SelectedText = "\n";
             }

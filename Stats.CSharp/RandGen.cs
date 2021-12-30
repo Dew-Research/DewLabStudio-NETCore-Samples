@@ -2487,7 +2487,7 @@ namespace StatsMasterDemo
 
             // do centered histogram
             Statistics.Histogram(v1,(int)numericUpDown2.Value,vcount,vbins,true);
-            TeeChart.DrawValues(vbins, vcount, bar1, false);
+            MtxVecTee.DrawValues(vbins, vcount, bar1, false);
 
             if (checkBox1.Checked)
             {
@@ -2495,7 +2495,7 @@ namespace StatsMasterDemo
                 tChart1.SubHeader.Visible = true; 
                 tChart1.SubHeader.Text = "Estimates: " + st;
                 if (line1.Active)
-                    TeeChart.DrawValues(vbins, v2, line1, false);
+                    MtxVecTee.DrawValues(vbins, v2, line1, false);
             }
             else line1.Active = false;
 

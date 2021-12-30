@@ -1860,14 +1860,14 @@ namespace MtxVecDemo
 				for (int i=0;i<x.Length - 1;i++) {
 					y.Values[i+1] = y.Values[i] + 250 - rnd.Next(500);
 				}
-				TeeChart.DrawValues(y,series1,0,1, DownSize);
+				MtxVecTee.DrawValues(y,series1,0,1, DownSize);
 				int timeCheck = Environment.TickCount;
 				pX.Size((dataPoints-1) * factor);
 				pX.Ramp(0, 1.0 /(double) factor);
 				Polynoms.Interpolate(y,pX,pY,intType,true);
 				int timeElapsed = Environment.TickCount - timeCheck;
 				labelTimeNeeded.Text = "Time needed : " + timeElapsed.ToString() + " ms";
-                TeeChart.DrawValues(pY, series2, 0, 1.0 /(double)factor, DownSize);
+                MtxVecTee.DrawValues(pY, series2, 0, 1.0 /(double)factor, DownSize);
 			} finally {
 				this.Cursor = Cursors.Default;
 			}

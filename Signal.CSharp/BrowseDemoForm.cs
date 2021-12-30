@@ -72,7 +72,7 @@ namespace DSPDemo {
 			} else {
 				series1.SeriesDataType = SignalSeriesDataType.ssdLine;
 				series1.SeriesMode = SignalSeriesMode.ssmAuto;
-				TeeChart.DrawValues(Src, Series, DtOffset, Dt, true);
+				MtxVecTee.DrawValues(Src, Series, DtOffset, Dt, true);
 			}
 		}
 

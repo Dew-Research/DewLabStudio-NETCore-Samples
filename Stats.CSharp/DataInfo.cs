@@ -42,8 +42,8 @@ namespace StatsMasterDemo
         {
             if (data != null)
             {
-                if (xdata != null && xdata.Length == data.Length) TeeChart.DrawValues(xdata, data, tChartData[0], false);
-                else TeeChart.DrawValues(data, tChartData[0], 0, 1, false);
+                if (xdata != null && xdata.Length == data.Length) MtxVecTee.DrawValues(xdata, data, tChartData[0], false);
+                else MtxVecTee.DrawValues(data, tChartData[0], 0, 1, false);
 
                 // Histogram, need only Y values
                 TVec hist, bins;
@@ -51,7 +51,7 @@ namespace StatsMasterDemo
                 try
                 {
                     Statistics.Histogram(data, 20, hist, bins, true);
-                    TeeChart.DrawValues(hist,bins, tChartHistogram[0], false);
+                    MtxVecTee.DrawValues(hist,bins, tChartHistogram[0], false);
                 }
                 finally
                 {

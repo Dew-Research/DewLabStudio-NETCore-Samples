@@ -1540,7 +1540,7 @@ namespace MtxVecDemo
 				series.YStep = ystep;
 				series.GetVertAxis.Increment = (ymax-ymin)*0.01;
 				series.GetHorizAxis.Increment = (xmax-xmin)*0.01;
-                TeeChart.DrawValues(data, series);
+                MtxVecTee.DrawValues(data, series);
 			} finally {
 				this.Cursor = Cursors.Default;
 			}

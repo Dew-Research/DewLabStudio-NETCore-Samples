@@ -1720,7 +1720,7 @@ namespace MtxVecDemo
                     labelResult.Text += "Ratio: " + Math387.SampleToStr(tcs / tcv, 4, 4);
 
                     tChart1.Header.Text = "y = " + textBoxFormula.Text;
-                    TeeChart.DrawValues(x, yResult, tChart1[0], checkBoxDownsample.Checked);
+                    MtxVecTee.DrawValues(x, yResult, tChart1[0], checkBoxDownsample.Checked);
 
                 }
                 finally

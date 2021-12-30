@@ -1775,8 +1775,8 @@ namespace DSPDemo
 				}
 				a.SetFullRange();
 				b.SetFullRange();
-				TeeChart.DrawValues(a,OriginalSeries, 0, 1, false);
-				TeeChart.DrawValues(b,FilteredSeries, 0, 1, false);
+				MtxVecTee.DrawValues(a,OriginalSeries, 0, 1, false);
+				MtxVecTee.DrawValues(b,FilteredSeries, 0, 1, false);
 			} finally {
 				SignalUtils.MedianFree(ref medianState);
 				MtxVec.FreeIt(ref a, ref b);
@@ -1803,8 +1803,8 @@ namespace DSPDemo
 				}
 				a.SetFullRange();
 				b.SetFullRange();
-				TeeChart.DrawValues(a,OriginalSeries, 0, 1, false);
-				TeeChart.DrawValues(b,FilteredSeries, 0, 1, false);
+				MtxVecTee.DrawValues(a,OriginalSeries, 0, 1, false);
+				MtxVecTee.DrawValues(b,FilteredSeries, 0, 1, false);
 			} finally {
 				SignalUtils.DelayFree(ref delayState);
 				MtxVec.FreeIt(ref a, ref b);

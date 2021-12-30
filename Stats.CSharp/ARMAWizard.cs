@@ -343,16 +343,16 @@ namespace StatsMasterDemo
                 {
                     StatTimeSerAnalysis.TimeSeriesIntInit(timeseries, v2, d, false);
                     v1.Integrate(v2);
-                    TeeChart.DrawValues(v1, Chart.Series[0], d, 1, false);
+                    MtxVecTee.DrawValues(v1, Chart.Series[0], d, 1, false);
                     offset = v1.Length + d;
                 }
                 else
                 {
-                    TeeChart.DrawValues(v1, Chart.Series[0], 0, 1, false);
+                    MtxVecTee.DrawValues(v1, Chart.Series[0], 0, 1, false);
                     offset = v1.Length;
                 }
                 // forecasts
-                TeeChart.DrawValues(forecasts, Chart.Series[1], offset, 1, false);
+                MtxVecTee.DrawValues(forecasts, Chart.Series[1], offset, 1, false);
                 v1.Size(forecasts);
                 v2.Size(v1);
                 // 1.0-Alpha CI
@@ -361,8 +361,8 @@ namespace StatsMasterDemo
                     v1.Values[i] = Probabilities.NormalCDFInv(0.5 *Alpha, forecasts.Values[i], forecastsd.Values[i]);
                     v2.Values[i] = Probabilities.NormalCDFInv(1.0 - 0.5 * Alpha, forecasts.Values[i], forecastsd.Values[i]);
                 }
-                TeeChart.DrawValues(v1, Chart.Series[2], offset, 1, false);
-                TeeChart.DrawValues(v2, Chart.Series[3], offset, 1, false);
+                MtxVecTee.DrawValues(v1, Chart.Series[2], offset, 1, false);
+                MtxVecTee.DrawValues(v2, Chart.Series[3], offset, 1, false);
                 Chart.Header.Text = "Forecasting up to " + forecasts.Length.ToString() + " points.";
                 CopyToRichBox(richTextBox);
                 richTextBox.SelectedText = "\n";
@@ -2538,7 +2538,7 @@ namespace StatsMasterDemo
             {
                 tChartData.Axes.Bottom.Visible = true;
                 tChartData.Header.Text = "Transformed time series";
-                TeeChart.DrawValues(data, tChartData.Series[0], 0, 1, false);
+                MtxVecTee.DrawValues(data, tChartData.Series[0], 0, 1, false);
             }
             else if (radioButtonACF.Checked) // acf
             {
@@ -2547,7 +2547,7 @@ namespace StatsMasterDemo
                 tChartData.Axes.Bottom.Minimum = -1;
                 tChartData.Header.Text = "Transformed time series ACF";
                 StatTimeSerAnalysis.ACF(data, v1, -1);
-                TeeChart.DrawValues(v1, tChartData.Series[0], 0, 1, false);
+                MtxVecTee.DrawValues(v1, tChartData.Series[0], 0, 1, false);
             }
             else if (radioButtonPACF.Checked) // pacf
             {
@@ -2557,7 +2557,7 @@ namespace StatsMasterDemo
                 tChartData.Header.Text = "Transformed time series PACF";
                 StatTimeSerAnalysis.ACF(data, v1, -1);
                 StatTimeSerAnalysis.PACF(v1, v2);
-                TeeChart.DrawValues(v2, tChartData.Series[0], 0, 1, false);
+                MtxVecTee.DrawValues(v2, tChartData.Series[0], 0, 1, false);
             }
         }
 

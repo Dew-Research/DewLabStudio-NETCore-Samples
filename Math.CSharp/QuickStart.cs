@@ -115,7 +115,7 @@ namespace MtxVecDemo
 			"  y.Resize(1024,false);\n"+
 			"  x.FFT(y,false);\n"+
 			"  spec.Mag(x);\n"+
-			"  TeeChart.DrawValues(spec,fastLine1,0,1,false);\n"+
+			"  MtxVecTee.DrawValues(spec,fastLine1,0,1,false);\n"+
 		    "}");
 			Add("");
 			richTextBox1.SelectionBullet = true;

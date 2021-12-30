@@ -2379,7 +2379,7 @@ namespace StatsMasterDemo
             stext = "Single EXP: alpha=" + Math387.FormatSample("0.000",SAlphaInit);
             tChart1.Series[1].Title = "Single EXP (MSE="+Math387.FormatSample("0.000",mse)+")";
             // offset by first point
-            TeeChart.DrawValues(yhat, tChart1.Series[1], 1, 1, false);
+            MtxVecTee.DrawValues(yhat, tChart1.Series[1], 1, 1, false);
 
             // step 1 => estimate parameters Alpha,Gamma
             // step 2 => forecast and store the results in YHat
@@ -2387,7 +2387,7 @@ namespace StatsMasterDemo
             dtext = "Double EXP: alpha=" + Math387.FormatSample("0.000",DAlphaInit)+" gamma=" + Math387.FormatSample("0.000",DGammaInit);
             tChart1.Series[2].Title = "Double EXP (MSE="+Math387.FormatSample("0.000",mse)+")";
             // offset by first point
-            TeeChart.DrawValues(yhat, tChart1.Series[2], 1, 1, false);
+            MtxVecTee.DrawValues(yhat, tChart1.Series[2], 1, 1, false);
 
             // step 1 => estimate parameters Alpha,Beta, Gamma
             // step 2 => forecast and store the results in YHat
@@ -2396,7 +2396,7 @@ namespace StatsMasterDemo
                     + "gamma=" + Math387.FormatSample("0.000",TGammaInit);
             tChart1.Series[3].Title = "Triple EXP (MSE="+Math387.FormatSample("0.000",mse)+")";
             // offset by first period
-            TeeChart.DrawValues(yhat, tChart1.Series[3], period, 1, false); 
+            MtxVecTee.DrawValues(yhat, tChart1.Series[3], period, 1, false); 
         }
 
         private void TSExpSmooth_Load(object sender, EventArgs e)
@@ -2428,7 +2428,7 @@ namespace StatsMasterDemo
             textBoxTBeta.Text = TBetaInit.ToString("0.000");
             textBoxTGamma.Text = TGammaInit.ToString("0.000");
             ResetForecasts();
-            TeeChart.DrawValues(timeseries, tChart1.Series[0], 0, 1, false);
+            MtxVecTee.DrawValues(timeseries, tChart1.Series[0], 0, 1, false);
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -2436,7 +2436,7 @@ namespace StatsMasterDemo
             MtxVecEdit.ViewValues(timeseries, "Time series", true, false, true);
             ResetChart();
             ResetForecasts();
-            TeeChart.DrawValues(timeseries, tChart1.Series[0], 0, 1, false);
+            MtxVecTee.DrawValues(timeseries, tChart1.Series[0], 0, 1, false);
         }
 
         private void button3_Click(object sender, EventArgs e)

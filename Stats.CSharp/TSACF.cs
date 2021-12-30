@@ -1513,8 +1513,8 @@ namespace StatsMasterDemo
 
             if (dy != null)
             {
-                if (dx != null) TeeChart.DrawValues(dx, dy, tChart1.Series[0], false);
-                else TeeChart.DrawValues(dy, tChart1.Series[0], 0, 1, false);
+                if (dx != null) MtxVecTee.DrawValues(dx, dy, tChart1.Series[0], false);
+                else MtxVecTee.DrawValues(dy, tChart1.Series[0], 0, 1, false);
             }
 
         }

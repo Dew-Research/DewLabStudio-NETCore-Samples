@@ -46,7 +46,7 @@ namespace DSPDemo {
 			a.CartToPolar(Re, Im);
 			Im = Im * (180 / Math.PI) + 45; //from radians to degrees //add 45 degrees
 			Re = Re / Re.Max();  //normalize to 1
-			TeeChart.DrawValues(Im, Re, phaseChart.Series[0], false); //angle is x
+			MtxVecTee.DrawValues(Im, Re, phaseChart.Series[0], false); //angle is x
 
 		}
 

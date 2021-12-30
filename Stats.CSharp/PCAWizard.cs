@@ -425,7 +425,7 @@ namespace StatsMasterDemo
                     bplot.Title = "Column " + i.ToString();
                     bplot.PlotStyle = BoxPlotStyle.bpDiamond;
                     tvec.SortAscend();
-                    Dew.Math.Tee.TeeChart.DrawValues(tvec, bplot, 0, 1, false);
+                    Dew.Math.Tee.MtxVecTee.DrawValues(tvec, bplot, 0, 1, false);
                 }
             }
 
@@ -549,8 +549,8 @@ namespace StatsMasterDemo
                 Chart.Series[0].Title = "Eigenvalue";
                 Chart.Series[1].Title = "Cumulative value";
                 tvec.CumSum(tMtxPCA1.TotalVarPct);
-                Dew.Math.Tee.TeeChart.DrawValues(tMtxPCA1.TotalVarPct, Chart.Series[0], 0, 1, false);
-                Dew.Math.Tee.TeeChart.DrawValues(tvec, Chart.Series[1], 0, 1, false);
+                Dew.Math.Tee.MtxVecTee.DrawValues(tMtxPCA1.TotalVarPct, Chart.Series[0], 0, 1, false);
+                Dew.Math.Tee.MtxVecTee.DrawValues(tvec, Chart.Series[1], 0, 1, false);
                 CopyToRichBox(richTextBox);
                 richTextBox.SelectedText = "\n";
             }
@@ -587,7 +587,7 @@ namespace StatsMasterDemo
                 gridseries1.YOffset = 0.5;
                 m1.Transp(tMtxPCA1.ZScores);
                 gridseries1.LegendItemsCount = 10;
-                Dew.Math.Tee.TeeChart.DrawValues(m1, gridseries1);
+                Dew.Math.Tee.MtxVecTee.DrawValues(m1, gridseries1);
                 CopyToRichBox(richTextBox);
                 richTextBox.SelectedText = "\n";
             }

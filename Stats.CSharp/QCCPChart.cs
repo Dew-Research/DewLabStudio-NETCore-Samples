@@ -1828,8 +1828,8 @@ namespace StatsMasterDemo
             Probabilities.NormalPDF(xdense, mean, stddev, bell);
             tChart1.Series[0].GetHorizAxis.Automatic = false;
             tChart1.Series[0].GetHorizAxis.SetMinMax(data.Min() - 10, data.Max() + 10);
-            TeeChart.DrawValues(x, y, tChart1.Series[0], false);
-            TeeChart.DrawValues(xdense, bell, tChart1.Series[1], false);
+            MtxVecTee.DrawValues(x, y, tChart1.Series[0], false);
+            MtxVecTee.DrawValues(xdense, bell, tChart1.Series[1], false);
             lb = x.Min() + 1.0;
             ub = x.Max() - 1.0;
             this.SuspendLayout();

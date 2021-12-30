@@ -65,7 +65,7 @@ namespace DSPDemo
 					}
 					SignalUtils.GroupDelay(h, num, den, 128);
 					h.SetSubRange(0,(int)(0.95 * h.Length));
-					TeeChart.DrawValues(h, s, 0, 0.95*0.5 / h.Length, false);
+					MtxVecTee.DrawValues(h, s, 0, 0.95*0.5 / h.Length, false);
 					h.SetFullRange();
 				}
 			} finally {

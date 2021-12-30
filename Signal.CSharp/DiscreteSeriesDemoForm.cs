@@ -1395,7 +1395,7 @@ namespace DSPDemo
 				Dew.Signal.TFilterType.ftLowpass,1);
 
 			SignalChart1.Series[0].Clear();
-			TeeChart.DrawValues(h,SignalChart1.Series[0],0,step,false);
+			MtxVecTee.DrawValues(h,SignalChart1.Series[0],0,step,false);
 			//DrawValues(H,SignalChart1.Series[0],0,Step);
 		}
 

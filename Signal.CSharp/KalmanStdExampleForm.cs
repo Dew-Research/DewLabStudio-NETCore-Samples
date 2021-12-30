@@ -100,12 +100,12 @@ namespace DSPDemo
                 P.Values[i] = KalmanFilter.P[0,0];
              }
            
-             TeeChart.DrawValues(z,fastLine1, 0, 1, false);
-             TeeChart.DrawValues(xhat, fastLine2, 0, 1, false);
-             TeeChart.DrawValues(truthValue, fastLine3, 0, 1, false);
+             MtxVecTee.DrawValues(z,fastLine1, 0, 1, false);
+             MtxVecTee.DrawValues(xhat, fastLine2, 0, 1, false);
+             MtxVecTee.DrawValues(truthValue, fastLine3, 0, 1, false);
 
              P.SetSubRange(1,n_iter-1);
-             TeeChart.DrawValues(P, fastLine4, 0, 1, false);
+             MtxVecTee.DrawValues(P, fastLine4, 0, 1, false);
         }
 
 

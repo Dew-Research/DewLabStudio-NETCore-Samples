@@ -174,7 +174,7 @@ namespace StatsMasterDemo
                 sos.Length = bins.Length -1;
                 sos.Add(bins,bins,0,1,0,bins.Length-1);
                 sos.Scale(0.5);
-                TeeChart.DrawValues(sos,predfreq,tChart1.Series[1],false);
+                MtxVecTee.DrawValues(sos,predfreq,tChart1.Series[1],false);
                 // Step 3: Do a Chi2 GOF test
                 Statistics.GOFChi2Test(ofreq, predfreq, vdata.Length, nu, out hres, out signif, THypothesisType.htTwoTailed, alpha);
                 richTextBox2.Clear();
@@ -200,7 +200,7 @@ namespace StatsMasterDemo
             Vector F = new Vector(0);
             Vector B = new Vector(0);
             Statistics.Histogram(vdata,numbins,F,B,true);
-            TeeChart.DrawValues(B,F,tChart1.Series[0],false);
+            MtxVecTee.DrawValues(B,F,tChart1.Series[0],false);
         }
 
         private void GenerateData(int index)

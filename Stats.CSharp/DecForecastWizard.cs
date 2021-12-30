@@ -2088,15 +2088,15 @@ namespace StatsMasterDemo
                 dmean = data.Mean();
                 yv.Copy(data);
                 yv *= 1.0 / dmean;
-                TeeChart.DrawValues(yv, tChartData.Series[0], 0, 1, false);
+                MtxVecTee.DrawValues(yv, tChartData.Series[0], 0, 1, false);
 
                 // #2 : Moving average
                 MovAve();
-                TeeChart.DrawValues(mv, tChartData.Series[1], 0, 1, false);
+                MtxVecTee.DrawValues(mv, tChartData.Series[1], 0, 1, false);
 
                 // #3 : Trend on M
                 Trend();
-                TeeChart.DrawValues(tv, tChartData.Series[2], 0, 1, false);
+                MtxVecTee.DrawValues(tv, tChartData.Series[2], 0, 1, false);
 
                 // #4 : Cycle
                 cv = mv / tv;
@@ -2285,8 +2285,8 @@ namespace StatsMasterDemo
                     pser.Pointer.VertSize = 2;
                     pser.Pointer.HorizSize = 2;
                     Chart.Series[1].Title = "Forecasts";
-                    TeeChart.DrawValues(timeseries, Chart.Series[0], 0, 1, false);
-                    TeeChart.DrawValues(forecasts, Chart.Series[1], 0, 1, false);
+                    MtxVecTee.DrawValues(timeseries, Chart.Series[0], 0, 1, false);
+                    MtxVecTee.DrawValues(forecasts, Chart.Series[1], 0, 1, false);
                     CopyToRichBox(richTextBox);
                     richTextBox.SelectedText = "\n";
 
@@ -2296,7 +2296,7 @@ namespace StatsMasterDemo
                     Chart.Series.Clear();
                     Chart.Header.Text = "Residuals";
                     Chart.Series.Add(new Steema.TeeChart.Styles.Line());
-                    TeeChart.DrawValues(residuals, Chart.Series[0], 0, 1, false);
+                    MtxVecTee.DrawValues(residuals, Chart.Series[0], 0, 1, false);
                     CopyToRichBox(richTextBox);
                     richTextBox.SelectedText = "\n";
 
@@ -2310,7 +2310,7 @@ namespace StatsMasterDemo
                     bseries.Marks.Visible = false;
                     bseries.UseOrigin = true;
                     bseries.Origin = 1.0;
-                    TeeChart.DrawValues(tv, Chart.Series[0], 0, 1, false);
+                    MtxVecTee.DrawValues(tv, Chart.Series[0], 0, 1, false);
                     CopyToRichBox(richTextBox);
                     richTextBox.SelectedText = "\n";
 
@@ -2323,7 +2323,7 @@ namespace StatsMasterDemo
                     bseries.Marks.Visible = false;
                     bseries.UseOrigin = true;
                     bseries.Origin = 1.0;
-                    TeeChart.DrawValues(cv, Chart.Series[0], 0, 1, false);
+                    MtxVecTee.DrawValues(cv, Chart.Series[0], 0, 1, false);
                     CopyToRichBox(richTextBox);
                     richTextBox.SelectedText = "\n";
 
@@ -2336,7 +2336,7 @@ namespace StatsMasterDemo
                     bseries.Marks.Visible = false;
                     bseries.UseOrigin = true;
                     bseries.Origin = 1.0;
-                    TeeChart.DrawValues(sv, Chart.Series[0], 0, 1, false);
+                    MtxVecTee.DrawValues(sv, Chart.Series[0], 0, 1, false);
                     CopyToRichBox(richTextBox);
                     richTextBox.SelectedText = "\n";
 
@@ -2346,7 +2346,7 @@ namespace StatsMasterDemo
                     Chart.Legend.Visible = false;
                     Chart.Header.Text = "Randomness";
                     Chart.Series.Add(new Steema.TeeChart.Styles.Line());
-                    TeeChart.DrawValues(rv, Chart.Series[0], 0, 1, false);
+                    MtxVecTee.DrawValues(rv, Chart.Series[0], 0, 1, false);
                     CopyToRichBox(richTextBox);
                     richTextBox.SelectedText = "\n";
                 }

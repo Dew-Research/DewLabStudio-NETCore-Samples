@@ -2403,7 +2403,7 @@ namespace StatsMasterDemo
 
             DisplayInfo(listBox1.SelectedIndex);
             FillData(listBox1.SelectedIndex);
-            TeeChart.DrawValues(tMtxNonLinReg1.X, tMtxNonLinReg1.Y, points1, false);
+            MtxVecTee.DrawValues(tMtxNonLinReg1.X, tMtxNonLinReg1.Y, points1, false);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -2417,7 +2417,7 @@ namespace StatsMasterDemo
                 tMtxNonLinReg1.Recalc();
                 timeCheck = Environment.TickCount - timeCheck;
                 // Update results
-                TeeChart.DrawValues(tMtxNonLinReg1.X, tMtxNonLinReg1.YCalc, line1, false);
+                MtxVecTee.DrawValues(tMtxNonLinReg1.X, tMtxNonLinReg1.YCalc, line1, false);
                 richTextBox3.Text = WriteToLog(timeCheck, listBox1.SelectedIndex, tMtxNonLinReg1);
             }
             finally

@@ -2208,7 +2208,7 @@ namespace MtxVecDemo
 				tmp += rnd.Next(100) - 50;
 				y.Values[i] = tmp;
 			}
-            TeeChart.DrawValues(y, series1, 0, 1, false);
+            MtxVecTee.DrawValues(y, series1, 0, 1, false);
 		}
 
 		private void button1_Click(object sender, System.EventArgs e) {
@@ -2221,11 +2221,11 @@ namespace MtxVecDemo
 				Polynoms.PolyEval(intX, coeff, r, degF, L2R, intY, delta);
 				int timeElapsed = Environment.TickCount - timeCheck;
 				labelTimeNeeded.Text = "Time needed : " + timeElapsed.ToString() + " ms";
-                TeeChart.DrawValues(intY, series2, 0, 1.0 / (double)factor, DownSize);
+                MtxVecTee.DrawValues(intY, series2, 0, 1.0 / (double)factor, DownSize);
 				intY.Sub(delta);
-                TeeChart.DrawValues(intY, series4, 0, 1.0 / (double)factor, DownSize);
+                MtxVecTee.DrawValues(intY, series4, 0, 1.0 / (double)factor, DownSize);
 				intY.AddScaled(delta, 2);
-                TeeChart.DrawValues(intY, series3, 0, 1.0 / (double)factor, DownSize);
+                MtxVecTee.DrawValues(intY, series3, 0, 1.0 / (double)factor, DownSize);
 				
                 button2.Enabled = true;
 				button3.Enabled = true;

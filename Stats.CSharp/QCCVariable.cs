@@ -1448,7 +1448,7 @@ namespace StatsMasterDemo
             qcc.LCL = lcl;
             qcc.UCL = ucl;
             qcc.CL = cl;
-            TeeChart.DrawValues(drawvec, tChart1.Series[0], 0, 1, false);
+            MtxVecTee.DrawValues(drawvec, tChart1.Series[0], 0, 1, false);
 
         }
 

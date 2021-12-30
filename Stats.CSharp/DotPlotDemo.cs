@@ -72,7 +72,7 @@ namespace StatsMasterDemo
 
                 // some custom labels for bottom axis ...
                 tChart1.Axes.Bottom.Labels.Items.Add(i, s.Title);
-                TeeChart.DrawValues(vl[i], tChart1.Series[i], 0, 1, false);
+                MtxVecTee.DrawValues(vl[i], tChart1.Series[i], 0, 1, false);
             }
         }
 

@@ -74,7 +74,7 @@ namespace MtxVecDemo
 			else if (radioButton2.Checked) mode = TPixelDownSample.pdsPeak;
 			else if (radioButton3.Checked) mode = TPixelDownSample.pdsAverage;
             sparseA.PixelDownSample(a,200,mode);
-            TeeChart.DrawValues(a, gridSeries);
+            MtxVecTee.DrawValues(a, gridSeries);
 		}
 
 		/// <summary>
@@ -2818,7 +2818,7 @@ namespace MtxVecDemo
         {
             splitContainer1.Panel2Collapsed = !checkBox3.Checked;
             splitContainer1.Panel1.Refresh();
-            TeeChart.DrawValues(a, gridSeries);
+            MtxVecTee.DrawValues(a, gridSeries);
         }
 
 		private void timer1_Elapsed(object sender, System.Timers.ElapsedEventArgs e) 

@@ -18,12 +18,12 @@
     <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
   </PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Dew.Math" Version="6.0.4" />
-  </ItemGroup>
-
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
     <Exec Command="mkdir $(TargetDir)Data\&#xD;&#xA;copy $(ProjectDir)Data\*.* $(TargetDir)Data\" />
   </Target>
+
+  <ItemGroup>
+    <PackageReference Include="Dew.Math" Version="6.0.6" />
+  </ItemGroup>
 
 </Project>

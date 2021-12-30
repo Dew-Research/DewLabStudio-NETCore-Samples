@@ -116,7 +116,7 @@ namespace DSPDemo
 				SpectrumAnalyzer1.Window = TSignalWindowType.wtRectangular;
 				SpectrumAnalyzer1.ZeroPadding = 16;
 				SpectrumAnalyzer1.Process(h,null,null,null,fs);
-				TeeChart.DrawValues(err,Series2,0,SpectrumAnalyzer1.HzRes, false);
+				MtxVecTee.DrawValues(err,Series2,0,SpectrumAnalyzer1.HzRes, false);
 			} finally {
 				MtxVec.FreeIt(ref h, ref err);
 			}

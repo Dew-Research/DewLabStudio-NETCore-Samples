@@ -28,7 +28,7 @@ namespace StatsMasterDemo
 			m = data.Mean();
 			s = data.StdDev();
 			StatControlCharts.QCWestgardRules(data,outcont,m,s);
-            TeeChart.DrawValues(data, tChart1.Series[0], 0, 1, false);
+            MtxVecTee.DrawValues(data, tChart1.Series[0], 0, 1, false);
 		}
 
 		private string DecodeRules(int err)

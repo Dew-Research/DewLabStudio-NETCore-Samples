@@ -1815,7 +1815,7 @@ namespace StatsMasterDemo
             richTextBox2.Text += l2.ToString()+"\t\t"+Math387.FormatSample(phi.Values[2],"0.000")+"\n";
             richTextBox2.Text += l3.ToString()+"\t\t"+Math387.FormatSample(phi.Values[3],"0.000")+"\n";
             richTextBox2.Text += "WN variance:\t"+Math387.FormatSample(sigma2,"0.000")+"\n";
-            TeeChart.DrawValues(timeseries, tChart1.Series[0], 0, 1, false);
+            MtxVecTee.DrawValues(timeseries, tChart1.Series[0], 0, 1, false);
             DoForecasts();
         }
 
@@ -1824,7 +1824,7 @@ namespace StatsMasterDemo
             double rmse;
             nuforecasts = (int)numericUpDown1.Value;
             StatTimeSerAnalysis.ARARForecast(timeseries,phi,filter,tau,l1,l2,l3,sTS.Mean(),nuforecasts,forecasts,stderrs,out rmse);
-            TeeChart.DrawValues(forecasts, tChart1.Series[1], timeseries.Length, 1, false);
+            MtxVecTee.DrawValues(forecasts, tChart1.Series[1], timeseries.Length, 1, false);
         }
 
         private void button1_Click(object sender, EventArgs e)

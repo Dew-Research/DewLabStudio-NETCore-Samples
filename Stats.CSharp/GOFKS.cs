@@ -74,8 +74,8 @@ namespace StatsMasterDemo
             Probabilities.NormalCDF(x,0.0,1.0,tcdf);
             // Ignore last value for yCDF (see help)
             ecdf.SetSubRange(0,ecdf.Length-1);
-            TeeChart.DrawValues(x,ecdf,tChart1.Series[0],false);
-            TeeChart.DrawValues(x, tcdf, tChart1.Series[1], false);
+            MtxVecTee.DrawValues(x,ecdf,tChart1.Series[0],false);
+            MtxVecTee.DrawValues(x, tcdf, tChart1.Series[1], false);
             // reset subrange
             ecdf.SetSubRange();
         }
