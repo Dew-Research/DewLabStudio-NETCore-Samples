@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net5.0-windows</TargetFramework>
+    <TargetFramework>net6.0-windows</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
     <ApplicationIcon>MtxVec.ico</ApplicationIcon>
   </PropertyGroup>
@@ -23,7 +23,7 @@
   </Target>
 
   <ItemGroup>
-    <PackageReference Include="Dew.Math" Version="6.0.6" />
+    <PackageReference Include="Dew.Math" Version="6.0.8" />
   </ItemGroup>
 
 </Project>
