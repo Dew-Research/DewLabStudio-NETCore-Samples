@@ -162,7 +162,7 @@ namespace StatsMasterDemo
 
         public static string ReadDemoPath()
         {
-            const string ProjectName = "StatsMasterDemoVS2010.csproj";
+            const string ProjectName = "StatsMasterDemo.csproj";
             string result = "";
 
             RegistryKey key = Registry.CurrentUser.CreateSubKey(StatsMasterRegKey);
@@ -183,16 +183,22 @@ namespace StatsMasterDemo
             }
 
             FileInfo fi = new FileInfo(result + ProjectName);
-            if (!fi.Exists)
-            {
-                fi = new FileInfo(result + @"..\" + ProjectName);
-                if (fi.Exists) result = result + @"..\";
-                else
-                {
-                    fi = new FileInfo(result + @"..\..\" + ProjectName);
-                    if (fi.Exists) result = result + @"..\..\";
-                }
-            }
+			if (!fi.Exists)
+			{
+				fi = new FileInfo(result + @"..\..\..\" + ProjectName);
+				if (fi.Exists) result = result + @"..\..\..\";
+				else
+				{
+					fi = new FileInfo(result + @"..\..\" + ProjectName);
+					if (fi.Exists) result = result + @"..\..\";
+					else
+					{
+						fi = new FileInfo(result + @"..\" + ProjectName);
+						if (fi.Exists) result = result + @"..\";
+					}
+				}
+			}
+
             return result;
         }
 

@@ -1,4 +1,6 @@
-﻿namespace DSPDemo {
+﻿using Steema.TeeChart;
+
+namespace DSPDemo {
 	partial class RateConvertForm {
 		/// <summary>
 		/// Required designer variable.
@@ -1849,7 +1851,7 @@
             this.signalChart.Legend.Brush.Color = System.Drawing.Color.White;
             this.signalChart.Legend.Brush.Solid = true;
             this.signalChart.Legend.Brush.Visible = true;
-            this.signalChart.Legend.CheckBoxes = true;
+            this.signalChart.Legend.ActiveStyle = LegendActiveStyles.CheckBox;
             // 
             // 
             // 
@@ -3096,7 +3098,7 @@
             this.spectrumChart.Legend.Brush.Color = System.Drawing.Color.White;
             this.spectrumChart.Legend.Brush.Solid = true;
             this.spectrumChart.Legend.Brush.Visible = true;
-            this.spectrumChart.Legend.CheckBoxes = true;
+            this.spectrumChart.Legend.ActiveStyle = LegendActiveStyles.CheckBox;
             // 
             // 
             // 

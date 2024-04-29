@@ -1203,7 +1203,7 @@ namespace MtxVecDemo
             this.tChart1.Legend.Brush.Color = System.Drawing.Color.White;
             this.tChart1.Legend.Brush.Solid = true;
             this.tChart1.Legend.Brush.Visible = true;
-            this.tChart1.Legend.CheckBoxes = true;
+            this.tChart1.Legend.ActiveStyle = Steema.TeeChart.LegendActiveStyles.CheckBox;
             // 
             // 
             // 

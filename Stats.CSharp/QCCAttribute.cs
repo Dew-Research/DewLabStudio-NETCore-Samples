@@ -1445,9 +1445,9 @@ namespace StatsMasterDemo
             drawvec = new Vector(0);
 
             qcc = new Dew.Stats.Tee.QCSeries(tChart1.Chart);
-            qcc.Color = Color.Yellow;
+            qcc.Color = Color.Blue;
             qcc.ControlLimitPen.Color = Color.Red;
-            qcc.CenterLinePen.Color = Color.Yellow;
+            qcc.CenterLinePen.Color = Color.BlueViolet;
             qcc.Marks.Visible = true;
             qcc.GetPointerStyle += new Steema.TeeChart.Styles.CustomPoint.GetPointerStyleEventHandler(qcc_GetPointerStyle);
             qcc.GetSeriesMark += new Steema.TeeChart.Styles.Series.GetSeriesMarkEventHandler(qcc_GetSeriesMark);
@@ -1455,7 +1455,7 @@ namespace StatsMasterDemo
 
         private Vector data, drawvec;
         private int samplesize = 100;
-        private double alpha = 0.05;
+        private double alpha = 0.002;
         private Dew.Stats.Tee.QCSeries qcc;
 
         private void qcc_GetPointerStyle(Steema.TeeChart.Styles.CustomPoint series,

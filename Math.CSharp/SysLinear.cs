@@ -294,8 +294,6 @@ namespace MtxVecDemo
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.mtxGridView4.DefaultCellStyle = dataGridViewCellStyle4;
             this.mtxGridView4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mtxGridView4.IntPrecision = Dew.Math.TIntPrecision.prInt32;
-            this.mtxGridView4.IsInteger = false;
             this.mtxGridView4.Location = new System.Drawing.Point(0, 0);
             this.mtxGridView4.MultiSelect = false;
             this.mtxGridView4.Name = "mtxGridView4";
@@ -333,8 +331,6 @@ namespace MtxVecDemo
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.mtxGridView1.DefaultCellStyle = dataGridViewCellStyle3;
-            this.mtxGridView1.IntPrecision = Dew.Math.TIntPrecision.prInt32;
-            this.mtxGridView1.IsInteger = false;
             this.mtxGridView1.Location = new System.Drawing.Point(10, 23);
             this.mtxGridView1.MultiSelect = false;
             this.mtxGridView1.Name = "mtxGridView1";
@@ -364,8 +360,6 @@ namespace MtxVecDemo
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.mtxGridView2.DefaultCellStyle = dataGridViewCellStyle2;
-            this.mtxGridView2.IntPrecision = Dew.Math.TIntPrecision.prInt32;
-            this.mtxGridView2.IsInteger = false;
             this.mtxGridView2.Location = new System.Drawing.Point(409, 23);
             this.mtxGridView2.MultiSelect = false;
             this.mtxGridView2.Name = "mtxGridView2";
@@ -396,8 +390,6 @@ namespace MtxVecDemo
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.mtxGridView3.DefaultCellStyle = dataGridViewCellStyle1;
-            this.mtxGridView3.IntPrecision = Dew.Math.TIntPrecision.prInt32;
-            this.mtxGridView3.IsInteger = false;
             this.mtxGridView3.Location = new System.Drawing.Point(614, 23);
             this.mtxGridView3.MultiSelect = false;
             this.mtxGridView3.Name = "mtxGridView3";

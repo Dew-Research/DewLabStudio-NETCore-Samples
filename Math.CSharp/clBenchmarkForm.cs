@@ -243,7 +243,7 @@ namespace MtxVecDemo
                             clD.Mul(clA, clC);
                             clC.Mul(clD, Math.Sqrt(4 * a / (2 * Math387.PI)) * a);
 
-                            C = Math.Sqrt(4 * a / (2 * Math387.PI)) * a * MtxExpr.Sqr(B) * MtxExpr.Exp(-0.5 * a * MtxExpr.Sqr(B));
+                            //C = Math.Sqrt(4 * a / (2 * Math387.PI)) * a * MtxExpr.Sqr(B) * MtxExpr.Exp(-0.5 * a * MtxExpr.Sqr(B));
                             break;
                         case 3:
                             if (!clB.Complex) { ScalarB = clB.Mean(); } else { ScalarB = clB.Meanc().Re; };
@@ -383,7 +383,7 @@ namespace MtxVecDemo
                             break;
                     }
                 }
-                bTime = Math387.StopTimer() * 4; //simulate longer running time
+                bTime = Math387.StopTimer() * 4; //simulate longer running time to allow comparison with older versions of this demo
 
                 memo.AppendText("\n");
                 memo.AppendText("C# timings:\n");

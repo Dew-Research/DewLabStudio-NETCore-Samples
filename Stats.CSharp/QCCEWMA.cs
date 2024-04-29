@@ -1407,7 +1407,7 @@ namespace StatsMasterDemo
         private Vector vlcl,vucl,drawvec;
         private double lcl,ucl,cl,ci;
         private double r = 0.35;
-        private double alpha = 0.025;
+        private double alpha = 0.0013;
 
         private void RefreshChart()
         {
@@ -1419,7 +1419,7 @@ namespace StatsMasterDemo
                 StatControlCharts.EWMAChart(data,drawvec,out cl,out ucl,out lcl,r,ci);
                 tChart1.Legend.Visible = false;
                 Dew.Stats.Tee.QCSeries s = (Dew.Stats.Tee.QCSeries)tChart1.Series[0];
-                s.Color = Color.Yellow;
+                s.Color = Color.Blue;
                 s.ControlLimitPen.Color = Color.Red;
                 s.CL = cl;
                 s.UCL = ucl;
@@ -1434,7 +1434,7 @@ namespace StatsMasterDemo
                 StatControlCharts.EWMAChart(data,drawvec,out cl,vucl,vlcl,r,ci);
                 tChart1.Legend.Visible = false;
                 tChart1.Series[0].Title = "Data";
-                tChart1.Series[0].Color = Color.Yellow;
+                tChart1.Series[0].Color = Color.Blue;
                 Steema.TeeChart.Styles.Line line = (Steema.TeeChart.Styles.Line)tChart1.Series[0];
                 line.Pointer.Visible = true;
 
@@ -1471,8 +1471,8 @@ namespace StatsMasterDemo
                 data.Size(20, 5);
                 data.RandGauss();
             }
-            textBox1.Text = r.ToString("0.000");
-            textBox2.Text = alpha.ToString("0.000");
+            textBox1.Text = r.ToString("0.00000");
+            textBox2.Text = alpha.ToString("0.00000");
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

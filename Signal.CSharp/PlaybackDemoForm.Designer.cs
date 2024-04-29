@@ -24,16 +24,13 @@
 		/// </summary>
 		private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
-            Dew.Signal.Tee.SignalTeeItem signalTeeItem1 = new Dew.Signal.Tee.SignalTeeItem();
             Steema.TeeChart.Drawing.Cursor cursor1 = new Steema.TeeChart.Drawing.Cursor();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PlaybackDemoForm));
+            Dew.Signal.Tee.SignalTeeItem signalTeeItem1 = new Dew.Signal.Tee.SignalTeeItem();
             Dew.Signal.Tee.SpectrumTeeItem spectrumTeeItem1 = new Dew.Signal.Tee.SpectrumTeeItem();
             this.Signal1 = new Dew.Signal.TSignal(this.components);
-            this.signalChart1 = new Dew.Signal.Tee.SignalChart();
             this.fastLine1 = new Steema.TeeChart.Styles.FastLine();
             this.SpectrumAnalyzer1 = new Dew.Signal.TSpectrumAnalyzer(this.components);
-            this.SpectrumChart1 = new Dew.Signal.Tee.SpectrumChart();
-            this.points2 = new Steema.TeeChart.Styles.Points();
             this.fastLine2 = new Steema.TeeChart.Styles.FastLine();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -45,7 +42,10 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.openButton = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.signalChart1 = new Dew.Signal.Tee.SignalChart();
             this.splitter1 = new System.Windows.Forms.Splitter();
+            this.SpectrumChart1 = new Dew.Signal.Tee.SpectrumChart();
+            this.points2 = new Steema.TeeChart.Styles.Points();
             this.SignalRead1 = new Dew.Signal.TSignalRead(this.components);
             this.SignalOut1 = new Dew.Signal.SignalOut(this.components);
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
@@ -55,10 +55,10 @@
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.frequencyChartEditor = new Steema.TeeChart.Editor(this.components);
             this.signalChartEditor = new Steema.TeeChart.Editor(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.signalChart1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SpectrumChart1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.signalChart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SpectrumChart1)).BeginInit();
             this.SuspendLayout();
             // 
             // Signal1
@@ -69,6 +69,7 @@
             this.Signal1.Complex = false;
             this.Signal1.FloatPrecision = Dew.Math.TMtxFloatPrecision.mvDouble;
             this.Signal1.FloatPrecisionLock = false;
+            this.Signal1.Input = null;
             this.Signal1.IsDouble = true;
             this.Signal1.Length = 128;
             this.Signal1.Name = null;
@@ -78,6 +79,492 @@
             this.Signal1.OnGetInput = null;
             this.Signal1.OnNotifyUpdate = null;
             this.Signal1.OnParameterUpdate = null;
+            // 
+            // fastLine1
+            // 
+            // 
+            // 
+            // 
+            this.fastLine1.Brush.Color = System.Drawing.Color.Empty;
+            this.fastLine1.Brush.Solid = true;
+            this.fastLine1.Brush.Visible = true;
+            this.fastLine1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(102)))), ((int)(((byte)(163)))));
+            this.fastLine1.ColorEach = false;
+            cursor1.CursorType = Steema.TeeChart.Drawing.CursorType.Default;
+            this.fastLine1.Cursor = cursor1;
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            this.fastLine1.Legend.Brush.Color = System.Drawing.Color.White;
+            this.fastLine1.Legend.Brush.Solid = true;
+            this.fastLine1.Legend.Brush.Visible = true;
+            // 
+            // 
+            // 
+            this.fastLine1.Legend.Font.Bold = false;
+            // 
+            // 
+            // 
+            this.fastLine1.Legend.Font.Brush.Color = System.Drawing.Color.Black;
+            this.fastLine1.Legend.Font.Brush.Solid = true;
+            this.fastLine1.Legend.Font.Brush.Visible = true;
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            this.fastLine1.Legend.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
+            this.fastLine1.Legend.Font.Shadow.Brush.Solid = true;
+            this.fastLine1.Legend.Font.Shadow.Brush.Visible = true;
+            this.fastLine1.Legend.Font.Size = 8;
+            this.fastLine1.Legend.Font.SizeFloat = 8F;
+            this.fastLine1.Legend.Font.Style = Steema.TeeChart.Drawing.FontStyle.Regular;
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            this.fastLine1.Legend.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
+            this.fastLine1.Legend.ImageBevel.Brush.Solid = true;
+            this.fastLine1.Legend.ImageBevel.Brush.Visible = true;
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            this.fastLine1.Legend.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
+            this.fastLine1.Legend.Shadow.Brush.Solid = true;
+            this.fastLine1.Legend.Shadow.Brush.Visible = true;
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            this.fastLine1.Marks.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.fastLine1.Marks.Brush.Solid = true;
+            this.fastLine1.Marks.Brush.Visible = true;
+            // 
+            // 
+            // 
+            this.fastLine1.Marks.Font.Bold = false;
+            // 
+            // 
+            // 
+            this.fastLine1.Marks.Font.Brush.Color = System.Drawing.Color.Black;
+            this.fastLine1.Marks.Font.Brush.Solid = true;
+            this.fastLine1.Marks.Font.Brush.Visible = true;
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            this.fastLine1.Marks.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
+            this.fastLine1.Marks.Font.Shadow.Brush.Solid = true;
+            this.fastLine1.Marks.Font.Shadow.Brush.Visible = true;
+            this.fastLine1.Marks.Font.Size = 8;
+            this.fastLine1.Marks.Font.SizeFloat = 8F;
+            this.fastLine1.Marks.Font.Style = Steema.TeeChart.Drawing.FontStyle.Regular;
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            this.fastLine1.Marks.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
+            this.fastLine1.Marks.ImageBevel.Brush.Solid = true;
+            this.fastLine1.Marks.ImageBevel.Brush.Visible = true;
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            this.fastLine1.Marks.Shadow.Brush.Color = System.Drawing.Color.Gray;
+            this.fastLine1.Marks.Shadow.Brush.Solid = true;
+            this.fastLine1.Marks.Shadow.Brush.Visible = true;
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            this.fastLine1.Marks.Symbol.Brush.Color = System.Drawing.Color.White;
+            this.fastLine1.Marks.Symbol.Brush.Solid = true;
+            this.fastLine1.Marks.Symbol.Brush.Visible = true;
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            this.fastLine1.Marks.Symbol.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
+            this.fastLine1.Marks.Symbol.ImageBevel.Brush.Solid = true;
+            this.fastLine1.Marks.Symbol.ImageBevel.Brush.Visible = true;
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            this.fastLine1.Marks.Symbol.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
+            this.fastLine1.Marks.Symbol.Shadow.Brush.Solid = true;
+            this.fastLine1.Marks.Symbol.Shadow.Brush.Visible = true;
+            // 
+            // 
+            // 
+            this.fastLine1.Marks.TailParams.CustomPointPos = ((System.Drawing.PointF)(resources.GetObject("resource.CustomPointPos")));
+            this.fastLine1.Marks.TailParams.Margin = 0F;
+            this.fastLine1.Marks.TailParams.PointerHeight = 8D;
+            this.fastLine1.Marks.TailParams.PointerWidth = 8D;
+            this.fastLine1.OriginalCursor = cursor1;
+            this.fastLine1.RandomData = true;
+            this.fastLine1.Title = "series3";
+            this.fastLine1.TreatNulls = Steema.TeeChart.Styles.TreatNullsStyle.Ignore;
+            this.fastLine1.Type = "Steema.TeeChart.Styles.FastLine";
+            this.fastLine1.UseExtendedNumRange = false;
+            // 
+            // 
+            // 
+            this.fastLine1.XValues.DataMember = "X";
+            this.fastLine1.XValues.Order = Steema.TeeChart.Styles.ValueListOrder.Ascending;
+            this.fastLine1.XValues.Series = this.fastLine1;
+            // 
+            // 
+            // 
+            this.fastLine1.YValues.DataMember = "Y";
+            this.fastLine1.YValues.Series = this.fastLine1;
+            // 
+            // SpectrumAnalyzer1
+            // 
+            this.SpectrumAnalyzer1.ArOrder = 100;
+            this.SpectrumAnalyzer1.Bands.TemplateIndex = -1;
+            this.SpectrumAnalyzer1.Bands.Templates = ((Dew.Signal.TStringStreamList)(resources.GetObject("resource.Templates")));
+            this.SpectrumAnalyzer1.BlockAssign = false;
+            this.SpectrumAnalyzer1.Complex = false;
+            this.SpectrumAnalyzer1.FloatPrecision = Dew.Math.TMtxFloatPrecision.mvDouble;
+            this.SpectrumAnalyzer1.FloatPrecisionLock = false;
+            this.SpectrumAnalyzer1.Harmonics = 10;
+            this.SpectrumAnalyzer1.Input = this.Signal1;
+            this.SpectrumAnalyzer1.IsDouble = true;
+            this.SpectrumAnalyzer1.Length = 64;
+            this.SpectrumAnalyzer1.LogBase = 0D;
+            this.SpectrumAnalyzer1.LogScale = 0D;
+            this.SpectrumAnalyzer1.MainlobeWidth = 8;
+            this.SpectrumAnalyzer1.Name = null;
+            this.SpectrumAnalyzer1.OnAfterAverage = null;
+            this.SpectrumAnalyzer1.OnAfterComplexSpectrum = null;
+            this.SpectrumAnalyzer1.OnAfterUpdate = null;
+            this.SpectrumAnalyzer1.OnBandsUpdate = null;
+            this.SpectrumAnalyzer1.OnBeforeAverage = null;
+            this.SpectrumAnalyzer1.OnBeforeSpectrumType = null;
+            this.SpectrumAnalyzer1.OnBeforeUpdate = null;
+            this.SpectrumAnalyzer1.OnDisplayUpdate = null;
+            this.SpectrumAnalyzer1.OnGetInput = null;
+            this.SpectrumAnalyzer1.OnNotifyUpdate = null;
+            this.SpectrumAnalyzer1.OnParameterUpdate = null;
+            this.SpectrumAnalyzer1.OnPeaksUpdate = null;
+            this.SpectrumAnalyzer1.Output = null;
+            this.SpectrumAnalyzer1.Peaks.HarmonicsCount = 10;
+            this.SpectrumAnalyzer1.Peaks.Interpolation.RecursiveHarmonics = Dew.Signal.TRecursiveHarmonics.rhNone;
+            this.SpectrumAnalyzer1.Peaks.LargestCount = 1;
+            this.SpectrumAnalyzer1.Report.AmplitudeFormat = null;
+            this.SpectrumAnalyzer1.Report.FrequencyFormat = null;
+            this.SpectrumAnalyzer1.Report.PhaseFormat = null;
+            this.SpectrumAnalyzer1.Report.UseTab = false;
+            this.SpectrumAnalyzer1.Rotation = 0;
+            this.SpectrumAnalyzer1.SpectrumScale = 0D;
+            this.SpectrumAnalyzer1.Stats.Averaged = 0;
+            this.SpectrumAnalyzer1.Stats.Averages = 30;
+            this.SpectrumAnalyzer1.Stats.ExpDecay = 5;
+            this.SpectrumAnalyzer1.Window = Dew.Signal.TSignalWindowType.wtHanning;
+            this.SpectrumAnalyzer1.ZeroPadding = 1;
+            this.SpectrumAnalyzer1.OnParameterUpdateEvent += new Dew.Math.TNotifyEvent(this.SpectrumAnalyzer1_OnParameterUpdateEvent);
+            // 
+            // fastLine2
+            // 
+            // 
+            // 
+            // 
+            this.fastLine2.Brush.Color = System.Drawing.Color.Empty;
+            this.fastLine2.Brush.Solid = true;
+            this.fastLine2.Brush.Visible = true;
+            this.fastLine2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(102)))), ((int)(((byte)(163)))));
+            this.fastLine2.ColorEach = false;
+            this.fastLine2.Cursor = cursor1;
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            this.fastLine2.Legend.Brush.Color = System.Drawing.Color.White;
+            this.fastLine2.Legend.Brush.Solid = true;
+            this.fastLine2.Legend.Brush.Visible = true;
+            // 
+            // 
+            // 
+            this.fastLine2.Legend.Font.Bold = false;
+            // 
+            // 
+            // 
+            this.fastLine2.Legend.Font.Brush.Color = System.Drawing.Color.Black;
+            this.fastLine2.Legend.Font.Brush.Solid = true;
+            this.fastLine2.Legend.Font.Brush.Visible = true;
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            this.fastLine2.Legend.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
+            this.fastLine2.Legend.Font.Shadow.Brush.Solid = true;
+            this.fastLine2.Legend.Font.Shadow.Brush.Visible = true;
+            this.fastLine2.Legend.Font.Size = 8;
+            this.fastLine2.Legend.Font.SizeFloat = 8F;
+            this.fastLine2.Legend.Font.Style = Steema.TeeChart.Drawing.FontStyle.Regular;
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            this.fastLine2.Legend.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
+            this.fastLine2.Legend.ImageBevel.Brush.Solid = true;
+            this.fastLine2.Legend.ImageBevel.Brush.Visible = true;
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            this.fastLine2.Legend.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
+            this.fastLine2.Legend.Shadow.Brush.Solid = true;
+            this.fastLine2.Legend.Shadow.Brush.Visible = true;
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            this.fastLine2.Marks.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.fastLine2.Marks.Brush.Solid = true;
+            this.fastLine2.Marks.Brush.Visible = true;
+            // 
+            // 
+            // 
+            this.fastLine2.Marks.Font.Bold = false;
+            // 
+            // 
+            // 
+            this.fastLine2.Marks.Font.Brush.Color = System.Drawing.Color.Black;
+            this.fastLine2.Marks.Font.Brush.Solid = true;
+            this.fastLine2.Marks.Font.Brush.Visible = true;
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            this.fastLine2.Marks.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
+            this.fastLine2.Marks.Font.Shadow.Brush.Solid = true;
+            this.fastLine2.Marks.Font.Shadow.Brush.Visible = true;
+            this.fastLine2.Marks.Font.Size = 8;
+            this.fastLine2.Marks.Font.SizeFloat = 8F;
+            this.fastLine2.Marks.Font.Style = Steema.TeeChart.Drawing.FontStyle.Regular;
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            this.fastLine2.Marks.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
+            this.fastLine2.Marks.ImageBevel.Brush.Solid = true;
+            this.fastLine2.Marks.ImageBevel.Brush.Visible = true;
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            this.fastLine2.Marks.Shadow.Brush.Color = System.Drawing.Color.Gray;
+            this.fastLine2.Marks.Shadow.Brush.Solid = true;
+            this.fastLine2.Marks.Shadow.Brush.Visible = true;
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            this.fastLine2.Marks.Symbol.Brush.Color = System.Drawing.Color.White;
+            this.fastLine2.Marks.Symbol.Brush.Solid = true;
+            this.fastLine2.Marks.Symbol.Brush.Visible = true;
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            this.fastLine2.Marks.Symbol.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
+            this.fastLine2.Marks.Symbol.ImageBevel.Brush.Solid = true;
+            this.fastLine2.Marks.Symbol.ImageBevel.Brush.Visible = true;
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            this.fastLine2.Marks.Symbol.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
+            this.fastLine2.Marks.Symbol.Shadow.Brush.Solid = true;
+            this.fastLine2.Marks.Symbol.Shadow.Brush.Visible = true;
+            // 
+            // 
+            // 
+            this.fastLine2.Marks.TailParams.CustomPointPos = ((System.Drawing.PointF)(resources.GetObject("resource.CustomPointPos1")));
+            this.fastLine2.Marks.TailParams.Margin = 0F;
+            this.fastLine2.Marks.TailParams.PointerHeight = 8D;
+            this.fastLine2.Marks.TailParams.PointerWidth = 8D;
+            this.fastLine2.OriginalCursor = cursor1;
+            this.fastLine2.RandomData = true;
+            this.fastLine2.Title = "series1";
+            this.fastLine2.TreatNulls = Steema.TeeChart.Styles.TreatNullsStyle.Ignore;
+            this.fastLine2.Type = "Steema.TeeChart.Styles.FastLine";
+            this.fastLine2.UseExtendedNumRange = false;
+            // 
+            // 
+            // 
+            this.fastLine2.XValues.DataMember = "X";
+            this.fastLine2.XValues.Order = Steema.TeeChart.Styles.ValueListOrder.Ascending;
+            this.fastLine2.XValues.Series = this.fastLine2;
+            // 
+            // 
+            // 
+            this.fastLine2.YValues.DataMember = "Y";
+            this.fastLine2.YValues.Series = this.fastLine2;
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.richTextBox1.Location = new System.Drawing.Point(0, 0);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(912, 110);
+            this.richTextBox1.TabIndex = 1;
+            this.richTextBox1.Text = "richTextBox1";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.timeChartButton);
+            this.panel1.Controls.Add(this.spectrumChartButton);
+            this.panel1.Controls.Add(this.playbackButton);
+            this.panel1.Controls.Add(this.spectrumButton);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.openButton);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 514);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(912, 44);
+            this.panel1.TabIndex = 9;
+            // 
+            // timeChartButton
+            // 
+            this.timeChartButton.Location = new System.Drawing.Point(324, 7);
+            this.timeChartButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.timeChartButton.Name = "timeChartButton";
+            this.timeChartButton.Size = new System.Drawing.Size(91, 27);
+            this.timeChartButton.TabIndex = 6;
+            this.timeChartButton.Text = "Time chart...";
+            this.timeChartButton.UseVisualStyleBackColor = true;
+            this.timeChartButton.Click += new System.EventHandler(this.timeChartButton_Click);
+            // 
+            // spectrumChartButton
+            // 
+            this.spectrumChartButton.Location = new System.Drawing.Point(203, 7);
+            this.spectrumChartButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.spectrumChartButton.Name = "spectrumChartButton";
+            this.spectrumChartButton.Size = new System.Drawing.Size(114, 27);
+            this.spectrumChartButton.TabIndex = 5;
+            this.spectrumChartButton.Text = "Spectrum chart...";
+            this.spectrumChartButton.UseVisualStyleBackColor = true;
+            this.spectrumChartButton.Click += new System.EventHandler(this.spectrumChartButton_Click);
+            // 
+            // playbackButton
+            // 
+            this.playbackButton.Location = new System.Drawing.Point(108, 7);
+            this.playbackButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.playbackButton.Name = "playbackButton";
+            this.playbackButton.Size = new System.Drawing.Size(88, 27);
+            this.playbackButton.TabIndex = 4;
+            this.playbackButton.Text = "Playback...";
+            this.playbackButton.UseVisualStyleBackColor = true;
+            this.playbackButton.Click += new System.EventHandler(this.playbackButton_Click);
+            // 
+            // spectrumButton
+            // 
+            this.spectrumButton.Location = new System.Drawing.Point(14, 7);
+            this.spectrumButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.spectrumButton.Name = "spectrumButton";
+            this.spectrumButton.Size = new System.Drawing.Size(88, 27);
+            this.spectrumButton.TabIndex = 3;
+            this.spectrumButton.Text = "Spectrum...";
+            this.spectrumButton.UseVisualStyleBackColor = true;
+            this.spectrumButton.Click += new System.EventHandler(this.spectrumButton_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(554, 13);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(98, 15);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Monitor channel:";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Left",
+            "Right"});
+            this.comboBox1.Location = new System.Drawing.Point(662, 9);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(87, 23);
+            this.comboBox1.TabIndex = 1;
+            // 
+            // openButton
+            // 
+            this.openButton.Location = new System.Drawing.Point(460, 7);
+            this.openButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.openButton.Name = "openButton";
+            this.openButton.Size = new System.Drawing.Size(88, 27);
+            this.openButton.TabIndex = 0;
+            this.openButton.Text = "Open...";
+            this.openButton.UseVisualStyleBackColor = true;
+            this.openButton.Click += new System.EventHandler(this.buttonOpen_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.signalChart1);
+            this.panel2.Controls.Add(this.splitter1);
+            this.panel2.Controls.Add(this.SpectrumChart1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 110);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(912, 404);
+            this.panel2.TabIndex = 11;
+            this.panel2.Resize += new System.EventHandler(this.panel2_Resize);
             // 
             // signalChart1
             // 
@@ -91,7 +578,6 @@
             // 
             // 
             this.signalChart1.Axes.Bottom.Grid.DrawEvery = 1;
-            this.signalChart1.Axes.Bottom.Grid.Visible = false;
             // 
             // 
             // 
@@ -454,10 +940,6 @@
             // 
             // 
             // 
-            // 
-            // 
-            // 
-            this.signalChart1.Axes.Left.AxisPen.Visible = false;
             // 
             // 
             // 
@@ -1083,7 +1565,7 @@
             signalTeeItem1.Series = this.fastLine1;
             signalTeeItem1.SeriesName = "series3";
             this.signalChart1.Signals.Add(signalTeeItem1);
-            this.signalChart1.Size = new System.Drawing.Size(937, 191);
+            this.signalChart1.Size = new System.Drawing.Size(912, 191);
             // 
             // 
             // 
@@ -1193,10 +1675,6 @@
             // 
             // 
             this.signalChart1.Walls.Back.Brush.Color = System.Drawing.Color.Silver;
-            // 
-            // 
-            // 
-            this.signalChart1.Walls.Back.Brush.Gradient.Visible = true;
             this.signalChart1.Walls.Back.Brush.Solid = true;
             this.signalChart1.Walls.Back.Brush.Visible = false;
             // 
@@ -1316,221 +1794,15 @@
             // 
             this.signalChart1.Zoom.Pen.Visible = true;
             // 
-            // fastLine1
-            // 
-            // 
-            // 
-            // 
-            this.fastLine1.Brush.Color = System.Drawing.Color.Empty;
-            this.fastLine1.Brush.Solid = true;
-            this.fastLine1.Brush.Visible = true;
-            this.fastLine1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(102)))), ((int)(((byte)(163)))));
-            this.fastLine1.ColorEach = false;
-            cursor1.CursorType = Steema.TeeChart.Drawing.CursorType.Default;
-            this.fastLine1.Cursor = cursor1;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.fastLine1.Legend.Brush.Color = System.Drawing.Color.White;
-            this.fastLine1.Legend.Brush.Solid = true;
-            this.fastLine1.Legend.Brush.Visible = true;
-            // 
-            // 
-            // 
-            this.fastLine1.Legend.Font.Bold = false;
-            // 
-            // 
-            // 
-            this.fastLine1.Legend.Font.Brush.Color = System.Drawing.Color.Black;
-            this.fastLine1.Legend.Font.Brush.Solid = true;
-            this.fastLine1.Legend.Font.Brush.Visible = true;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.fastLine1.Legend.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.fastLine1.Legend.Font.Shadow.Brush.Solid = true;
-            this.fastLine1.Legend.Font.Shadow.Brush.Visible = true;
-            this.fastLine1.Legend.Font.Size = 8;
-            this.fastLine1.Legend.Font.SizeFloat = 8F;
-            this.fastLine1.Legend.Font.Style = Steema.TeeChart.Drawing.FontStyle.Regular;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.fastLine1.Legend.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.fastLine1.Legend.ImageBevel.Brush.Solid = true;
-            this.fastLine1.Legend.ImageBevel.Brush.Visible = true;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.fastLine1.Legend.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.fastLine1.Legend.Shadow.Brush.Solid = true;
-            this.fastLine1.Legend.Shadow.Brush.Visible = true;
-            // 
-            // 
-            // 
-            this.fastLine1.LinePen.Color = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(102)))), ((int)(((byte)(163)))));
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.fastLine1.Marks.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.fastLine1.Marks.Brush.Solid = true;
-            this.fastLine1.Marks.Brush.Visible = true;
-            // 
-            // 
-            // 
-            this.fastLine1.Marks.Font.Bold = false;
-            // 
-            // 
-            // 
-            this.fastLine1.Marks.Font.Brush.Color = System.Drawing.Color.Black;
-            this.fastLine1.Marks.Font.Brush.Solid = true;
-            this.fastLine1.Marks.Font.Brush.Visible = true;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.fastLine1.Marks.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.fastLine1.Marks.Font.Shadow.Brush.Solid = true;
-            this.fastLine1.Marks.Font.Shadow.Brush.Visible = true;
-            this.fastLine1.Marks.Font.Size = 8;
-            this.fastLine1.Marks.Font.SizeFloat = 8F;
-            this.fastLine1.Marks.Font.Style = Steema.TeeChart.Drawing.FontStyle.Regular;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.fastLine1.Marks.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.fastLine1.Marks.ImageBevel.Brush.Solid = true;
-            this.fastLine1.Marks.ImageBevel.Brush.Visible = true;
-            // 
-            // 
-            // 
-            this.fastLine1.Marks.Pen.Color = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(138)))), ((int)(((byte)(193)))));
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.fastLine1.Marks.Shadow.Brush.Color = System.Drawing.Color.Gray;
-            this.fastLine1.Marks.Shadow.Brush.Solid = true;
-            this.fastLine1.Marks.Shadow.Brush.Visible = true;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.fastLine1.Marks.Symbol.Brush.Color = System.Drawing.Color.White;
-            this.fastLine1.Marks.Symbol.Brush.Solid = true;
-            this.fastLine1.Marks.Symbol.Brush.Visible = true;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.fastLine1.Marks.Symbol.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.fastLine1.Marks.Symbol.ImageBevel.Brush.Solid = true;
-            this.fastLine1.Marks.Symbol.ImageBevel.Brush.Visible = true;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.fastLine1.Marks.Symbol.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.fastLine1.Marks.Symbol.Shadow.Brush.Solid = true;
-            this.fastLine1.Marks.Symbol.Shadow.Brush.Visible = true;
-            // 
-            // 
-            // 
-            this.fastLine1.Marks.TailParams.CustomPointPos = ((System.Drawing.PointF)(resources.GetObject("resource.CustomPointPos")));
-            this.fastLine1.Marks.TailParams.Margin = 0F;
-            this.fastLine1.Marks.TailParams.PointerHeight = 8D;
-            this.fastLine1.Marks.TailParams.PointerWidth = 8D;
-            this.fastLine1.OriginalCursor = cursor1;
-            this.fastLine1.RandomData = true;
-            this.fastLine1.Title = "series3";
-            this.fastLine1.TreatNulls = Steema.TeeChart.Styles.TreatNullsStyle.Ignore;
-            this.fastLine1.Type = "Steema.TeeChart.Styles.FastLine";
-            this.fastLine1.UseExtendedNumRange = false;
-            // 
-            // 
-            // 
-            this.fastLine1.XValues.DataMember = "X";
-            this.fastLine1.XValues.Order = Steema.TeeChart.Styles.ValueListOrder.Ascending;
-            this.fastLine1.XValues.Series = this.fastLine1;
-            // 
-            // 
-            // 
-            this.fastLine1.YValues.DataMember = "Y";
-            this.fastLine1.YValues.Series = this.fastLine1;
-            // 
-            // SpectrumAnalyzer1
-            // 
-            this.SpectrumAnalyzer1.ArOrder = 100;
-            this.SpectrumAnalyzer1.Bands.TemplateIndex = -1;
-            this.SpectrumAnalyzer1.Bands.Templates = ((Dew.Signal.TStringStreamList)(resources.GetObject("resource.Templates")));
-            this.SpectrumAnalyzer1.BlockAssign = false;
-            this.SpectrumAnalyzer1.Complex = false;
-            this.SpectrumAnalyzer1.FloatPrecision = Dew.Math.TMtxFloatPrecision.mvDouble;
-            this.SpectrumAnalyzer1.FloatPrecisionLock = false;
-            this.SpectrumAnalyzer1.Harmonics = 10;
-            this.SpectrumAnalyzer1.Input = this.Signal1;
-            this.SpectrumAnalyzer1.IsDouble = true;
-            this.SpectrumAnalyzer1.Length = 64;
-            this.SpectrumAnalyzer1.LogBase = 0D;
-            this.SpectrumAnalyzer1.LogScale = 0D;
-            this.SpectrumAnalyzer1.MainlobeWidth = 8;
-            this.SpectrumAnalyzer1.Name = null;
-            this.SpectrumAnalyzer1.OnAfterAverage = null;
-            this.SpectrumAnalyzer1.OnAfterComplexSpectrum = null;
-            this.SpectrumAnalyzer1.OnAfterUpdate = null;
-            this.SpectrumAnalyzer1.OnBandsUpdate = null;
-            this.SpectrumAnalyzer1.OnBeforeAverage = null;
-            this.SpectrumAnalyzer1.OnBeforeSpectrumType = null;
-            this.SpectrumAnalyzer1.OnBeforeUpdate = null;
-            this.SpectrumAnalyzer1.OnDisplayUpdate = null;
-            this.SpectrumAnalyzer1.OnGetInput = null;
-            this.SpectrumAnalyzer1.OnNotifyUpdate = null;
-            this.SpectrumAnalyzer1.OnParameterUpdate = null;
-            this.SpectrumAnalyzer1.OnPeaksUpdate = null;
-            this.SpectrumAnalyzer1.Output = null;
-            this.SpectrumAnalyzer1.Peaks.HarmonicsCount = 10;
-            this.SpectrumAnalyzer1.Peaks.Interpolation.RecursiveHarmonics = Dew.Signal.TRecursiveHarmonics.rhNone;
-            this.SpectrumAnalyzer1.Peaks.LargestCount = 1;
-            this.SpectrumAnalyzer1.Report.AmplitudeFormat = null;
-            this.SpectrumAnalyzer1.Report.FrequencyFormat = null;
-            this.SpectrumAnalyzer1.Report.PhaseFormat = null;
-            this.SpectrumAnalyzer1.Report.UseTab = false;
-            this.SpectrumAnalyzer1.Rotation = 0;
-            this.SpectrumAnalyzer1.SpectrumScale = 0D;
-            this.SpectrumAnalyzer1.Stats.Averaged = 0;
-            this.SpectrumAnalyzer1.Stats.Averages = 30;
-            this.SpectrumAnalyzer1.Stats.ExpDecay = 5;
-            this.SpectrumAnalyzer1.Window = Dew.Signal.TSignalWindowType.wtHanning;
-            this.SpectrumAnalyzer1.ZeroPadding = 1;
-            this.SpectrumAnalyzer1.OnParameterUpdateEvent += new Dew.Math.TNotifyEvent(this.SpectrumAnalyzer1_OnParameterUpdateEvent);
+            // splitter1
+            // 
+            this.splitter1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.splitter1.Location = new System.Drawing.Point(0, 210);
+            this.splitter1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.splitter1.Name = "splitter1";
+            this.splitter1.Size = new System.Drawing.Size(912, 3);
+            this.splitter1.TabIndex = 11;
+            this.splitter1.TabStop = false;
             // 
             // SpectrumChart1
             // 
@@ -1541,14 +1813,10 @@
             // 
             // 
             // 
-            this.SpectrumChart1.Axes.Bottom.Automatic = false;
-            this.SpectrumChart1.Axes.Bottom.AutomaticMaximum = false;
-            this.SpectrumChart1.Axes.Bottom.AutomaticMinimum = false;
             // 
             // 
             // 
             this.SpectrumChart1.Axes.Bottom.Grid.DrawEvery = 1;
-            this.SpectrumChart1.Axes.Bottom.Grid.Visible = false;
             // 
             // 
             // 
@@ -1600,9 +1868,7 @@
             this.SpectrumChart1.Axes.Bottom.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
             this.SpectrumChart1.Axes.Bottom.Labels.Shadow.Brush.Solid = true;
             this.SpectrumChart1.Axes.Bottom.Labels.Shadow.Brush.Visible = true;
-            this.SpectrumChart1.Axes.Bottom.Maximum = 0D;
             this.SpectrumChart1.Axes.Bottom.MaximumOffset = 5;
-            this.SpectrumChart1.Axes.Bottom.Minimum = 0D;
             this.SpectrumChart1.Axes.Bottom.MinimumOffset = 5;
             // 
             // 
@@ -1926,13 +2192,6 @@
             // 
             // 
             // 
-            this.SpectrumChart1.Axes.Left.Automatic = false;
-            this.SpectrumChart1.Axes.Left.AutomaticMaximum = false;
-            this.SpectrumChart1.Axes.Left.AutomaticMinimum = false;
-            // 
-            // 
-            // 
-            this.SpectrumChart1.Axes.Left.AxisPen.Visible = false;
             // 
             // 
             // 
@@ -1987,8 +2246,6 @@
             this.SpectrumChart1.Axes.Left.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
             this.SpectrumChart1.Axes.Left.Labels.Shadow.Brush.Solid = true;
             this.SpectrumChart1.Axes.Left.Labels.Shadow.Brush.Visible = true;
-            this.SpectrumChart1.Axes.Left.Maximum = 0D;
-            this.SpectrumChart1.Axes.Left.Minimum = 0D;
             // 
             // 
             // 
@@ -2059,10 +2316,6 @@
             this.SpectrumChart1.Axes.Right.Automatic = false;
             this.SpectrumChart1.Axes.Right.AutomaticMaximum = false;
             this.SpectrumChart1.Axes.Right.AutomaticMinimum = false;
-            // 
-            // 
-            // 
-            this.SpectrumChart1.Axes.Right.AxisPen.Visible = false;
             // 
             // 
             // 
@@ -2562,9 +2815,9 @@
             this.SpectrumChart1.Panel.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
             this.SpectrumChart1.Panel.Shadow.Brush.Solid = true;
             this.SpectrumChart1.Panel.Shadow.Brush.Visible = true;
-            this.SpectrumChart1.Series.Add(this.points2);
             this.SpectrumChart1.Series.Add(this.fastLine2);
-            this.SpectrumChart1.Size = new System.Drawing.Size(937, 210);
+            this.SpectrumChart1.Series.Add(this.points2);
+            this.SpectrumChart1.Size = new System.Drawing.Size(912, 210);
             this.SpectrumChart1.SpectrumPart = Dew.Signal.Tee.SpectrumPart.sppAmplt;
             spectrumTeeItem1.Caption = null;
             spectrumTeeItem1.Input = this.SpectrumAnalyzer1;
@@ -2682,10 +2935,6 @@
             // 
             // 
             this.SpectrumChart1.Walls.Back.Brush.Color = System.Drawing.Color.Silver;
-            // 
-            // 
-            // 
-            this.SpectrumChart1.Walls.Back.Brush.Gradient.Visible = true;
             this.SpectrumChart1.Walls.Back.Brush.Solid = true;
             this.SpectrumChart1.Walls.Back.Brush.Visible = false;
             // 
@@ -2948,7 +3197,7 @@
             // 
             // 
             // 
-            this.points2.Marks.TailParams.CustomPointPos = ((System.Drawing.PointF)(resources.GetObject("resource.CustomPointPos1")));
+            this.points2.Marks.TailParams.CustomPointPos = ((System.Drawing.PointF)(resources.GetObject("resource.CustomPointPos2")));
             this.points2.Marks.TailParams.Margin = 0F;
             this.points2.Marks.TailParams.PointerHeight = 8D;
             this.points2.Marks.TailParams.PointerWidth = 8D;
@@ -2987,302 +3236,6 @@
             this.points2.YValues.DataMember = "Y";
             this.points2.YValues.Series = this.points2;
             // 
-            // fastLine2
-            // 
-            // 
-            // 
-            // 
-            this.fastLine2.Brush.Color = System.Drawing.Color.Empty;
-            this.fastLine2.Brush.Solid = true;
-            this.fastLine2.Brush.Visible = true;
-            this.fastLine2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(102)))), ((int)(((byte)(163)))));
-            this.fastLine2.ColorEach = false;
-            this.fastLine2.Cursor = cursor1;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.fastLine2.Legend.Brush.Color = System.Drawing.Color.White;
-            this.fastLine2.Legend.Brush.Solid = true;
-            this.fastLine2.Legend.Brush.Visible = true;
-            // 
-            // 
-            // 
-            this.fastLine2.Legend.Font.Bold = false;
-            // 
-            // 
-            // 
-            this.fastLine2.Legend.Font.Brush.Color = System.Drawing.Color.Black;
-            this.fastLine2.Legend.Font.Brush.Solid = true;
-            this.fastLine2.Legend.Font.Brush.Visible = true;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.fastLine2.Legend.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.fastLine2.Legend.Font.Shadow.Brush.Solid = true;
-            this.fastLine2.Legend.Font.Shadow.Brush.Visible = true;
-            this.fastLine2.Legend.Font.Size = 8;
-            this.fastLine2.Legend.Font.SizeFloat = 8F;
-            this.fastLine2.Legend.Font.Style = Steema.TeeChart.Drawing.FontStyle.Regular;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.fastLine2.Legend.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.fastLine2.Legend.ImageBevel.Brush.Solid = true;
-            this.fastLine2.Legend.ImageBevel.Brush.Visible = true;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.fastLine2.Legend.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.fastLine2.Legend.Shadow.Brush.Solid = true;
-            this.fastLine2.Legend.Shadow.Brush.Visible = true;
-            // 
-            // 
-            // 
-            this.fastLine2.LinePen.Color = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(102)))), ((int)(((byte)(163)))));
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.fastLine2.Marks.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.fastLine2.Marks.Brush.Solid = true;
-            this.fastLine2.Marks.Brush.Visible = true;
-            // 
-            // 
-            // 
-            this.fastLine2.Marks.Font.Bold = false;
-            // 
-            // 
-            // 
-            this.fastLine2.Marks.Font.Brush.Color = System.Drawing.Color.Black;
-            this.fastLine2.Marks.Font.Brush.Solid = true;
-            this.fastLine2.Marks.Font.Brush.Visible = true;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.fastLine2.Marks.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.fastLine2.Marks.Font.Shadow.Brush.Solid = true;
-            this.fastLine2.Marks.Font.Shadow.Brush.Visible = true;
-            this.fastLine2.Marks.Font.Size = 8;
-            this.fastLine2.Marks.Font.SizeFloat = 8F;
-            this.fastLine2.Marks.Font.Style = Steema.TeeChart.Drawing.FontStyle.Regular;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.fastLine2.Marks.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.fastLine2.Marks.ImageBevel.Brush.Solid = true;
-            this.fastLine2.Marks.ImageBevel.Brush.Visible = true;
-            // 
-            // 
-            // 
-            this.fastLine2.Marks.Pen.Color = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(138)))), ((int)(((byte)(193)))));
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.fastLine2.Marks.Shadow.Brush.Color = System.Drawing.Color.Gray;
-            this.fastLine2.Marks.Shadow.Brush.Solid = true;
-            this.fastLine2.Marks.Shadow.Brush.Visible = true;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.fastLine2.Marks.Symbol.Brush.Color = System.Drawing.Color.White;
-            this.fastLine2.Marks.Symbol.Brush.Solid = true;
-            this.fastLine2.Marks.Symbol.Brush.Visible = true;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.fastLine2.Marks.Symbol.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.fastLine2.Marks.Symbol.ImageBevel.Brush.Solid = true;
-            this.fastLine2.Marks.Symbol.ImageBevel.Brush.Visible = true;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.fastLine2.Marks.Symbol.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.fastLine2.Marks.Symbol.Shadow.Brush.Solid = true;
-            this.fastLine2.Marks.Symbol.Shadow.Brush.Visible = true;
-            // 
-            // 
-            // 
-            this.fastLine2.Marks.TailParams.CustomPointPos = ((System.Drawing.PointF)(resources.GetObject("resource.CustomPointPos2")));
-            this.fastLine2.Marks.TailParams.Margin = 0F;
-            this.fastLine2.Marks.TailParams.PointerHeight = 8D;
-            this.fastLine2.Marks.TailParams.PointerWidth = 8D;
-            this.fastLine2.OriginalCursor = cursor1;
-            this.fastLine2.RandomData = true;
-            this.fastLine2.Title = "series1";
-            this.fastLine2.TreatNulls = Steema.TeeChart.Styles.TreatNullsStyle.Ignore;
-            this.fastLine2.Type = "Steema.TeeChart.Styles.FastLine";
-            this.fastLine2.UseExtendedNumRange = false;
-            // 
-            // 
-            // 
-            this.fastLine2.XValues.DataMember = "X";
-            this.fastLine2.XValues.Order = Steema.TeeChart.Styles.ValueListOrder.Ascending;
-            this.fastLine2.XValues.Series = this.fastLine2;
-            // 
-            // 
-            // 
-            this.fastLine2.YValues.DataMember = "Y";
-            this.fastLine2.YValues.Series = this.fastLine2;
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.richTextBox1.Location = new System.Drawing.Point(0, 0);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(937, 110);
-            this.richTextBox1.TabIndex = 1;
-            this.richTextBox1.Text = "richTextBox1";
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.timeChartButton);
-            this.panel1.Controls.Add(this.spectrumChartButton);
-            this.panel1.Controls.Add(this.playbackButton);
-            this.panel1.Controls.Add(this.spectrumButton);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Controls.Add(this.openButton);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 514);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(937, 44);
-            this.panel1.TabIndex = 9;
-            // 
-            // timeChartButton
-            // 
-            this.timeChartButton.Location = new System.Drawing.Point(324, 7);
-            this.timeChartButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.timeChartButton.Name = "timeChartButton";
-            this.timeChartButton.Size = new System.Drawing.Size(91, 27);
-            this.timeChartButton.TabIndex = 6;
-            this.timeChartButton.Text = "Time chart...";
-            this.timeChartButton.UseVisualStyleBackColor = true;
-            this.timeChartButton.Click += new System.EventHandler(this.timeChartButton_Click);
-            // 
-            // spectrumChartButton
-            // 
-            this.spectrumChartButton.Location = new System.Drawing.Point(203, 7);
-            this.spectrumChartButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.spectrumChartButton.Name = "spectrumChartButton";
-            this.spectrumChartButton.Size = new System.Drawing.Size(114, 27);
-            this.spectrumChartButton.TabIndex = 5;
-            this.spectrumChartButton.Text = "Spectrum chart...";
-            this.spectrumChartButton.UseVisualStyleBackColor = true;
-            this.spectrumChartButton.Click += new System.EventHandler(this.spectrumChartButton_Click);
-            // 
-            // playbackButton
-            // 
-            this.playbackButton.Location = new System.Drawing.Point(108, 7);
-            this.playbackButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.playbackButton.Name = "playbackButton";
-            this.playbackButton.Size = new System.Drawing.Size(88, 27);
-            this.playbackButton.TabIndex = 4;
-            this.playbackButton.Text = "Playback...";
-            this.playbackButton.UseVisualStyleBackColor = true;
-            this.playbackButton.Click += new System.EventHandler(this.playbackButton_Click);
-            // 
-            // spectrumButton
-            // 
-            this.spectrumButton.Location = new System.Drawing.Point(14, 7);
-            this.spectrumButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.spectrumButton.Name = "spectrumButton";
-            this.spectrumButton.Size = new System.Drawing.Size(88, 27);
-            this.spectrumButton.TabIndex = 3;
-            this.spectrumButton.Text = "Spectrum...";
-            this.spectrumButton.UseVisualStyleBackColor = true;
-            this.spectrumButton.Click += new System.EventHandler(this.spectrumButton_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(554, 13);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 15);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Monitor channel:";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Left",
-            "Right"});
-            this.comboBox1.Location = new System.Drawing.Point(662, 9);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(87, 23);
-            this.comboBox1.TabIndex = 1;
-            // 
-            // openButton
-            // 
-            this.openButton.Location = new System.Drawing.Point(460, 7);
-            this.openButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.openButton.Name = "openButton";
-            this.openButton.Size = new System.Drawing.Size(88, 27);
-            this.openButton.TabIndex = 0;
-            this.openButton.Text = "Open...";
-            this.openButton.UseVisualStyleBackColor = true;
-            this.openButton.Click += new System.EventHandler(this.buttonOpen_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.signalChart1);
-            this.panel2.Controls.Add(this.splitter1);
-            this.panel2.Controls.Add(this.SpectrumChart1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 110);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(937, 404);
-            this.panel2.TabIndex = 11;
-            this.panel2.Resize += new System.EventHandler(this.panel2_Resize);
-            // 
-            // splitter1
-            // 
-            this.splitter1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.splitter1.Location = new System.Drawing.Point(0, 210);
-            this.splitter1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(937, 3);
-            this.splitter1.TabIndex = 11;
-            this.splitter1.TabStop = false;
-            // 
             // SignalRead1
             // 
             this.SignalRead1.BandwidthL = 0D;
@@ -3292,6 +3245,7 @@
             this.SignalRead1.FloatPrecision = Dew.Math.TMtxFloatPrecision.mvDouble;
             this.SignalRead1.FloatPrecisionLock = false;
             this.SignalRead1.FramesPerSecond = 0.0078125D;
+            this.SignalRead1.Input = null;
             this.SignalRead1.IsDouble = true;
             this.SignalRead1.Length = 128;
             this.SignalRead1.Name = null;
@@ -3317,6 +3271,7 @@
             this.SignalOut1.Complex = false;
             this.SignalOut1.FloatPrecision = Dew.Math.TMtxFloatPrecision.mvDouble;
             this.SignalOut1.FloatPrecisionLock = false;
+            this.SignalOut1.Input = this.SignalRead1;
             this.SignalOut1.IsDouble = true;
             this.SignalOut1.Length = 128;
             this.SignalOut1.MonitorAggressiveness = -200;
@@ -3331,7 +3286,6 @@
             this.SignalOut1.Rounding = Dew.Math.TRounding.rnTrunc;
             this.SignalOut1.SamplingFrequency = 22050D;
             this.SignalOut1.ScaleFactor = 1D;
-            this.SignalOut1.Input = SignalRead1;
             // 
             // openFileDialog1
             // 
@@ -3395,7 +3349,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(937, 558);
+            this.ClientSize = new System.Drawing.Size(912, 558);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.richTextBox1);
@@ -3403,11 +3357,11 @@
             this.Name = "PlaybackDemoForm";
             this.Text = "PlaybackDemoForm";
             this.Load += new System.EventHandler(this.PlaybackDemoForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.signalChart1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SpectrumChart1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.signalChart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SpectrumChart1)).EndInit();
             this.ResumeLayout(false);
 
 		}

@@ -30,10 +30,6 @@
             Dew.Signal.TSignalItem tSignalItem1 = new Dew.Signal.TSignalItem();
             Dew.Signal.Tee.SignalTeeItem signalTeeItem1 = new Dew.Signal.Tee.SignalTeeItem();
             Dew.Signal.Tee.SignalTeeItem signalTeeItem2 = new Dew.Signal.Tee.SignalTeeItem();
-            this.bottomChart = new Dew.Signal.Tee.SignalChart();
-            this.axisScaleTool2 = new Dew.Signal.Tee.AxisScaleTool();
-            this.topChart = new Dew.Signal.Tee.SignalChart();
-            this.axisScaleTool1 = new Dew.Signal.Tee.AxisScaleTool();
             this.signalList = new Dew.Signal.TSignalList(this.components);
             this.mtxFastLine2 = new Dew.Math.Tee.MtxFastLine();
             this.mtxFastLine1 = new Dew.Math.Tee.MtxFastLine();
@@ -60,6 +56,10 @@
             this.signalWrite1 = new Dew.Signal.TSignalWrite(this.components);
             this.signalMux = new Dew.Signal.TSignalMux(this.components);
             this.signalAsio1 = new Dew.Signal.SignalAsio(this.components);
+            this.bottomChart = new Dew.Signal.Tee.SignalChart();
+            this.axisScaleTool2 = new Dew.Signal.Tee.AxisScaleTool();
+            this.topChart = new Dew.Signal.Tee.SignalChart();
+            this.axisScaleTool1 = new Dew.Signal.Tee.AxisScaleTool();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bottomChart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.topChart)).BeginInit();

@@ -14,6 +14,35 @@ namespace DSPDemo
 		{
 			// This call is required by the Windows Form Designer.
 			InitializeComponent();
+			
+            richTextBox1.Font = new Font(richTextBox1.Font.FontFamily, 10, FontStyle.Bold);
+            richTextBox1.SelectionFont = new Font(richTextBox1.Font.FontFamily, 12, richTextBox1.Font.Style);
+            richTextBox1.SelectionColor = Color.FromArgb(51, 51, 153);
+			Add("New features in v6.2");
+			Add("");			
+            richTextBox1.SelectionBullet = true;
+            richTextBox1.BulletIndent = 10;
+			Add("Support for Visual Studio 2022 v17.9.3");
+			Add("Support for .NET Core 7.0 and 8.0");
+			Add("Support for TeeChart v 2024.15.3");
+            richTextBox1.SelectionBullet = false;
+            richTextBox1.SelectionIndent = 0;
+            Add("");			
+			
+            richTextBox1.Font = new Font(richTextBox1.Font.FontFamily, 10, FontStyle.Bold);
+            richTextBox1.SelectionFont = new Font(richTextBox1.Font.FontFamily, 12, richTextBox1.Font.Style);
+            richTextBox1.SelectionColor = Color.FromArgb(51, 51, 153);
+            Add("New features in v6");
+            Add("");
+            richTextBox1.SelectionBullet = true;
+            richTextBox1.BulletIndent = 10;
+            Add("Rewritten in C# with support for .NET Core 5.");
+            Add("All the functions/components can work either with double and/or single precision.");
+            Add("Added FloatPrecision property to TSignal/TSignalList and TSpectrum/TSpectrumList and descendants.");
+            Add("FloatPrecision is selectable also at run-time.");
+            richTextBox1.SelectionBullet = false;
+            richTextBox1.BulletIndent = 10;
+            Add("");						
 
             richTextBox1.Font = new Font(richTextBox1.Font.FontFamily, 10, FontStyle.Bold);
             richTextBox1.SelectionFont = new Font(richTextBox1.Font.FontFamily, 12, richTextBox1.Font.Style);

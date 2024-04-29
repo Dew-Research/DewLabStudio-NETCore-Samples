@@ -27,11 +27,18 @@
         
 		private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AsioPlaybackForm));
+            Dew.Math.Tee.MtxVecTee.RegisterSeries();
+            Steema.TeeChart.Drawing.Cursor cursor1 = new Steema.TeeChart.Drawing.Cursor();
             Dew.Signal.Tee.SignalTeeItem signalTeeItem1 = new Dew.Signal.Tee.SignalTeeItem();
             Dew.Signal.Tee.SignalTeeItem signalTeeItem2 = new Dew.Signal.Tee.SignalTeeItem();
-            Steema.TeeChart.Drawing.Cursor cursor1 = new Steema.TeeChart.Drawing.Cursor();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AsioPlaybackForm));
+           
+
+            this.signalDemuxList = new Dew.Signal.TSignalDemuxList(components);
+            this.signalRateConverterList = new Dew.Signal.TSignalRateConverterList(components);
             this.signalList = new Dew.Signal.TSignalList(this.components);
+            this.mtxFastLine2 = new Dew.Math.Tee.MtxFastLine();
+            this.mtxFastLine1 = new Dew.Math.Tee.MtxFastLine();
             this.signalRead = new Dew.Signal.TSignalRead(this.components);
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -55,8 +62,6 @@
             this.axisScaleTool2 = new Dew.Signal.Tee.AxisScaleTool();
             this.topChart = new Dew.Signal.Tee.SignalChart();
             this.axisScaleTool1 = new Dew.Signal.Tee.AxisScaleTool();
-            this.mtxFastLine2 = new Dew.Math.Tee.MtxFastLine();
-            this.mtxFastLine1 = new Dew.Math.Tee.MtxFastLine();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.volumeTrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bottomChart)).BeginInit();
@@ -83,6 +88,327 @@
             this.signalList.OnParameterUpdate = null;
             this.signalList.PropagateTemplate = false;
             // 
+            // mtxFastLine2
+            // 
+            // 
+            // 
+            // 
+            this.mtxFastLine2.Brush.Color = System.Drawing.Color.Empty;
+            this.mtxFastLine2.Brush.Solid = true;
+            this.mtxFastLine2.Brush.Visible = true;
+            this.mtxFastLine2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.mtxFastLine2.ColorEach = false;
+            cursor1.CursorType = Steema.TeeChart.Drawing.CursorType.Default;
+            this.mtxFastLine2.Cursor = cursor1;
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            this.mtxFastLine2.Legend.Brush.Color = System.Drawing.Color.White;
+            this.mtxFastLine2.Legend.Brush.Solid = true;
+            this.mtxFastLine2.Legend.Brush.Visible = true;
+            // 
+            // 
+            // 
+            this.mtxFastLine2.Legend.Font.Bold = false;
+            // 
+            // 
+            // 
+            this.mtxFastLine2.Legend.Font.Brush.Color = System.Drawing.Color.Black;
+            this.mtxFastLine2.Legend.Font.Brush.Solid = true;
+            this.mtxFastLine2.Legend.Font.Brush.Visible = true;
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            this.mtxFastLine2.Legend.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
+            this.mtxFastLine2.Legend.Font.Shadow.Brush.Solid = true;
+            this.mtxFastLine2.Legend.Font.Shadow.Brush.Visible = true;
+            this.mtxFastLine2.Legend.Font.Size = 8;
+            this.mtxFastLine2.Legend.Font.SizeFloat = 8F;
+            this.mtxFastLine2.Legend.Font.Style = Steema.TeeChart.Drawing.FontStyle.Regular;
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            this.mtxFastLine2.Legend.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
+            this.mtxFastLine2.Legend.ImageBevel.Brush.Solid = true;
+            this.mtxFastLine2.Legend.ImageBevel.Brush.Visible = true;
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            this.mtxFastLine2.Legend.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
+            this.mtxFastLine2.Legend.Shadow.Brush.Solid = true;
+            this.mtxFastLine2.Legend.Shadow.Brush.Visible = true;
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            this.mtxFastLine2.Marks.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.mtxFastLine2.Marks.Brush.Solid = true;
+            this.mtxFastLine2.Marks.Brush.Visible = true;
+            // 
+            // 
+            // 
+            this.mtxFastLine2.Marks.Font.Bold = false;
+            // 
+            // 
+            // 
+            this.mtxFastLine2.Marks.Font.Brush.Color = System.Drawing.Color.Black;
+            this.mtxFastLine2.Marks.Font.Brush.Solid = true;
+            this.mtxFastLine2.Marks.Font.Brush.Visible = true;
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            this.mtxFastLine2.Marks.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
+            this.mtxFastLine2.Marks.Font.Shadow.Brush.Solid = true;
+            this.mtxFastLine2.Marks.Font.Shadow.Brush.Visible = true;
+            this.mtxFastLine2.Marks.Font.Size = 8;
+            this.mtxFastLine2.Marks.Font.SizeFloat = 8F;
+            this.mtxFastLine2.Marks.Font.Style = Steema.TeeChart.Drawing.FontStyle.Regular;
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            this.mtxFastLine2.Marks.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
+            this.mtxFastLine2.Marks.ImageBevel.Brush.Solid = true;
+            this.mtxFastLine2.Marks.ImageBevel.Brush.Visible = true;
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            this.mtxFastLine2.Marks.Shadow.Brush.Color = System.Drawing.Color.Gray;
+            this.mtxFastLine2.Marks.Shadow.Brush.Solid = true;
+            this.mtxFastLine2.Marks.Shadow.Brush.Visible = true;
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            this.mtxFastLine2.Marks.Symbol.Brush.Color = System.Drawing.Color.White;
+            this.mtxFastLine2.Marks.Symbol.Brush.Solid = true;
+            this.mtxFastLine2.Marks.Symbol.Brush.Visible = true;
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            this.mtxFastLine2.Marks.Symbol.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
+            this.mtxFastLine2.Marks.Symbol.ImageBevel.Brush.Solid = true;
+            this.mtxFastLine2.Marks.Symbol.ImageBevel.Brush.Visible = true;
+            // 
+            //  
+            // 
+            // 
+            // 
+            // 
+            this.mtxFastLine2.Marks.Symbol.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
+            this.mtxFastLine2.Marks.Symbol.Shadow.Brush.Solid = true;
+            this.mtxFastLine2.Marks.Symbol.Shadow.Brush.Visible = true;
+            // 
+            // 
+            // 
+            this.mtxFastLine2.Marks.TailParams.Margin = 0F;
+            this.mtxFastLine2.Marks.TailParams.PointerHeight = 8D;
+            this.mtxFastLine2.Marks.TailParams.PointerWidth = 8D;
+            this.mtxFastLine2.OriginalCursor = cursor1;
+            this.mtxFastLine2.RandomData = true;
+            this.mtxFastLine2.Title = "mtxFastLine2";
+            this.mtxFastLine2.TreatNulls = Steema.TeeChart.Styles.TreatNullsStyle.Ignore;
+            this.mtxFastLine2.Type = "Dew.Math.Tee.MtxFastLine";
+            this.mtxFastLine2.UseExtendedNumRange = false;
+            // 
+            // 
+            // 
+            this.mtxFastLine2.XValues.DataMember = "X";
+            this.mtxFastLine2.XValues.Order = Steema.TeeChart.Styles.ValueListOrder.Ascending;
+            this.mtxFastLine2.XValues.Series = this.mtxFastLine2;
+            // 
+            // 
+            // 
+            this.mtxFastLine2.YValues.DataMember = "Y";
+            this.mtxFastLine2.YValues.Series = this.mtxFastLine2;
+            // 
+            // mtxFastLine1
+            // 
+            // 
+            // 
+            // 
+            this.mtxFastLine1.Brush.Color = System.Drawing.Color.Empty;
+            this.mtxFastLine1.Brush.Solid = true;
+            this.mtxFastLine1.Brush.Visible = true;
+            this.mtxFastLine1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.mtxFastLine1.ColorEach = false;
+            this.mtxFastLine1.Cursor = cursor1;
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            this.mtxFastLine1.Legend.Brush.Color = System.Drawing.Color.White;
+            this.mtxFastLine1.Legend.Brush.Solid = true;
+            this.mtxFastLine1.Legend.Brush.Visible = true;
+            // 
+            // 
+            // 
+            this.mtxFastLine1.Legend.Font.Bold = false;
+            // 
+            // 
+            // 
+            this.mtxFastLine1.Legend.Font.Brush.Color = System.Drawing.Color.Black;
+            this.mtxFastLine1.Legend.Font.Brush.Solid = true;
+            this.mtxFastLine1.Legend.Font.Brush.Visible = true;
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            this.mtxFastLine1.Legend.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
+            this.mtxFastLine1.Legend.Font.Shadow.Brush.Solid = true;
+            this.mtxFastLine1.Legend.Font.Shadow.Brush.Visible = true;
+            this.mtxFastLine1.Legend.Font.Size = 8;
+            this.mtxFastLine1.Legend.Font.SizeFloat = 8F;
+            this.mtxFastLine1.Legend.Font.Style = Steema.TeeChart.Drawing.FontStyle.Regular;
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            this.mtxFastLine1.Legend.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
+            this.mtxFastLine1.Legend.ImageBevel.Brush.Solid = true;
+            this.mtxFastLine1.Legend.ImageBevel.Brush.Visible = true;
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            this.mtxFastLine1.Legend.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
+            this.mtxFastLine1.Legend.Shadow.Brush.Solid = true;
+            this.mtxFastLine1.Legend.Shadow.Brush.Visible = true;
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            this.mtxFastLine1.Marks.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.mtxFastLine1.Marks.Brush.Solid = true;
+            this.mtxFastLine1.Marks.Brush.Visible = true;
+            // 
+            // 
+            // 
+            this.mtxFastLine1.Marks.Font.Bold = false;
+            // 
+            // 
+            // 
+            this.mtxFastLine1.Marks.Font.Brush.Color = System.Drawing.Color.Black;
+            this.mtxFastLine1.Marks.Font.Brush.Solid = true;
+            this.mtxFastLine1.Marks.Font.Brush.Visible = true;
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            this.mtxFastLine1.Marks.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
+            this.mtxFastLine1.Marks.Font.Shadow.Brush.Solid = true;
+            this.mtxFastLine1.Marks.Font.Shadow.Brush.Visible = true;
+            this.mtxFastLine1.Marks.Font.Size = 8;
+            this.mtxFastLine1.Marks.Font.SizeFloat = 8F;
+            this.mtxFastLine1.Marks.Font.Style = Steema.TeeChart.Drawing.FontStyle.Regular;
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            this.mtxFastLine1.Marks.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
+            this.mtxFastLine1.Marks.ImageBevel.Brush.Solid = true;
+            this.mtxFastLine1.Marks.ImageBevel.Brush.Visible = true;
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            this.mtxFastLine1.Marks.Shadow.Brush.Color = System.Drawing.Color.Gray;
+            this.mtxFastLine1.Marks.Shadow.Brush.Solid = true;
+            this.mtxFastLine1.Marks.Shadow.Brush.Visible = true;
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            this.mtxFastLine1.Marks.Symbol.Brush.Color = System.Drawing.Color.White;
+            this.mtxFastLine1.Marks.Symbol.Brush.Solid = true;
+            this.mtxFastLine1.Marks.Symbol.Brush.Visible = true;
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            this.mtxFastLine1.Marks.Symbol.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
+            this.mtxFastLine1.Marks.Symbol.ImageBevel.Brush.Solid = true;
+            this.mtxFastLine1.Marks.Symbol.ImageBevel.Brush.Visible = true;
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            this.mtxFastLine1.Marks.Symbol.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
+            this.mtxFastLine1.Marks.Symbol.Shadow.Brush.Solid = true;
+            this.mtxFastLine1.Marks.Symbol.Shadow.Brush.Visible = true;
+            // 
+            // 
+            // 
+            this.mtxFastLine1.Marks.TailParams.Margin = 0F;
+            this.mtxFastLine1.Marks.TailParams.PointerHeight = 8D;
+            this.mtxFastLine1.Marks.TailParams.PointerWidth = 8D;
+            this.mtxFastLine1.OriginalCursor = cursor1;
+            this.mtxFastLine1.RandomData = true;
+            this.mtxFastLine1.Title = "mtxFastLine1";
+            this.mtxFastLine1.TreatNulls = Steema.TeeChart.Styles.TreatNullsStyle.Ignore;
+            this.mtxFastLine1.Type = "Dew.Math.Tee.MtxFastLine";
+            this.mtxFastLine1.UseExtendedNumRange = false;
+            // 
+            // 
+            // 
+            this.mtxFastLine1.XValues.DataMember = "X";
+            this.mtxFastLine1.XValues.Order = Steema.TeeChart.Styles.ValueListOrder.Ascending;
+            this.mtxFastLine1.XValues.Series = this.mtxFastLine1;
+            // 
+            // 
+            // 
+            this.mtxFastLine1.YValues.DataMember = "Y";
+            this.mtxFastLine1.YValues.Series = this.mtxFastLine1;
+            // 
             // signalRead
             // 
             this.signalRead.BandwidthL = 0D;
@@ -92,6 +418,7 @@
             this.signalRead.FloatPrecision = Dew.Math.TMtxFloatPrecision.mvDouble;
             this.signalRead.FloatPrecisionLock = false;
             this.signalRead.FramesPerSecond = 0.0078125D;
+            this.signalRead.Input = null;
             this.signalRead.IsDouble = true;
             this.signalRead.Length = 128;
             this.signalRead.Name = null;
@@ -113,7 +440,7 @@
             this.splitter1.Location = new System.Drawing.Point(0, 213);
             this.splitter1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(984, 3);
+            this.splitter1.Size = new System.Drawing.Size(1000, 3);
             this.splitter1.TabIndex = 1;
             this.splitter1.TabStop = false;
             // 
@@ -136,7 +463,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 503);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(984, 250);
+            this.panel1.Size = new System.Drawing.Size(1000, 250);
             this.panel1.TabIndex = 2;
             // 
             // volumeTrackBar
@@ -322,9 +649,9 @@
             // 
             // 
             // 
-            this.bottomChart.Axes.Bottom.Automatic = false;
-            this.bottomChart.Axes.Bottom.AutomaticMaximum = false;
-            this.bottomChart.Axes.Bottom.AutomaticMinimum = false;
+            this.bottomChart.Axes.Bottom.Automatic = true;
+            this.bottomChart.Axes.Bottom.AutomaticMaximum = true;
+            this.bottomChart.Axes.Bottom.AutomaticMinimum = true;
             // 
             // 
             // 
@@ -761,9 +1088,9 @@
             this.bottomChart.Axes.Left.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
             this.bottomChart.Axes.Left.Labels.Shadow.Brush.Solid = true;
             this.bottomChart.Axes.Left.Labels.Shadow.Brush.Visible = true;
-            this.bottomChart.Axes.Left.Maximum = 0.1D;
+            this.bottomChart.Axes.Left.Maximum = 1197D;
             this.bottomChart.Axes.Left.MaximumOffset = 1;
-            this.bottomChart.Axes.Left.Minimum = -0.1D;
+            this.bottomChart.Axes.Left.Minimum = 549D;
             this.bottomChart.Axes.Left.MinimumOffset = 1;
             // 
             // 
@@ -1338,14 +1665,15 @@
             this.bottomChart.Panel.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
             this.bottomChart.Panel.Shadow.Brush.Solid = true;
             this.bottomChart.Panel.Shadow.Brush.Visible = true;
+            this.bottomChart.Series.Add(this.mtxFastLine2);
             signalTeeItem1.Caption = null;
             signalTeeItem1.Input = null;
             signalTeeItem1.Inputs = this.signalList;
             signalTeeItem1.InputsItemIndex = 1;
-            signalTeeItem1.Series = null;
+            signalTeeItem1.Series = this.mtxFastLine2;
             signalTeeItem1.SeriesName = "mtxFastLine2";
             this.bottomChart.Signals.Add(signalTeeItem1);
-            this.bottomChart.Size = new System.Drawing.Size(984, 287);
+            this.bottomChart.Size = new System.Drawing.Size(1000, 287);
             // 
             // 
             // 
@@ -1456,10 +1784,6 @@
             // 
             // 
             this.bottomChart.Walls.Back.Brush.Color = System.Drawing.Color.Silver;
-            // 
-            // 
-            // 
-            this.bottomChart.Walls.Back.Brush.Gradient.Visible = true;
             this.bottomChart.Walls.Back.Brush.Solid = true;
             this.bottomChart.Walls.Back.Brush.Visible = false;
             // 
@@ -1597,9 +1921,9 @@
             // 
             // 
             // 
-            this.topChart.Axes.Bottom.Automatic = false;
-            this.topChart.Axes.Bottom.AutomaticMaximum = false;
-            this.topChart.Axes.Bottom.AutomaticMinimum = false;
+            this.topChart.Axes.Bottom.Automatic = true;
+            this.topChart.Axes.Bottom.AutomaticMaximum = true;
+            this.topChart.Axes.Bottom.AutomaticMinimum = true;
             // 
             // 
             // 
@@ -2036,9 +2360,9 @@
             this.topChart.Axes.Left.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
             this.topChart.Axes.Left.Labels.Shadow.Brush.Solid = true;
             this.topChart.Axes.Left.Labels.Shadow.Brush.Visible = true;
-            this.topChart.Axes.Left.Maximum = 0.1D;
+            this.topChart.Axes.Left.Maximum = 726.4D;
             this.topChart.Axes.Left.MaximumOffset = 1;
-            this.topChart.Axes.Left.Minimum = -0.1D;
+            this.topChart.Axes.Left.Minimum = 205.6D;
             this.topChart.Axes.Left.MinimumOffset = 1;
             // 
             // 
@@ -2613,14 +2937,15 @@
             this.topChart.Panel.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
             this.topChart.Panel.Shadow.Brush.Solid = true;
             this.topChart.Panel.Shadow.Brush.Visible = true;
+            this.topChart.Series.Add(this.mtxFastLine1);
             signalTeeItem2.Caption = null;
             signalTeeItem2.Input = null;
             signalTeeItem2.Inputs = this.signalList;
             signalTeeItem2.InputsItemIndex = 0;
-            signalTeeItem2.Series = null;
+            signalTeeItem2.Series = this.mtxFastLine1;
             signalTeeItem2.SeriesName = "mtxFastLine1";
             this.topChart.Signals.Add(signalTeeItem2);
-            this.topChart.Size = new System.Drawing.Size(984, 213);
+            this.topChart.Size = new System.Drawing.Size(1000, 213);
             // 
             // 
             // 
@@ -2731,10 +3056,6 @@
             // 
             // 
             this.topChart.Walls.Back.Brush.Color = System.Drawing.Color.Silver;
-            // 
-            // 
-            // 
-            this.topChart.Walls.Back.Brush.Gradient.Visible = true;
             this.topChart.Walls.Back.Brush.Solid = true;
             this.topChart.Walls.Back.Brush.Visible = false;
             // 
@@ -2863,326 +3184,11 @@
             this.axisScaleTool1.Type = "Dew.Signal.Tee.AxisScaleTool";
             this.axisScaleTool1.UpperMargin = 10;
             // 
-            // mtxFastLine2
-            // 
-            // 
-            // 
-            // 
-            this.mtxFastLine2.Brush.Color = System.Drawing.Color.Empty;
-            this.mtxFastLine2.Brush.Solid = true;
-            this.mtxFastLine2.Brush.Visible = true;
-            this.mtxFastLine2.Color = System.Drawing.Color.Empty;
-            this.mtxFastLine2.ColorEach = false;
-            cursor1.CursorType = Steema.TeeChart.Drawing.CursorType.Default;
-            this.mtxFastLine2.Cursor = cursor1;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.mtxFastLine2.Legend.Brush.Color = System.Drawing.Color.White;
-            this.mtxFastLine2.Legend.Brush.Solid = true;
-            this.mtxFastLine2.Legend.Brush.Visible = true;
-            // 
-            // 
-            // 
-            this.mtxFastLine2.Legend.Font.Bold = false;
-            // 
-            // 
-            // 
-            this.mtxFastLine2.Legend.Font.Brush.Color = System.Drawing.Color.Black;
-            this.mtxFastLine2.Legend.Font.Brush.Solid = true;
-            this.mtxFastLine2.Legend.Font.Brush.Visible = true;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.mtxFastLine2.Legend.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.mtxFastLine2.Legend.Font.Shadow.Brush.Solid = true;
-            this.mtxFastLine2.Legend.Font.Shadow.Brush.Visible = true;
-            this.mtxFastLine2.Legend.Font.Size = 8;
-            this.mtxFastLine2.Legend.Font.SizeFloat = 8F;
-            this.mtxFastLine2.Legend.Font.Style = Steema.TeeChart.Drawing.FontStyle.Regular;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.mtxFastLine2.Legend.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.mtxFastLine2.Legend.ImageBevel.Brush.Solid = true;
-            this.mtxFastLine2.Legend.ImageBevel.Brush.Visible = true;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.mtxFastLine2.Legend.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.mtxFastLine2.Legend.Shadow.Brush.Solid = true;
-            this.mtxFastLine2.Legend.Shadow.Brush.Visible = true;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.mtxFastLine2.Marks.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.mtxFastLine2.Marks.Brush.Solid = true;
-            this.mtxFastLine2.Marks.Brush.Visible = true;
-            // 
-            // 
-            // 
-            this.mtxFastLine2.Marks.Font.Bold = false;
-            // 
-            // 
-            // 
-            this.mtxFastLine2.Marks.Font.Brush.Color = System.Drawing.Color.Black;
-            this.mtxFastLine2.Marks.Font.Brush.Solid = true;
-            this.mtxFastLine2.Marks.Font.Brush.Visible = true;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.mtxFastLine2.Marks.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.mtxFastLine2.Marks.Font.Shadow.Brush.Solid = true;
-            this.mtxFastLine2.Marks.Font.Shadow.Brush.Visible = true;
-            this.mtxFastLine2.Marks.Font.Size = 8;
-            this.mtxFastLine2.Marks.Font.SizeFloat = 8F;
-            this.mtxFastLine2.Marks.Font.Style = Steema.TeeChart.Drawing.FontStyle.Regular;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.mtxFastLine2.Marks.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.mtxFastLine2.Marks.ImageBevel.Brush.Solid = true;
-            this.mtxFastLine2.Marks.ImageBevel.Brush.Visible = true;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.mtxFastLine2.Marks.Shadow.Brush.Color = System.Drawing.Color.Gray;
-            this.mtxFastLine2.Marks.Shadow.Brush.Solid = true;
-            this.mtxFastLine2.Marks.Shadow.Brush.Visible = true;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.mtxFastLine2.Marks.Symbol.Brush.Color = System.Drawing.Color.White;
-            this.mtxFastLine2.Marks.Symbol.Brush.Solid = true;
-            this.mtxFastLine2.Marks.Symbol.Brush.Visible = true;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.mtxFastLine2.Marks.Symbol.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.mtxFastLine2.Marks.Symbol.ImageBevel.Brush.Solid = true;
-            this.mtxFastLine2.Marks.Symbol.ImageBevel.Brush.Visible = true;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.mtxFastLine2.Marks.Symbol.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.mtxFastLine2.Marks.Symbol.Shadow.Brush.Solid = true;
-            this.mtxFastLine2.Marks.Symbol.Shadow.Brush.Visible = true;
-            // 
-            // 
-            // 
-            this.mtxFastLine2.Marks.TailParams.CustomPointPos = ((System.Drawing.PointF)(resources.GetObject("resource.CustomPointPos")));
-            this.mtxFastLine2.Marks.TailParams.Margin = 0F;
-            this.mtxFastLine2.Marks.TailParams.PointerHeight = 8D;
-            this.mtxFastLine2.Marks.TailParams.PointerWidth = 8D;
-            this.mtxFastLine2.OriginalCursor = cursor1;
-            this.mtxFastLine2.RandomData = true;
-            this.mtxFastLine2.TreatNulls = Steema.TeeChart.Styles.TreatNullsStyle.Ignore;
-            this.mtxFastLine2.Type = "Dew.Math.Tee.MtxFastLine";
-            this.mtxFastLine2.UseExtendedNumRange = false;
-            // 
-            // 
-            // 
-            this.mtxFastLine2.XValues.Series = this.mtxFastLine2;
-            // 
-            // 
-            // 
-            this.mtxFastLine2.YValues.Series = this.mtxFastLine2;
-            // 
-            // mtxFastLine1
-            // 
-            // 
-            // 
-            // 
-            this.mtxFastLine1.Brush.Color = System.Drawing.Color.Empty;
-            this.mtxFastLine1.Brush.Solid = true;
-            this.mtxFastLine1.Brush.Visible = true;
-            this.mtxFastLine1.Color = System.Drawing.Color.Empty;
-            this.mtxFastLine1.ColorEach = false;
-            this.mtxFastLine1.Cursor = cursor1;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.mtxFastLine1.Legend.Brush.Color = System.Drawing.Color.White;
-            this.mtxFastLine1.Legend.Brush.Solid = true;
-            this.mtxFastLine1.Legend.Brush.Visible = true;
-            // 
-            // 
-            // 
-            this.mtxFastLine1.Legend.Font.Bold = false;
-            // 
-            // 
-            // 
-            this.mtxFastLine1.Legend.Font.Brush.Color = System.Drawing.Color.Black;
-            this.mtxFastLine1.Legend.Font.Brush.Solid = true;
-            this.mtxFastLine1.Legend.Font.Brush.Visible = true;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.mtxFastLine1.Legend.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.mtxFastLine1.Legend.Font.Shadow.Brush.Solid = true;
-            this.mtxFastLine1.Legend.Font.Shadow.Brush.Visible = true;
-            this.mtxFastLine1.Legend.Font.Size = 8;
-            this.mtxFastLine1.Legend.Font.SizeFloat = 8F;
-            this.mtxFastLine1.Legend.Font.Style = Steema.TeeChart.Drawing.FontStyle.Regular;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.mtxFastLine1.Legend.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.mtxFastLine1.Legend.ImageBevel.Brush.Solid = true;
-            this.mtxFastLine1.Legend.ImageBevel.Brush.Visible = true;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.mtxFastLine1.Legend.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.mtxFastLine1.Legend.Shadow.Brush.Solid = true;
-            this.mtxFastLine1.Legend.Shadow.Brush.Visible = true;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.mtxFastLine1.Marks.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.mtxFastLine1.Marks.Brush.Solid = true;
-            this.mtxFastLine1.Marks.Brush.Visible = true;
-            // 
-            // 
-            // 
-            this.mtxFastLine1.Marks.Font.Bold = false;
-            // 
-            // 
-            // 
-            this.mtxFastLine1.Marks.Font.Brush.Color = System.Drawing.Color.Black;
-            this.mtxFastLine1.Marks.Font.Brush.Solid = true;
-            this.mtxFastLine1.Marks.Font.Brush.Visible = true;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.mtxFastLine1.Marks.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.mtxFastLine1.Marks.Font.Shadow.Brush.Solid = true;
-            this.mtxFastLine1.Marks.Font.Shadow.Brush.Visible = true;
-            this.mtxFastLine1.Marks.Font.Size = 8;
-            this.mtxFastLine1.Marks.Font.SizeFloat = 8F;
-            this.mtxFastLine1.Marks.Font.Style = Steema.TeeChart.Drawing.FontStyle.Regular;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.mtxFastLine1.Marks.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.mtxFastLine1.Marks.ImageBevel.Brush.Solid = true;
-            this.mtxFastLine1.Marks.ImageBevel.Brush.Visible = true;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.mtxFastLine1.Marks.Shadow.Brush.Color = System.Drawing.Color.Gray;
-            this.mtxFastLine1.Marks.Shadow.Brush.Solid = true;
-            this.mtxFastLine1.Marks.Shadow.Brush.Visible = true;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.mtxFastLine1.Marks.Symbol.Brush.Color = System.Drawing.Color.White;
-            this.mtxFastLine1.Marks.Symbol.Brush.Solid = true;
-            this.mtxFastLine1.Marks.Symbol.Brush.Visible = true;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.mtxFastLine1.Marks.Symbol.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.mtxFastLine1.Marks.Symbol.ImageBevel.Brush.Solid = true;
-            this.mtxFastLine1.Marks.Symbol.ImageBevel.Brush.Visible = true;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.mtxFastLine1.Marks.Symbol.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.mtxFastLine1.Marks.Symbol.Shadow.Brush.Solid = true;
-            this.mtxFastLine1.Marks.Symbol.Shadow.Brush.Visible = true;
-            // 
-            // 
-            // 
-            this.mtxFastLine1.Marks.TailParams.CustomPointPos = ((System.Drawing.PointF)(resources.GetObject("resource.CustomPointPos1")));
-            this.mtxFastLine1.Marks.TailParams.Margin = 0F;
-            this.mtxFastLine1.Marks.TailParams.PointerHeight = 8D;
-            this.mtxFastLine1.Marks.TailParams.PointerWidth = 8D;
-            this.mtxFastLine1.OriginalCursor = cursor1;
-            this.mtxFastLine1.RandomData = true;
-            this.mtxFastLine1.TreatNulls = Steema.TeeChart.Styles.TreatNullsStyle.Ignore;
-            this.mtxFastLine1.Type = "Dew.Math.Tee.MtxFastLine";
-            this.mtxFastLine1.UseExtendedNumRange = false;
-            // 
-            // 
-            // 
-            this.mtxFastLine1.XValues.Series = this.mtxFastLine1;
-            // 
-            // 
-            // 
-            this.mtxFastLine1.YValues.Series = this.mtxFastLine1;
-            // 
             // AsioPlaybackForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 753);
+            this.ClientSize = new System.Drawing.Size(1000, 753);
             this.Controls.Add(this.bottomChart);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.splitter1);

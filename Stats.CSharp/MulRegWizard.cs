@@ -822,7 +822,7 @@ namespace StatsMasterDemo
             st += "KS\t" + Math387.FormatSample(FmtString, statval) + "\t" + Math387.FormatSample(FmtString, signif) + "\t" + HypResult(hres) + "\n";
 
             // Lilliefors test
-            statval = Statistics.GOFLillieTest(data, out hres, out signif, tMtxMulLinReg1.Alpha,1e-2);
+            statval = Statistics.GOFLillieTest(data, out hres, out signif, tMtxMulLinReg1.Alpha,1e-4);
             st += "Lillie\t" + Math387.FormatSample(FmtString, statval) + "\t" + Math387.FormatSample(FmtString, signif) + "\t" + HypResult(hres) + "\n";
 
             // Bera-Jarque

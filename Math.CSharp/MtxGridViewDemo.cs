@@ -206,8 +206,6 @@ namespace MtxVecDemo
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.mtxGridView1.DefaultCellStyle = dataGridViewCellStyle1;
             this.mtxGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mtxGridView1.IntPrecision = Dew.Math.TIntPrecision.prInt32;
-            this.mtxGridView1.IsInteger = false;
             this.mtxGridView1.Location = new System.Drawing.Point(153, 0);
             this.mtxGridView1.MultiSelect = false;
             this.mtxGridView1.Name = "mtxGridView1";

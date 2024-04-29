@@ -61,323 +61,318 @@ namespace MtxVecDemo
 			base.Dispose( disposing );
 		}
 
-		#region Designer generated code
-		/// <summary>
-		/// Required method for Designer support - do not modify
-		/// the contents of this method with the code editor.
-		/// </summary>
-		private void InitializeComponent()
-		{
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.label1 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButtonvfShur = new System.Windows.Forms.RadioButton();
-            this.radioButtonvfEig = new System.Windows.Forms.RadioButton();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.radioButtonbtFull = new System.Windows.Forms.RadioButton();
-            this.radioButtonbtPerm = new System.Windows.Forms.RadioButton();
-            this.radioButtonbtScale = new System.Windows.Forms.RadioButton();
-            this.radioButtonbtNone = new System.Windows.Forms.RadioButton();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.radioButtonLeft = new System.Windows.Forms.RadioButton();
-            this.radioButtonRight = new System.Windows.Forms.RadioButton();
-            this.button1 = new System.Windows.Forms.Button();
-            this.mtxGridView1 = new Dew.Math.Controls.MtxGridView();
-            this.mtxGridView2 = new Dew.Math.Controls.MtxGridView();
-            this.mtxGridView3 = new Dew.Math.Controls.MtxGridView();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.mtxGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mtxGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mtxGridView3)).BeginInit();
-            this.SuspendLayout();
+        #region Designer generated code
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            label1 = new Label();
+            groupBox1 = new GroupBox();
+            radioButtonvfShur = new RadioButton();
+            radioButtonvfEig = new RadioButton();
+            groupBox2 = new GroupBox();
+            radioButtonbtFull = new RadioButton();
+            radioButtonbtPerm = new RadioButton();
+            radioButtonbtScale = new RadioButton();
+            radioButtonbtNone = new RadioButton();
+            label2 = new Label();
+            label3 = new Label();
+            radioButtonLeft = new RadioButton();
+            radioButtonRight = new RadioButton();
+            button1 = new Button();
+            mtxGridView1 = new MtxGridView();
+            mtxGridView2 = new MtxGridView();
+            mtxGridView3 = new MtxGridView();
+            panel2.SuspendLayout();
+            panel3.SuspendLayout();
+            groupBox1.SuspendLayout();
+            groupBox2.SuspendLayout();
+            ((ISupportInitialize)mtxGridView1).BeginInit();
+            ((ISupportInitialize)mtxGridView2).BeginInit();
+            ((ISupportInitialize)mtxGridView3).BeginInit();
+            SuspendLayout();
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.mtxGridView3);
-            this.panel2.Controls.Add(this.mtxGridView2);
-            this.panel2.Controls.Add(this.mtxGridView1);
-            this.panel2.Controls.Add(this.radioButtonRight);
-            this.panel2.Controls.Add(this.radioButtonLeft);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.groupBox2);
-            this.panel2.Controls.Add(this.groupBox1);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(0, 170);
-            this.panel2.Size = new System.Drawing.Size(878, 457);
+            panel2.Controls.Add(mtxGridView3);
+            panel2.Controls.Add(mtxGridView2);
+            panel2.Controls.Add(mtxGridView1);
+            panel2.Controls.Add(radioButtonRight);
+            panel2.Controls.Add(radioButtonLeft);
+            panel2.Controls.Add(label3);
+            panel2.Controls.Add(label2);
+            panel2.Controls.Add(groupBox2);
+            panel2.Controls.Add(groupBox1);
+            panel2.Controls.Add(label1);
+            panel2.Size = new Size(878, 489);
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.button1);
-            this.panel3.Location = new System.Drawing.Point(0, 627);
-            this.panel3.Size = new System.Drawing.Size(878, 59);
+            panel3.Controls.Add(button1);
+            panel3.Location = new Point(0, 627);
+            panel3.Size = new Size(878, 59);
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Size = new System.Drawing.Size(878, 170);
+            richTextBox1.Size = new Size(878, 138);
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(10, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Matrix A :";
+            label1.Location = new Point(10, 10);
+            label1.Name = "label1";
+            label1.Size = new Size(120, 20);
+            label1.TabIndex = 0;
+            label1.Text = "Matrix A :";
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.radioButtonvfShur);
-            this.groupBox1.Controls.Add(this.radioButtonvfEig);
-            this.groupBox1.Location = new System.Drawing.Point(403, 30);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(106, 68);
-            this.groupBox1.TabIndex = 2;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Vector Form";
+            groupBox1.Controls.Add(radioButtonvfShur);
+            groupBox1.Controls.Add(radioButtonvfEig);
+            groupBox1.Location = new Point(403, 30);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(106, 68);
+            groupBox1.TabIndex = 2;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Vector Form";
             // 
             // radioButtonvfShur
             // 
-            this.radioButtonvfShur.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.radioButtonvfShur.Location = new System.Drawing.Point(10, 39);
-            this.radioButtonvfShur.Name = "radioButtonvfShur";
-            this.radioButtonvfShur.Size = new System.Drawing.Size(67, 20);
-            this.radioButtonvfShur.TabIndex = 1;
-            this.radioButtonvfShur.Text = "vfShur";
-            this.radioButtonvfShur.Click += new System.EventHandler(this.radioButtonForm_clicked);
+            radioButtonvfShur.FlatStyle = FlatStyle.System;
+            radioButtonvfShur.Location = new Point(10, 39);
+            radioButtonvfShur.Name = "radioButtonvfShur";
+            radioButtonvfShur.Size = new Size(67, 20);
+            radioButtonvfShur.TabIndex = 1;
+            radioButtonvfShur.Text = "vfShur";
+            radioButtonvfShur.Click += radioButtonForm_clicked;
             // 
             // radioButtonvfEig
             // 
-            this.radioButtonvfEig.Checked = true;
-            this.radioButtonvfEig.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.radioButtonvfEig.Location = new System.Drawing.Point(10, 20);
-            this.radioButtonvfEig.Name = "radioButtonvfEig";
-            this.radioButtonvfEig.Size = new System.Drawing.Size(67, 19);
-            this.radioButtonvfEig.TabIndex = 0;
-            this.radioButtonvfEig.TabStop = true;
-            this.radioButtonvfEig.Text = "vfEig";
-            this.radioButtonvfEig.Click += new System.EventHandler(this.radioButtonForm_clicked);
+            radioButtonvfEig.Checked = true;
+            radioButtonvfEig.FlatStyle = FlatStyle.System;
+            radioButtonvfEig.Location = new Point(10, 20);
+            radioButtonvfEig.Name = "radioButtonvfEig";
+            radioButtonvfEig.Size = new Size(67, 19);
+            radioButtonvfEig.TabIndex = 0;
+            radioButtonvfEig.TabStop = true;
+            radioButtonvfEig.Text = "vfEig";
+            radioButtonvfEig.Click += radioButtonForm_clicked;
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.radioButtonbtFull);
-            this.groupBox2.Controls.Add(this.radioButtonbtPerm);
-            this.groupBox2.Controls.Add(this.radioButtonbtScale);
-            this.groupBox2.Controls.Add(this.radioButtonbtNone);
-            this.groupBox2.Location = new System.Drawing.Point(518, 30);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(183, 68);
-            this.groupBox2.TabIndex = 3;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Balance";
+            groupBox2.Controls.Add(radioButtonbtFull);
+            groupBox2.Controls.Add(radioButtonbtPerm);
+            groupBox2.Controls.Add(radioButtonbtScale);
+            groupBox2.Controls.Add(radioButtonbtNone);
+            groupBox2.Location = new Point(518, 30);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(183, 68);
+            groupBox2.TabIndex = 3;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "Balance";
             // 
             // radioButtonbtFull
             // 
-            this.radioButtonbtFull.Checked = true;
-            this.radioButtonbtFull.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.radioButtonbtFull.Location = new System.Drawing.Point(96, 39);
-            this.radioButtonbtFull.Name = "radioButtonbtFull";
-            this.radioButtonbtFull.Size = new System.Drawing.Size(77, 20);
-            this.radioButtonbtFull.TabIndex = 3;
-            this.radioButtonbtFull.TabStop = true;
-            this.radioButtonbtFull.Text = "btFull";
-            this.radioButtonbtFull.Click += new System.EventHandler(this.radioButtonBalance_clicked);
+            radioButtonbtFull.Checked = true;
+            radioButtonbtFull.FlatStyle = FlatStyle.System;
+            radioButtonbtFull.Location = new Point(96, 39);
+            radioButtonbtFull.Name = "radioButtonbtFull";
+            radioButtonbtFull.Size = new Size(77, 20);
+            radioButtonbtFull.TabIndex = 3;
+            radioButtonbtFull.TabStop = true;
+            radioButtonbtFull.Text = "btFull";
+            radioButtonbtFull.Click += radioButtonBalance_clicked;
             // 
             // radioButtonbtPerm
             // 
-            this.radioButtonbtPerm.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.radioButtonbtPerm.Location = new System.Drawing.Point(96, 20);
-            this.radioButtonbtPerm.Name = "radioButtonbtPerm";
-            this.radioButtonbtPerm.Size = new System.Drawing.Size(77, 19);
-            this.radioButtonbtPerm.TabIndex = 2;
-            this.radioButtonbtPerm.Text = "btPerm";
-            this.radioButtonbtPerm.Click += new System.EventHandler(this.radioButtonBalance_clicked);
+            radioButtonbtPerm.FlatStyle = FlatStyle.System;
+            radioButtonbtPerm.Location = new Point(96, 20);
+            radioButtonbtPerm.Name = "radioButtonbtPerm";
+            radioButtonbtPerm.Size = new Size(77, 19);
+            radioButtonbtPerm.TabIndex = 2;
+            radioButtonbtPerm.Text = "btPerm";
+            radioButtonbtPerm.Click += radioButtonBalance_clicked;
             // 
             // radioButtonbtScale
             // 
-            this.radioButtonbtScale.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.radioButtonbtScale.Location = new System.Drawing.Point(10, 39);
-            this.radioButtonbtScale.Name = "radioButtonbtScale";
-            this.radioButtonbtScale.Size = new System.Drawing.Size(76, 20);
-            this.radioButtonbtScale.TabIndex = 1;
-            this.radioButtonbtScale.Text = "btScale";
-            this.radioButtonbtScale.Click += new System.EventHandler(this.radioButtonBalance_clicked);
+            radioButtonbtScale.FlatStyle = FlatStyle.System;
+            radioButtonbtScale.Location = new Point(10, 39);
+            radioButtonbtScale.Name = "radioButtonbtScale";
+            radioButtonbtScale.Size = new Size(76, 20);
+            radioButtonbtScale.TabIndex = 1;
+            radioButtonbtScale.Text = "btScale";
+            radioButtonbtScale.Click += radioButtonBalance_clicked;
             // 
             // radioButtonbtNone
             // 
-            this.radioButtonbtNone.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.radioButtonbtNone.Location = new System.Drawing.Point(10, 20);
-            this.radioButtonbtNone.Name = "radioButtonbtNone";
-            this.radioButtonbtNone.Size = new System.Drawing.Size(76, 19);
-            this.radioButtonbtNone.TabIndex = 0;
-            this.radioButtonbtNone.Text = "btNone";
-            this.radioButtonbtNone.Click += new System.EventHandler(this.radioButtonBalance_clicked);
+            radioButtonbtNone.FlatStyle = FlatStyle.System;
+            radioButtonbtNone.Location = new Point(10, 20);
+            radioButtonbtNone.Name = "radioButtonbtNone";
+            radioButtonbtNone.Size = new Size(76, 19);
+            radioButtonbtNone.TabIndex = 0;
+            radioButtonbtNone.Text = "btNone";
+            radioButtonbtNone.Click += radioButtonBalance_clicked;
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(10, 217);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(249, 19);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Eigenvalues are elements of vector D :";
+            label2.Location = new Point(10, 217);
+            label2.Name = "label2";
+            label2.Size = new Size(249, 19);
+            label2.TabIndex = 4;
+            label2.Text = "Eigenvalues are elements of vector D :";
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(384, 217);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(120, 19);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Eigenvectors";
+            label3.Location = new Point(384, 217);
+            label3.Name = "label3";
+            label3.Size = new Size(120, 19);
+            label3.TabIndex = 6;
+            label3.Text = "Eigenvectors";
             // 
             // radioButtonLeft
             // 
-            this.radioButtonLeft.Checked = true;
-            this.radioButtonLeft.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.radioButtonLeft.Location = new System.Drawing.Point(509, 217);
-            this.radioButtonLeft.Name = "radioButtonLeft";
-            this.radioButtonLeft.Size = new System.Drawing.Size(57, 19);
-            this.radioButtonLeft.TabIndex = 7;
-            this.radioButtonLeft.TabStop = true;
-            this.radioButtonLeft.Text = "Left";
-            this.radioButtonLeft.Click += new System.EventHandler(this.radioButtonEigenVectors_click);
+            radioButtonLeft.FlatStyle = FlatStyle.System;
+            radioButtonLeft.Location = new Point(509, 217);
+            radioButtonLeft.Name = "radioButtonLeft";
+            radioButtonLeft.Size = new Size(57, 19);
+            radioButtonLeft.TabIndex = 7;
+            radioButtonLeft.Text = "Left";
+            radioButtonLeft.Click += radioButtonEigenVectors_click;
             // 
             // radioButtonRight
             // 
-            this.radioButtonRight.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.radioButtonRight.Location = new System.Drawing.Point(566, 217);
-            this.radioButtonRight.Name = "radioButtonRight";
-            this.radioButtonRight.Size = new System.Drawing.Size(68, 19);
-            this.radioButtonRight.TabIndex = 8;
-            this.radioButtonRight.Text = "Right";
-            this.radioButtonRight.Click += new System.EventHandler(this.radioButtonEigenVectors_click);
+            radioButtonRight.Checked = true;
+            radioButtonRight.FlatStyle = FlatStyle.System;
+            radioButtonRight.Location = new Point(566, 217);
+            radioButtonRight.Name = "radioButtonRight";
+            radioButtonRight.Size = new Size(68, 19);
+            radioButtonRight.TabIndex = 8;
+            radioButtonRight.TabStop = true;
+            radioButtonRight.Text = "Right";
+            radioButtonRight.Click += radioButtonEigenVectors_click;
             // 
             // button1
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button1.Location = new System.Drawing.Point(19, 10);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(135, 29);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Calc eigenvalues";
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            button1.FlatStyle = FlatStyle.System;
+            button1.Location = new Point(19, 10);
+            button1.Name = "button1";
+            button1.Size = new Size(135, 29);
+            button1.TabIndex = 0;
+            button1.Text = "Calc eigenvalues";
+            button1.Click += button1_Click;
             // 
             // mtxGridView1
             // 
-            this.mtxGridView1.AllowUserToAddRows = false;
-            this.mtxGridView1.AllowUserToDeleteRows = false;
-            this.mtxGridView1.AllowUserToResizeColumns = false;
-            this.mtxGridView1.AllowUserToResizeRows = false;
-            this.mtxGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCellsExceptHeader;
-            this.mtxGridView1.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
-            this.mtxGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.Format = "0.0000";
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.mtxGridView1.DefaultCellStyle = dataGridViewCellStyle4;
-            this.mtxGridView1.IntPrecision = Dew.Math.TIntPrecision.prInt32;
-            this.mtxGridView1.IsInteger = false;
-            this.mtxGridView1.Location = new System.Drawing.Point(13, 28);
-            this.mtxGridView1.MultiSelect = false;
-            this.mtxGridView1.Name = "mtxGridView1";
-            this.mtxGridView1.ObjectInfoText = "";
-            this.mtxGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            this.mtxGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.mtxGridView1.Size = new System.Drawing.Size(333, 185);
-            this.mtxGridView1.TabIndex = 10;
-            this.mtxGridView1.VirtualMode = true;
+            mtxGridView1.AllowUserToAddRows = false;
+            mtxGridView1.AllowUserToDeleteRows = false;
+            mtxGridView1.AllowUserToResizeColumns = false;
+            mtxGridView1.AllowUserToResizeRows = false;
+            mtxGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCellsExceptHeader;
+            mtxGridView1.ClipboardCopyMode = DataGridViewClipboardCopyMode.Disable;
+            mtxGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle3.BackColor = SystemColors.Window;
+            dataGridViewCellStyle3.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle3.Format = "0.0000";
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            mtxGridView1.DefaultCellStyle = dataGridViewCellStyle3;
+            mtxGridView1.Location = new Point(13, 28);
+            mtxGridView1.MultiSelect = false;
+            mtxGridView1.Name = "mtxGridView1";
+            mtxGridView1.numberFormat = "0.0000";
+            mtxGridView1.ObjectInfoText = "";
+            mtxGridView1.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            mtxGridView1.SelectionMode = DataGridViewSelectionMode.CellSelect;
+            mtxGridView1.Size = new Size(333, 185);
+            mtxGridView1.TabIndex = 10;
+            mtxGridView1.VirtualMode = true;
             // 
             // mtxGridView2
             // 
-            this.mtxGridView2.AllowUserToAddRows = false;
-            this.mtxGridView2.AllowUserToDeleteRows = false;
-            this.mtxGridView2.AllowUserToResizeColumns = false;
-            this.mtxGridView2.AllowUserToResizeRows = false;
-            this.mtxGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCellsExceptHeader;
-            this.mtxGridView2.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
-            this.mtxGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.Format = "0.0000";
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.mtxGridView2.DefaultCellStyle = dataGridViewCellStyle5;
-            this.mtxGridView2.IntPrecision = Dew.Math.TIntPrecision.prInt32;
-            this.mtxGridView2.IsInteger = false;
-            this.mtxGridView2.Location = new System.Drawing.Point(13, 249);
-            this.mtxGridView2.MultiSelect = false;
-            this.mtxGridView2.Name = "mtxGridView2";
-            this.mtxGridView2.ObjectInfoText = "";
-            this.mtxGridView2.ReadOnly = true;
-            this.mtxGridView2.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            this.mtxGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.mtxGridView2.Size = new System.Drawing.Size(173, 184);
-            this.mtxGridView2.TabIndex = 11;
-            this.mtxGridView2.VirtualMode = true;
+            mtxGridView2.AllowUserToAddRows = false;
+            mtxGridView2.AllowUserToDeleteRows = false;
+            mtxGridView2.AllowUserToResizeColumns = false;
+            mtxGridView2.AllowUserToResizeRows = false;
+            mtxGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCellsExceptHeader;
+            mtxGridView2.ClipboardCopyMode = DataGridViewClipboardCopyMode.Disable;
+            mtxGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle2.BackColor = SystemColors.Window;
+            dataGridViewCellStyle2.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.Format = "0.0000";
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            mtxGridView2.DefaultCellStyle = dataGridViewCellStyle2;
+            mtxGridView2.Location = new Point(13, 249);
+            mtxGridView2.MultiSelect = false;
+            mtxGridView2.Name = "mtxGridView2";
+            mtxGridView2.numberFormat = "0.0000";
+            mtxGridView2.ObjectInfoText = "";
+            mtxGridView2.ReadOnly = true;
+            mtxGridView2.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            mtxGridView2.SelectionMode = DataGridViewSelectionMode.CellSelect;
+            mtxGridView2.Size = new Size(173, 184);
+            mtxGridView2.TabIndex = 11;
+            mtxGridView2.VirtualMode = true;
             // 
             // mtxGridView3
             // 
-            this.mtxGridView3.AllowUserToAddRows = false;
-            this.mtxGridView3.AllowUserToDeleteRows = false;
-            this.mtxGridView3.AllowUserToResizeColumns = false;
-            this.mtxGridView3.AllowUserToResizeRows = false;
-            this.mtxGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCellsExceptHeader;
-            this.mtxGridView3.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
-            this.mtxGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.Format = "0.0000";
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.mtxGridView3.DefaultCellStyle = dataGridViewCellStyle6;
-            this.mtxGridView3.IntPrecision = Dew.Math.TIntPrecision.prInt32;
-            this.mtxGridView3.IsInteger = false;
-            this.mtxGridView3.Location = new System.Drawing.Point(388, 249);
-            this.mtxGridView3.MultiSelect = false;
-            this.mtxGridView3.Name = "mtxGridView3";
-            this.mtxGridView3.ObjectInfoText = "";
-            this.mtxGridView3.ReadOnly = true;
-            this.mtxGridView3.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            this.mtxGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.mtxGridView3.Size = new System.Drawing.Size(313, 184);
-            this.mtxGridView3.TabIndex = 12;
-            this.mtxGridView3.VirtualMode = true;
+            mtxGridView3.AllowUserToAddRows = false;
+            mtxGridView3.AllowUserToDeleteRows = false;
+            mtxGridView3.AllowUserToResizeColumns = false;
+            mtxGridView3.AllowUserToResizeRows = false;
+            mtxGridView3.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCellsExceptHeader;
+            mtxGridView3.ClipboardCopyMode = DataGridViewClipboardCopyMode.Disable;
+            mtxGridView3.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle1.BackColor = SystemColors.Window;
+            dataGridViewCellStyle1.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle1.Format = "0.0000";
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.False;
+            mtxGridView3.DefaultCellStyle = dataGridViewCellStyle1;
+            mtxGridView3.Location = new Point(388, 249);
+            mtxGridView3.MultiSelect = false;
+            mtxGridView3.Name = "mtxGridView3";
+            mtxGridView3.numberFormat = "0.0000";
+            mtxGridView3.ObjectInfoText = "";
+            mtxGridView3.ReadOnly = true;
+            mtxGridView3.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            mtxGridView3.SelectionMode = DataGridViewSelectionMode.CellSelect;
+            mtxGridView3.Size = new Size(313, 184);
+            mtxGridView3.TabIndex = 12;
+            mtxGridView3.VirtualMode = true;
             // 
             // EigenVectors1Form
             // 
-            this.AutoScaleBaseSize = new System.Drawing.Size(6, 16);
-            this.ClientSize = new System.Drawing.Size(878, 686);
-            this.Name = "EigenVectors1Form";
-            this.Load += new System.EventHandler(this.EigenVectors1Form_Load);
-            this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.mtxGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mtxGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mtxGridView3)).EndInit();
-            this.ResumeLayout(false);
+            AutoScaleBaseSize = new Size(6, 16);
+            ClientSize = new Size(878, 686);
+            Name = "EigenVectors1Form";
+            Load += EigenVectors1Form_Load;
+            panel2.ResumeLayout(false);
+            panel3.ResumeLayout(false);
+            groupBox1.ResumeLayout(false);
+            groupBox2.ResumeLayout(false);
+            ((ISupportInitialize)mtxGridView1).EndInit();
+            ((ISupportInitialize)mtxGridView2).EndInit();
+            ((ISupportInitialize)mtxGridView3).EndInit();
+            ResumeLayout(false);
+        }
+        #endregion
 
-		}
-		#endregion
 
-
-		private Matrix a, eigL, eigR, diagMtx;
+        private Matrix a, eigL, eigR, diagMtx;
 		private Vector eigValues;
 		private TVectorForm vecForm;
 		private TBalanceType bal;

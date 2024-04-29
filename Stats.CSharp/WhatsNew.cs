@@ -73,6 +73,36 @@ namespace StatsMasterDemo
 		private void WhatsNewForm_Load(object sender, System.EventArgs e) {
 			richTextBox1.Clear();
 
+            richTextBox1.SelectionFont = new Font(richTextBox1.SelectionFont.FontFamily, 11, FontStyle.Bold);
+            richTextBox1.SelectionColor = Color.FromArgb(51, 104, 196);
+            Add("Release 6.2.0 List of changes");
+            Add("");
+            richTextBox1.SelectionBullet = true;
+            richTextBox1.SelectionIndent = 10;
+            Add("Support for Visual Studio 2022 v17.9.3");
+            Add("Support for .NET Core 7.0 and 8.0");
+            Add("Support for TeeChart.NET v4.2024.3.15");
+            Add("Bug fix for MannWhitneyTest");
+            Add("Rewritten the ARMA MLE fitting and the forecasting function used by ARIMA.");
+            Add("Added an example for ARIMA fitting with trend decomposition.");
+            Add("Bug fix for Stepwise multiple regression when running with enabled assertions (debug mode).");
+            Add("Fixed a bug when fitting parameters of the Fisher random distribution.");
+            Add("Added vectorized version of the Fisher PDF.");
+            richTextBox1.SelectionBullet = false;
+            richTextBox1.SelectionIndent = 0;
+            Add("");
+
+            richTextBox1.SelectionFont = new Font(richTextBox1.SelectionFont.FontFamily, 11, FontStyle.Bold);
+            richTextBox1.SelectionColor = Color.FromArgb(51, 104, 196);
+            Add("Release 6.0.8 List of changes");
+            Add("");
+            richTextBox1.SelectionBullet = true;
+            richTextBox1.SelectionIndent = 10;
+            Add("Support for combined (either double or single) precision where meaningfull with MtxVec v6.");
+            Add("Added new CDF and Inverse CDF for Studentized Range distribution.");
+            richTextBox1.SelectionBullet = false;
+            richTextBox1.SelectionIndent = 0;
+            Add("");
 
             richTextBox1.SelectionFont = new Font(richTextBox1.SelectionFont.FontFamily, 11, FontStyle.Bold);
             richTextBox1.SelectionColor = Color.FromArgb(51, 104, 196);

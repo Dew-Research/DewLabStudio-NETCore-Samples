@@ -337,8 +337,6 @@ namespace MtxVecDemo
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.mtxGridViewc.DefaultCellStyle = dataGridViewCellStyle1;
-            this.mtxGridViewc.IntPrecision = Dew.Math.TIntPrecision.prInt32;
-            this.mtxGridViewc.IsInteger = false;
             this.mtxGridViewc.Location = new System.Drawing.Point(341, 34);
             this.mtxGridViewc.MultiSelect = false;
             this.mtxGridViewc.Name = "mtxGridViewc";
@@ -376,8 +374,6 @@ namespace MtxVecDemo
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.mtxGridViewb.DefaultCellStyle = dataGridViewCellStyle2;
-            this.mtxGridViewb.IntPrecision = Dew.Math.TIntPrecision.prInt32;
-            this.mtxGridViewb.IsInteger = false;
             this.mtxGridViewb.Location = new System.Drawing.Point(220, 34);
             this.mtxGridViewb.MultiSelect = false;
             this.mtxGridViewb.Name = "mtxGridViewb";
@@ -415,8 +411,6 @@ namespace MtxVecDemo
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.mtxGridViewA.DefaultCellStyle = dataGridViewCellStyle3;
-            this.mtxGridViewA.IntPrecision = Dew.Math.TIntPrecision.prInt32;
-            this.mtxGridViewA.IsInteger = false;
             this.mtxGridViewA.Location = new System.Drawing.Point(6, 34);
             this.mtxGridViewA.MultiSelect = false;
             this.mtxGridViewA.Name = "mtxGridViewA";

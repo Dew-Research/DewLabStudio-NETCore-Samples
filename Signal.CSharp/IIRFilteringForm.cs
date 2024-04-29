@@ -10,6 +10,7 @@ using Dew.Signal.Units;
 using Dew.Math.Units;
 using Steema.TeeChart.Styles;
 using Dew.Math.Controls;
+using Steema.TeeChart;
 
 namespace DSPDemo
 {
@@ -1077,7 +1078,7 @@ namespace DSPDemo
             this.SpectrumChart1.Legend.Brush.Color = System.Drawing.Color.White;
             this.SpectrumChart1.Legend.Brush.Solid = true;
             this.SpectrumChart1.Legend.Brush.Visible = true;
-            this.SpectrumChart1.Legend.CheckBoxes = true;
+            this.SpectrumChart1.Legend.ActiveStyle = LegendActiveStyles.CheckBox;
             // 
             // 
             // 
