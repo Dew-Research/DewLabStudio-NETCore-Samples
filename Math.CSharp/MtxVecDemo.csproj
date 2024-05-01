@@ -24,7 +24,7 @@
   </Target>
 
   <ItemGroup>
-    <PackageReference Include="Dew.Math" Version="6.2.1" />
+    <PackageReference Include="Dew.Math" Version="6.2.2" />
   </ItemGroup>
 
 </Project>
