@@ -89,6 +89,14 @@ namespace DSPDemo {
 			CrossSpectrumAnalyzerDialog1.Execute();
 		}
 
+		private void CrossSpectrumAnalyzer1_OnParameterUpdate(object Sender) {
+			spectrumsBox.SelectedIndex = (byte)CrossSpectrumAnalyzer1.CrossAnalyzer.Transform;
+			spectrumChart1.Header.Text = SignalAnalysis.CrossTransformToString(CrossSpectrumAnalyzer1.CrossAnalyzer.Transform);
+			CrossSpectrumAnalyzer1.UpdateSpectrum(); //copy the correct TCrossTransfrom to CrossAnalyzer.Amplt
+			//update bands, peaks and chart, but do not perform average
+
+		}
+
         private void button1_Click(object sender, EventArgs e)
         {
             chartEditor.ShowModal();
@@ -99,12 +107,11 @@ namespace DSPDemo {
             CrossSpectrumAnalyzer1.ResetAveraging();
         }
 
-        private void CrossSpectrumAnalyzer1_OnParameterUpdateEvent(object Sender)
+        private void spectrumChart1_Click(object sender, EventArgs e)
         {
-			spectrumsBox.SelectedIndex = (byte)CrossSpectrumAnalyzer1.CrossAnalyzer.Transform;
-			spectrumChart1.Header.Text = SignalAnalysis.CrossTransformToString(CrossSpectrumAnalyzer1.CrossAnalyzer.Transform);
-			CrossSpectrumAnalyzer1.UpdateSpectrum(); //copy the correct TCrossTransfrom to CrossAnalyzer.Amplt
-													 //update bands, peaks and chart, but do not perform average
-		}
+
+        }
+
+
 	}
 }

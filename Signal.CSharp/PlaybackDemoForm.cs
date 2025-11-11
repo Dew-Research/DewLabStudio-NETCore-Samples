@@ -99,14 +99,13 @@ namespace DSPDemo {
 			signalChartEditor.ShowModal();
 		}
 
+		private void SpectrumAnalyzer1_OnParameterUpdate(object Sender) {
+			SpectrumAnalyzer1.Update();
+		}
+
         private void SignalOutDialog1_OnParameterUpdate(object Sender, EventArgs e)
         {
 			SignalOut1.Update();
 		}
-
-        private void SpectrumAnalyzer1_OnParameterUpdateEvent(object Sender)
-        {
-			SpectrumAnalyzer1.Update();
-		}
-    }
+	}
 }

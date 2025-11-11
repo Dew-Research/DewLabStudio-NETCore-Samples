@@ -39,6 +39,11 @@ namespace DSPDemo {
 			attBox.SelectedIndex = 0;
 		}
 
+		private void spectrumAnalyzer1_OnParameterUpdate(object Sender) {
+			spectrumAnalyzer1.Update();
+			spectrumAnalyzer2.Update();
+		}
+
 		private void ModulatorForm_Resize(object sender, EventArgs e) {
 			spectrumChart1.Height = panel2.Height / 2;
 		}
@@ -67,17 +72,5 @@ namespace DSPDemo {
             spectrumAnalyzer1.Update();
             filterDelayLabel.Text = "Delay: " + signalModulator1.FilterDelay.ToString("0.#");
         }
-
-        private void spectrumAnalyzer2_OnParameterUpdateEvent(object Sender)
-        {
-			spectrumAnalyzer1.Update();
-			spectrumAnalyzer2.Update();
-		}
-
-        private void spectrumAnalyzer1_OnParameterUpdateEvent(object Sender)
-        {
-			spectrumAnalyzer1.Update();
-			spectrumAnalyzer2.Update();
-		}
-    }
+	}
 }

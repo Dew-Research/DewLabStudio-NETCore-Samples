@@ -16,27 +16,27 @@
 			base.Dispose(disposing);
 		}
 
-		#region Windows Form Designer generated code
+        #region Windows Form Designer generated code
 
-		/// <summary>
-		/// Required method for Designer support - do not modify
-		/// the contents of this method with the code editor.
-		/// </summary>
-		private void InitializeComponent() {
-            this.SuspendLayout();
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            SuspendLayout();
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Size = new System.Drawing.Size(302, 273);
+            richTextBox1.Size = new System.Drawing.Size(890, 597);
             // 
             // IntroSignalRateForm
             // 
-            this.ClientSize = new System.Drawing.Size(302, 273);
-            this.Name = "IntroSignalRateForm";
-            this.ResumeLayout(false);
+            ClientSize = new System.Drawing.Size(890, 597);
+            Name = "IntroSignalRateForm";
+            ResumeLayout(false);
+        }
 
-		}
-
-		#endregion
-	}
+        #endregion
+    }
 }

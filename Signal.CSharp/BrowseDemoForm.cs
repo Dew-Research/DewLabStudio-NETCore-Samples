@@ -8,7 +8,7 @@ using System.Windows.Forms;
 using Dew.Math;
 using Steema.TeeChart.Styles;
 using Dew.Math.Units;
-using Dew.Math.Tee;
+using static Dew.Math.Tee.MtxVecTee;
 using Dew.Math.Controls;
 using Dew.Signal.Units;
 using Dew.Signal.Tee;
@@ -54,7 +54,9 @@ namespace DSPDemo {
 
 		private void BrowseDemoForm_Load(object sender, EventArgs e) {
 			channelBox.SelectedIndex = 0;
-			signalBrowse1.ProgressThread.UpdateInterval = 50;
+			signalBrowse1.ProgressRuntime = progressDialog.Runtime;
+			signalBrowse1.OverviewRepositoryPath = Application.StartupPath + "\\SignalPkFiles";
+            progressDialog.UpdateInterval = 50;
 			richTextBox1.Text = "Open a few 10MB long uncompressed wav file. The chart will display signal overview." +
           "For 200 MB long wav file, it takes a little less then 6 seconds to create the overview. " +
           "(.pk file). It is then possible to browse through the entire signal, pan and zoom with " +
@@ -72,7 +74,7 @@ namespace DSPDemo {
 			} else {
 				series1.SeriesDataType = SignalSeriesDataType.ssdLine;
 				series1.SeriesMode = SignalSeriesMode.ssmAuto;
-				MtxVecTee.DrawValues(Src, Series, DtOffset, Dt, true);
+				DrawValues(Src, Series, DtOffset, Dt, true);
 			}
 		}
 
@@ -96,6 +98,19 @@ namespace DSPDemo {
                             DrawOverviewSeries(a1, signalChart1.Series[0], DtOffset, signalBrowse1.Dt );
 							break;
 					}
+					break;
+			}
+		}
+
+		private void signalBrowse1_OnProgressUpdate(object sender, Dew.Math.TMtxProgressEvent e) {
+			switch (e) {
+				case TMtxProgressEvent.peCycle:
+					positionPanel1.SliderSpan = signalBrowse1.SignalFile.RecordPosition * 100 / signalBrowse1.SignalFile.RecordLength;
+					break;
+				case TMtxProgressEvent.peCleanUp:
+					positionPanel1.SliderSpan = 100;
+					signalBrowse1.LoadFullRecord();
+					BrowseChartUpdate(0);
 					break;
 			}
 		}
@@ -128,20 +143,5 @@ namespace DSPDemo {
         {
 
         }
-
-        private void signalBrowse1_OnProgressUpdateEvent(object sender, MtxProgressEvent e)
-        {
-			switch (e)
-			{
-				case MtxProgressEvent.peCycle:
-					positionPanel1.SliderSpan = signalBrowse1.SignalFile.RecordPosition * 100 / signalBrowse1.SignalFile.RecordLength;
-					break;
-				case MtxProgressEvent.peCleanUp:
-					positionPanel1.SliderSpan = 100;
-					signalBrowse1.LoadFullRecord();
-					BrowseChartUpdate(0);
-					break;
-			}
-		}
     }
 }

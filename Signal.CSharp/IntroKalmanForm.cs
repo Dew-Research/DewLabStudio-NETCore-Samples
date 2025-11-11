@@ -44,28 +44,28 @@ namespace DSPDemo
 			base.Dispose( disposing );
 		}
 
-		#region Designer generated code
-		/// <summary>
-		/// Required method for Designer support - do not modify
-		/// the contents of this method with the code editor.
-		/// </summary>
-		private void InitializeComponent()
-		{
-            this.SuspendLayout();
+        #region Designer generated code
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            SuspendLayout();
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Size = new System.Drawing.Size(304, 273);
+            richTextBox1.Size = new Size(1046, 682);
             // 
             // IntroKalmanForm
             // 
-            this.ClientSize = new System.Drawing.Size(304, 273);
-            this.Name = "IntroKalmanForm";
-            this.Load += new System.EventHandler(this.IntroPeakSpectralForm_Load);
-            this.ResumeLayout(false);
+            ClientSize = new Size(1046, 682);
+            Name = "IntroKalmanForm";
+            Load += IntroPeakSpectralForm_Load;
+            ResumeLayout(false);
 
-		}
-		#endregion
+        }
+        #endregion
 
         private void IntroPeakSpectralForm_Load(object sender, EventArgs e)
         {

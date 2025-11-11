@@ -88,11 +88,10 @@ namespace DSPDemo {
 
 		private void timeChartButton_Click(object sender, EventArgs e) {
 			signalEditor.ShowModal();
-		}	
+		}
 
-        private void SpectrumAnalyzer1_OnParameterUpdateEvent(object Sender)
-        {
+		private void SpectrumAnalyzer1_OnParameterUpdate(object Sender) {
 			SpectrumAnalyzer1.Update();
 		}
-    }
+	}
 }

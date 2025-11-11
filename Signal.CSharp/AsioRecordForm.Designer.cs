@@ -28,7 +28,9 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AsioRecordForm));
             Dew.Signal.TSignalItem tSignalItem1 = new Dew.Signal.TSignalItem();
+            Steema.TeeChart.Margins margins1 = new Steema.TeeChart.Margins();
             Dew.Signal.Tee.SignalTeeItem signalTeeItem1 = new Dew.Signal.Tee.SignalTeeItem();
+            Steema.TeeChart.Margins margins2 = new Steema.TeeChart.Margins();
             Dew.Signal.Tee.SignalTeeItem signalTeeItem2 = new Dew.Signal.Tee.SignalTeeItem();
             this.signalList = new Dew.Signal.TSignalList(this.components);
             this.mtxFastLine2 = new Dew.Math.Tee.MtxFastLine();
@@ -55,7 +57,7 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.signalWrite1 = new Dew.Signal.TSignalWrite(this.components);
             this.signalMux = new Dew.Signal.TSignalMux(this.components);
-            this.signalAsio1 = new Dew.Signal.SignalAsio(this.components);
+            this.signalAsio1 = new Dew.Signal.Audio.SignalAsio(this.components);
             this.bottomChart = new Dew.Signal.Tee.SignalChart();
             this.axisScaleTool2 = new Dew.Signal.Tee.AxisScaleTool();
             this.topChart = new Dew.Signal.Tee.SignalChart();
@@ -67,15 +69,32 @@
             // 
             // signalList
             // 
-            this.signalList.BlockAssign = false;
-            this.signalList.Complex = false;
             this.signalList.Count = 2;
             this.signalList.EditIndex = -1;
             this.signalList.FloatPrecision = Dew.Math.TMtxFloatPrecision.mvDouble;
             this.signalList.FloatPrecisionLock = false;
-            this.signalList.IsDouble = true;
-            this.signalList.Managed = true;
-            this.signalList.Name = null;
+            // List serializer begin
+            // 
+            // 
+            // 
+            this.signalList[0].ChannelCount = 1;
+            this.signalList[0].Complex = false;
+            this.signalList[0].Data = new Dew.Math.TVec(System.Convert.FromBase64String("AAAAAAAAQEEAAAAAAACAPwAAAAAAgB9EAAAAQQAAAAAAE3pHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"));
+            this.signalList[0].FloatPrecision = Dew.Math.TMtxFloatPrecision.mvDouble;
+            this.signalList[0].FloatPrecisionLock = false;
+            this.signalList[0].IsDouble = true;
+            this.signalList[0].Length = 12;
+            // 
+            // 
+            // 
+            this.signalList[1].ChannelCount = 1;
+            this.signalList[1].Complex = false;
+            this.signalList[1].Data = new Dew.Math.TVec(System.Convert.FromBase64String("AAAAAAAAQEEAAAAAAACAPwAAAAAAgB9EAAAAQQAAAAAAE3pHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"));
+            this.signalList[1].FloatPrecision = Dew.Math.TMtxFloatPrecision.mvDouble;
+            this.signalList[1].FloatPrecisionLock = false;
+            this.signalList[1].IsDouble = true;
+            this.signalList[1].Length = 12;
+            // List serializer end
             this.signalList.PropagateTemplate = false;
             // 
             // mtxFastLine2
@@ -93,18 +112,13 @@
             // 
             // 
             this.mtxFastLine2.Legend.Brush.Color = System.Drawing.Color.White;
-            this.mtxFastLine2.Legend.Brush.Solid = true;
-            this.mtxFastLine2.Legend.Brush.Visible = true;
             // 
             // 
             // 
-            this.mtxFastLine2.Legend.Font.Bold = false;
             // 
             // 
             // 
             this.mtxFastLine2.Legend.Font.Brush.Color = System.Drawing.Color.Black;
-            this.mtxFastLine2.Legend.Font.Brush.Solid = true;
-            this.mtxFastLine2.Legend.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -112,8 +126,6 @@
             // 
             // 
             this.mtxFastLine2.Legend.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.mtxFastLine2.Legend.Font.Shadow.Brush.Solid = true;
-            this.mtxFastLine2.Legend.Font.Shadow.Brush.Visible = true;
             this.mtxFastLine2.Legend.Font.Size = 8;
             this.mtxFastLine2.Legend.Font.SizeFloat = 8F;
             // 
@@ -123,8 +135,6 @@
             // 
             // 
             this.mtxFastLine2.Legend.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.mtxFastLine2.Legend.ImageBevel.Brush.Solid = true;
-            this.mtxFastLine2.Legend.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -132,8 +142,6 @@
             // 
             // 
             this.mtxFastLine2.Legend.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.mtxFastLine2.Legend.Shadow.Brush.Solid = true;
-            this.mtxFastLine2.Legend.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -149,18 +157,13 @@
             // 
             // 
             this.mtxFastLine2.Marks.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.mtxFastLine2.Marks.Brush.Solid = true;
-            this.mtxFastLine2.Marks.Brush.Visible = true;
             // 
             // 
             // 
-            this.mtxFastLine2.Marks.Font.Bold = false;
             // 
             // 
             // 
             this.mtxFastLine2.Marks.Font.Brush.Color = System.Drawing.Color.Black;
-            this.mtxFastLine2.Marks.Font.Brush.Solid = true;
-            this.mtxFastLine2.Marks.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -168,8 +171,6 @@
             // 
             // 
             this.mtxFastLine2.Marks.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.mtxFastLine2.Marks.Font.Shadow.Brush.Solid = true;
-            this.mtxFastLine2.Marks.Font.Shadow.Brush.Visible = true;
             this.mtxFastLine2.Marks.Font.Size = 8;
             this.mtxFastLine2.Marks.Font.SizeFloat = 8F;
             // 
@@ -179,8 +180,6 @@
             // 
             // 
             this.mtxFastLine2.Marks.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.mtxFastLine2.Marks.ImageBevel.Brush.Solid = true;
-            this.mtxFastLine2.Marks.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -188,8 +187,6 @@
             // 
             // 
             this.mtxFastLine2.Marks.Shadow.Brush.Color = System.Drawing.Color.Gray;
-            this.mtxFastLine2.Marks.Shadow.Brush.Solid = true;
-            this.mtxFastLine2.Marks.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -201,8 +198,6 @@
             // 
             // 
             this.mtxFastLine2.Marks.Symbol.Brush.Color = System.Drawing.Color.White;
-            this.mtxFastLine2.Marks.Symbol.Brush.Solid = true;
-            this.mtxFastLine2.Marks.Symbol.Brush.Visible = true;
             // 
             // 
             // 
@@ -210,8 +205,6 @@
             // 
             // 
             this.mtxFastLine2.Marks.Symbol.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.mtxFastLine2.Marks.Symbol.ImageBevel.Brush.Solid = true;
-            this.mtxFastLine2.Marks.Symbol.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -219,14 +212,9 @@
             // 
             // 
             this.mtxFastLine2.Marks.Symbol.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.mtxFastLine2.Marks.Symbol.Shadow.Brush.Solid = true;
-            this.mtxFastLine2.Marks.Symbol.Shadow.Brush.Visible = true;
             // 
             // 
             // 
-            this.mtxFastLine2.Marks.TailParams.Margin = 0F;
-            this.mtxFastLine2.Marks.TailParams.PointerHeight = 8D;
-            this.mtxFastLine2.Marks.TailParams.PointerWidth = 8D;
             this.mtxFastLine2.OriginalCursor = null;
             this.mtxFastLine2.Title = "mtxFastLine2";
             this.mtxFastLine2.TreatNulls = Steema.TeeChart.Styles.TreatNullsStyle.Ignore;
@@ -256,18 +244,13 @@
             // 
             // 
             this.mtxFastLine1.Legend.Brush.Color = System.Drawing.Color.White;
-            this.mtxFastLine1.Legend.Brush.Solid = true;
-            this.mtxFastLine1.Legend.Brush.Visible = true;
             // 
             // 
             // 
-            this.mtxFastLine1.Legend.Font.Bold = false;
             // 
             // 
             // 
             this.mtxFastLine1.Legend.Font.Brush.Color = System.Drawing.Color.Black;
-            this.mtxFastLine1.Legend.Font.Brush.Solid = true;
-            this.mtxFastLine1.Legend.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -275,8 +258,6 @@
             // 
             // 
             this.mtxFastLine1.Legend.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.mtxFastLine1.Legend.Font.Shadow.Brush.Solid = true;
-            this.mtxFastLine1.Legend.Font.Shadow.Brush.Visible = true;
             this.mtxFastLine1.Legend.Font.Size = 8;
             this.mtxFastLine1.Legend.Font.SizeFloat = 8F;
             // 
@@ -286,8 +267,6 @@
             // 
             // 
             this.mtxFastLine1.Legend.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.mtxFastLine1.Legend.ImageBevel.Brush.Solid = true;
-            this.mtxFastLine1.Legend.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -295,8 +274,6 @@
             // 
             // 
             this.mtxFastLine1.Legend.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.mtxFastLine1.Legend.Shadow.Brush.Solid = true;
-            this.mtxFastLine1.Legend.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -312,18 +289,13 @@
             // 
             // 
             this.mtxFastLine1.Marks.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.mtxFastLine1.Marks.Brush.Solid = true;
-            this.mtxFastLine1.Marks.Brush.Visible = true;
             // 
             // 
             // 
-            this.mtxFastLine1.Marks.Font.Bold = false;
             // 
             // 
             // 
             this.mtxFastLine1.Marks.Font.Brush.Color = System.Drawing.Color.Black;
-            this.mtxFastLine1.Marks.Font.Brush.Solid = true;
-            this.mtxFastLine1.Marks.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -331,8 +303,6 @@
             // 
             // 
             this.mtxFastLine1.Marks.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.mtxFastLine1.Marks.Font.Shadow.Brush.Solid = true;
-            this.mtxFastLine1.Marks.Font.Shadow.Brush.Visible = true;
             this.mtxFastLine1.Marks.Font.Size = 8;
             this.mtxFastLine1.Marks.Font.SizeFloat = 8F;
             // 
@@ -342,8 +312,6 @@
             // 
             // 
             this.mtxFastLine1.Marks.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.mtxFastLine1.Marks.ImageBevel.Brush.Solid = true;
-            this.mtxFastLine1.Marks.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -351,8 +319,6 @@
             // 
             // 
             this.mtxFastLine1.Marks.Shadow.Brush.Color = System.Drawing.Color.Gray;
-            this.mtxFastLine1.Marks.Shadow.Brush.Solid = true;
-            this.mtxFastLine1.Marks.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -364,8 +330,6 @@
             // 
             // 
             this.mtxFastLine1.Marks.Symbol.Brush.Color = System.Drawing.Color.White;
-            this.mtxFastLine1.Marks.Symbol.Brush.Solid = true;
-            this.mtxFastLine1.Marks.Symbol.Brush.Visible = true;
             // 
             // 
             // 
@@ -373,8 +337,6 @@
             // 
             // 
             this.mtxFastLine1.Marks.Symbol.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.mtxFastLine1.Marks.Symbol.ImageBevel.Brush.Solid = true;
-            this.mtxFastLine1.Marks.Symbol.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -382,15 +344,10 @@
             // 
             // 
             this.mtxFastLine1.Marks.Symbol.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.mtxFastLine1.Marks.Symbol.Shadow.Brush.Solid = true;
-            this.mtxFastLine1.Marks.Symbol.Shadow.Brush.Visible = true;
             // 
             // 
             // 
-            this.mtxFastLine1.Marks.TailParams.Margin = 0F;
-            this.mtxFastLine1.Marks.TailParams.PointerHeight = 8D;
-            this.mtxFastLine1.Marks.TailParams.PointerWidth = 8D;
-            this.mtxFastLine1.OriginalCursor = Steema.TeeChart.Drawing.Cursors.Default;
+            this.mtxFastLine1.OriginalCursor = Steema.TeeChart.Drawing.Cursor.Current;
             this.mtxFastLine1.Title = "mtxFastLine1";
             this.mtxFastLine1.TreatNulls = Steema.TeeChart.Styles.TreatNullsStyle.Ignore;
             this.mtxFastLine1.UseExtendedNumRange = false;
@@ -555,49 +512,40 @@
             // 
             // signalRead
             // 
-            this.signalRead.BandwidthL = 0D;
-            this.signalRead.BlockAssign = false;
+            this.signalRead.ChannelCount = 1;
             this.signalRead.Complex = false;
+            this.signalRead.Data = new Dew.Math.TVec(System.Convert.FromBase64String("AAAAAAAAQEEAAAAAAACAPwAAAAAAgB9EAAAAQQAAAAAAE3pHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"));
             this.signalRead.FloatPrecision = Dew.Math.TMtxFloatPrecision.mvDouble;
             this.signalRead.FloatPrecisionLock = false;
-            this.signalRead.FramesPerSecond = 0.0078125D;
-            this.signalRead.Input = null;
+            this.signalRead.FramesPerSecond = 0.083333333333333329D;
             this.signalRead.IsDouble = true;
-            this.signalRead.Name = null;
+            this.signalRead.Length = 12;
+            this.signalRead.OverlappingSamples = 0;
+            this.signalRead.PostBufferSamples = 0;
+            this.signalRead.RecordNumber = 0;
             // 
             // signalDemuxList
             // 
-            this.signalDemuxList.BlockAssign = false;
-            this.signalDemuxList.Complex = false;
             this.signalDemuxList.Count = 0;
             this.signalDemuxList.EditIndex = -1;
             this.signalDemuxList.FloatPrecision = Dew.Math.TMtxFloatPrecision.mvDouble;
             this.signalDemuxList.FloatPrecisionLock = false;
             this.signalDemuxList.Input = this.signalRead;
             this.signalDemuxList.Inputs = null;
-            this.signalDemuxList.IsDouble = true;
-            // ------>>
-            // <<------
-            this.signalDemuxList.Managed = true;
-            this.signalDemuxList.Name = null;
+            // List serializer begin
+            // List serializer end
             this.signalDemuxList.PropagateTemplate = false;
             // 
             // signalRateConverterList
             // 
-            this.signalRateConverterList.BlockAssign = false;
-            this.signalRateConverterList.Complex = false;
             this.signalRateConverterList.Count = 0;
             this.signalRateConverterList.EditIndex = -1;
             this.signalRateConverterList.FloatPrecision = Dew.Math.TMtxFloatPrecision.mvDouble;
             this.signalRateConverterList.FloatPrecisionLock = false;
             this.signalRateConverterList.Inputs = this.signalDemuxList;
-            this.signalRateConverterList.IsDouble = true;
-            // ------>>
-            // <<------
-            this.signalRateConverterList.Managed = true;
-            this.signalRateConverterList.Name = null;
+            // List serializer begin
+            // List serializer end
             this.signalRateConverterList.PropagateTemplate = false;
-            this.signalRateConverterList.OnBeforeUpdate += new Dew.Math.TNotifyEvent(this.signalRateConverterList_OnBeforeUpdate);
             // 
             // timer1
             // 
@@ -611,35 +559,34 @@
             // signalWrite1
             // 
             this.signalWrite1.AuthorInfo = "Unknown";
-            this.signalWrite1.BandwidthL = 0D;
-            this.signalWrite1.BlockAssign = false;
+            this.signalWrite1.ChannelCount = 1;
             this.signalWrite1.Complex = false;
+            this.signalWrite1.Data = new Dew.Math.TVec(System.Convert.FromBase64String("AAAAAAAAQEEAAAAAAACAPwAAAAAAgB9EAAAAQQAAAAAAE3pHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"));
             this.signalWrite1.FloatPrecision = Dew.Math.TMtxFloatPrecision.mvDouble;
             this.signalWrite1.FloatPrecisionLock = false;
             this.signalWrite1.ImFormat = null;
             this.signalWrite1.Input = this.signalMux;
             this.signalWrite1.IsDouble = true;
-            this.signalWrite1.Name = null;
+            this.signalWrite1.Length = 12;
+            this.signalWrite1.RecordNumber = 0;
             this.signalWrite1.ReFormat = null;
             // 
             // signalMux
             // 
-            this.signalMux.BandwidthL = 0D;
-            this.signalMux.BlockAssign = false;
+            this.signalMux.ChannelCount = 1;
             this.signalMux.Complex = false;
+            this.signalMux.Data = new Dew.Math.TVec(System.Convert.FromBase64String("AAAAAAAAQEEAAAAAAACAPwAAAAAAgB9EAAAAQQAAAAAAE3pHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"));
             this.signalMux.FloatPrecision = Dew.Math.TMtxFloatPrecision.mvDouble;
             this.signalMux.FloatPrecisionLock = false;
             this.signalMux.InputList = this.signalAsio1;
             tSignalItem1.Input = null;
             this.signalMux.Inputs.Add(tSignalItem1);
             this.signalMux.IsDouble = true;
-            this.signalMux.Name = null;
+            this.signalMux.Length = 12;
             // 
             // signalAsio1
             // 
             this.signalAsio1.Active = false;
-            this.signalAsio1.BlockAssign = false;
-            this.signalAsio1.Complex = false;
             this.signalAsio1.Continuous = false;
             this.signalAsio1.Count = 0;
             this.signalAsio1.EditIndex = -1;
@@ -648,11 +595,9 @@
             this.signalAsio1.FloatPrecisionLock = false;
             this.signalAsio1.InputPrecision = Dew.Math.TPrecision.prDouble;
             this.signalAsio1.Inputs = this.signalRateConverterList;
-            this.signalAsio1.IsDouble = true;
-            this.signalAsio1.Managed = true;
-            this.signalAsio1.Name = null;
+            // List serializer begin
+            // List serializer end
             this.signalAsio1.OutputPrecision = Dew.Math.TPrecision.prSmallInt;
-            this.signalAsio1.Paused = false;
             this.signalAsio1.PropagateTemplate = false;
             this.signalAsio1.SamplingFrequency = 48000D;
             this.signalAsio1.ProcessRealTime += new System.EventHandler(this.signalAsio1_ProcessRealTime);
@@ -664,12 +609,11 @@
             // 
             // 
             // 
-            this.bottomChart.Graphics3D.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.Default;
-            this.bottomChart.Graphics3D.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+             
+             
             // 
             // 
             // 
-            this.bottomChart.Axes.Automatic = false;
             // 
             // 
             // 
@@ -684,18 +628,13 @@
             // 
             // 
             this.bottomChart.Axes.Bottom.Labels.Brush.Color = System.Drawing.Color.White;
-            this.bottomChart.Axes.Bottom.Labels.Brush.Solid = true;
-            this.bottomChart.Axes.Bottom.Labels.Brush.Visible = true;
             // 
             // 
             // 
-            this.bottomChart.Axes.Bottom.Labels.Font.Bold = false;
             // 
             // 
             // 
             this.bottomChart.Axes.Bottom.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.bottomChart.Axes.Bottom.Labels.Font.Brush.Solid = true;
-            this.bottomChart.Axes.Bottom.Labels.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -703,8 +642,6 @@
             // 
             // 
             this.bottomChart.Axes.Bottom.Labels.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.bottomChart.Axes.Bottom.Labels.Font.Shadow.Brush.Solid = true;
-            this.bottomChart.Axes.Bottom.Labels.Font.Shadow.Brush.Visible = true;
             this.bottomChart.Axes.Bottom.Labels.Font.Size = 9;
             this.bottomChart.Axes.Bottom.Labels.Font.SizeFloat = 9F;
             // 
@@ -714,8 +651,6 @@
             // 
             // 
             this.bottomChart.Axes.Bottom.Labels.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.bottomChart.Axes.Bottom.Labels.ImageBevel.Brush.Solid = true;
-            this.bottomChart.Axes.Bottom.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -723,8 +658,6 @@
             // 
             // 
             this.bottomChart.Axes.Bottom.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.bottomChart.Axes.Bottom.Labels.Shadow.Brush.Solid = true;
-            this.bottomChart.Axes.Bottom.Labels.Shadow.Brush.Visible = true;
             this.bottomChart.Axes.Bottom.MaximumOffset = 1;
             this.bottomChart.Axes.Bottom.MinimumOffset = 1;
             // 
@@ -743,18 +676,13 @@
             // 
             // 
             this.bottomChart.Axes.Bottom.Title.Brush.Color = System.Drawing.Color.Silver;
-            this.bottomChart.Axes.Bottom.Title.Brush.Solid = true;
-            this.bottomChart.Axes.Bottom.Title.Brush.Visible = true;
             // 
             // 
             // 
-            this.bottomChart.Axes.Bottom.Title.Font.Bold = false;
             // 
             // 
             // 
             this.bottomChart.Axes.Bottom.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bottomChart.Axes.Bottom.Title.Font.Brush.Solid = true;
-            this.bottomChart.Axes.Bottom.Title.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -762,8 +690,6 @@
             // 
             // 
             this.bottomChart.Axes.Bottom.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.bottomChart.Axes.Bottom.Title.Font.Shadow.Brush.Solid = true;
-            this.bottomChart.Axes.Bottom.Title.Font.Shadow.Brush.Visible = true;
             this.bottomChart.Axes.Bottom.Title.Font.Size = 11;
             this.bottomChart.Axes.Bottom.Title.Font.SizeFloat = 11F;
             // 
@@ -773,8 +699,6 @@
             // 
             // 
             this.bottomChart.Axes.Bottom.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.bottomChart.Axes.Bottom.Title.ImageBevel.Brush.Solid = true;
-            this.bottomChart.Axes.Bottom.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -782,11 +706,12 @@
             // 
             // 
             this.bottomChart.Axes.Bottom.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.bottomChart.Axes.Bottom.Title.Shadow.Brush.Solid = true;
-            this.bottomChart.Axes.Bottom.Title.Shadow.Brush.Visible = true;
             // 
             // 
             // 
+            this.bottomChart.Axes.Depth.Automatic = false;
+            this.bottomChart.Axes.Depth.AutomaticMaximum = false;
+            this.bottomChart.Axes.Depth.AutomaticMinimum = false;
             // 
             // 
             // 
@@ -798,18 +723,13 @@
             // 
             // 
             this.bottomChart.Axes.Depth.Labels.Brush.Color = System.Drawing.Color.White;
-            this.bottomChart.Axes.Depth.Labels.Brush.Solid = true;
-            this.bottomChart.Axes.Depth.Labels.Brush.Visible = true;
             // 
             // 
             // 
-            this.bottomChart.Axes.Depth.Labels.Font.Bold = false;
             // 
             // 
             // 
             this.bottomChart.Axes.Depth.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.bottomChart.Axes.Depth.Labels.Font.Brush.Solid = true;
-            this.bottomChart.Axes.Depth.Labels.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -817,8 +737,6 @@
             // 
             // 
             this.bottomChart.Axes.Depth.Labels.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.bottomChart.Axes.Depth.Labels.Font.Shadow.Brush.Solid = true;
-            this.bottomChart.Axes.Depth.Labels.Font.Shadow.Brush.Visible = true;
             this.bottomChart.Axes.Depth.Labels.Font.Size = 9;
             this.bottomChart.Axes.Depth.Labels.Font.SizeFloat = 9F;
             // 
@@ -828,8 +746,6 @@
             // 
             // 
             this.bottomChart.Axes.Depth.Labels.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.bottomChart.Axes.Depth.Labels.ImageBevel.Brush.Solid = true;
-            this.bottomChart.Axes.Depth.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -837,8 +753,8 @@
             // 
             // 
             this.bottomChart.Axes.Depth.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.bottomChart.Axes.Depth.Labels.Shadow.Brush.Solid = true;
-            this.bottomChart.Axes.Depth.Labels.Shadow.Brush.Visible = true;
+            this.bottomChart.Axes.Depth.Maximum = 0D;
+            this.bottomChart.Axes.Depth.Minimum = 0D;
             // 
             // 
             // 
@@ -851,18 +767,13 @@
             // 
             // 
             this.bottomChart.Axes.Depth.Title.Brush.Color = System.Drawing.Color.Silver;
-            this.bottomChart.Axes.Depth.Title.Brush.Solid = true;
-            this.bottomChart.Axes.Depth.Title.Brush.Visible = true;
             // 
             // 
             // 
-            this.bottomChart.Axes.Depth.Title.Font.Bold = false;
             // 
             // 
             // 
             this.bottomChart.Axes.Depth.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bottomChart.Axes.Depth.Title.Font.Brush.Solid = true;
-            this.bottomChart.Axes.Depth.Title.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -870,8 +781,6 @@
             // 
             // 
             this.bottomChart.Axes.Depth.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.bottomChart.Axes.Depth.Title.Font.Shadow.Brush.Solid = true;
-            this.bottomChart.Axes.Depth.Title.Font.Shadow.Brush.Visible = true;
             this.bottomChart.Axes.Depth.Title.Font.Size = 11;
             this.bottomChart.Axes.Depth.Title.Font.SizeFloat = 11F;
             // 
@@ -881,8 +790,6 @@
             // 
             // 
             this.bottomChart.Axes.Depth.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.bottomChart.Axes.Depth.Title.ImageBevel.Brush.Solid = true;
-            this.bottomChart.Axes.Depth.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -890,11 +797,12 @@
             // 
             // 
             this.bottomChart.Axes.Depth.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.bottomChart.Axes.Depth.Title.Shadow.Brush.Solid = true;
-            this.bottomChart.Axes.Depth.Title.Shadow.Brush.Visible = true;
             // 
             // 
             // 
+            this.bottomChart.Axes.DepthTop.Automatic = false;
+            this.bottomChart.Axes.DepthTop.AutomaticMaximum = false;
+            this.bottomChart.Axes.DepthTop.AutomaticMinimum = false;
             // 
             // 
             // 
@@ -906,18 +814,13 @@
             // 
             // 
             this.bottomChart.Axes.DepthTop.Labels.Brush.Color = System.Drawing.Color.White;
-            this.bottomChart.Axes.DepthTop.Labels.Brush.Solid = true;
-            this.bottomChart.Axes.DepthTop.Labels.Brush.Visible = true;
             // 
             // 
             // 
-            this.bottomChart.Axes.DepthTop.Labels.Font.Bold = false;
             // 
             // 
             // 
             this.bottomChart.Axes.DepthTop.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.bottomChart.Axes.DepthTop.Labels.Font.Brush.Solid = true;
-            this.bottomChart.Axes.DepthTop.Labels.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -925,8 +828,6 @@
             // 
             // 
             this.bottomChart.Axes.DepthTop.Labels.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.bottomChart.Axes.DepthTop.Labels.Font.Shadow.Brush.Solid = true;
-            this.bottomChart.Axes.DepthTop.Labels.Font.Shadow.Brush.Visible = true;
             this.bottomChart.Axes.DepthTop.Labels.Font.Size = 9;
             this.bottomChart.Axes.DepthTop.Labels.Font.SizeFloat = 9F;
             // 
@@ -936,8 +837,6 @@
             // 
             // 
             this.bottomChart.Axes.DepthTop.Labels.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.bottomChart.Axes.DepthTop.Labels.ImageBevel.Brush.Solid = true;
-            this.bottomChart.Axes.DepthTop.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -945,8 +844,8 @@
             // 
             // 
             this.bottomChart.Axes.DepthTop.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.bottomChart.Axes.DepthTop.Labels.Shadow.Brush.Solid = true;
-            this.bottomChart.Axes.DepthTop.Labels.Shadow.Brush.Visible = true;
+            this.bottomChart.Axes.DepthTop.Maximum = 0D;
+            this.bottomChart.Axes.DepthTop.Minimum = 0D;
             // 
             // 
             // 
@@ -959,18 +858,13 @@
             // 
             // 
             this.bottomChart.Axes.DepthTop.Title.Brush.Color = System.Drawing.Color.Silver;
-            this.bottomChart.Axes.DepthTop.Title.Brush.Solid = true;
-            this.bottomChart.Axes.DepthTop.Title.Brush.Visible = true;
             // 
             // 
             // 
-            this.bottomChart.Axes.DepthTop.Title.Font.Bold = false;
             // 
             // 
             // 
             this.bottomChart.Axes.DepthTop.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bottomChart.Axes.DepthTop.Title.Font.Brush.Solid = true;
-            this.bottomChart.Axes.DepthTop.Title.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -978,8 +872,6 @@
             // 
             // 
             this.bottomChart.Axes.DepthTop.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.bottomChart.Axes.DepthTop.Title.Font.Shadow.Brush.Solid = true;
-            this.bottomChart.Axes.DepthTop.Title.Font.Shadow.Brush.Visible = true;
             this.bottomChart.Axes.DepthTop.Title.Font.Size = 11;
             this.bottomChart.Axes.DepthTop.Title.Font.SizeFloat = 11F;
             // 
@@ -989,8 +881,6 @@
             // 
             // 
             this.bottomChart.Axes.DepthTop.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.bottomChart.Axes.DepthTop.Title.ImageBevel.Brush.Solid = true;
-            this.bottomChart.Axes.DepthTop.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -998,8 +888,6 @@
             // 
             // 
             this.bottomChart.Axes.DepthTop.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.bottomChart.Axes.DepthTop.Title.Shadow.Brush.Solid = true;
-            this.bottomChart.Axes.DepthTop.Title.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -1017,18 +905,13 @@
             // 
             // 
             this.bottomChart.Axes.Left.Labels.Brush.Color = System.Drawing.Color.White;
-            this.bottomChart.Axes.Left.Labels.Brush.Solid = true;
-            this.bottomChart.Axes.Left.Labels.Brush.Visible = true;
             // 
             // 
             // 
-            this.bottomChart.Axes.Left.Labels.Font.Bold = false;
             // 
             // 
             // 
             this.bottomChart.Axes.Left.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.bottomChart.Axes.Left.Labels.Font.Brush.Solid = true;
-            this.bottomChart.Axes.Left.Labels.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -1036,8 +919,6 @@
             // 
             // 
             this.bottomChart.Axes.Left.Labels.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.bottomChart.Axes.Left.Labels.Font.Shadow.Brush.Solid = true;
-            this.bottomChart.Axes.Left.Labels.Font.Shadow.Brush.Visible = true;
             this.bottomChart.Axes.Left.Labels.Font.Size = 9;
             this.bottomChart.Axes.Left.Labels.Font.SizeFloat = 9F;
             // 
@@ -1047,8 +928,6 @@
             // 
             // 
             this.bottomChart.Axes.Left.Labels.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.bottomChart.Axes.Left.Labels.ImageBevel.Brush.Solid = true;
-            this.bottomChart.Axes.Left.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -1056,12 +935,10 @@
             // 
             // 
             this.bottomChart.Axes.Left.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.bottomChart.Axes.Left.Labels.Shadow.Brush.Solid = true;
-            this.bottomChart.Axes.Left.Labels.Shadow.Brush.Visible = true;
             this.bottomChart.Axes.Left.Labels.ValueFormat = "#,##0.####";
-            this.bottomChart.Axes.Left.Maximum = 1012.3D;
+            this.bottomChart.Axes.Left.Maximum = 1583.5D;
             this.bottomChart.Axes.Left.MaximumOffset = 1;
-            this.bottomChart.Axes.Left.Minimum = 420.7D;
+            this.bottomChart.Axes.Left.Minimum = 677.5D;
             this.bottomChart.Axes.Left.MinimumOffset = 1;
             // 
             // 
@@ -1075,18 +952,13 @@
             // 
             // 
             this.bottomChart.Axes.Left.Title.Brush.Color = System.Drawing.Color.Silver;
-            this.bottomChart.Axes.Left.Title.Brush.Solid = true;
-            this.bottomChart.Axes.Left.Title.Brush.Visible = true;
             // 
             // 
             // 
-            this.bottomChart.Axes.Left.Title.Font.Bold = false;
             // 
             // 
             // 
             this.bottomChart.Axes.Left.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bottomChart.Axes.Left.Title.Font.Brush.Solid = true;
-            this.bottomChart.Axes.Left.Title.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -1094,8 +966,6 @@
             // 
             // 
             this.bottomChart.Axes.Left.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.bottomChart.Axes.Left.Title.Font.Shadow.Brush.Solid = true;
-            this.bottomChart.Axes.Left.Title.Font.Shadow.Brush.Visible = true;
             this.bottomChart.Axes.Left.Title.Font.Size = 11;
             this.bottomChart.Axes.Left.Title.Font.SizeFloat = 11F;
             // 
@@ -1105,8 +975,6 @@
             // 
             // 
             this.bottomChart.Axes.Left.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.bottomChart.Axes.Left.Title.ImageBevel.Brush.Solid = true;
-            this.bottomChart.Axes.Left.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -1114,11 +982,12 @@
             // 
             // 
             this.bottomChart.Axes.Left.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.bottomChart.Axes.Left.Title.Shadow.Brush.Solid = true;
-            this.bottomChart.Axes.Left.Title.Shadow.Brush.Visible = true;
             // 
             // 
             // 
+            this.bottomChart.Axes.Right.Automatic = false;
+            this.bottomChart.Axes.Right.AutomaticMaximum = false;
+            this.bottomChart.Axes.Right.AutomaticMinimum = false;
             // 
             // 
             // 
@@ -1130,18 +999,13 @@
             // 
             // 
             this.bottomChart.Axes.Right.Labels.Brush.Color = System.Drawing.Color.White;
-            this.bottomChart.Axes.Right.Labels.Brush.Solid = true;
-            this.bottomChart.Axes.Right.Labels.Brush.Visible = true;
             // 
             // 
             // 
-            this.bottomChart.Axes.Right.Labels.Font.Bold = false;
             // 
             // 
             // 
             this.bottomChart.Axes.Right.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.bottomChart.Axes.Right.Labels.Font.Brush.Solid = true;
-            this.bottomChart.Axes.Right.Labels.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -1149,8 +1013,6 @@
             // 
             // 
             this.bottomChart.Axes.Right.Labels.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.bottomChart.Axes.Right.Labels.Font.Shadow.Brush.Solid = true;
-            this.bottomChart.Axes.Right.Labels.Font.Shadow.Brush.Visible = true;
             this.bottomChart.Axes.Right.Labels.Font.Size = 9;
             this.bottomChart.Axes.Right.Labels.Font.SizeFloat = 9F;
             // 
@@ -1160,8 +1022,6 @@
             // 
             // 
             this.bottomChart.Axes.Right.Labels.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.bottomChart.Axes.Right.Labels.ImageBevel.Brush.Solid = true;
-            this.bottomChart.Axes.Right.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -1169,8 +1029,8 @@
             // 
             // 
             this.bottomChart.Axes.Right.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.bottomChart.Axes.Right.Labels.Shadow.Brush.Solid = true;
-            this.bottomChart.Axes.Right.Labels.Shadow.Brush.Visible = true;
+            this.bottomChart.Axes.Right.Maximum = 0D;
+            this.bottomChart.Axes.Right.Minimum = 0D;
             // 
             // 
             // 
@@ -1183,18 +1043,13 @@
             // 
             // 
             this.bottomChart.Axes.Right.Title.Brush.Color = System.Drawing.Color.Silver;
-            this.bottomChart.Axes.Right.Title.Brush.Solid = true;
-            this.bottomChart.Axes.Right.Title.Brush.Visible = true;
             // 
             // 
             // 
-            this.bottomChart.Axes.Right.Title.Font.Bold = false;
             // 
             // 
             // 
             this.bottomChart.Axes.Right.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bottomChart.Axes.Right.Title.Font.Brush.Solid = true;
-            this.bottomChart.Axes.Right.Title.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -1202,8 +1057,6 @@
             // 
             // 
             this.bottomChart.Axes.Right.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.bottomChart.Axes.Right.Title.Font.Shadow.Brush.Solid = true;
-            this.bottomChart.Axes.Right.Title.Font.Shadow.Brush.Visible = true;
             this.bottomChart.Axes.Right.Title.Font.Size = 11;
             this.bottomChart.Axes.Right.Title.Font.SizeFloat = 11F;
             // 
@@ -1213,8 +1066,6 @@
             // 
             // 
             this.bottomChart.Axes.Right.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.bottomChart.Axes.Right.Title.ImageBevel.Brush.Solid = true;
-            this.bottomChart.Axes.Right.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -1222,11 +1073,12 @@
             // 
             // 
             this.bottomChart.Axes.Right.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.bottomChart.Axes.Right.Title.Shadow.Brush.Solid = true;
-            this.bottomChart.Axes.Right.Title.Shadow.Brush.Visible = true;
             // 
             // 
             // 
+            this.bottomChart.Axes.Top.Automatic = false;
+            this.bottomChart.Axes.Top.AutomaticMaximum = false;
+            this.bottomChart.Axes.Top.AutomaticMinimum = false;
             // 
             // 
             // 
@@ -1238,18 +1090,13 @@
             // 
             // 
             this.bottomChart.Axes.Top.Labels.Brush.Color = System.Drawing.Color.White;
-            this.bottomChart.Axes.Top.Labels.Brush.Solid = true;
-            this.bottomChart.Axes.Top.Labels.Brush.Visible = true;
             // 
             // 
             // 
-            this.bottomChart.Axes.Top.Labels.Font.Bold = false;
             // 
             // 
             // 
             this.bottomChart.Axes.Top.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.bottomChart.Axes.Top.Labels.Font.Brush.Solid = true;
-            this.bottomChart.Axes.Top.Labels.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -1257,8 +1104,6 @@
             // 
             // 
             this.bottomChart.Axes.Top.Labels.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.bottomChart.Axes.Top.Labels.Font.Shadow.Brush.Solid = true;
-            this.bottomChart.Axes.Top.Labels.Font.Shadow.Brush.Visible = true;
             this.bottomChart.Axes.Top.Labels.Font.Size = 9;
             this.bottomChart.Axes.Top.Labels.Font.SizeFloat = 9F;
             // 
@@ -1268,8 +1113,6 @@
             // 
             // 
             this.bottomChart.Axes.Top.Labels.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.bottomChart.Axes.Top.Labels.ImageBevel.Brush.Solid = true;
-            this.bottomChart.Axes.Top.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -1277,8 +1120,8 @@
             // 
             // 
             this.bottomChart.Axes.Top.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.bottomChart.Axes.Top.Labels.Shadow.Brush.Solid = true;
-            this.bottomChart.Axes.Top.Labels.Shadow.Brush.Visible = true;
+            this.bottomChart.Axes.Top.Maximum = 0D;
+            this.bottomChart.Axes.Top.Minimum = 0D;
             // 
             // 
             // 
@@ -1291,18 +1134,13 @@
             // 
             // 
             this.bottomChart.Axes.Top.Title.Brush.Color = System.Drawing.Color.Silver;
-            this.bottomChart.Axes.Top.Title.Brush.Solid = true;
-            this.bottomChart.Axes.Top.Title.Brush.Visible = true;
             // 
             // 
             // 
-            this.bottomChart.Axes.Top.Title.Font.Bold = false;
             // 
             // 
             // 
             this.bottomChart.Axes.Top.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bottomChart.Axes.Top.Title.Font.Brush.Solid = true;
-            this.bottomChart.Axes.Top.Title.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -1310,8 +1148,6 @@
             // 
             // 
             this.bottomChart.Axes.Top.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.bottomChart.Axes.Top.Title.Font.Shadow.Brush.Solid = true;
-            this.bottomChart.Axes.Top.Title.Font.Shadow.Brush.Visible = true;
             this.bottomChart.Axes.Top.Title.Font.Size = 11;
             this.bottomChart.Axes.Top.Title.Font.SizeFloat = 11F;
             // 
@@ -1321,8 +1157,6 @@
             // 
             // 
             this.bottomChart.Axes.Top.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.bottomChart.Axes.Top.Title.ImageBevel.Brush.Solid = true;
-            this.bottomChart.Axes.Top.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -1330,8 +1164,6 @@
             // 
             // 
             this.bottomChart.Axes.Top.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.bottomChart.Axes.Top.Title.Shadow.Brush.Solid = true;
-            this.bottomChart.Axes.Top.Title.Shadow.Brush.Visible = true;
             this.bottomChart.Color = System.Drawing.Color.White;
             this.bottomChart.Dock = System.Windows.Forms.DockStyle.Fill;
             // 
@@ -1345,18 +1177,13 @@
             // 
             // 
             this.bottomChart.Footer.Brush.Color = System.Drawing.Color.Silver;
-            this.bottomChart.Footer.Brush.Solid = true;
-            this.bottomChart.Footer.Brush.Visible = true;
             // 
             // 
             // 
-            this.bottomChart.Footer.Font.Bold = false;
             // 
             // 
             // 
             this.bottomChart.Footer.Font.Brush.Color = System.Drawing.Color.Red;
-            this.bottomChart.Footer.Font.Brush.Solid = true;
-            this.bottomChart.Footer.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -1364,8 +1191,6 @@
             // 
             // 
             this.bottomChart.Footer.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.bottomChart.Footer.Font.Shadow.Brush.Solid = true;
-            this.bottomChart.Footer.Font.Shadow.Brush.Visible = true;
             this.bottomChart.Footer.Font.Size = 8;
             this.bottomChart.Footer.Font.SizeFloat = 8F;
             // 
@@ -1375,8 +1200,6 @@
             // 
             // 
             this.bottomChart.Footer.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.bottomChart.Footer.ImageBevel.Brush.Solid = true;
-            this.bottomChart.Footer.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -1384,8 +1207,6 @@
             // 
             // 
             this.bottomChart.Footer.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.bottomChart.Footer.Shadow.Brush.Solid = true;
-            this.bottomChart.Footer.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -1397,18 +1218,13 @@
             // 
             // 
             this.bottomChart.Header.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.bottomChart.Header.Brush.Solid = true;
-            this.bottomChart.Header.Brush.Visible = true;
             // 
             // 
             // 
-            this.bottomChart.Header.Font.Bold = false;
             // 
             // 
             // 
             this.bottomChart.Header.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.bottomChart.Header.Font.Brush.Solid = true;
-            this.bottomChart.Header.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -1416,8 +1232,6 @@
             // 
             // 
             this.bottomChart.Header.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.bottomChart.Header.Font.Shadow.Brush.Solid = true;
-            this.bottomChart.Header.Font.Shadow.Brush.Visible = true;
             this.bottomChart.Header.Font.Size = 12;
             this.bottomChart.Header.Font.SizeFloat = 12F;
             // 
@@ -1427,8 +1241,6 @@
             // 
             // 
             this.bottomChart.Header.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.bottomChart.Header.ImageBevel.Brush.Solid = true;
-            this.bottomChart.Header.ImageBevel.Brush.Visible = true;
             this.bottomChart.Header.Lines = new string[] {
         "Channel 1"};
             // 
@@ -1438,8 +1250,6 @@
             // 
             // 
             this.bottomChart.Header.Shadow.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.bottomChart.Header.Shadow.Brush.Solid = true;
-            this.bottomChart.Header.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -1451,18 +1261,13 @@
             // 
             // 
             this.bottomChart.Legend.Brush.Color = System.Drawing.Color.White;
-            this.bottomChart.Legend.Brush.Solid = true;
-            this.bottomChart.Legend.Brush.Visible = true;
             // 
             // 
             // 
-            this.bottomChart.Legend.Font.Bold = false;
             // 
             // 
             // 
             this.bottomChart.Legend.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bottomChart.Legend.Font.Brush.Solid = true;
-            this.bottomChart.Legend.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -1470,8 +1275,6 @@
             // 
             // 
             this.bottomChart.Legend.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.bottomChart.Legend.Font.Shadow.Brush.Solid = true;
-            this.bottomChart.Legend.Font.Shadow.Brush.Visible = true;
             this.bottomChart.Legend.Font.Size = 9;
             this.bottomChart.Legend.Font.SizeFloat = 9F;
             // 
@@ -1481,8 +1284,6 @@
             // 
             // 
             this.bottomChart.Legend.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.bottomChart.Legend.ImageBevel.Brush.Solid = true;
-            this.bottomChart.Legend.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -1490,8 +1291,6 @@
             // 
             // 
             this.bottomChart.Legend.Shadow.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.bottomChart.Legend.Shadow.Brush.Solid = true;
-            this.bottomChart.Legend.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -1502,8 +1301,6 @@
             // 
             // 
             this.bottomChart.Legend.Symbol.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.bottomChart.Legend.Symbol.Shadow.Brush.Solid = true;
-            this.bottomChart.Legend.Symbol.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -1515,8 +1312,6 @@
             // 
             // 
             this.bottomChart.Legend.Title.Brush.Color = System.Drawing.Color.White;
-            this.bottomChart.Legend.Title.Brush.Solid = true;
-            this.bottomChart.Legend.Title.Brush.Visible = true;
             // 
             // 
             // 
@@ -1525,8 +1320,6 @@
             // 
             // 
             this.bottomChart.Legend.Title.Font.Brush.Color = System.Drawing.Color.Black;
-            this.bottomChart.Legend.Title.Font.Brush.Solid = true;
-            this.bottomChart.Legend.Title.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -1534,8 +1327,6 @@
             // 
             // 
             this.bottomChart.Legend.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.bottomChart.Legend.Title.Font.Shadow.Brush.Solid = true;
-            this.bottomChart.Legend.Title.Font.Shadow.Brush.Visible = true;
             this.bottomChart.Legend.Title.Font.Size = 8;
             this.bottomChart.Legend.Title.Font.SizeFloat = 8F;
             // 
@@ -1545,8 +1336,6 @@
             // 
             // 
             this.bottomChart.Legend.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.bottomChart.Legend.Title.ImageBevel.Brush.Solid = true;
-            this.bottomChart.Legend.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -1554,8 +1343,6 @@
             // 
             // 
             this.bottomChart.Legend.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.bottomChart.Legend.Title.Shadow.Brush.Solid = true;
-            this.bottomChart.Legend.Title.Shadow.Brush.Visible = true;
             this.bottomChart.Legend.Visible = false;
             this.bottomChart.Location = new System.Drawing.Point(0, 185);
             this.bottomChart.Name = "bottomChart";
@@ -1570,8 +1357,6 @@
             // 
             // 
             this.bottomChart.Panel.Brush.Color = System.Drawing.Color.White;
-            this.bottomChart.Panel.Brush.Solid = true;
-            this.bottomChart.Panel.Brush.Visible = true;
             // 
             // 
             // 
@@ -1579,8 +1364,6 @@
             // 
             // 
             this.bottomChart.Panel.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.bottomChart.Panel.ImageBevel.Brush.Solid = true;
-            this.bottomChart.Panel.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -1588,8 +1371,14 @@
             // 
             // 
             this.bottomChart.Panel.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.bottomChart.Panel.Shadow.Brush.Solid = true;
-            this.bottomChart.Panel.Shadow.Brush.Visible = true;
+            // 
+            // 
+            // 
+            margins1.Bottom = 100;
+            margins1.Left = 100;
+            margins1.Right = 100;
+            margins1.Top = 100;
+            this.bottomChart.Printer.Margins = margins1;
             this.bottomChart.Series.Add(this.mtxFastLine2);
             signalTeeItem1.Caption = null;
             signalTeeItem1.Input = null;
@@ -1610,18 +1399,13 @@
             // 
             // 
             this.bottomChart.SubFooter.Brush.Color = System.Drawing.Color.Silver;
-            this.bottomChart.SubFooter.Brush.Solid = true;
-            this.bottomChart.SubFooter.Brush.Visible = true;
             // 
             // 
             // 
-            this.bottomChart.SubFooter.Font.Bold = false;
             // 
             // 
             // 
             this.bottomChart.SubFooter.Font.Brush.Color = System.Drawing.Color.Red;
-            this.bottomChart.SubFooter.Font.Brush.Solid = true;
-            this.bottomChart.SubFooter.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -1629,8 +1413,6 @@
             // 
             // 
             this.bottomChart.SubFooter.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.bottomChart.SubFooter.Font.Shadow.Brush.Solid = true;
-            this.bottomChart.SubFooter.Font.Shadow.Brush.Visible = true;
             this.bottomChart.SubFooter.Font.Size = 8;
             this.bottomChart.SubFooter.Font.SizeFloat = 8F;
             // 
@@ -1640,8 +1422,6 @@
             // 
             // 
             this.bottomChart.SubFooter.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.bottomChart.SubFooter.ImageBevel.Brush.Solid = true;
-            this.bottomChart.SubFooter.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -1649,8 +1429,6 @@
             // 
             // 
             this.bottomChart.SubFooter.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.bottomChart.SubFooter.Shadow.Brush.Solid = true;
-            this.bottomChart.SubFooter.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -1662,18 +1440,13 @@
             // 
             // 
             this.bottomChart.SubHeader.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.bottomChart.SubHeader.Brush.Solid = true;
-            this.bottomChart.SubHeader.Brush.Visible = true;
             // 
             // 
             // 
-            this.bottomChart.SubHeader.Font.Bold = false;
             // 
             // 
             // 
             this.bottomChart.SubHeader.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.bottomChart.SubHeader.Font.Brush.Solid = true;
-            this.bottomChart.SubHeader.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -1681,8 +1454,6 @@
             // 
             // 
             this.bottomChart.SubHeader.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.bottomChart.SubHeader.Font.Shadow.Brush.Solid = true;
-            this.bottomChart.SubHeader.Font.Shadow.Brush.Visible = true;
             this.bottomChart.SubHeader.Font.Size = 12;
             this.bottomChart.SubHeader.Font.SizeFloat = 12F;
             // 
@@ -1692,8 +1463,6 @@
             // 
             // 
             this.bottomChart.SubHeader.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.bottomChart.SubHeader.ImageBevel.Brush.Solid = true;
-            this.bottomChart.SubHeader.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -1701,8 +1470,6 @@
             // 
             // 
             this.bottomChart.SubHeader.Shadow.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.bottomChart.SubHeader.Shadow.Brush.Solid = true;
-            this.bottomChart.SubHeader.Shadow.Brush.Visible = true;
             this.bottomChart.TabIndex = 6;
             this.bottomChart.Tools.Add(this.axisScaleTool2);
             // 
@@ -1719,7 +1486,6 @@
             // 
             // 
             this.bottomChart.Walls.Back.Brush.Color = System.Drawing.Color.Silver;
-            this.bottomChart.Walls.Back.Brush.Solid = true;
             this.bottomChart.Walls.Back.Brush.Visible = false;
             // 
             // 
@@ -1728,8 +1494,6 @@
             // 
             // 
             this.bottomChart.Walls.Back.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.bottomChart.Walls.Back.ImageBevel.Brush.Solid = true;
-            this.bottomChart.Walls.Back.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -1737,8 +1501,6 @@
             // 
             // 
             this.bottomChart.Walls.Back.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.bottomChart.Walls.Back.Shadow.Brush.Solid = true;
-            this.bottomChart.Walls.Back.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -1750,8 +1512,6 @@
             // 
             // 
             this.bottomChart.Walls.Bottom.Brush.Color = System.Drawing.Color.White;
-            this.bottomChart.Walls.Bottom.Brush.Solid = true;
-            this.bottomChart.Walls.Bottom.Brush.Visible = true;
             // 
             // 
             // 
@@ -1759,8 +1519,6 @@
             // 
             // 
             this.bottomChart.Walls.Bottom.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.bottomChart.Walls.Bottom.ImageBevel.Brush.Solid = true;
-            this.bottomChart.Walls.Bottom.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -1768,8 +1526,6 @@
             // 
             // 
             this.bottomChart.Walls.Bottom.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.bottomChart.Walls.Bottom.Shadow.Brush.Solid = true;
-            this.bottomChart.Walls.Bottom.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -1781,8 +1537,6 @@
             // 
             // 
             this.bottomChart.Walls.Left.Brush.Color = System.Drawing.Color.LightYellow;
-            this.bottomChart.Walls.Left.Brush.Solid = true;
-            this.bottomChart.Walls.Left.Brush.Visible = true;
             // 
             // 
             // 
@@ -1790,8 +1544,6 @@
             // 
             // 
             this.bottomChart.Walls.Left.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.bottomChart.Walls.Left.ImageBevel.Brush.Solid = true;
-            this.bottomChart.Walls.Left.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -1799,8 +1551,6 @@
             // 
             // 
             this.bottomChart.Walls.Left.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.bottomChart.Walls.Left.Shadow.Brush.Solid = true;
-            this.bottomChart.Walls.Left.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -1812,8 +1562,6 @@
             // 
             // 
             this.bottomChart.Walls.Right.Brush.Color = System.Drawing.Color.LightYellow;
-            this.bottomChart.Walls.Right.Brush.Solid = true;
-            this.bottomChart.Walls.Right.Brush.Visible = true;
             // 
             // 
             // 
@@ -1821,8 +1569,6 @@
             // 
             // 
             this.bottomChart.Walls.Right.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.bottomChart.Walls.Right.ImageBevel.Brush.Solid = true;
-            this.bottomChart.Walls.Right.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -1830,8 +1576,6 @@
             // 
             // 
             this.bottomChart.Walls.Right.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.bottomChart.Walls.Right.Shadow.Brush.Solid = true;
-            this.bottomChart.Walls.Right.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -1839,7 +1583,6 @@
             // 
             // 
             this.bottomChart.Zoom.Brush.Color = System.Drawing.Color.LightBlue;
-            this.bottomChart.Zoom.Brush.Solid = true;
             this.bottomChart.Zoom.Brush.Visible = false;
             // 
             // axisScaleTool2
@@ -1855,12 +1598,11 @@
             // 
             // 
             // 
-            this.topChart.Graphics3D.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.Default;
-            this.topChart.Graphics3D.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+             
+             
             // 
             // 
             // 
-            this.topChart.Axes.Automatic = false;
             // 
             // 
             // 
@@ -1880,18 +1622,13 @@
             // 
             // 
             this.topChart.Axes.Bottom.Labels.Brush.Color = System.Drawing.Color.White;
-            this.topChart.Axes.Bottom.Labels.Brush.Solid = true;
-            this.topChart.Axes.Bottom.Labels.Brush.Visible = true;
             // 
             // 
             // 
-            this.topChart.Axes.Bottom.Labels.Font.Bold = false;
             // 
             // 
             // 
             this.topChart.Axes.Bottom.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.topChart.Axes.Bottom.Labels.Font.Brush.Solid = true;
-            this.topChart.Axes.Bottom.Labels.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -1899,8 +1636,6 @@
             // 
             // 
             this.topChart.Axes.Bottom.Labels.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.topChart.Axes.Bottom.Labels.Font.Shadow.Brush.Solid = true;
-            this.topChart.Axes.Bottom.Labels.Font.Shadow.Brush.Visible = true;
             this.topChart.Axes.Bottom.Labels.Font.Size = 9;
             this.topChart.Axes.Bottom.Labels.Font.SizeFloat = 9F;
             // 
@@ -1910,8 +1645,6 @@
             // 
             // 
             this.topChart.Axes.Bottom.Labels.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.topChart.Axes.Bottom.Labels.ImageBevel.Brush.Solid = true;
-            this.topChart.Axes.Bottom.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -1919,8 +1652,6 @@
             // 
             // 
             this.topChart.Axes.Bottom.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.topChart.Axes.Bottom.Labels.Shadow.Brush.Solid = true;
-            this.topChart.Axes.Bottom.Labels.Shadow.Brush.Visible = true;
             this.topChart.Axes.Bottom.MaximumOffset = 1;
             this.topChart.Axes.Bottom.MinimumOffset = 1;
             // 
@@ -1939,18 +1670,13 @@
             // 
             // 
             this.topChart.Axes.Bottom.Title.Brush.Color = System.Drawing.Color.Silver;
-            this.topChart.Axes.Bottom.Title.Brush.Solid = true;
-            this.topChart.Axes.Bottom.Title.Brush.Visible = true;
             // 
             // 
             // 
-            this.topChart.Axes.Bottom.Title.Font.Bold = false;
             // 
             // 
             // 
             this.topChart.Axes.Bottom.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.topChart.Axes.Bottom.Title.Font.Brush.Solid = true;
-            this.topChart.Axes.Bottom.Title.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -1958,8 +1684,6 @@
             // 
             // 
             this.topChart.Axes.Bottom.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.topChart.Axes.Bottom.Title.Font.Shadow.Brush.Solid = true;
-            this.topChart.Axes.Bottom.Title.Font.Shadow.Brush.Visible = true;
             this.topChart.Axes.Bottom.Title.Font.Size = 11;
             this.topChart.Axes.Bottom.Title.Font.SizeFloat = 11F;
             // 
@@ -1969,8 +1693,6 @@
             // 
             // 
             this.topChart.Axes.Bottom.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.topChart.Axes.Bottom.Title.ImageBevel.Brush.Solid = true;
-            this.topChart.Axes.Bottom.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -1978,11 +1700,12 @@
             // 
             // 
             this.topChart.Axes.Bottom.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.topChart.Axes.Bottom.Title.Shadow.Brush.Solid = true;
-            this.topChart.Axes.Bottom.Title.Shadow.Brush.Visible = true;
             // 
             // 
             // 
+            this.topChart.Axes.Depth.Automatic = false;
+            this.topChart.Axes.Depth.AutomaticMaximum = false;
+            this.topChart.Axes.Depth.AutomaticMinimum = false;
             // 
             // 
             // 
@@ -1994,18 +1717,13 @@
             // 
             // 
             this.topChart.Axes.Depth.Labels.Brush.Color = System.Drawing.Color.White;
-            this.topChart.Axes.Depth.Labels.Brush.Solid = true;
-            this.topChart.Axes.Depth.Labels.Brush.Visible = true;
             // 
             // 
             // 
-            this.topChart.Axes.Depth.Labels.Font.Bold = false;
             // 
             // 
             // 
             this.topChart.Axes.Depth.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.topChart.Axes.Depth.Labels.Font.Brush.Solid = true;
-            this.topChart.Axes.Depth.Labels.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -2013,8 +1731,6 @@
             // 
             // 
             this.topChart.Axes.Depth.Labels.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.topChart.Axes.Depth.Labels.Font.Shadow.Brush.Solid = true;
-            this.topChart.Axes.Depth.Labels.Font.Shadow.Brush.Visible = true;
             this.topChart.Axes.Depth.Labels.Font.Size = 9;
             this.topChart.Axes.Depth.Labels.Font.SizeFloat = 9F;
             // 
@@ -2024,8 +1740,6 @@
             // 
             // 
             this.topChart.Axes.Depth.Labels.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.topChart.Axes.Depth.Labels.ImageBevel.Brush.Solid = true;
-            this.topChart.Axes.Depth.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -2033,8 +1747,8 @@
             // 
             // 
             this.topChart.Axes.Depth.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.topChart.Axes.Depth.Labels.Shadow.Brush.Solid = true;
-            this.topChart.Axes.Depth.Labels.Shadow.Brush.Visible = true;
+            this.topChart.Axes.Depth.Maximum = 0D;
+            this.topChart.Axes.Depth.Minimum = 0D;
             // 
             // 
             // 
@@ -2047,18 +1761,13 @@
             // 
             // 
             this.topChart.Axes.Depth.Title.Brush.Color = System.Drawing.Color.Silver;
-            this.topChart.Axes.Depth.Title.Brush.Solid = true;
-            this.topChart.Axes.Depth.Title.Brush.Visible = true;
             // 
             // 
             // 
-            this.topChart.Axes.Depth.Title.Font.Bold = false;
             // 
             // 
             // 
             this.topChart.Axes.Depth.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.topChart.Axes.Depth.Title.Font.Brush.Solid = true;
-            this.topChart.Axes.Depth.Title.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -2066,8 +1775,6 @@
             // 
             // 
             this.topChart.Axes.Depth.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.topChart.Axes.Depth.Title.Font.Shadow.Brush.Solid = true;
-            this.topChart.Axes.Depth.Title.Font.Shadow.Brush.Visible = true;
             this.topChart.Axes.Depth.Title.Font.Size = 11;
             this.topChart.Axes.Depth.Title.Font.SizeFloat = 11F;
             // 
@@ -2077,8 +1784,6 @@
             // 
             // 
             this.topChart.Axes.Depth.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.topChart.Axes.Depth.Title.ImageBevel.Brush.Solid = true;
-            this.topChart.Axes.Depth.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -2086,11 +1791,12 @@
             // 
             // 
             this.topChart.Axes.Depth.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.topChart.Axes.Depth.Title.Shadow.Brush.Solid = true;
-            this.topChart.Axes.Depth.Title.Shadow.Brush.Visible = true;
             // 
             // 
             // 
+            this.topChart.Axes.DepthTop.Automatic = false;
+            this.topChart.Axes.DepthTop.AutomaticMaximum = false;
+            this.topChart.Axes.DepthTop.AutomaticMinimum = false;
             // 
             // 
             // 
@@ -2102,18 +1808,13 @@
             // 
             // 
             this.topChart.Axes.DepthTop.Labels.Brush.Color = System.Drawing.Color.White;
-            this.topChart.Axes.DepthTop.Labels.Brush.Solid = true;
-            this.topChart.Axes.DepthTop.Labels.Brush.Visible = true;
             // 
             // 
             // 
-            this.topChart.Axes.DepthTop.Labels.Font.Bold = false;
             // 
             // 
             // 
             this.topChart.Axes.DepthTop.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.topChart.Axes.DepthTop.Labels.Font.Brush.Solid = true;
-            this.topChart.Axes.DepthTop.Labels.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -2121,8 +1822,6 @@
             // 
             // 
             this.topChart.Axes.DepthTop.Labels.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.topChart.Axes.DepthTop.Labels.Font.Shadow.Brush.Solid = true;
-            this.topChart.Axes.DepthTop.Labels.Font.Shadow.Brush.Visible = true;
             this.topChart.Axes.DepthTop.Labels.Font.Size = 9;
             this.topChart.Axes.DepthTop.Labels.Font.SizeFloat = 9F;
             // 
@@ -2132,8 +1831,6 @@
             // 
             // 
             this.topChart.Axes.DepthTop.Labels.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.topChart.Axes.DepthTop.Labels.ImageBevel.Brush.Solid = true;
-            this.topChart.Axes.DepthTop.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -2141,8 +1838,8 @@
             // 
             // 
             this.topChart.Axes.DepthTop.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.topChart.Axes.DepthTop.Labels.Shadow.Brush.Solid = true;
-            this.topChart.Axes.DepthTop.Labels.Shadow.Brush.Visible = true;
+            this.topChart.Axes.DepthTop.Maximum = 0D;
+            this.topChart.Axes.DepthTop.Minimum = 0D;
             // 
             // 
             // 
@@ -2155,18 +1852,13 @@
             // 
             // 
             this.topChart.Axes.DepthTop.Title.Brush.Color = System.Drawing.Color.Silver;
-            this.topChart.Axes.DepthTop.Title.Brush.Solid = true;
-            this.topChart.Axes.DepthTop.Title.Brush.Visible = true;
             // 
             // 
             // 
-            this.topChart.Axes.DepthTop.Title.Font.Bold = false;
             // 
             // 
             // 
             this.topChart.Axes.DepthTop.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.topChart.Axes.DepthTop.Title.Font.Brush.Solid = true;
-            this.topChart.Axes.DepthTop.Title.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -2174,8 +1866,6 @@
             // 
             // 
             this.topChart.Axes.DepthTop.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.topChart.Axes.DepthTop.Title.Font.Shadow.Brush.Solid = true;
-            this.topChart.Axes.DepthTop.Title.Font.Shadow.Brush.Visible = true;
             this.topChart.Axes.DepthTop.Title.Font.Size = 11;
             this.topChart.Axes.DepthTop.Title.Font.SizeFloat = 11F;
             // 
@@ -2185,8 +1875,6 @@
             // 
             // 
             this.topChart.Axes.DepthTop.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.topChart.Axes.DepthTop.Title.ImageBevel.Brush.Solid = true;
-            this.topChart.Axes.DepthTop.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -2194,8 +1882,6 @@
             // 
             // 
             this.topChart.Axes.DepthTop.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.topChart.Axes.DepthTop.Title.Shadow.Brush.Solid = true;
-            this.topChart.Axes.DepthTop.Title.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -2217,18 +1903,13 @@
             // 
             // 
             this.topChart.Axes.Left.Labels.Brush.Color = System.Drawing.Color.White;
-            this.topChart.Axes.Left.Labels.Brush.Solid = true;
-            this.topChart.Axes.Left.Labels.Brush.Visible = true;
             // 
             // 
             // 
-            this.topChart.Axes.Left.Labels.Font.Bold = false;
             // 
             // 
             // 
             this.topChart.Axes.Left.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.topChart.Axes.Left.Labels.Font.Brush.Solid = true;
-            this.topChart.Axes.Left.Labels.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -2236,8 +1917,6 @@
             // 
             // 
             this.topChart.Axes.Left.Labels.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.topChart.Axes.Left.Labels.Font.Shadow.Brush.Solid = true;
-            this.topChart.Axes.Left.Labels.Font.Shadow.Brush.Visible = true;
             this.topChart.Axes.Left.Labels.Font.Size = 9;
             this.topChart.Axes.Left.Labels.Font.SizeFloat = 9F;
             // 
@@ -2247,8 +1926,6 @@
             // 
             // 
             this.topChart.Axes.Left.Labels.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.topChart.Axes.Left.Labels.ImageBevel.Brush.Solid = true;
-            this.topChart.Axes.Left.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -2256,12 +1933,10 @@
             // 
             // 
             this.topChart.Axes.Left.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.topChart.Axes.Left.Labels.Shadow.Brush.Solid = true;
-            this.topChart.Axes.Left.Labels.Shadow.Brush.Visible = true;
             this.topChart.Axes.Left.Labels.ValueFormat = "#,##0.####";
-            this.topChart.Axes.Left.Maximum = 636.3D;
+            this.topChart.Axes.Left.Maximum = 256.2D;
             this.topChart.Axes.Left.MaximumOffset = 1;
-            this.topChart.Axes.Left.Minimum = 176.7D;
+            this.topChart.Axes.Left.Minimum = -22.200000000000003D;
             this.topChart.Axes.Left.MinimumOffset = 1;
             // 
             // 
@@ -2275,18 +1950,13 @@
             // 
             // 
             this.topChart.Axes.Left.Title.Brush.Color = System.Drawing.Color.Silver;
-            this.topChart.Axes.Left.Title.Brush.Solid = true;
-            this.topChart.Axes.Left.Title.Brush.Visible = true;
             // 
             // 
             // 
-            this.topChart.Axes.Left.Title.Font.Bold = false;
             // 
             // 
             // 
             this.topChart.Axes.Left.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.topChart.Axes.Left.Title.Font.Brush.Solid = true;
-            this.topChart.Axes.Left.Title.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -2294,8 +1964,6 @@
             // 
             // 
             this.topChart.Axes.Left.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.topChart.Axes.Left.Title.Font.Shadow.Brush.Solid = true;
-            this.topChart.Axes.Left.Title.Font.Shadow.Brush.Visible = true;
             this.topChart.Axes.Left.Title.Font.Size = 11;
             this.topChart.Axes.Left.Title.Font.SizeFloat = 11F;
             // 
@@ -2305,8 +1973,6 @@
             // 
             // 
             this.topChart.Axes.Left.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.topChart.Axes.Left.Title.ImageBevel.Brush.Solid = true;
-            this.topChart.Axes.Left.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -2314,11 +1980,12 @@
             // 
             // 
             this.topChart.Axes.Left.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.topChart.Axes.Left.Title.Shadow.Brush.Solid = true;
-            this.topChart.Axes.Left.Title.Shadow.Brush.Visible = true;
             // 
             // 
             // 
+            this.topChart.Axes.Right.Automatic = false;
+            this.topChart.Axes.Right.AutomaticMaximum = false;
+            this.topChart.Axes.Right.AutomaticMinimum = false;
             // 
             // 
             // 
@@ -2330,18 +1997,13 @@
             // 
             // 
             this.topChart.Axes.Right.Labels.Brush.Color = System.Drawing.Color.White;
-            this.topChart.Axes.Right.Labels.Brush.Solid = true;
-            this.topChart.Axes.Right.Labels.Brush.Visible = true;
             // 
             // 
             // 
-            this.topChart.Axes.Right.Labels.Font.Bold = false;
             // 
             // 
             // 
             this.topChart.Axes.Right.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.topChart.Axes.Right.Labels.Font.Brush.Solid = true;
-            this.topChart.Axes.Right.Labels.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -2349,8 +2011,6 @@
             // 
             // 
             this.topChart.Axes.Right.Labels.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.topChart.Axes.Right.Labels.Font.Shadow.Brush.Solid = true;
-            this.topChart.Axes.Right.Labels.Font.Shadow.Brush.Visible = true;
             this.topChart.Axes.Right.Labels.Font.Size = 9;
             this.topChart.Axes.Right.Labels.Font.SizeFloat = 9F;
             // 
@@ -2360,8 +2020,6 @@
             // 
             // 
             this.topChart.Axes.Right.Labels.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.topChart.Axes.Right.Labels.ImageBevel.Brush.Solid = true;
-            this.topChart.Axes.Right.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -2369,8 +2027,8 @@
             // 
             // 
             this.topChart.Axes.Right.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.topChart.Axes.Right.Labels.Shadow.Brush.Solid = true;
-            this.topChart.Axes.Right.Labels.Shadow.Brush.Visible = true;
+            this.topChart.Axes.Right.Maximum = 0D;
+            this.topChart.Axes.Right.Minimum = 0D;
             // 
             // 
             // 
@@ -2383,18 +2041,13 @@
             // 
             // 
             this.topChart.Axes.Right.Title.Brush.Color = System.Drawing.Color.Silver;
-            this.topChart.Axes.Right.Title.Brush.Solid = true;
-            this.topChart.Axes.Right.Title.Brush.Visible = true;
             // 
             // 
             // 
-            this.topChart.Axes.Right.Title.Font.Bold = false;
             // 
             // 
             // 
             this.topChart.Axes.Right.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.topChart.Axes.Right.Title.Font.Brush.Solid = true;
-            this.topChart.Axes.Right.Title.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -2402,8 +2055,6 @@
             // 
             // 
             this.topChart.Axes.Right.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.topChart.Axes.Right.Title.Font.Shadow.Brush.Solid = true;
-            this.topChart.Axes.Right.Title.Font.Shadow.Brush.Visible = true;
             this.topChart.Axes.Right.Title.Font.Size = 11;
             this.topChart.Axes.Right.Title.Font.SizeFloat = 11F;
             // 
@@ -2413,8 +2064,6 @@
             // 
             // 
             this.topChart.Axes.Right.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.topChart.Axes.Right.Title.ImageBevel.Brush.Solid = true;
-            this.topChart.Axes.Right.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -2422,11 +2071,12 @@
             // 
             // 
             this.topChart.Axes.Right.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.topChart.Axes.Right.Title.Shadow.Brush.Solid = true;
-            this.topChart.Axes.Right.Title.Shadow.Brush.Visible = true;
             // 
             // 
             // 
+            this.topChart.Axes.Top.Automatic = false;
+            this.topChart.Axes.Top.AutomaticMaximum = false;
+            this.topChart.Axes.Top.AutomaticMinimum = false;
             // 
             // 
             // 
@@ -2438,18 +2088,13 @@
             // 
             // 
             this.topChart.Axes.Top.Labels.Brush.Color = System.Drawing.Color.White;
-            this.topChart.Axes.Top.Labels.Brush.Solid = true;
-            this.topChart.Axes.Top.Labels.Brush.Visible = true;
             // 
             // 
             // 
-            this.topChart.Axes.Top.Labels.Font.Bold = false;
             // 
             // 
             // 
             this.topChart.Axes.Top.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.topChart.Axes.Top.Labels.Font.Brush.Solid = true;
-            this.topChart.Axes.Top.Labels.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -2457,8 +2102,6 @@
             // 
             // 
             this.topChart.Axes.Top.Labels.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.topChart.Axes.Top.Labels.Font.Shadow.Brush.Solid = true;
-            this.topChart.Axes.Top.Labels.Font.Shadow.Brush.Visible = true;
             this.topChart.Axes.Top.Labels.Font.Size = 9;
             this.topChart.Axes.Top.Labels.Font.SizeFloat = 9F;
             // 
@@ -2468,8 +2111,6 @@
             // 
             // 
             this.topChart.Axes.Top.Labels.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.topChart.Axes.Top.Labels.ImageBevel.Brush.Solid = true;
-            this.topChart.Axes.Top.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -2477,8 +2118,8 @@
             // 
             // 
             this.topChart.Axes.Top.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.topChart.Axes.Top.Labels.Shadow.Brush.Solid = true;
-            this.topChart.Axes.Top.Labels.Shadow.Brush.Visible = true;
+            this.topChart.Axes.Top.Maximum = 0D;
+            this.topChart.Axes.Top.Minimum = 0D;
             // 
             // 
             // 
@@ -2491,18 +2132,13 @@
             // 
             // 
             this.topChart.Axes.Top.Title.Brush.Color = System.Drawing.Color.Silver;
-            this.topChart.Axes.Top.Title.Brush.Solid = true;
-            this.topChart.Axes.Top.Title.Brush.Visible = true;
             // 
             // 
             // 
-            this.topChart.Axes.Top.Title.Font.Bold = false;
             // 
             // 
             // 
             this.topChart.Axes.Top.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.topChart.Axes.Top.Title.Font.Brush.Solid = true;
-            this.topChart.Axes.Top.Title.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -2510,8 +2146,6 @@
             // 
             // 
             this.topChart.Axes.Top.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.topChart.Axes.Top.Title.Font.Shadow.Brush.Solid = true;
-            this.topChart.Axes.Top.Title.Font.Shadow.Brush.Visible = true;
             this.topChart.Axes.Top.Title.Font.Size = 11;
             this.topChart.Axes.Top.Title.Font.SizeFloat = 11F;
             // 
@@ -2521,8 +2155,6 @@
             // 
             // 
             this.topChart.Axes.Top.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.topChart.Axes.Top.Title.ImageBevel.Brush.Solid = true;
-            this.topChart.Axes.Top.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -2530,10 +2162,8 @@
             // 
             // 
             this.topChart.Axes.Top.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.topChart.Axes.Top.Title.Shadow.Brush.Solid = true;
-            this.topChart.Axes.Top.Title.Shadow.Brush.Visible = true;
             this.topChart.Color = System.Drawing.Color.White;
-            this.topChart.Cursor = System.Windows.Forms.Cursors.Default;
+             
             this.topChart.Dock = System.Windows.Forms.DockStyle.Top;
             // 
             // 
@@ -2546,18 +2176,13 @@
             // 
             // 
             this.topChart.Footer.Brush.Color = System.Drawing.Color.Silver;
-            this.topChart.Footer.Brush.Solid = true;
-            this.topChart.Footer.Brush.Visible = true;
             // 
             // 
             // 
-            this.topChart.Footer.Font.Bold = false;
             // 
             // 
             // 
             this.topChart.Footer.Font.Brush.Color = System.Drawing.Color.Red;
-            this.topChart.Footer.Font.Brush.Solid = true;
-            this.topChart.Footer.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -2565,8 +2190,6 @@
             // 
             // 
             this.topChart.Footer.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.topChart.Footer.Font.Shadow.Brush.Solid = true;
-            this.topChart.Footer.Font.Shadow.Brush.Visible = true;
             this.topChart.Footer.Font.Size = 8;
             this.topChart.Footer.Font.SizeFloat = 8F;
             // 
@@ -2576,8 +2199,6 @@
             // 
             // 
             this.topChart.Footer.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.topChart.Footer.ImageBevel.Brush.Solid = true;
-            this.topChart.Footer.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -2585,8 +2206,6 @@
             // 
             // 
             this.topChart.Footer.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.topChart.Footer.Shadow.Brush.Solid = true;
-            this.topChart.Footer.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -2598,18 +2217,13 @@
             // 
             // 
             this.topChart.Header.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.topChart.Header.Brush.Solid = true;
-            this.topChart.Header.Brush.Visible = true;
             // 
             // 
             // 
-            this.topChart.Header.Font.Bold = false;
             // 
             // 
             // 
             this.topChart.Header.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.topChart.Header.Font.Brush.Solid = true;
-            this.topChart.Header.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -2617,8 +2231,6 @@
             // 
             // 
             this.topChart.Header.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.topChart.Header.Font.Shadow.Brush.Solid = true;
-            this.topChart.Header.Font.Shadow.Brush.Visible = true;
             this.topChart.Header.Font.Size = 12;
             this.topChart.Header.Font.SizeFloat = 12F;
             // 
@@ -2628,8 +2240,6 @@
             // 
             // 
             this.topChart.Header.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.topChart.Header.ImageBevel.Brush.Solid = true;
-            this.topChart.Header.ImageBevel.Brush.Visible = true;
             this.topChart.Header.Lines = new string[] {
         "Channel 0"};
             // 
@@ -2639,8 +2249,6 @@
             // 
             // 
             this.topChart.Header.Shadow.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.topChart.Header.Shadow.Brush.Solid = true;
-            this.topChart.Header.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -2652,18 +2260,13 @@
             // 
             // 
             this.topChart.Legend.Brush.Color = System.Drawing.Color.White;
-            this.topChart.Legend.Brush.Solid = true;
-            this.topChart.Legend.Brush.Visible = true;
             // 
             // 
             // 
-            this.topChart.Legend.Font.Bold = false;
             // 
             // 
             // 
             this.topChart.Legend.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.topChart.Legend.Font.Brush.Solid = true;
-            this.topChart.Legend.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -2671,8 +2274,6 @@
             // 
             // 
             this.topChart.Legend.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.topChart.Legend.Font.Shadow.Brush.Solid = true;
-            this.topChart.Legend.Font.Shadow.Brush.Visible = true;
             this.topChart.Legend.Font.Size = 9;
             this.topChart.Legend.Font.SizeFloat = 9F;
             // 
@@ -2682,8 +2283,6 @@
             // 
             // 
             this.topChart.Legend.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.topChart.Legend.ImageBevel.Brush.Solid = true;
-            this.topChart.Legend.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -2691,8 +2290,6 @@
             // 
             // 
             this.topChart.Legend.Shadow.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.topChart.Legend.Shadow.Brush.Solid = true;
-            this.topChart.Legend.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -2703,8 +2300,6 @@
             // 
             // 
             this.topChart.Legend.Symbol.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.topChart.Legend.Symbol.Shadow.Brush.Solid = true;
-            this.topChart.Legend.Symbol.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -2716,8 +2311,6 @@
             // 
             // 
             this.topChart.Legend.Title.Brush.Color = System.Drawing.Color.White;
-            this.topChart.Legend.Title.Brush.Solid = true;
-            this.topChart.Legend.Title.Brush.Visible = true;
             // 
             // 
             // 
@@ -2726,8 +2319,6 @@
             // 
             // 
             this.topChart.Legend.Title.Font.Brush.Color = System.Drawing.Color.Black;
-            this.topChart.Legend.Title.Font.Brush.Solid = true;
-            this.topChart.Legend.Title.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -2735,8 +2326,6 @@
             // 
             // 
             this.topChart.Legend.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.topChart.Legend.Title.Font.Shadow.Brush.Solid = true;
-            this.topChart.Legend.Title.Font.Shadow.Brush.Visible = true;
             this.topChart.Legend.Title.Font.Size = 8;
             this.topChart.Legend.Title.Font.SizeFloat = 8F;
             // 
@@ -2746,8 +2335,6 @@
             // 
             // 
             this.topChart.Legend.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.topChart.Legend.Title.ImageBevel.Brush.Solid = true;
-            this.topChart.Legend.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -2755,8 +2342,6 @@
             // 
             // 
             this.topChart.Legend.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.topChart.Legend.Title.Shadow.Brush.Solid = true;
-            this.topChart.Legend.Title.Shadow.Brush.Visible = true;
             this.topChart.Legend.Visible = false;
             this.topChart.Location = new System.Drawing.Point(0, 0);
             this.topChart.Name = "topChart";
@@ -2771,8 +2356,6 @@
             // 
             // 
             this.topChart.Panel.Brush.Color = System.Drawing.Color.White;
-            this.topChart.Panel.Brush.Solid = true;
-            this.topChart.Panel.Brush.Visible = true;
             // 
             // 
             // 
@@ -2780,8 +2363,6 @@
             // 
             // 
             this.topChart.Panel.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.topChart.Panel.ImageBevel.Brush.Solid = true;
-            this.topChart.Panel.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -2789,8 +2370,14 @@
             // 
             // 
             this.topChart.Panel.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.topChart.Panel.Shadow.Brush.Solid = true;
-            this.topChart.Panel.Shadow.Brush.Visible = true;
+            // 
+            // 
+            // 
+            margins2.Bottom = 100;
+            margins2.Left = 100;
+            margins2.Right = 100;
+            margins2.Top = 100;
+            this.topChart.Printer.Margins = margins2;
             this.topChart.Series.Add(this.mtxFastLine1);
             signalTeeItem2.Caption = null;
             signalTeeItem2.Input = null;
@@ -2811,18 +2398,13 @@
             // 
             // 
             this.topChart.SubFooter.Brush.Color = System.Drawing.Color.Silver;
-            this.topChart.SubFooter.Brush.Solid = true;
-            this.topChart.SubFooter.Brush.Visible = true;
             // 
             // 
             // 
-            this.topChart.SubFooter.Font.Bold = false;
             // 
             // 
             // 
             this.topChart.SubFooter.Font.Brush.Color = System.Drawing.Color.Red;
-            this.topChart.SubFooter.Font.Brush.Solid = true;
-            this.topChart.SubFooter.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -2830,8 +2412,6 @@
             // 
             // 
             this.topChart.SubFooter.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.topChart.SubFooter.Font.Shadow.Brush.Solid = true;
-            this.topChart.SubFooter.Font.Shadow.Brush.Visible = true;
             this.topChart.SubFooter.Font.Size = 8;
             this.topChart.SubFooter.Font.SizeFloat = 8F;
             // 
@@ -2841,8 +2421,6 @@
             // 
             // 
             this.topChart.SubFooter.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.topChart.SubFooter.ImageBevel.Brush.Solid = true;
-            this.topChart.SubFooter.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -2850,8 +2428,6 @@
             // 
             // 
             this.topChart.SubFooter.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.topChart.SubFooter.Shadow.Brush.Solid = true;
-            this.topChart.SubFooter.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -2863,18 +2439,13 @@
             // 
             // 
             this.topChart.SubHeader.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.topChart.SubHeader.Brush.Solid = true;
-            this.topChart.SubHeader.Brush.Visible = true;
             // 
             // 
             // 
-            this.topChart.SubHeader.Font.Bold = false;
             // 
             // 
             // 
             this.topChart.SubHeader.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.topChart.SubHeader.Font.Brush.Solid = true;
-            this.topChart.SubHeader.Font.Brush.Visible = true;
             // 
             // 
             // 
@@ -2882,8 +2453,6 @@
             // 
             // 
             this.topChart.SubHeader.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.topChart.SubHeader.Font.Shadow.Brush.Solid = true;
-            this.topChart.SubHeader.Font.Shadow.Brush.Visible = true;
             this.topChart.SubHeader.Font.Size = 12;
             this.topChart.SubHeader.Font.SizeFloat = 12F;
             // 
@@ -2893,8 +2462,6 @@
             // 
             // 
             this.topChart.SubHeader.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.topChart.SubHeader.ImageBevel.Brush.Solid = true;
-            this.topChart.SubHeader.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -2902,8 +2469,6 @@
             // 
             // 
             this.topChart.SubHeader.Shadow.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.topChart.SubHeader.Shadow.Brush.Solid = true;
-            this.topChart.SubHeader.Shadow.Brush.Visible = true;
             this.topChart.TabIndex = 4;
             this.topChart.Tools.Add(this.axisScaleTool1);
             // 
@@ -2920,7 +2485,6 @@
             // 
             // 
             this.topChart.Walls.Back.Brush.Color = System.Drawing.Color.Silver;
-            this.topChart.Walls.Back.Brush.Solid = true;
             this.topChart.Walls.Back.Brush.Visible = false;
             // 
             // 
@@ -2929,8 +2493,6 @@
             // 
             // 
             this.topChart.Walls.Back.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.topChart.Walls.Back.ImageBevel.Brush.Solid = true;
-            this.topChart.Walls.Back.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -2938,8 +2500,6 @@
             // 
             // 
             this.topChart.Walls.Back.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.topChart.Walls.Back.Shadow.Brush.Solid = true;
-            this.topChart.Walls.Back.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -2951,8 +2511,6 @@
             // 
             // 
             this.topChart.Walls.Bottom.Brush.Color = System.Drawing.Color.White;
-            this.topChart.Walls.Bottom.Brush.Solid = true;
-            this.topChart.Walls.Bottom.Brush.Visible = true;
             // 
             // 
             // 
@@ -2960,8 +2518,6 @@
             // 
             // 
             this.topChart.Walls.Bottom.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.topChart.Walls.Bottom.ImageBevel.Brush.Solid = true;
-            this.topChart.Walls.Bottom.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -2969,8 +2525,6 @@
             // 
             // 
             this.topChart.Walls.Bottom.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.topChart.Walls.Bottom.Shadow.Brush.Solid = true;
-            this.topChart.Walls.Bottom.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -2982,8 +2536,6 @@
             // 
             // 
             this.topChart.Walls.Left.Brush.Color = System.Drawing.Color.LightYellow;
-            this.topChart.Walls.Left.Brush.Solid = true;
-            this.topChart.Walls.Left.Brush.Visible = true;
             // 
             // 
             // 
@@ -2991,8 +2543,6 @@
             // 
             // 
             this.topChart.Walls.Left.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.topChart.Walls.Left.ImageBevel.Brush.Solid = true;
-            this.topChart.Walls.Left.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -3000,8 +2550,6 @@
             // 
             // 
             this.topChart.Walls.Left.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.topChart.Walls.Left.Shadow.Brush.Solid = true;
-            this.topChart.Walls.Left.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -3013,8 +2561,6 @@
             // 
             // 
             this.topChart.Walls.Right.Brush.Color = System.Drawing.Color.LightYellow;
-            this.topChart.Walls.Right.Brush.Solid = true;
-            this.topChart.Walls.Right.Brush.Visible = true;
             // 
             // 
             // 
@@ -3022,8 +2568,6 @@
             // 
             // 
             this.topChart.Walls.Right.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.topChart.Walls.Right.ImageBevel.Brush.Solid = true;
-            this.topChart.Walls.Right.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
@@ -3031,8 +2575,6 @@
             // 
             // 
             this.topChart.Walls.Right.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.topChart.Walls.Right.Shadow.Brush.Solid = true;
-            this.topChart.Walls.Right.Shadow.Brush.Visible = true;
             // 
             // 
             // 
@@ -3041,10 +2583,8 @@
             // 
             // 
             this.topChart.Zoom.Brush.Color = System.Drawing.Color.LightBlue;
-            this.topChart.Zoom.Brush.Solid = true;
             this.topChart.Zoom.Brush.Visible = false;
-            this.topChart.Zoom.FullRepaint = true;
-            this.topChart.Zoom.Pen.Visible = true;
+            this.topChart.Click += new System.EventHandler(this.topChart_Click);
             // 
             // axisScaleTool1
             // 
@@ -3096,7 +2636,7 @@
 		private Dew.Signal.TSignalRead signalRead;
 		private Dew.Signal.TSignalDemuxList signalDemuxList;
 		private Dew.Signal.TSignalRateConverterList signalRateConverterList;
-		private Dew.Signal.SignalAsio signalAsio1;
+		private Dew.Signal.Audio.SignalAsio signalAsio1;
 		private Dew.Signal.TSignalList signalList;
 		private System.Windows.Forms.Timer timer1;
 		private System.Windows.Forms.OpenFileDialog openFileDialog1;

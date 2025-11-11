@@ -8,6 +8,7 @@ using Dew.Signal.Units;
 using Dew.Math;
 using Dew.Math.Units;
 using Dew.Signal.Tee;
+using Dew.Signal.Editors;
 
 namespace DSPDemo
 {
@@ -63,7 +64,6 @@ namespace DSPDemo
 
 
 			axisTool = new AxisScaleTool(SpectrumChart.Chart);
-            axisTool.Active = true; 
 			axisTool.UpperMargin = 20;
 			axisTool.LowerMargin = 5;
 			axisTool.AxisScaleMode = AxisScaleMode.amPeakHold;
@@ -104,7 +104,6 @@ namespace DSPDemo
 		private void InitializeComponent()
 		{
             this.components = new System.ComponentModel.Container();
-            Steema.TeeChart.Drawing.Cursor cursor2 = new Steema.TeeChart.Drawing.Cursor();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PeakFilteringForm));
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -120,7 +119,7 @@ namespace DSPDemo
             this.Signal1 = new Dew.Signal.TSignal(this.components);
             this.SpectrumAnalyzer1 = new Dew.Signal.TSpectrumAnalyzer(this.components);
             this.ChartEditor = new Steema.TeeChart.Editor(this.components);
-            this.SpectrumAnalyzerDialog = new Dew.Signal.SpectrumAnalyzerDialog(this.components);
+            this.SpectrumAnalyzerDialog = new Dew.Signal.Editors.SpectrumAnalyzerDialog(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SpectrumChart)).BeginInit();
             this.SuspendLayout();
@@ -130,7 +129,7 @@ namespace DSPDemo
             this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.richTextBox1.Location = new System.Drawing.Point(0, 0);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(732, 118);
+            this.richTextBox1.Size = new System.Drawing.Size(708, 96);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "richTextBox1";
             // 
@@ -143,16 +142,16 @@ namespace DSPDemo
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.checkBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 500);
+            this.panel1.Location = new System.Drawing.Point(0, 480);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(732, 45);
+            this.panel1.Size = new System.Drawing.Size(708, 37);
             this.panel1.TabIndex = 1;
             // 
             // ChartButton
             // 
-            this.ChartButton.Location = new System.Drawing.Point(136, 9);
+            this.ChartButton.Location = new System.Drawing.Point(113, 7);
             this.ChartButton.Name = "ChartButton";
-            this.ChartButton.Size = new System.Drawing.Size(90, 28);
+            this.ChartButton.Size = new System.Drawing.Size(75, 23);
             this.ChartButton.TabIndex = 4;
             this.ChartButton.Text = "Chart...";
             this.ChartButton.UseVisualStyleBackColor = true;
@@ -160,9 +159,9 @@ namespace DSPDemo
             // 
             // SpectrumButton
             // 
-            this.SpectrumButton.Location = new System.Drawing.Point(14, 9);
+            this.SpectrumButton.Location = new System.Drawing.Point(12, 7);
             this.SpectrumButton.Name = "SpectrumButton";
-            this.SpectrumButton.Size = new System.Drawing.Size(90, 28);
+            this.SpectrumButton.Size = new System.Drawing.Size(75, 23);
             this.SpectrumButton.TabIndex = 3;
             this.SpectrumButton.Text = "Spectrum...";
             this.SpectrumButton.UseVisualStyleBackColor = true;
@@ -174,26 +173,26 @@ namespace DSPDemo
             this.comboBox1.Items.AddRange(new object[] {
             "Real world",
             "Two sines"});
-            this.comboBox1.Location = new System.Drawing.Point(460, 11);
+            this.comboBox1.Location = new System.Drawing.Point(383, 9);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(163, 23);
+            this.comboBox1.Size = new System.Drawing.Size(136, 21);
             this.comboBox1.TabIndex = 2;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(392, 11);
+            this.label1.Location = new System.Drawing.Point(327, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 28);
+            this.label1.Size = new System.Drawing.Size(48, 23);
             this.label1.TabIndex = 1;
             this.label1.Text = "Data";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // checkBox1
             // 
-            this.checkBox1.Location = new System.Drawing.Point(284, 11);
+            this.checkBox1.Location = new System.Drawing.Point(237, 9);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(125, 30);
+            this.checkBox1.Size = new System.Drawing.Size(104, 24);
             this.checkBox1.TabIndex = 0;
             this.checkBox1.Text = "Logarithmic";
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
@@ -203,22 +202,21 @@ namespace DSPDemo
             // 
             // 
             // 
-            this.SpectrumChart.Axes.Automatic = false; 
             // 
             // 
             // 
-            this.SpectrumChart.Axes.Bottom.Automatic = true;
-            this.SpectrumChart.Axes.Bottom.AutomaticMaximum = true;
-            this.SpectrumChart.Axes.Bottom.AutomaticMinimum = true;
             // 
             // 
             // 
             this.SpectrumChart.Axes.Bottom.Grid.DrawEvery = 1;
-            this.SpectrumChart.Axes.Bottom.Grid.Visible = false;
+            this.SpectrumChart.Axes.Bottom.Grid.Visible = true;
             // 
             // 
             // 
-            this.SpectrumChart.Axes.Bottom.Labels.Axis = this.SpectrumChart.Axes.Bottom;
+            // 
+            // 
+            // 
+            this.SpectrumChart.Axes.Bottom.Labels.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
             // 
             // 
             // 
@@ -246,7 +244,6 @@ namespace DSPDemo
             this.SpectrumChart.Axes.Bottom.Labels.Font.Shadow.Brush.Visible = true;
             this.SpectrumChart.Axes.Bottom.Labels.Font.Size = 9;
             this.SpectrumChart.Axes.Bottom.Labels.Font.SizeFloat = 9F;
-            this.SpectrumChart.Axes.Bottom.Labels.Font.Style = Steema.TeeChart.Drawing.FontStyle.Regular;
             // 
             // 
             // 
@@ -266,28 +263,16 @@ namespace DSPDemo
             this.SpectrumChart.Axes.Bottom.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
             this.SpectrumChart.Axes.Bottom.Labels.Shadow.Brush.Solid = true;
             this.SpectrumChart.Axes.Bottom.Labels.Shadow.Brush.Visible = true;
-            this.SpectrumChart.Axes.Bottom.Maximum = 0D;
             this.SpectrumChart.Axes.Bottom.MaximumOffset = 4;
-            this.SpectrumChart.Axes.Bottom.Minimum = 0D;
             this.SpectrumChart.Axes.Bottom.MinimumOffset = 4;
             // 
             // 
             // 
-            this.SpectrumChart.Axes.Bottom.MinorTicks.Length = 2;
-            this.SpectrumChart.Axes.Bottom.MinorTicks.Visible = false;
+            this.SpectrumChart.Axes.Bottom.Title.Angle = 0;
             // 
             // 
             // 
-            this.SpectrumChart.Axes.Bottom.Ticks.Length = 4;
-            this.SpectrumChart.Axes.Bottom.Ticks.Visible = false;
-            // 
-            // 
-            // 
-            this.SpectrumChart.Axes.Bottom.TicksInner.Length = 0;
-            this.SpectrumChart.Axes.Bottom.TicksInner.Visible = false;
-            // 
-            // 
-            // 
+            this.SpectrumChart.Axes.Bottom.Title.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
             // 
             // 
             // 
@@ -316,7 +301,6 @@ namespace DSPDemo
             this.SpectrumChart.Axes.Bottom.Title.Font.Shadow.Brush.Visible = true;
             this.SpectrumChart.Axes.Bottom.Title.Font.Size = 11;
             this.SpectrumChart.Axes.Bottom.Title.Font.SizeFloat = 11F;
-            this.SpectrumChart.Axes.Bottom.Title.Font.Style = Steema.TeeChart.Drawing.FontStyle.Regular;
             // 
             // 
             // 
@@ -346,11 +330,10 @@ namespace DSPDemo
             // 
             // 
             // 
-            this.SpectrumChart.Axes.Depth.AxisPen.Visible = false;
             // 
             // 
             // 
-            this.SpectrumChart.Axes.Depth.Labels.Axis = this.SpectrumChart.Axes.Depth;
+            this.SpectrumChart.Axes.Depth.Labels.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
             // 
             // 
             // 
@@ -378,7 +361,6 @@ namespace DSPDemo
             this.SpectrumChart.Axes.Depth.Labels.Font.Shadow.Brush.Visible = true;
             this.SpectrumChart.Axes.Depth.Labels.Font.Size = 9;
             this.SpectrumChart.Axes.Depth.Labels.Font.SizeFloat = 9F;
-            this.SpectrumChart.Axes.Depth.Labels.Font.Style = Steema.TeeChart.Drawing.FontStyle.Regular;
             // 
             // 
             // 
@@ -402,21 +384,11 @@ namespace DSPDemo
             // 
             // 
             // 
-            this.SpectrumChart.Axes.Depth.MinorTicks.Length = 2;
-            this.SpectrumChart.Axes.Depth.MinorTicks.Visible = false;
+            this.SpectrumChart.Axes.Depth.Title.Angle = 0;
             // 
             // 
             // 
-            this.SpectrumChart.Axes.Depth.Ticks.Length = 4;
-            this.SpectrumChart.Axes.Depth.Ticks.Visible = false;
-            // 
-            // 
-            // 
-            this.SpectrumChart.Axes.Depth.TicksInner.Length = 0;
-            this.SpectrumChart.Axes.Depth.TicksInner.Visible = false;
-            // 
-            // 
-            // 
+            this.SpectrumChart.Axes.Depth.Title.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
             // 
             // 
             // 
@@ -444,7 +416,6 @@ namespace DSPDemo
             this.SpectrumChart.Axes.Depth.Title.Font.Shadow.Brush.Visible = true;
             this.SpectrumChart.Axes.Depth.Title.Font.Size = 11;
             this.SpectrumChart.Axes.Depth.Title.Font.SizeFloat = 11F;
-            this.SpectrumChart.Axes.Depth.Title.Font.Style = Steema.TeeChart.Drawing.FontStyle.Regular;
             // 
             // 
             // 
@@ -472,11 +443,10 @@ namespace DSPDemo
             // 
             // 
             // 
-            this.SpectrumChart.Axes.DepthTop.AxisPen.Visible = false;
             // 
             // 
             // 
-            this.SpectrumChart.Axes.DepthTop.Labels.Axis = this.SpectrumChart.Axes.DepthTop;
+            this.SpectrumChart.Axes.DepthTop.Labels.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
             // 
             // 
             // 
@@ -504,7 +474,6 @@ namespace DSPDemo
             this.SpectrumChart.Axes.DepthTop.Labels.Font.Shadow.Brush.Visible = true;
             this.SpectrumChart.Axes.DepthTop.Labels.Font.Size = 9;
             this.SpectrumChart.Axes.DepthTop.Labels.Font.SizeFloat = 9F;
-            this.SpectrumChart.Axes.DepthTop.Labels.Font.Style = Steema.TeeChart.Drawing.FontStyle.Regular;
             // 
             // 
             // 
@@ -528,21 +497,11 @@ namespace DSPDemo
             // 
             // 
             // 
-            this.SpectrumChart.Axes.DepthTop.MinorTicks.Length = 2;
-            this.SpectrumChart.Axes.DepthTop.MinorTicks.Visible = false;
+            this.SpectrumChart.Axes.DepthTop.Title.Angle = 0;
             // 
             // 
             // 
-            this.SpectrumChart.Axes.DepthTop.Ticks.Length = 4;
-            this.SpectrumChart.Axes.DepthTop.Ticks.Visible = false;
-            // 
-            // 
-            // 
-            this.SpectrumChart.Axes.DepthTop.TicksInner.Length = 0;
-            this.SpectrumChart.Axes.DepthTop.TicksInner.Visible = false;
-            // 
-            // 
-            // 
+            this.SpectrumChart.Axes.DepthTop.Title.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
             // 
             // 
             // 
@@ -570,7 +529,6 @@ namespace DSPDemo
             this.SpectrumChart.Axes.DepthTop.Title.Font.Shadow.Brush.Visible = true;
             this.SpectrumChart.Axes.DepthTop.Title.Font.Size = 11;
             this.SpectrumChart.Axes.DepthTop.Title.Font.SizeFloat = 11F;
-            this.SpectrumChart.Axes.DepthTop.Title.Font.Style = Steema.TeeChart.Drawing.FontStyle.Regular;
             // 
             // 
             // 
@@ -592,17 +550,17 @@ namespace DSPDemo
             // 
             // 
             // 
-            this.SpectrumChart.Axes.Left.Automatic = false;
-            this.SpectrumChart.Axes.Left.AutomaticMaximum = false;
-            this.SpectrumChart.Axes.Left.AutomaticMinimum = false;
             // 
             // 
             // 
-            this.SpectrumChart.Axes.Left.AxisPen.Visible = false;
+            this.SpectrumChart.Axes.Left.AxisPen.Visible = true;
             // 
             // 
             // 
-            this.SpectrumChart.Axes.Left.Labels.Axis = this.SpectrumChart.Axes.Left;
+            // 
+            // 
+            // 
+            this.SpectrumChart.Axes.Left.Labels.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
             // 
             // 
             // 
@@ -630,7 +588,6 @@ namespace DSPDemo
             this.SpectrumChart.Axes.Left.Labels.Font.Shadow.Brush.Visible = true;
             this.SpectrumChart.Axes.Left.Labels.Font.Size = 9;
             this.SpectrumChart.Axes.Left.Labels.Font.SizeFloat = 9F;
-            this.SpectrumChart.Axes.Left.Labels.Font.Style = Steema.TeeChart.Drawing.FontStyle.Regular;
             // 
             // 
             // 
@@ -649,26 +606,14 @@ namespace DSPDemo
             this.SpectrumChart.Axes.Left.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
             this.SpectrumChart.Axes.Left.Labels.Shadow.Brush.Solid = true;
             this.SpectrumChart.Axes.Left.Labels.Shadow.Brush.Visible = true;
-            this.SpectrumChart.Axes.Left.Maximum = 0D;
-            this.SpectrumChart.Axes.Left.Minimum = 0D;
             // 
             // 
             // 
-            this.SpectrumChart.Axes.Left.MinorTicks.Length = 2;
-            this.SpectrumChart.Axes.Left.MinorTicks.Visible = false;
+            this.SpectrumChart.Axes.Left.Title.Angle = 90;
             // 
             // 
             // 
-            this.SpectrumChart.Axes.Left.Ticks.Length = 4;
-            this.SpectrumChart.Axes.Left.Ticks.Visible = false;
-            // 
-            // 
-            // 
-            this.SpectrumChart.Axes.Left.TicksInner.Length = 0;
-            this.SpectrumChart.Axes.Left.TicksInner.Visible = false;
-            // 
-            // 
-            // 
+            this.SpectrumChart.Axes.Left.Title.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
             // 
             // 
             // 
@@ -696,7 +641,6 @@ namespace DSPDemo
             this.SpectrumChart.Axes.Left.Title.Font.Shadow.Brush.Visible = true;
             this.SpectrumChart.Axes.Left.Title.Font.Size = 11;
             this.SpectrumChart.Axes.Left.Title.Font.SizeFloat = 11F;
-            this.SpectrumChart.Axes.Left.Title.Font.Style = Steema.TeeChart.Drawing.FontStyle.Regular;
             // 
             // 
             // 
@@ -724,11 +668,10 @@ namespace DSPDemo
             // 
             // 
             // 
-            this.SpectrumChart.Axes.Right.AxisPen.Visible = false;
             // 
             // 
             // 
-            this.SpectrumChart.Axes.Right.Labels.Axis = this.SpectrumChart.Axes.Right;
+            this.SpectrumChart.Axes.Right.Labels.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
             // 
             // 
             // 
@@ -756,7 +699,6 @@ namespace DSPDemo
             this.SpectrumChart.Axes.Right.Labels.Font.Shadow.Brush.Visible = true;
             this.SpectrumChart.Axes.Right.Labels.Font.Size = 9;
             this.SpectrumChart.Axes.Right.Labels.Font.SizeFloat = 9F;
-            this.SpectrumChart.Axes.Right.Labels.Font.Style = Steema.TeeChart.Drawing.FontStyle.Regular;
             // 
             // 
             // 
@@ -780,21 +722,11 @@ namespace DSPDemo
             // 
             // 
             // 
-            this.SpectrumChart.Axes.Right.MinorTicks.Length = 2;
-            this.SpectrumChart.Axes.Right.MinorTicks.Visible = false;
+            this.SpectrumChart.Axes.Right.Title.Angle = 270;
             // 
             // 
             // 
-            this.SpectrumChart.Axes.Right.Ticks.Length = 4;
-            this.SpectrumChart.Axes.Right.Ticks.Visible = false;
-            // 
-            // 
-            // 
-            this.SpectrumChart.Axes.Right.TicksInner.Length = 0;
-            this.SpectrumChart.Axes.Right.TicksInner.Visible = false;
-            // 
-            // 
-            // 
+            this.SpectrumChart.Axes.Right.Title.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
             // 
             // 
             // 
@@ -822,7 +754,6 @@ namespace DSPDemo
             this.SpectrumChart.Axes.Right.Title.Font.Shadow.Brush.Visible = true;
             this.SpectrumChart.Axes.Right.Title.Font.Size = 11;
             this.SpectrumChart.Axes.Right.Title.Font.SizeFloat = 11F;
-            this.SpectrumChart.Axes.Right.Title.Font.Style = Steema.TeeChart.Drawing.FontStyle.Regular;
             // 
             // 
             // 
@@ -850,7 +781,10 @@ namespace DSPDemo
             // 
             // 
             // 
-            this.SpectrumChart.Axes.Top.Labels.Axis = this.SpectrumChart.Axes.Top;
+            // 
+            // 
+            // 
+            this.SpectrumChart.Axes.Top.Labels.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
             // 
             // 
             // 
@@ -878,7 +812,6 @@ namespace DSPDemo
             this.SpectrumChart.Axes.Top.Labels.Font.Shadow.Brush.Visible = true;
             this.SpectrumChart.Axes.Top.Labels.Font.Size = 9;
             this.SpectrumChart.Axes.Top.Labels.Font.SizeFloat = 9F;
-            this.SpectrumChart.Axes.Top.Labels.Font.Style = Steema.TeeChart.Drawing.FontStyle.Regular;
             // 
             // 
             // 
@@ -902,21 +835,11 @@ namespace DSPDemo
             // 
             // 
             // 
-            this.SpectrumChart.Axes.Top.MinorTicks.Length = 2;
-            this.SpectrumChart.Axes.Top.MinorTicks.Visible = false;
+            this.SpectrumChart.Axes.Top.Title.Angle = 0;
             // 
             // 
             // 
-            this.SpectrumChart.Axes.Top.Ticks.Length = 4;
-            this.SpectrumChart.Axes.Top.Ticks.Visible = false;
-            // 
-            // 
-            // 
-            this.SpectrumChart.Axes.Top.TicksInner.Length = 0;
-            this.SpectrumChart.Axes.Top.TicksInner.Visible = false;
-            // 
-            // 
-            // 
+            this.SpectrumChart.Axes.Top.Title.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
             // 
             // 
             // 
@@ -944,7 +867,6 @@ namespace DSPDemo
             this.SpectrumChart.Axes.Top.Title.Font.Shadow.Brush.Visible = true;
             this.SpectrumChart.Axes.Top.Title.Font.Size = 11;
             this.SpectrumChart.Axes.Top.Title.Font.SizeFloat = 11F;
-            this.SpectrumChart.Axes.Top.Title.Font.Style = Steema.TeeChart.Drawing.FontStyle.Regular;
             // 
             // 
             // 
@@ -964,11 +886,15 @@ namespace DSPDemo
             this.SpectrumChart.Axes.Top.Title.Shadow.Brush.Solid = true;
             this.SpectrumChart.Axes.Top.Title.Shadow.Brush.Visible = true;
             this.SpectrumChart.Color = System.Drawing.Color.Silver;
-            this.SpectrumChart.Cursor = System.Windows.Forms.Cursors.Default;
+             
             this.SpectrumChart.Dock = System.Windows.Forms.DockStyle.Fill;
             // 
             // 
             // 
+            // 
+            // 
+            // 
+            this.SpectrumChart.Footer.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
             // 
             // 
             // 
@@ -996,7 +922,6 @@ namespace DSPDemo
             this.SpectrumChart.Footer.Font.Shadow.Brush.Visible = true;
             this.SpectrumChart.Footer.Font.Size = 8;
             this.SpectrumChart.Footer.Font.SizeFloat = 8F;
-            this.SpectrumChart.Footer.Font.Style = Steema.TeeChart.Drawing.FontStyle.Regular;
             // 
             // 
             // 
@@ -1018,6 +943,10 @@ namespace DSPDemo
             // 
             // 
             // 
+            // 
+            // 
+            // 
+            this.SpectrumChart.Header.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
             // 
             // 
             // 
@@ -1045,7 +974,6 @@ namespace DSPDemo
             this.SpectrumChart.Header.Font.Shadow.Brush.Visible = true;
             this.SpectrumChart.Header.Font.Size = 12;
             this.SpectrumChart.Header.Font.SizeFloat = 12F;
-            this.SpectrumChart.Header.Font.Style = Steema.TeeChart.Drawing.FontStyle.Regular;
             // 
             // 
             // 
@@ -1069,6 +997,10 @@ namespace DSPDemo
             // 
             // 
             // 
+            // 
+            // 
+            // 
+            this.SpectrumChart.Legend.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
             // 
             // 
             // 
@@ -1096,7 +1028,6 @@ namespace DSPDemo
             this.SpectrumChart.Legend.Font.Shadow.Brush.Visible = true;
             this.SpectrumChart.Legend.Font.Size = 9;
             this.SpectrumChart.Legend.Font.SizeFloat = 9F;
-            this.SpectrumChart.Legend.Font.Style = Steema.TeeChart.Drawing.FontStyle.Regular;
             // 
             // 
             // 
@@ -1109,10 +1040,6 @@ namespace DSPDemo
             // 
             // 
             // 
-            this.SpectrumChart.Legend.Pen.Visible = false;
-            // 
-            // 
-            // 
             // 
             // 
             // 
@@ -1122,7 +1049,6 @@ namespace DSPDemo
             // 
             // 
             // 
-            this.SpectrumChart.Legend.Symbol.Legend = this.SpectrumChart.Legend;
             // 
             // 
             // 
@@ -1135,6 +1061,10 @@ namespace DSPDemo
             // 
             // 
             // 
+            // 
+            // 
+            // 
+            this.SpectrumChart.Legend.Title.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
             // 
             // 
             // 
@@ -1162,7 +1092,6 @@ namespace DSPDemo
             this.SpectrumChart.Legend.Title.Font.Shadow.Brush.Visible = true;
             this.SpectrumChart.Legend.Title.Font.Size = 8;
             this.SpectrumChart.Legend.Title.Font.SizeFloat = 8F;
-            this.SpectrumChart.Legend.Title.Font.Style = Steema.TeeChart.Drawing.FontStyle.Bold;
             // 
             // 
             // 
@@ -1175,10 +1104,6 @@ namespace DSPDemo
             // 
             // 
             // 
-            this.SpectrumChart.Legend.Title.Pen.Visible = false;
-            // 
-            // 
-            // 
             // 
             // 
             // 
@@ -1186,7 +1111,7 @@ namespace DSPDemo
             this.SpectrumChart.Legend.Title.Shadow.Brush.Solid = true;
             this.SpectrumChart.Legend.Title.Shadow.Brush.Visible = true;
             this.SpectrumChart.Legend.Visible = false;
-            this.SpectrumChart.Location = new System.Drawing.Point(0, 118);
+            this.SpectrumChart.Location = new System.Drawing.Point(0, 96);
             this.SpectrumChart.Name = "SpectrumChart";
             // 
             // 
@@ -1195,14 +1120,11 @@ namespace DSPDemo
             // 
             // 
             this.SpectrumChart.Panel.Bevel.Inner = Steema.TeeChart.Drawing.BevelStyles.Lowered;
+            this.SpectrumChart.Panel.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
             // 
             // 
             // 
             this.SpectrumChart.Panel.Brush.Color = System.Drawing.Color.Silver;
-            // 
-            // 
-            // 
-            this.SpectrumChart.Panel.Brush.Gradient.UseMiddle = true;
             this.SpectrumChart.Panel.Brush.Solid = true;
             this.SpectrumChart.Panel.Brush.Visible = true;
             // 
@@ -1217,10 +1139,6 @@ namespace DSPDemo
             // 
             // 
             // 
-            this.SpectrumChart.Panel.Pen.Visible = false;
-            // 
-            // 
-            // 
             // 
             // 
             // 
@@ -1229,11 +1147,15 @@ namespace DSPDemo
             this.SpectrumChart.Panel.Shadow.Brush.Visible = true;
             this.SpectrumChart.Series.Add(this.Series1);
             this.SpectrumChart.Series.Add(this.Series2);
-            this.SpectrumChart.Size = new System.Drawing.Size(732, 382);
+            this.SpectrumChart.Size = new System.Drawing.Size(708, 384);
             this.SpectrumChart.SpectrumPart = Dew.Signal.Tee.SpectrumPart.sppAmplt;
             // 
             // 
             // 
+            // 
+            // 
+            // 
+            this.SpectrumChart.SubFooter.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
             // 
             // 
             // 
@@ -1261,7 +1183,6 @@ namespace DSPDemo
             this.SpectrumChart.SubFooter.Font.Shadow.Brush.Visible = true;
             this.SpectrumChart.SubFooter.Font.Size = 8;
             this.SpectrumChart.SubFooter.Font.SizeFloat = 8F;
-            this.SpectrumChart.SubFooter.Font.Style = Steema.TeeChart.Drawing.FontStyle.Regular;
             // 
             // 
             // 
@@ -1283,6 +1204,10 @@ namespace DSPDemo
             // 
             // 
             // 
+            // 
+            // 
+            // 
+            this.SpectrumChart.SubHeader.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
             // 
             // 
             // 
@@ -1310,7 +1235,6 @@ namespace DSPDemo
             this.SpectrumChart.SubHeader.Font.Shadow.Brush.Visible = true;
             this.SpectrumChart.SubHeader.Font.Size = 12;
             this.SpectrumChart.SubHeader.Font.SizeFloat = 12F;
-            this.SpectrumChart.SubHeader.Font.Style = Steema.TeeChart.Drawing.FontStyle.Regular;
             // 
             // 
             // 
@@ -1336,6 +1260,10 @@ namespace DSPDemo
             // 
             // 
             // 
+            // 
+            // 
+            // 
+            this.SpectrumChart.Walls.Back.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
             // 
             // 
             // 
@@ -1366,6 +1294,10 @@ namespace DSPDemo
             // 
             // 
             // 
+            this.SpectrumChart.Walls.Bottom.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
+            // 
+            // 
+            // 
             this.SpectrumChart.Walls.Bottom.Brush.Color = System.Drawing.Color.White;
             this.SpectrumChart.Walls.Bottom.Brush.Solid = true;
             this.SpectrumChart.Walls.Bottom.Brush.Visible = true;
@@ -1393,6 +1325,10 @@ namespace DSPDemo
             // 
             // 
             // 
+            this.SpectrumChart.Walls.Left.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
+            // 
+            // 
+            // 
             this.SpectrumChart.Walls.Left.Brush.Color = System.Drawing.Color.LightYellow;
             this.SpectrumChart.Walls.Left.Brush.Solid = true;
             this.SpectrumChart.Walls.Left.Brush.Visible = true;
@@ -1417,6 +1353,10 @@ namespace DSPDemo
             // 
             // 
             // 
+            // 
+            // 
+            // 
+            this.SpectrumChart.Walls.Right.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
             // 
             // 
             // 
@@ -1460,19 +1400,15 @@ namespace DSPDemo
             // 
             // Series1
             // 
-            // 
-            // 
-            // 
-            this.Series1.Brush.Color = System.Drawing.Color.Empty;
-            this.Series1.Brush.Solid = true;
-            this.Series1.Brush.Visible = true;
             this.Series1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(102)))), ((int)(((byte)(163)))));
             this.Series1.ColorEach = false;
-            cursor2.CursorType = Steema.TeeChart.Drawing.CursorType.Default;
-            this.Series1.Cursor = cursor2;
             // 
             // 
             // 
+            // 
+            // 
+            // 
+            this.Series1.Legend.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
             // 
             // 
             // 
@@ -1500,7 +1436,6 @@ namespace DSPDemo
             this.Series1.Legend.Font.Shadow.Brush.Visible = true;
             this.Series1.Legend.Font.Size = 8;
             this.Series1.Legend.Font.SizeFloat = 8F;
-            this.Series1.Legend.Font.Style = Steema.TeeChart.Drawing.FontStyle.Regular;
             // 
             // 
             // 
@@ -1522,6 +1457,14 @@ namespace DSPDemo
             // 
             // 
             // 
+            this.Series1.LinePen.Color = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(102)))), ((int)(((byte)(163)))));
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            this.Series1.Marks.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
             // 
             // 
             // 
@@ -1549,7 +1492,6 @@ namespace DSPDemo
             this.Series1.Marks.Font.Shadow.Brush.Visible = true;
             this.Series1.Marks.Font.Size = 8;
             this.Series1.Marks.Font.SizeFloat = 8F;
-            this.Series1.Marks.Font.Style = Steema.TeeChart.Drawing.FontStyle.Regular;
             // 
             // 
             // 
@@ -1571,6 +1513,10 @@ namespace DSPDemo
             // 
             // 
             // 
+            // 
+            // 
+            // 
+            this.Series1.Marks.Symbol.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
             // 
             // 
             // 
@@ -1598,42 +1544,34 @@ namespace DSPDemo
             // 
             // 
             // 
-            this.Series1.Marks.TailParams.CustomPointPos = ((System.Drawing.PointF)(resources.GetObject("resource.CustomPointPos")));
             this.Series1.Marks.TailParams.Margin = 0F;
             this.Series1.Marks.TailParams.PointerHeight = 8D;
             this.Series1.Marks.TailParams.PointerWidth = 8D;
-            this.Series1.OriginalCursor = cursor2;
-            this.Series1.RandomData = true;
+            this.Series1.OriginalCursor = Steema.TeeChart.Drawing.Cursor.Current;
             this.Series1.Title = "fastLine1";
             this.Series1.TreatNulls = Steema.TeeChart.Styles.TreatNullsStyle.Ignore;
-            this.Series1.Type = "Steema.TeeChart.Styles.FastLine";
             this.Series1.UseExtendedNumRange = false;
             // 
             // 
             // 
             this.Series1.XValues.DataMember = "X";
             this.Series1.XValues.Order = Steema.TeeChart.Styles.ValueListOrder.Ascending;
-            this.Series1.XValues.Series = this.Series1;
             // 
             // 
             // 
             this.Series1.YValues.DataMember = "Y";
-            this.Series1.YValues.Series = this.Series1;
             // 
             // Series2
             // 
-            // 
-            // 
-            // 
-            this.Series2.Brush.Color = System.Drawing.Color.Empty;
-            this.Series2.Brush.Solid = true;
-            this.Series2.Brush.Visible = true;
             this.Series2.Color = System.Drawing.Color.Red;
             this.Series2.ColorEach = false;
-            this.Series2.Cursor = cursor2;
             // 
             // 
             // 
+            // 
+            // 
+            // 
+            this.Series2.Legend.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
             // 
             // 
             // 
@@ -1661,7 +1599,6 @@ namespace DSPDemo
             this.Series2.Legend.Font.Shadow.Brush.Visible = true;
             this.Series2.Legend.Font.Size = 8;
             this.Series2.Legend.Font.SizeFloat = 8F;
-            this.Series2.Legend.Font.Style = Steema.TeeChart.Drawing.FontStyle.Regular;
             // 
             // 
             // 
@@ -1683,11 +1620,19 @@ namespace DSPDemo
             // 
             // 
             // 
+            this.Series2.LinePen.Color = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            // 
+            // 
+            // 
             // 
             // 
             // 
             this.Series2.Marks.Arrow.Visible = false;
             this.Series2.Marks.ArrowLength = 8;
+            // 
+            // 
+            // 
+            this.Series2.Marks.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
             // 
             // 
             // 
@@ -1715,7 +1660,6 @@ namespace DSPDemo
             this.Series2.Marks.Font.Shadow.Brush.Visible = true;
             this.Series2.Marks.Font.Size = 8;
             this.Series2.Marks.Font.SizeFloat = 8F;
-            this.Series2.Marks.Font.Style = Steema.TeeChart.Drawing.FontStyle.Regular;
             // 
             // 
             // 
@@ -1737,6 +1681,10 @@ namespace DSPDemo
             // 
             // 
             // 
+            // 
+            // 
+            // 
+            this.Series2.Marks.Symbol.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
             // 
             // 
             // 
@@ -1764,13 +1712,12 @@ namespace DSPDemo
             // 
             // 
             // 
-            this.Series2.Marks.TailParams.CustomPointPos = ((System.Drawing.PointF)(resources.GetObject("resource.CustomPointPos1")));
             this.Series2.Marks.TailParams.Margin = 0F;
             this.Series2.Marks.TailParams.PointerHeight = 8D;
             this.Series2.Marks.TailParams.PointerWidth = 8D;
             this.Series2.Marks.Transparent = true;
             this.Series2.Marks.Visible = true;
-            this.Series2.OriginalCursor = cursor2;
+            this.Series2.OriginalCursor = Steema.TeeChart.Drawing.Cursor.Current;
             // 
             // 
             // 
@@ -1789,109 +1736,66 @@ namespace DSPDemo
             this.Series2.Pointer.SizeUnits = Steema.TeeChart.Styles.PointerSizeUnits.Pixels;
             this.Series2.Pointer.Style = Steema.TeeChart.Styles.PointerStyles.Circle;
             this.Series2.Pointer.VertSize = 3;
-            this.Series2.RandomData = true;
             this.Series2.Title = "point1";
-            this.Series2.Type = "Steema.TeeChart.Styles.Points";
             this.Series2.UseExtendedNumRange = false;
             // 
             // 
             // 
             this.Series2.XValues.DataMember = "X";
             this.Series2.XValues.Order = Steema.TeeChart.Styles.ValueListOrder.Ascending;
-            this.Series2.XValues.Series = this.Series2;
             // 
             // 
             // 
             this.Series2.YValues.DataMember = "Y";
-            this.Series2.YValues.Series = this.Series2;
             // 
             // SignalRead1
             // 
             this.SignalRead1.BandwidthL = 0D;
             this.SignalRead1.BlockAssign = false;
-            this.SignalRead1.ChannelCount = 1;
             this.SignalRead1.Complex = false;
             this.SignalRead1.FloatPrecision = Dew.Math.TMtxFloatPrecision.mvDouble;
             this.SignalRead1.FloatPrecisionLock = false;
             this.SignalRead1.FramesPerSecond = 0.0009765625D;
             this.SignalRead1.Input = null;
             this.SignalRead1.IsDouble = true;
+            this.SignalRead1.LastFrameCheck = Dew.Signal.TLastFrameCheck.lfcZeroPadded;
             this.SignalRead1.Length = 1024;
             this.SignalRead1.Name = "";
-            this.SignalRead1.OnAfterUpdate = null;
-            this.SignalRead1.OnBeforeUpdate = null;
-            this.SignalRead1.OnDisplayUpdate = null;
-            this.SignalRead1.OnGetInput = null;
-            this.SignalRead1.OnNotifyUpdate = null;
-            this.SignalRead1.OnParameterUpdate = null;
-            this.SignalRead1.OnProcessAll = null;
-            this.SignalRead1.OnRecordPositionChange = null;
-            this.SignalRead1.OverlappingSamples = 0;
             this.SignalRead1.PostBufferSamples = 0;
-            this.SignalRead1.RecordNumber = 0;
             this.SignalRead1.RecordPosition = ((long)(0));
             // 
             // Signal1
             // 
             this.Signal1.BandwidthL = 0D;
             this.Signal1.BlockAssign = false;
-            this.Signal1.ChannelCount = 1;
             this.Signal1.Complex = false;
             this.Signal1.FloatPrecision = Dew.Math.TMtxFloatPrecision.mvDouble;
             this.Signal1.FloatPrecisionLock = false;
             this.Signal1.Input = null;
             this.Signal1.IsDouble = true;
-            this.Signal1.Length = 128;
             this.Signal1.Name = "";
-            this.Signal1.OnAfterUpdate = null;
-            this.Signal1.OnBeforeUpdate = null;
-            this.Signal1.OnDisplayUpdate = null;
-            this.Signal1.OnGetInput = null;
-            this.Signal1.OnNotifyUpdate = null;
-            this.Signal1.OnParameterUpdate = null;
-            this.Signal1.OnAfterUpdateEvent += new Dew.Math.TNotifyEvent(this.Signal1_OnAfterUpdateEvent);
+            this.Signal1.OnAfterUpdateEvent += new Dew.Math.TNotifyEvent(this.Signal1_OnAfterUpdate);
             // 
             // SpectrumAnalyzer1
             // 
-            this.SpectrumAnalyzer1.ArOrder = 100;
             this.SpectrumAnalyzer1.Bands.TemplateIndex = -1;
-            this.SpectrumAnalyzer1.Bands.Templates = ((Dew.Signal.TStringStreamList)(resources.GetObject("resource.Templates")));
+            this.SpectrumAnalyzer1.Bands.Templates = new Dew.Signal.TStringStreamList(System.Convert.FromBase64String("AAAAAA=="));
             this.SpectrumAnalyzer1.BlockAssign = false;
             this.SpectrumAnalyzer1.Complex = false;
             this.SpectrumAnalyzer1.FloatPrecision = Dew.Math.TMtxFloatPrecision.mvDouble;
             this.SpectrumAnalyzer1.FloatPrecisionLock = false;
-            this.SpectrumAnalyzer1.Harmonics = 10;
             this.SpectrumAnalyzer1.Input = this.SignalRead1;
             this.SpectrumAnalyzer1.IsDouble = true;
-            this.SpectrumAnalyzer1.Length = 64;
             this.SpectrumAnalyzer1.LogBase = 0D;
             this.SpectrumAnalyzer1.LogScale = 0D;
-            this.SpectrumAnalyzer1.MainlobeWidth = 8;
             this.SpectrumAnalyzer1.Name = "";
-            this.SpectrumAnalyzer1.OnAfterAverage = null;
-            this.SpectrumAnalyzer1.OnAfterComplexSpectrum = null;
-            this.SpectrumAnalyzer1.OnAfterUpdate = null;
-            this.SpectrumAnalyzer1.OnBandsUpdate = null;
-            this.SpectrumAnalyzer1.OnBeforeAverage = null;
-            this.SpectrumAnalyzer1.OnBeforeSpectrumType = null;
-            this.SpectrumAnalyzer1.OnBeforeUpdate = null;
-            this.SpectrumAnalyzer1.OnDisplayUpdate = null;
-            this.SpectrumAnalyzer1.OnGetInput = null;
-            this.SpectrumAnalyzer1.OnNotifyUpdate = null;
-            this.SpectrumAnalyzer1.OnParameterUpdate = null;
-            this.SpectrumAnalyzer1.OnPeaksUpdate = null;
             this.SpectrumAnalyzer1.Output = null;
-            this.SpectrumAnalyzer1.Peaks.HarmonicsCount = 10;
             this.SpectrumAnalyzer1.Peaks.Interpolation.RecursiveHarmonics = Dew.Signal.TRecursiveHarmonics.rhNone;
-            this.SpectrumAnalyzer1.Peaks.LargestCount = 1;
             this.SpectrumAnalyzer1.Report.UseTab = false;
-            this.SpectrumAnalyzer1.Rotation = 0;
             this.SpectrumAnalyzer1.SpectrumScale = 0D;
             this.SpectrumAnalyzer1.Stats.Averaged = 0;
             this.SpectrumAnalyzer1.Stats.Averages = 30;
-            this.SpectrumAnalyzer1.Stats.ExpDecay = 5;
             this.SpectrumAnalyzer1.Window = Dew.Signal.TSignalWindowType.wtHanning;
-            this.SpectrumAnalyzer1.ZeroPadding = 1;
             // 
             // ChartEditor
             // 
@@ -1916,8 +1820,8 @@ namespace DSPDemo
             // 
             // PeakFilteringForm
             // 
-            this.AutoScaleBaseSize = new System.Drawing.Size(6, 16);
-            this.ClientSize = new System.Drawing.Size(732, 545);
+            this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
+            this.ClientSize = new System.Drawing.Size(708, 517);
             this.Controls.Add(this.SpectrumChart);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.richTextBox1);
@@ -1943,6 +1847,23 @@ namespace DSPDemo
             smt.ClearMarks();
             //end peak hold reset
 			SpectrumAnalyzer1.Pull();
+		}
+
+		private void Signal1_OnAfterUpdate(object Sender) {
+			TToneState toneState = new TToneState();
+			TVec a;
+			MtxVec.CreateIt(out a);
+			try {
+				a.Size(1024);
+				SignalUtils.ToneInit(0.1,0,1,ref toneState, false);
+				SignalUtils.Tone(a,ref toneState);
+				Signal1.Data.Copy(a);
+				SignalUtils.ToneInit(0.12,0,1,ref toneState, false);
+				SignalUtils.Tone(a,ref toneState);
+				Signal1.Data.Add(a);
+			} finally {
+				MtxVec.FreeIt(ref a);
+			}
 		}
 
 		private void checkBox1_CheckedChanged(object sender, System.EventArgs e) {
@@ -1974,25 +1895,5 @@ namespace DSPDemo
             Add(" - There are two data sets to chose from and it is possible to switch between logarithmic and linear axis.");
         }
 
-        private void Signal1_OnAfterUpdateEvent(object Sender)
-        {
-            TToneState toneState = new TToneState();
-            TVec a;
-            MtxVec.CreateIt(out a);
-            try
-            {
-                a.Size(1024);
-                SignalUtils.ToneInit(0.1, 0, 1, ref toneState, false);
-                SignalUtils.Tone(a, ref toneState);
-                Signal1.Data.Copy(a);
-                SignalUtils.ToneInit(0.12, 0, 1, ref toneState, false);
-                SignalUtils.Tone(a, ref toneState);
-                Signal1.Data.Add(a);
-            }
-            finally
-            {
-                MtxVec.FreeIt(ref a);
-            }
-        }
-    }
+	}
 }

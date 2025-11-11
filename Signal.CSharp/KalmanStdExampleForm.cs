@@ -9,7 +9,7 @@ using Dew.Math;
 using Dew.Math.Units;
 using Dew.Signal;
 using Dew.Signal.Units;
-using Dew.Math.Tee;
+using static Dew.Math.Tee.MtxVecTee;
 
 namespace DSPDemo
 {
@@ -100,12 +100,12 @@ namespace DSPDemo
                 P.Values[i] = KalmanFilter.P[0,0];
              }
            
-             MtxVecTee.DrawValues(z,fastLine1, 0, 1, false);
-             MtxVecTee.DrawValues(xhat, fastLine2, 0, 1, false);
-             MtxVecTee.DrawValues(truthValue, fastLine3, 0, 1, false);
+             DrawValues(z,fastLine1, 0, 1, false);
+             DrawValues(xhat, fastLine2, 0, 1, false);
+             DrawValues(truthValue, fastLine3, 0, 1, false);
 
              P.SetSubRange(1,n_iter-1);
-             MtxVecTee.DrawValues(P, fastLine4, 0, 1, false);
+             DrawValues(P, fastLine4, 0, 1, false);
         }
 
 

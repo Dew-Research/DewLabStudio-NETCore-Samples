@@ -52,27 +52,26 @@ namespace DSPDemo
 			base.Dispose( disposing );
 		}
 
-		#region Designer generated code
-		/// <summary>
-		/// Required method for Designer support - do not modify
-		/// the contents of this method with the code editor.
-		/// </summary>
-		private void InitializeComponent()
-		{
-            this.SuspendLayout();
+        #region Designer generated code
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            SuspendLayout();
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Size = new System.Drawing.Size(339, 288);
+            richTextBox1.Size = new Size(875, 755);
             // 
             // IntroPlaybackForm
             // 
-            this.ClientSize = new System.Drawing.Size(339, 288);
-            this.Name = "IntroPlaybackForm";
-            this.ResumeLayout(false);
-
-		}
-		#endregion
-	}
+            ClientSize = new Size(875, 755);
+            Name = "IntroPlaybackForm";
+            ResumeLayout(false);
+        }
+        #endregion
+    }
 }
 

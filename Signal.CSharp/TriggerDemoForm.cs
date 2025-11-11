@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using Dew.Signal;
+using Dew.Signal.Audio;
 using Dew.Signal.Tee;
 
 namespace DSPDemo {
@@ -36,6 +37,10 @@ namespace DSPDemo {
 
 		private void button2_Click(object sender, EventArgs e) {
 			SignalIn1.ResetTriggers();
+		}
+
+		private void SpectrumAnalyzer1_OnParameterUpdate(object Sender) {
+			SpectrumAnalyzer1.Update();
 		}
 
 		private void panel2_Resize(object sender, EventArgs e) {
@@ -82,10 +87,5 @@ namespace DSPDemo {
 					"show how many times the samples had to be skipped (see help for more info). " +
 					"There are many other options available.";
 		}
-
-        private void SpectrumAnalyzer1_OnParameterUpdateEvent(object Sender)
-        {
-			SpectrumAnalyzer1.Update();
-		}
-    }
+	}
 }

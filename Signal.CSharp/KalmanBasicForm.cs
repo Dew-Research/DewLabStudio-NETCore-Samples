@@ -9,7 +9,7 @@ using Dew.Math;
 using Dew.Math.Units;
 using Dew.Signal;
 using Dew.Signal.Units;
-using Dew.Math.Tee;
+using static Dew.Math.Tee.MtxVecTee;
 
 namespace DSPDemo
 {
@@ -99,12 +99,12 @@ namespace DSPDemo
                 P.Values[i] = (1 - K.Values[i]) * pMinus.Values[i];
             }
            
-            MtxVecTee.DrawValues(z,fastLine1, 0, 1, false);
-            MtxVecTee.DrawValues(xhat, fastLine2, 0, 1, false);
-            MtxVecTee.DrawValues(truthValue, fastLine3, 0, 1, false);
+            DrawValues(z,fastLine1, 0, 1, false);
+            DrawValues(xhat, fastLine2, 0, 1, false);
+            DrawValues(truthValue, fastLine3, 0, 1, false);
 
             pMinus.SetSubRange(2,n_iter-2);
-            MtxVecTee.DrawValues(pMinus, fastLine4, 0, 1, false);
+            DrawValues(pMinus, fastLine4, 0, 1, false);
         }
 
 

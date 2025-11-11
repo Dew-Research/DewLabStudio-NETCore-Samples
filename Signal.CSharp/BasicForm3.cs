@@ -25,14 +25,17 @@ namespace DSPDemo
 			InitializeComponent();
 		}
 
-		protected void Add(String s) {
-			richTextBox1.SelectedText = s + "\n";
-		}
+        protected void Add(string s)
+        {
+            richTextBox1.SelectionStart = richTextBox1.TextLength; // <- ensure insertion point is at end
+            richTextBox1.SelectionLength = 0;                      // <- ensure no selection
+            richTextBox1.SelectedText = s + Environment.NewLine;   // <- now correct formatting applies
+        }
 
-		/// <summary>
-		/// Clean up any resources being used.
-		/// </summary>
-		protected override void Dispose( bool disposing )
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        protected override void Dispose( bool disposing )
 		{
 			if( disposing )
 			{
@@ -51,27 +54,27 @@ namespace DSPDemo
 		/// </summary>
 		private void InitializeComponent()
 		{
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.SuspendLayout();
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.richTextBox1.Location = new System.Drawing.Point(0, 0);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(379, 333);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "";
-            // 
-            // BasicForm3
-            // 
-            this.AutoScaleBaseSize = new System.Drawing.Size(6, 16);
-            this.ClientSize = new System.Drawing.Size(379, 333);
-            this.Controls.Add(this.richTextBox1);
-            this.Name = "BasicForm3";
-            this.Text = "BasicForm3";
-            this.ResumeLayout(false);
+			this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+			this.SuspendLayout();
+			// 
+			// richTextBox1
+			// 
+			this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.richTextBox1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(204)));
+			this.richTextBox1.Location = new System.Drawing.Point(0, 0);
+			this.richTextBox1.Name = "richTextBox1";
+			this.richTextBox1.Size = new System.Drawing.Size(292, 273);
+			this.richTextBox1.TabIndex = 0;
+			this.richTextBox1.Text = "";
+			// 
+			// BasicForm3
+			// 
+			this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
+			this.ClientSize = new System.Drawing.Size(292, 273);
+			this.Controls.Add(this.richTextBox1);
+			this.Name = "BasicForm3";
+			this.Text = "BasicForm3";
+			this.ResumeLayout(false);
 
 		}
 		#endregion

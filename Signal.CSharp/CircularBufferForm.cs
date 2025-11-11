@@ -36,10 +36,18 @@ namespace DSPDemo {
 			}
 		}
 
+		private void signalBuffer1_OnAfterUpdate(object Sender) {
+			DisplayUpdate();
+		}
+
 		private void bufferSizeEdit_Click(object sender, EventArgs e) {
 			signalBuffer1.Length = bufferSizeEdit.IntPosition;
 			DisplayUpdate();
-		}	
+		}
+
+		private void signalBuffer1_OnBeforeUpdate(object Sender) {
+			signalChart2.Series[0].Clear();
+		}
 
 		private void CircularBufferForm_Load(object sender, EventArgs e) {
 			bufferSizeEdit.IntPosition = signalBuffer1.Length;
@@ -57,20 +65,5 @@ namespace DSPDemo {
 			signalStoreBuffer1.Reset();
 			DisplayUpdate();
 		}
-
-        private void signalGenerator1_OnAfterUpdateEvent(object Sender)
-        {
-			signalUpdateLabel.Text = "Signal gen was updated!";
-		}
-
-        private void signalBuffer1_OnBeforeUpdateEvent(object Sender)
-        {
-			signalChart2.Series[0].Clear();
-		}
-
-        private void signalBuffer1_OnAfterUpdateEvent(object Sender)
-        {
-			DisplayUpdate();
-		}
-    }
+	}
 }

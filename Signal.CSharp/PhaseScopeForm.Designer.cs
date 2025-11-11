@@ -44,8 +44,8 @@
             this.signalChart1 = new Dew.Signal.Tee.SignalChart();
             this.chartEditor = new Steema.TeeChart.Editor(this.components);
             this.Signal2 = new Dew.Signal.TSignal(this.components);
-            this.SignalIn1 = new Dew.Signal.SignalIn(this.components);
-            this.SignalTimer1 = new Dew.Signal.SignalTimer(this.components);
+            this.SignalIn1 = new Dew.Signal.Audio.SignalIn(this.components);
+            this.SignalTimer1 = new Dew.Signal.Audio.SignalTimer(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -209,7 +209,6 @@
             // 
             // 
             // 
-            this.fastLine1.Marks.TailParams.CustomPointPos = ((System.Drawing.PointF)(resources.GetObject("resource.CustomPointPos")));
             this.fastLine1.Marks.TailParams.Margin = 0F;
             this.fastLine1.Marks.TailParams.PointerHeight = 8D;
             this.fastLine1.Marks.TailParams.PointerWidth = 8D;
@@ -321,8 +320,6 @@
             this.rightPhaseChart.Aspect.Perspective = 0;
             this.rightPhaseChart.Aspect.Rotation = 360;
             this.rightPhaseChart.Aspect.RotationFloat = 360D;
-            this.rightPhaseChart.Graphics3D.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.Default;
-            this.rightPhaseChart.Graphics3D.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             // 
             // 
             // 
@@ -1710,7 +1707,6 @@
             // 
             // 
             // 
-            this.polar2.Marks.TailParams.CustomPointPos = ((System.Drawing.PointF)(resources.GetObject("resource.CustomPointPos1")));
             this.polar2.Marks.TailParams.Margin = 0F;
             this.polar2.Marks.TailParams.PointerHeight = 8D;
             this.polar2.Marks.TailParams.PointerWidth = 8D;
@@ -1766,8 +1762,6 @@
             this.leftPhaseChart.Aspect.Perspective = 0;
             this.leftPhaseChart.Aspect.Rotation = 360;
             this.leftPhaseChart.Aspect.RotationFloat = 360D;
-            this.leftPhaseChart.Graphics3D.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.Default;
-            this.leftPhaseChart.Graphics3D.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             // 
             // 
             // 
@@ -3159,7 +3153,6 @@
             // 
             // 
             // 
-            this.polar1.Marks.TailParams.CustomPointPos = ((System.Drawing.PointF)(resources.GetObject("resource.CustomPointPos2")));
             this.polar1.Marks.TailParams.Margin = 0F;
             this.polar1.Marks.TailParams.PointerHeight = 8D;
             this.polar1.Marks.TailParams.PointerWidth = 8D;
@@ -3203,7 +3196,7 @@
             // 
             // 
             // 
-            this.signalChart1.Graphics3D.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.Default;
+             
             // 
             // 
             // 
@@ -3873,7 +3866,7 @@
             this.signalChart1.Axes.Top.Title.Shadow.Brush.Solid = true;
             this.signalChart1.Axes.Top.Title.Shadow.Brush.Visible = true;
             this.signalChart1.Color = System.Drawing.Color.White;
-            this.signalChart1.Cursor = System.Windows.Forms.Cursors.Default;
+             
             this.signalChart1.Dock = System.Windows.Forms.DockStyle.Bottom;
             // 
             // 
@@ -4420,9 +4413,9 @@
             this.SignalIn1.TriggerBelow = 0D;
             this.SignalIn1.TriggerChannel = Dew.Signal.TChannel.chLeft;
             this.SignalIn1.TriggerDelay = 0;
-            this.SignalIn1.Triggering = Dew.Signal.TriggerType.trNone;
-            this.SignalIn1.TriggerMode = Dew.Signal.TriggerMode.trCrossing;
-            this.SignalIn1.TriggerPosition = Dew.Signal.TriggerPosition.tpAfter;
+            this.SignalIn1.Triggering = Dew.Signal.Audio.TriggerType.trNone;
+            this.SignalIn1.TriggerMode = Dew.Signal.Audio.TriggerMode.trCrossing;
+            this.SignalIn1.TriggerPosition = Dew.Signal.Audio.TriggerPosition.tpAfter;
             // 
             // SignalTimer1
             // 
@@ -4470,8 +4463,8 @@
 		private Steema.TeeChart.Styles.Polar polar1;
 		private Dew.Signal.TSignal Signal1;
 		private Dew.Signal.TSignal Signal2;
-		private Dew.Signal.SignalIn SignalIn1;
-		private Dew.Signal.SignalTimer SignalTimer1;
+		private Dew.Signal.Audio.SignalIn SignalIn1;
+		private Dew.Signal.Audio.SignalTimer SignalTimer1;
 		private Steema.TeeChart.TChart rightPhaseChart;
 		private Steema.TeeChart.Styles.Polar polar2;
 		private Steema.TeeChart.Styles.FastLine fastLine1;

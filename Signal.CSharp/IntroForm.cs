@@ -73,65 +73,63 @@ namespace DSPDemo
 			base.Dispose( disposing );
 		}
 
-		#region Windows Form Designer generated code
-		/// <summary>
-		/// Required method for Designer support - do not modify
-		/// the contents of this method with the code editor.
-		/// </summary>
-		private void InitializeComponent()
-		{
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.panel1.SuspendLayout();
-            this.SuspendLayout();
+        #region Windows Form Designer generated code
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            panel1 = new Panel();
+            label1 = new Label();
+            richTextBox1 = new RichTextBox();
+            panel1.SuspendLayout();
+            SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(642, 59);
-            this.panel1.TabIndex = 1;
+            panel1.Controls.Add(label1);
+            panel1.Dock = DockStyle.Top;
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1014, 59);
+            panel1.TabIndex = 1;
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.DarkGray;
-            this.label1.Location = new System.Drawing.Point(10, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(622, 39);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Welcome to DSP Master v6";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            label1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            label1.Font = new Font("Arial", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            label1.ForeColor = Color.DarkGray;
+            label1.Location = new Point(10, 10);
+            label1.Name = "label1";
+            label1.Size = new Size(994, 39);
+            label1.TabIndex = 0;
+            label1.Text = "Welcome to DSP Master v6";
+            label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.richTextBox1.Location = new System.Drawing.Point(0, 59);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(642, 427);
-            this.richTextBox1.TabIndex = 2;
-            this.richTextBox1.Text = "";
+            richTextBox1.Dock = DockStyle.Fill;
+            richTextBox1.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            richTextBox1.Location = new Point(0, 59);
+            richTextBox1.Name = "richTextBox1";
+            richTextBox1.ReadOnly = true;
+            richTextBox1.Size = new Size(1014, 672);
+            richTextBox1.TabIndex = 2;
+            richTextBox1.Text = "";
             // 
             // IntroForm
             // 
-            this.AutoScaleBaseSize = new System.Drawing.Size(6, 16);
-            this.ClientSize = new System.Drawing.Size(642, 486);
-            this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.panel1);
-            this.Name = "IntroForm";
-            this.Text = "IntroForm";
-            this.panel1.ResumeLayout(false);
-            this.ResumeLayout(false);
+            AutoScaleBaseSize = new Size(6, 16);
+            ClientSize = new Size(1014, 731);
+            Controls.Add(richTextBox1);
+            Controls.Add(panel1);
+            Name = "IntroForm";
+            Text = "IntroForm";
+            panel1.ResumeLayout(false);
+            ResumeLayout(false);
 
-		}
-		#endregion
-	}
+        }
+        #endregion
+    }
 }

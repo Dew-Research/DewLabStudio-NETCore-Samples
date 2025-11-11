@@ -64,28 +64,28 @@ namespace DSPDemo
 			base.Dispose( disposing );
 		}
 
-		#region Designer generated code
-		/// <summary>
-		/// Required method for Designer support - do not modify
-		/// the contents of this method with the code editor.
-		/// </summary>
-		private void InitializeComponent()
-		{
-            this.SuspendLayout();
+        #region Designer generated code
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            SuspendLayout();
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Size = new System.Drawing.Size(345, 273);
+            richTextBox1.Size = new Size(870, 627);
             // 
             // IntroAsioForm
             // 
-            this.ClientSize = new System.Drawing.Size(345, 273);
-            this.Name = "IntroAsioForm";
-            this.Load += new System.EventHandler(this.IntroAsioForm_Load);
-            this.ResumeLayout(false);
+            ClientSize = new Size(870, 627);
+            Name = "IntroAsioForm";
+            Load += IntroAsioForm_Load;
+            ResumeLayout(false);
 
-		}
-		#endregion
+        }
+        #endregion
 
         private void IntroAsioForm_Load(object sender, EventArgs e)
         {

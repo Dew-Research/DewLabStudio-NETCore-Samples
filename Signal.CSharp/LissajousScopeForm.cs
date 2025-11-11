@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using Dew.Math;
-using Dew.Math.Tee;
+using static Dew.Math.Tee.MtxVecTee;
 
 namespace DSPDemo {
 	public partial class LissajousScopeForm : Form {
@@ -46,7 +46,7 @@ namespace DSPDemo {
 			a.CartToPolar(Re, Im);
 			Im = Im * (180 / Math.PI) + 45; //from radians to degrees //add 45 degrees
 			Re = Re / Re.Max();  //normalize to 1
-			MtxVecTee.DrawValues(Im, Re, phaseChart.Series[0], false); //angle is x
+			DrawValues(Im, Re, phaseChart.Series[0], false); //angle is x
 
 		}
 

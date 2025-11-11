@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using Dew.Math;
-using Dew.Math.Tee;
+using static Dew.Math.Tee.MtxVecTee;
 using Dew.Signal;
 using Dew.Signal.Units;
 using Dew.Signal.Tee;
@@ -67,14 +67,14 @@ namespace DSPDemo {
 			a.CartToPolar(Re, Im);
 			Im = Im * (180 / Math.PI); //from radians to degrees
 			Re = Re / Re.Max();  //normalize
-			MtxVecTee.DrawValues(Im, Re, leftPhaseChart.Series[0], false); //angle is x
+			DrawValues(Im, Re, leftPhaseChart.Series[0], false); //angle is x
 			a.SetFullRange();
 			a.Hilbert(Signal2.Data, THilbertMethod.hmMethod1);
 			a.SetSubRange((int)(a.Length * 0.1), (int)(a.Length * 0.8)); //leave out the edges, because they are bad... (rectangular window ripple effect)
 			a.CartToPolar(Re, Im);
 			Im = Im * (180 / Math.PI); //from radians to degrees
 			Re = Re / Re.Max();  //normalize
-			MtxVecTee.DrawValues(Im, Re, rightPhaseChart.Series[0], false); //angle is x
+			DrawValues(Im, Re, rightPhaseChart.Series[0], false); //angle is x
 			
 			switch (channelBox.SelectedIndex) {
 				case 0:

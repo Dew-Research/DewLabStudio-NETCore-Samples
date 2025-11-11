@@ -131,8 +131,9 @@ namespace DSPDemo
 
 		}
 
+        private void topChart_Click(object sender, EventArgs e)
+        {
 
-
-
-	}
+        }
+    }
 }

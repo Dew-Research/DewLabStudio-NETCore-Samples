@@ -204,7 +204,7 @@ namespace Dew.Demo
 
         public static string SourcePath()
         {            
-            const string ProjectName = "DewDSPDemo.csproj";
+            const string ProjectName = "DSP Demo 2010.csproj";
             string result = "";
 
             RegistryKey key = Registry.CurrentUser.CreateSubKey(DemoRegKey);
@@ -221,21 +221,16 @@ namespace Dew.Demo
             }
 
             FileInfo fi = new FileInfo(result + ProjectName);
-			if (!fi.Exists)
-			{
-				fi = new FileInfo(result + @"..\..\..\" + ProjectName);
-				if (fi.Exists) result = result + @"..\..\..\";
-				else
-				{
-					fi = new FileInfo(result + @"..\..\" + ProjectName);
-					if (fi.Exists) result = result + @"..\..\";
-					else
-					{
-						fi = new FileInfo(result + @"..\" + ProjectName);
-						if (fi.Exists) result = result + @"..\";
-					}
-				}
-			}
+            if (!fi.Exists)
+            {
+                fi = new FileInfo(result + @"..\" + ProjectName);
+                if (fi.Exists) result = result + @"..\";
+                else
+                {
+                    fi = new FileInfo(result + @"..\..\" + ProjectName);
+                    if (fi.Exists) result = result + @"..\..\";
+                }
+            }
 
             return result;
         }

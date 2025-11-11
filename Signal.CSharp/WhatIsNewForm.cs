@@ -10,28 +10,131 @@ namespace DSPDemo
 	{
 		private System.ComponentModel.IContainer components = null;
 
-		public WhatIsNewForm()
+        //private void Add(string text)
+        //{
+        //    richTextBox1.SelectionStart = richTextBox1.TextLength;
+        //    richTextBox1.SelectionLength = 0;
+        //    richTextBox1.SelectedText = text + Environment.NewLine;
+        //}
+
+        public WhatIsNewForm()
 		{
 			// This call is required by the Windows Form Designer.
 			InitializeComponent();
+
             richTextBox1.Font = new Font(richTextBox1.Font.FontFamily, 10, FontStyle.Bold);
             richTextBox1.SelectionFont = new Font(richTextBox1.Font.FontFamily, 12, richTextBox1.Font.Style);
             richTextBox1.SelectionColor = Color.FromArgb(51, 51, 153);
             Add("");
+            //richTextBox1.SelectionStart = richTextBox1.TextLength;
+            //richTextBox1.SelectionLength = 0;
             richTextBox1.Font = new Font(richTextBox1.Font.FontFamily, 10, FontStyle.Bold);
             richTextBox1.SelectionFont = new Font(richTextBox1.Font.FontFamily, 12, richTextBox1.Font.Style);
             richTextBox1.SelectionColor = Color.FromArgb(51, 51, 153);
-            Add("New features in v6.2");
-			Add("");
+            Add("New features and changes for v6.3.5 (November 2025)");
+            Add("");
+
+            // BULLETS
             richTextBox1.SelectionBullet = true;
             richTextBox1.BulletIndent = 10;
-			Add("Support for Visual Studio 2022 v17.9.3");
-			Add("Support for .NET Core 7.0 and 8.0");
-			Add("Support for TeeChart v 2024.15.3");
+            Add("Compiled fully in C#, including when targeting .NET Framework (net48).");
+            Add("Full XML documentation tooltip support is now included directly from source code comments.");
+            Add("Compiled using the latest C# compiler toolchain, offering significant performance improvements.");
+            Add("100% compatible public API across .NET Framework and modern .NET (.NET Core / .NET 5+).");
+            Add("Redesigned WinForms component serialization to avoid binary serialization while maintaining compatibility.");
+            Add("Target frameworks expanded: netstandard2.0, net48, net8.0, net8.0-windows, net9.0, net9.0-windows.");
+            Add("UI components are available on WinForms; all non-visual processing components run cross-platform.");
             richTextBox1.SelectionBullet = false;
-            richTextBox1.SelectionIndent = 0;
-            Add("");			
-			
+            Add("");
+
+            richTextBox1.Font = new Font(richTextBox1.Font.FontFamily, 10, FontStyle.Bold);
+            richTextBox1.SelectionFont = new Font(richTextBox1.Font.FontFamily, 12, richTextBox1.Font.Style);
+            richTextBox1.SelectionColor = Color.FromArgb(51, 51, 153);
+            Add("New features and changes for v6.3 (December 2024)");
+            Add("");
+
+            richTextBox1.SelectionBullet = true;
+            richTextBox1.BulletIndent = 10;
+            Add("SignalUtils.CZT performance improved ~7x.");
+            Add("Added SignalUtils.CZT overload supporting State variable for additional ~2.5x speed-up (total ~17.5x).");
+            Add("Added SignalUtils.MusicalNotePitch and vectorized MusicalNotePitchInit for pitch detection.");
+            Add("Enabled block-vectorized SignalUtils.GoertzN with multi-frequency acceleration (5-10x+; with threading scales linearly).");
+            Add("New implementation of SignalUtils.GoertzN achieving 3x to 10x performance gains depending on frequency count.");
+            Add("Improved Bonzanigo phase correction accuracy for large frequency spectrums.");
+            richTextBox1.SelectionBullet = false;
+            Add("");
+
+            Add("TSpectrumAnalyzer improvements:");
+            Add("");
+            richTextBox1.SelectionBullet = true;
+            Add("Enabled support for the new faster CZT engine.");
+            Add("Peak interpolation works also when CZT is the selected spectral method.");
+            Add("Vectorized peak searching and processing (multiple vector-based overloads added).");
+            Add("Peak interpolation now invariant to zero-padding; up to 16x faster for 16x zero-padded signals.");
+            Add("Vectorized peak interpolation algorithm provides at least 6x speed-up per core (single-core SIMD parallel job model).");
+            Add("Under favorable conditions total speed-up can reach ~96x (6x interpolation × 16x zero-padding).");
+            Add("FindLargestPeaks is typically 100x+ faster when using numerical interpolation.");
+            Add("Added FindFirstHarmonic for pitch detection support.");
+            Add("Added FindFundamentals to detect multiple harmonic series in the spectrum.");
+            richTextBox1.SelectionBullet = false;
+            Add("");
+
+            Add("TSignalCore Audio improvements:");
+            Add("");
+            richTextBox1.SelectionBullet = true;
+            Add("Expanded ChannelMapping with per-stream channel lists enabling arbitrary channel mixes for record/playback.");
+            richTextBox1.SelectionBullet = false;
+            Add("");
+
+            // ------------------------------------------------------------
+
+            Add("");
+            richTextBox1.SelectionFont = new Font(richTextBox1.Font.FontFamily, 12, richTextBox1.Font.Style);
+            richTextBox1.SelectionColor = Color.FromArgb(51, 51, 153);
+            Add("Changes for v6.2 (2024)");
+            Add("");
+
+            richTextBox1.SelectionBullet = true;
+            richTextBox1.BulletIndent = 10;
+            Add("Support for Visual Studio 2022 v17.9+.");
+            Add("Support for .NET 7 and .NET 8.");
+            Add("Updated support for TeeChart v2024 series.");
+            Add("Updated for Dew.Math v6.2.");
+            richTextBox1.SelectionBullet = false;
+            Add("");
+
+            // ------------------------------------------------------------
+
+            Add("");
+            richTextBox1.SelectionFont = new Font(richTextBox1.Font.FontFamily, 12, richTextBox1.Font.Style);
+            richTextBox1.SelectionColor = Color.FromArgb(51, 51, 153);
+            Add("Changes for v6.1 (2022)");
+            Add("");
+
+            richTextBox1.SelectionBullet = true;
+            richTextBox1.BulletIndent = 10;
+            Add("Android 11 tagged pointer compatibility (for .NET platforms targeting Android).");
+            richTextBox1.SelectionBullet = false;
+            Add("");
+
+            // ------------------------------------------------------------
+
+            Add("");
+            richTextBox1.SelectionFont = new Font(richTextBox1.Font.FontFamily, 12, richTextBox1.Font.Style);
+            richTextBox1.SelectionColor = Color.FromArgb(51, 51, 153);
+            Add("Changes for v6.0 (2020-2021)");
+            Add("");
+
+            richTextBox1.SelectionBullet = true;
+            richTextBox1.BulletIndent = 10;
+            Add("Initial DSP Master release for .NET Core / .NET 5 rewritten fully in C#.");
+            Add("Support for Windows, Linux, macOS targets depending on platform audio backend.");
+            Add("Enhanced TSignalCoreAudioIn / TSignalCoreAudioOut for low-latency streaming across platforms.");
+            Add("Matched core functionality with MtxVec v6 feature set.");
+            richTextBox1.SelectionBullet = false;
+            Add("");
+
+
             richTextBox1.Font = new Font(richTextBox1.Font.FontFamily, 10, FontStyle.Bold);
             richTextBox1.SelectionFont = new Font(richTextBox1.Font.FontFamily, 12, richTextBox1.Font.Style);
             richTextBox1.SelectionColor = Color.FromArgb(51, 51, 153);
@@ -45,7 +148,7 @@ namespace DSPDemo
             Add("FloatPrecision is selectable also at run-time.");
             richTextBox1.SelectionBullet = false;
             richTextBox1.BulletIndent = 10;
-            Add("");						
+            Add("");
 
             richTextBox1.Font = new Font(richTextBox1.Font.FontFamily, 10, FontStyle.Bold);
             richTextBox1.SelectionFont = new Font(richTextBox1.Font.FontFamily, 12, richTextBox1.Font.Style);
@@ -165,31 +268,31 @@ namespace DSPDemo
 			base.Dispose( disposing );
 		}
 
-		#region Designer generated code
-		/// <summary>
-		/// Required method for Designer support - do not modify
-		/// the contents of this method with the code editor.
-		/// </summary>
-		private void InitializeComponent()
-		{
-            this.SuspendLayout();
+        #region Designer generated code
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            SuspendLayout();
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.richTextBox1.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.richTextBox1.Size = new System.Drawing.Size(429, 362);
+            richTextBox1.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            richTextBox1.ForeColor = SystemColors.WindowText;
+            richTextBox1.Size = new Size(931, 690);
             // 
             // WhatIsNewForm
             // 
-            this.AutoScaleBaseSize = new System.Drawing.Size(6, 16);
-            this.ClientSize = new System.Drawing.Size(429, 362);
-            this.Name = "WhatIsNewForm";
-            this.Load += new System.EventHandler(this.WhatIsNewForm_Load);
-            this.ResumeLayout(false);
+            AutoScaleBaseSize = new Size(6, 16);
+            ClientSize = new Size(931, 690);
+            Name = "WhatIsNewForm";
+            Load += WhatIsNewForm_Load;
+            ResumeLayout(false);
 
-		}
-		#endregion
+        }
+        #endregion
 
         private void WhatIsNewForm_Load(object sender, EventArgs e)
         {
