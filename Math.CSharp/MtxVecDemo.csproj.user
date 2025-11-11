@@ -31,6 +31,9 @@
     <Compile Update="clMultiDeviceForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="CompoundExpressions.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="CopyCompare.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -46,13 +49,13 @@
     <Compile Update="FloatEdit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="FunctionList.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="GCProcessing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="IfThenForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Interpolation.cs">
@@ -97,6 +100,9 @@
     <Compile Update="LQRDemo.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="MathParser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +119,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="MtxOptim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="MtxVecThreading.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Multiply1.cs">
@@ -154,6 +163,9 @@
     <Compile Update="Scripting.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="SmallMatrixMul.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="SparseTest.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,7 +180,16 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Update="YuleLevinson.resx">
+    <EmbeddedResource Update="BenchmarkX.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Optim_Bounded.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ProbCalculator.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Update="SparseTest.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>

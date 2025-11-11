@@ -20,7 +20,7 @@ namespace MtxVecDemo
         public clCustomFunctionForm()
         {
             InitializeComponent();
-            clPlatforms = clMtxVec.clPlatform();
+            clPlatforms = ClMtxVec.clPlatform();
         }
        
         private void platformListBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -36,7 +36,10 @@ namespace MtxVecDemo
               for (i = 0; i < DeviceList.Count; i++)      {
                    deviceListBox.Items.Add(DeviceList[i]);
               }
-              deviceListBox.SelectedIndex = 0;
+              if (DeviceList.Count > 0)
+              {
+                   deviceListBox.SelectedIndex = 0;
+              }
         }
 
         private void CreateCustom() //compile custom function
@@ -84,19 +87,19 @@ namespace MtxVecDemo
         private void DoCompute()
         {
             Vector A = new Vector(VectorLen, TMtxFloatPrecision.mvSingle);
-            Vector B = new Vector(VectorLen, TMtxFloatPrecision.mvSingle);               
+            Vector B = new Vector(VectorLen, TMtxFloatPrecision.mvSingle);
             Vector R = new Vector(VectorLen, TMtxFloatPrecision.mvSingle);
-            Vector C; 
+            Vector C;
             TOpenCLVector clB, clC, clA;
-            
+
             A.SetVal(0.5);
             B.SetVal(0);
 
 
-            clMtxVec.CreateIt(out clB,out clC);
-            clMtxVec.CreateIt(out clA);
+            ClMtxVec.CreateIt(out clB, out clC);
+            ClMtxVec.CreateIt(out clA);
             try
-            {                    
+            {
                 clA.Copy(A);
                 clB.Copy(B);
                 vec_sin_f(clA, clB, clC);  //call custom function here
@@ -111,11 +114,11 @@ namespace MtxVecDemo
             }
             finally
             {
-                clMtxVec.FreeIt(ref clA, ref clB);
-                clMtxVec.FreeIt(ref clC);
+                ClMtxVec.FreeIt(ref clA, ref clB);
+                ClMtxVec.FreeIt(ref clC);
                 this.Cursor = Cursors.Default;
             }
-         }
+        }
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -135,7 +138,7 @@ namespace MtxVecDemo
             TOpenCLVector clB, clC, clA, clD;
             int i;
 
-            clMtxVec.CreateIt(out clA, out clB, out clC, out clD);
+            ClMtxVec.CreateIt(out clA, out clB, out clC, out clD);
             try
             {
                 clA.Size(VectorLen, TclFloatPrecision.clFloat, false);
@@ -153,7 +156,7 @@ namespace MtxVecDemo
                 clC.Finish(); //Wait for computation on GPU to finish
             }
             finally {
-                clMtxVec.FreeIt(ref clA, ref clB, ref clC, ref clD);
+                ClMtxVec.FreeIt(ref clA, ref clB, ref clC, ref clD);
             }
 
         }
@@ -188,9 +191,11 @@ namespace MtxVecDemo
             //Main form requires:
             //protected override void Dispose( bool disposing )
             //{
-            //    clMtxVec.clPlatform.Free();
+            //    ClMtxVec.clPlatform.Free();
 
             int i, k, kernelSum;
+
+            i = (int)(sizeof(double) * 8);
 
             for (i = 0; i < clPlatforms.Count; i++)
             {
@@ -229,6 +234,7 @@ namespace MtxVecDemo
 
             VectorLen = (int)Math.Round(Math387.Exp2(19));
             vectorLengthBox.Text = VectorLen.ToString();
-        }         
+        }
+         
     }
 }

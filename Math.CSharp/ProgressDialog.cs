@@ -11,12 +11,12 @@ namespace MtxVecDemo
 	public class ProgressDialogForm : MtxVecDemo.BasicForm2
 	{
 		private System.Windows.Forms.GroupBox groupBox1;
-		private System.Windows.Forms.RadioButton radioButton1;
-		private System.Windows.Forms.RadioButton radioButton2;
-		private System.Windows.Forms.RadioButton radioButton3;
+		private System.Windows.Forms.RadioButton InternalLoopButton;
+		private System.Windows.Forms.RadioButton ExternalLoopButton;
+		private System.Windows.Forms.RadioButton InProcedureButton;
 		private System.Windows.Forms.GroupBox groupBox2;
-		private System.Windows.Forms.RadioButton radioButton4;
-		private System.Windows.Forms.RadioButton radioButton5;
+		private System.Windows.Forms.RadioButton ForLoopButton;
+		private System.Windows.Forms.RadioButton WhileLoopButton;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.ProgressBar progressBar1;
 		private System.Windows.Forms.CheckBox checkBox1;
@@ -31,7 +31,7 @@ namespace MtxVecDemo
 		private System.Windows.Forms.Button button1;
 		private System.Windows.Forms.NumericUpDown numericUpDown2;
 		private System.Windows.Forms.NumericUpDown numericUpDown3;
-        private Dew.Math.Controls.ProgressDialog progressDialog1;
+        private Dew.Math.Controls.TMtxProgressDialog progressDialog1;
 		private System.ComponentModel.IContainer components = null;
 
 		public ProgressDialogForm()
@@ -39,6 +39,7 @@ namespace MtxVecDemo
 			// This call is required by the Windows Form Designer.
 			InitializeComponent();
 			progressDialog1.DefineLoop(0,1500);
+            progressDialog1.InfiniteLoop = true;
 		}
 
 		/// <summary>
@@ -65,12 +66,12 @@ namespace MtxVecDemo
 		private void InitializeComponent()
 		{
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.InternalLoopButton = new System.Windows.Forms.RadioButton();
+            this.ExternalLoopButton = new System.Windows.Forms.RadioButton();
+            this.InProcedureButton = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
+            this.ForLoopButton = new System.Windows.Forms.RadioButton();
+            this.WhileLoopButton = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
@@ -85,7 +86,7 @@ namespace MtxVecDemo
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.progressDialog1 = new Dew.Math.Controls.ProgressDialog();
+            this.progressDialog1 = new Dew.Math.Controls.TMtxProgressDialog();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -109,128 +110,129 @@ namespace MtxVecDemo
             this.panel2.Controls.Add(this.groupBox2);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label4);
-            this.panel2.Location = new System.Drawing.Point(0, 170);
-            this.panel2.Size = new System.Drawing.Size(746, 363);
+            this.panel2.Size = new System.Drawing.Size(975, 378);
             // 
             // panel3
             // 
-            this.panel3.Location = new System.Drawing.Point(0, 533);
-            this.panel3.Size = new System.Drawing.Size(746, 73);
+            this.panel3.Location = new System.Drawing.Point(0, 490);
+            this.panel3.Size = new System.Drawing.Size(975, 48);
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Size = new System.Drawing.Size(746, 170);
+            this.richTextBox1.Size = new System.Drawing.Size(975, 112);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton3);
+            this.groupBox1.Controls.Add(this.InternalLoopButton);
+            this.groupBox1.Controls.Add(this.ExternalLoopButton);
+            this.groupBox1.Controls.Add(this.InProcedureButton);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.groupBox1.Location = new System.Drawing.Point(10, 10);
+            this.groupBox1.Location = new System.Drawing.Point(12, 16);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(144, 88);
+            this.groupBox1.Size = new System.Drawing.Size(120, 83);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Iterator control";
             // 
-            // radioButton1
+            // InternalLoopButton
             // 
-            this.radioButton1.Checked = true;
-            this.radioButton1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.radioButton1.Location = new System.Drawing.Point(10, 20);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(124, 19);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Internal loop";
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.InternalLoopButton.Checked = true;
+            this.InternalLoopButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.InternalLoopButton.Location = new System.Drawing.Point(8, 16);
+            this.InternalLoopButton.Name = "InternalLoopButton";
+            this.InternalLoopButton.Size = new System.Drawing.Size(104, 16);
+            this.InternalLoopButton.TabIndex = 0;
+            this.InternalLoopButton.TabStop = true;
+            this.InternalLoopButton.Text = "Internal loop";
+            this.InternalLoopButton.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
-            // radioButton2
+            // ExternalLoopButton
             // 
-            this.radioButton2.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.radioButton2.Location = new System.Drawing.Point(10, 39);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(124, 20);
-            this.radioButton2.TabIndex = 0;
-            this.radioButton2.Text = "External loop";
-            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.ExternalLoopButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.ExternalLoopButton.Location = new System.Drawing.Point(8, 38);
+            this.ExternalLoopButton.Name = "ExternalLoopButton";
+            this.ExternalLoopButton.Size = new System.Drawing.Size(104, 16);
+            this.ExternalLoopButton.TabIndex = 0;
+            this.ExternalLoopButton.Text = "External loop";
+            this.ExternalLoopButton.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
-            // radioButton3
+            // InProcedureButton
             // 
-            this.radioButton3.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.radioButton3.Location = new System.Drawing.Point(10, 59);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(124, 20);
-            this.radioButton3.TabIndex = 0;
-            this.radioButton3.Text = "InProcedure";
-            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.InProcedureButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.InProcedureButton.Location = new System.Drawing.Point(8, 61);
+            this.InProcedureButton.Name = "InProcedureButton";
+            this.InProcedureButton.Size = new System.Drawing.Size(104, 16);
+            this.InProcedureButton.TabIndex = 0;
+            this.InProcedureButton.Text = "InProcedure";
+            this.InProcedureButton.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.radioButton4);
-            this.groupBox2.Controls.Add(this.radioButton5);
+            this.groupBox2.Controls.Add(this.ForLoopButton);
+            this.groupBox2.Controls.Add(this.WhileLoopButton);
             this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.groupBox2.Location = new System.Drawing.Point(173, 10);
+            this.groupBox2.Location = new System.Drawing.Point(148, 16);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(144, 88);
+            this.groupBox2.Size = new System.Drawing.Size(120, 66);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Loop type";
             // 
-            // radioButton4
+            // ForLoopButton
             // 
-            this.radioButton4.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.radioButton4.Location = new System.Drawing.Point(10, 30);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(124, 19);
-            this.radioButton4.TabIndex = 0;
-            this.radioButton4.Text = "For loop";
-            this.radioButton4.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
+            this.ForLoopButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.ForLoopButton.Location = new System.Drawing.Point(10, 19);
+            this.ForLoopButton.Name = "ForLoopButton";
+            this.ForLoopButton.Size = new System.Drawing.Size(104, 16);
+            this.ForLoopButton.TabIndex = 0;
+            this.ForLoopButton.Text = "For loop";
+            this.ForLoopButton.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
             // 
-            // radioButton5
+            // WhileLoopButton
             // 
-            this.radioButton5.Checked = true;
-            this.radioButton5.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.radioButton5.Location = new System.Drawing.Point(10, 59);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(124, 20);
-            this.radioButton5.TabIndex = 0;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "While loop";
-            this.radioButton5.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
+            this.WhileLoopButton.Checked = true;
+            this.WhileLoopButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.WhileLoopButton.Location = new System.Drawing.Point(10, 41);
+            this.WhileLoopButton.Name = "WhileLoopButton";
+            this.WhileLoopButton.Size = new System.Drawing.Size(104, 16);
+            this.WhileLoopButton.TabIndex = 0;
+            this.WhileLoopButton.TabStop = true;
+            this.WhileLoopButton.Text = "While loop";
+            this.WhileLoopButton.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(326, 10);
+            this.label1.Location = new System.Drawing.Point(299, 5);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(192, 20);
+            this.label1.Size = new System.Drawing.Size(160, 16);
             this.label1.TabIndex = 1;
             this.label1.Text = "Progress indicator";
             // 
             // progressBar1
             // 
+            this.progressBar1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.progressBar1.ForeColor = System.Drawing.Color.Lime;
-            this.progressBar1.Location = new System.Drawing.Point(326, 30);
+            this.progressBar1.Location = new System.Drawing.Point(302, 24);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(212, 19);
+            this.progressBar1.Size = new System.Drawing.Size(622, 27);
             this.progressBar1.TabIndex = 2;
             // 
             // checkBox1
             // 
             this.checkBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.checkBox1.Location = new System.Drawing.Point(10, 108);
+            this.checkBox1.Location = new System.Drawing.Point(20, 105);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(240, 30);
+            this.checkBox1.Size = new System.Drawing.Size(200, 24);
             this.checkBox1.TabIndex = 3;
             this.checkBox1.Text = "Show progress form";
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(10, 148);
+            this.label2.Location = new System.Drawing.Point(17, 162);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(144, 19);
+            this.label2.Size = new System.Drawing.Size(120, 16);
             this.label2.TabIndex = 4;
             this.label2.Text = "Thread priority";
             // 
@@ -244,30 +246,30 @@ namespace MtxVecDemo
             "Normal",
             "Above normal",
             "Highest"});
-            this.comboBox1.Location = new System.Drawing.Point(10, 167);
+            this.comboBox1.Location = new System.Drawing.Point(195, 162);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(145, 23);
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 5;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(10, 207);
+            this.label3.Location = new System.Drawing.Point(14, 204);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(211, 19);
+            this.label3.Size = new System.Drawing.Size(176, 16);
             this.label3.TabIndex = 4;
             this.label3.Text = "Progress indicator update  interval";
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(10, 226);
+            this.numericUpDown1.Location = new System.Drawing.Point(196, 200);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             10000,
             0,
             0,
             0});
             this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(144, 23);
+            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
             this.numericUpDown1.TabIndex = 6;
             this.numericUpDown1.Value = new decimal(new int[] {
             200,
@@ -278,9 +280,9 @@ namespace MtxVecDemo
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(154, 231);
+            this.label4.Location = new System.Drawing.Point(333, 202);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(48, 20);
+            this.label4.Size = new System.Drawing.Size(40, 16);
             this.label4.TabIndex = 4;
             this.label4.Text = "ms";
             // 
@@ -290,23 +292,23 @@ namespace MtxVecDemo
             this.groupBox3.Controls.Add(this.numericUpDown2);
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Controls.Add(this.label6);
-            this.groupBox3.Location = new System.Drawing.Point(10, 261);
+            this.groupBox3.Location = new System.Drawing.Point(20, 267);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(268, 64);
+            this.groupBox3.Size = new System.Drawing.Size(296, 72);
             this.groupBox3.TabIndex = 7;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Loop range";
             // 
             // numericUpDown3
             // 
-            this.numericUpDown3.Location = new System.Drawing.Point(182, 25);
+            this.numericUpDown3.Location = new System.Drawing.Point(198, 28);
             this.numericUpDown3.Maximum = new decimal(new int[] {
             10000,
             0,
             0,
             0});
             this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(68, 23);
+            this.numericUpDown3.Size = new System.Drawing.Size(56, 20);
             this.numericUpDown3.TabIndex = 2;
             this.numericUpDown3.Value = new decimal(new int[] {
             1500,
@@ -317,34 +319,34 @@ namespace MtxVecDemo
             // 
             // numericUpDown2
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(58, 25);
+            this.numericUpDown2.Location = new System.Drawing.Point(56, 30);
             this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(67, 23);
+            this.numericUpDown2.Size = new System.Drawing.Size(56, 20);
             this.numericUpDown2.TabIndex = 1;
             this.numericUpDown2.ValueChanged += new System.EventHandler(this.numericUpDown2_ValueChanged);
             // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(10, 30);
+            this.label5.Location = new System.Drawing.Point(16, 34);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(43, 14);
+            this.label5.Size = new System.Drawing.Size(36, 12);
             this.label5.TabIndex = 0;
             this.label5.Text = "From";
             // 
             // label6
             // 
-            this.label6.Location = new System.Drawing.Point(139, 30);
+            this.label6.Location = new System.Drawing.Point(156, 32);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(43, 14);
+            this.label6.Size = new System.Drawing.Size(36, 12);
             this.label6.TabIndex = 0;
             this.label6.Text = "To";
             // 
             // button1
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button1.Location = new System.Drawing.Point(293, 281);
+            this.button1.Location = new System.Drawing.Point(353, 284);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(90, 28);
+            this.button1.Size = new System.Drawing.Size(106, 31);
             this.button1.TabIndex = 8;
             this.button1.Text = "Start";
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -352,6 +354,8 @@ namespace MtxVecDemo
             // progressDialog1
             // 
             this.progressDialog1.BlockAssign = false;
+            this.progressDialog1.Cancel = false;
+            this.progressDialog1.Counter = 0;
             this.progressDialog1.InfiniteLoop = false;
             this.progressDialog1.Max = 0;
             this.progressDialog1.Min = 0;
@@ -359,13 +363,14 @@ namespace MtxVecDemo
             this.progressDialog1.ShowDialog = false;
             this.progressDialog1.ThreadBypass = false;
             this.progressDialog1.ThreadName = "Test thread";
-            this.progressDialog1.Compute += new EventHandler(this.progressDialog1_Compute);
-            this.progressDialog1.ProgressUpdate += new Dew.Math.Controls.UpdateEventHandler(this.progressDialog1_ProgressUpdate);
+            this.progressDialog1.UpdateInterval = 40;
+            this.progressDialog1.Compute += new Dew.Math.TComputeEvent(this.progressDialog1_Compute);
+            this.progressDialog1.ProgressUpdate += new Dew.Math.TProgressUpdateEvent(this.progressDialog1_ProgressUpdate);
             // 
             // ProgressDialogForm
             // 
-            this.AutoScaleBaseSize = new System.Drawing.Size(6, 16);
-            this.ClientSize = new System.Drawing.Size(746, 606);
+            this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
+            this.ClientSize = new System.Drawing.Size(975, 538);
             this.Name = "ProgressDialogForm";
             this.Load += new System.EventHandler(this.ProgressDialogForm_Load);
             this.panel2.ResumeLayout(false);
@@ -389,15 +394,19 @@ namespace MtxVecDemo
 
 		private void radioButton4_CheckedChanged(object sender, System.EventArgs e) 
         {
-            progressDialog1.InfiniteLoop = radioButton4.Checked;
+            progressDialog1.InfiniteLoop = !ForLoopButton.Checked;
 		}
 
-        private void button1_Click(object sender, System.EventArgs e) {
-			if (button1.Text.Equals("Start")) {
+        private void button1_Click(object sender, System.EventArgs e) 
+        {
+			if (button1.Text.Equals("Start")) 
+            {
 				button1.Text = "Stop";
 				progressDialog1.Start();
-			} else {
-				progressDialog1.Cancel = true;
+			} 
+            else 
+            {
+                progressDialog1.Stop();
 				button1.Text = "Start";
 			}
 			// Sequence of calls:
@@ -430,7 +439,7 @@ namespace MtxVecDemo
 		}
 
 		private void radioButton1_CheckedChanged(object sender, System.EventArgs e) {
-            progressDialog1.InternalLoop = radioButton1.Checked;
+            progressDialog1.InternalLoop = InternalLoopButton.Checked;
 		}
 
         private void ProgressDialogForm_Load(object sender, System.EventArgs e) {
@@ -450,7 +459,7 @@ namespace MtxVecDemo
 
         private void whileLoopInProcedure() 
         {
-            while (!(progressDialog1.Max == progressDialog1.Counter)) 
+            while (!(progressDialog1.Max == progressDialog1.Counter) | progressDialog1.InfiniteLoop)
             {
                 if (progressDialog1.Cancel) break;
 				c.Mul(a,b);
@@ -458,47 +467,59 @@ namespace MtxVecDemo
 			}
 		}
 
-        private void progressDialog1_Compute(object sender, EventArgs e)
+        private void progressDialog1_Compute(object sender)
         {
-            if (radioButton1.Checked) { c.Mul(a, b); }
-            else if (radioButton2.Checked)
+            if (InternalLoopButton.Checked) { c.Mul(a, b); }
+            else if (ExternalLoopButton.Checked)
             {
-                for (int i = progressDialog1.Min; i <= progressDialog1.Max; i++)
+                if (progressDialog1.InfiniteLoop)
                 {
-                    progressDialog1.Counter = i;
-                    if (progressDialog1.Cancel) break;
-                    c.Mul(a, b);
+                    int i = progressDialog1.Min;
+                    while (true)
+                    {
+                        progressDialog1.Counter = i;
+                        if (progressDialog1.Cancel) break;
+                        c.Mul(a, b);
+                        i++;
+                    }
+                }
+                else
+                {
+                    for (int i = progressDialog1.Min; i <= progressDialog1.Max; i++)
+                    {
+                        progressDialog1.Counter = i;
+                        if (progressDialog1.Cancel) break;
+                        c.Mul(a, b);
+                    }
                 }
             }
-            else if (radioButton3.Checked)
+            else if (InProcedureButton.Checked)
             {
                 whileLoopInProcedure();
             }
         }
 
-        private void progressDialog1_ProgressUpdate(object sender, Dew.Math.Controls.MtxProgressEvent e)
+        private void progressDialog1_ProgressUpdate(object sender, Dew.Math.TMtxProgressEvent e)
         {
             switch (e)
             {
-                case Dew.Math.Controls.MtxProgressEvent.peInit :
+                case Dew.Math.TMtxProgressEvent.peInit :
                     {
                         progressDialog1.DefineProgressBar(progressBar1);
-                        progressBar1.Minimum = progressDialog1.Min;
-                        progressBar1.Maximum = progressDialog1.Max;
-                        progressBar1.Value = 0;
                         MtxVec.CreateIt(out a, out b, out c);
-                        a.Size(100, 100);
+                        a.Size(300, 300);
                         a.RandGauss();
                         b.Copy(a);
-
-                    };break;
-                case Dew.Math.Controls.MtxProgressEvent.peCycle:
+                    };
+                    break;
+                case Dew.Math.TMtxProgressEvent.peCycle:
                     {
-                        progressBar1.Value = progressDialog1.Counter;
+                        progressBar1.Value = (progressDialog1.Counter - progressDialog1.Min) % (progressDialog1.Max - progressDialog1.Min);
                         label1.Text = "Progress indicator : " +
                         (progressDialog1.Counter * 100 / progressDialog1.Max).ToString() + " %";
-                    }; break;
-                case Dew.Math.Controls.MtxProgressEvent.peCleanUp:
+                    }; 
+                    break;
+                case Dew.Math.TMtxProgressEvent.peCleanUp:
                     {
                         if (!progressDialog1.Cancel)
                         {
@@ -506,9 +527,13 @@ namespace MtxVecDemo
                             label1.Text = "Progress indicator : 100 %";
                         }
                         MtxVec.FreeIt(ref a, ref b, ref c);
-                    } ; break;
+                        button1.Text = "Start";                      
+                    };
+                    break;
+                
             }
         }
 	}
 }
+
 

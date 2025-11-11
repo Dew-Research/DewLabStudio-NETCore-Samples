@@ -1689,7 +1689,6 @@ namespace MtxVecDemo
             // 
             // 
             // 
-            this.area1.Marks.TailParams.CustomPointPos = ((System.Drawing.PointF)(resources.GetObject("resource.CustomPointPos")));
             this.area1.Marks.TailParams.Margin = 0F;
             this.area1.Marks.TailParams.PointerHeight = 8D;
             this.area1.Marks.TailParams.PointerWidth = 8D;

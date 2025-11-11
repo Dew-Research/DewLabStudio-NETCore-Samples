@@ -1498,7 +1498,6 @@ namespace MtxVecDemo
             // 
             // 
             // 
-            this.line1.Marks.TailParams.CustomPointPos = ((System.Drawing.PointF)(resources.GetObject("resource.CustomPointPos")));
             this.line1.Marks.TailParams.Margin = 0F;
             this.line1.Marks.TailParams.PointerHeight = 8D;
             this.line1.Marks.TailParams.PointerWidth = 8D;
@@ -1685,7 +1684,6 @@ namespace MtxVecDemo
             // 
             // 
             // 
-            this.line2.Marks.TailParams.CustomPointPos = ((System.Drawing.PointF)(resources.GetObject("resource.CustomPointPos1")));
             this.line2.Marks.TailParams.Margin = 0F;
             this.line2.Marks.TailParams.PointerHeight = 8D;
             this.line2.Marks.TailParams.PointerWidth = 8D;
@@ -1872,7 +1870,6 @@ namespace MtxVecDemo
             // 
             // 
             // 
-            this.line3.Marks.TailParams.CustomPointPos = ((System.Drawing.PointF)(resources.GetObject("resource.CustomPointPos2")));
             this.line3.Marks.TailParams.Margin = 0F;
             this.line3.Marks.TailParams.PointerHeight = 8D;
             this.line3.Marks.TailParams.PointerWidth = 8D;
@@ -2063,7 +2060,6 @@ namespace MtxVecDemo
             // 
             // 
             // 
-            this.line4.Marks.TailParams.CustomPointPos = ((System.Drawing.PointF)(resources.GetObject("resource.CustomPointPos3")));
             this.line4.Marks.TailParams.Margin = 0F;
             this.line4.Marks.TailParams.PointerHeight = 8D;
             this.line4.Marks.TailParams.PointerWidth = 8D;

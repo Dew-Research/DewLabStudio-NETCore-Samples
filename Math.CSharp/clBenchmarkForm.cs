@@ -7,7 +7,6 @@ using System.Text;
 using System.Threading;
 using System.Windows.Forms;
 using Dew.Math;
-using static Dew.Math.Units.Math387;
 using Dew.Math.Units;
 
 namespace MtxVecDemo
@@ -21,7 +20,7 @@ namespace MtxVecDemo
         public clBenchmarkForm()
         {
             InitializeComponent();
-            clPlatforms = clMtxVec.clPlatform();
+            clPlatforms = ClMtxVec.clPlatform();
         }
 
         private void clBenchmarkForm_Load(object sender, EventArgs e)
@@ -41,6 +40,11 @@ namespace MtxVecDemo
             + "If the same graphics card is used also for display next to its OpenCL purpose "
             + "the performance degradation of Open CL code can be substantial. This depends largely also "
             + "on the amount of total memory allocated on the GPU by the Open CL library.\n";
+
+            //Main form requires:
+            //protected override void Dispose( bool disposing )
+            //{
+            //    ClMtxVec.clPlatform.Free();
 
             int i, k, kernelSum;
             i = (int)(sizeof(double) * 8);            
@@ -84,14 +88,15 @@ namespace MtxVecDemo
             if (kernelSum == 0)
             {
                 this.Cursor = Cursors.WaitCursor;
-                MessageBox.Show("When loading the first time, the Open CL drivers need to recompile the source code." + 
-                                "This may take a minute or longer. If you have Intel Open CL drivers installed they " + 
-                                "add 20s delay regardless, if the program is precompiled. Similar for AMD. The NVidia " + 
-                                "compiled code load times are much faster, but GPU has limits (2s) on maximum kernel " + 
+                MessageBox.Show("When loading the first time, the Open CL drivers need to recompile the source code." +
+                                "This may take a minute or longer. If you have Intel Open CL drivers installed they " +
+                                "add 20s delay regardless, if the program is precompiled. Similar for AMD. The NVidia " +
+                                "compiled code load times are much faster, but GPU has limits (2s) on maximum kernel " +
                                 "execution time for gaming GPUs.");
                 clPlatforms.LoadProgramsForDevices(false, false, true, false, false);
                 this.Cursor = Cursors.Default;
             }
+
             functionBox.SelectedIndex = 0;
 
             VectorLen = (int)Math.Round(Math387.Exp2(19));
@@ -109,7 +114,7 @@ namespace MtxVecDemo
 
             clPlatforms.UnMarkThreads();
             selectedDevice = clPlatforms[platformListBox.SelectedIndex][deviceListBox.SelectedIndex];
-            if ((selectedDevice.DevicePlatform.Name == clMtxVec.INTEL_PLATFORM) & clPlatforms.IgnoreIntel)
+            if ((selectedDevice.DevicePlatform.Name == ClMtxVec.INTEL_PLATFORM) & clPlatforms.IgnoreIntel)
             {
                 MessageBox.Show("clPlatform.IgnoreIntel = True. If you want to run benchmark for Intel platform set this flag to false first!");
             }
@@ -132,7 +137,10 @@ namespace MtxVecDemo
               {
                    deviceListBox.Items.Add(DeviceList[i]);
               }
-              deviceListBox.SelectedIndex = 0;
+              if (DeviceList.Count > 0)
+              {
+                   deviceListBox.SelectedIndex = 0;
+              }
         }
 
         private void DoCompute()
@@ -152,8 +160,8 @@ namespace MtxVecDemo
             C = new Vector(0);
             R = new Vector(0);
             this.Cursor = Cursors.WaitCursor;
-            clMtxVec.CreateIt(out clB, out clC);
-            clMtxVec.CreateIt(out clA, out clD);
+            ClMtxVec.CreateIt(out clB, out clC);
+            ClMtxVec.CreateIt(out clA, out clD);
             try
             {
                 clC.FloatPrecision = (TclFloatPrecision)floatPrecisionBox.SelectedIndex;
@@ -163,7 +171,7 @@ namespace MtxVecDemo
                 memo.Clear();
 
                 memo.AppendText("Vector length = " + Convert.ToString(VectorLen) + "\n");
-                
+
                 switch (clC.FloatPrecision)
                 {
                     case TclFloatPrecision.clFloat:
@@ -180,7 +188,7 @@ namespace MtxVecDemo
 
                 a = 1;
                 ScalarB = 1.02;
-               
+
 
                 IterCount = 1;
                 switch (functionBox.SelectedIndex)
@@ -320,10 +328,10 @@ namespace MtxVecDemo
                                     for (k = 0; k <= C.Length - 1; k++) C.SValues[k] = C.SValues[k] * B.SValues[k];
                                     break;
                                 case 1:
-                                    for (k = 0; k <= C.Length - 1; k++) C.SValues[k] = Sin(C.SValues[k]) + Sin(B.SValues[k]);
+                                    for (k = 0; k <= C.Length - 1; k++) C.SValues[k] = Math387.Sinf(C.SValues[k]) + Math387.Sinf(B.SValues[k]);
                                     break;
                                 case 2:
-                                    for (k = 0; k <= C.Length - 1; k++) C.SValues[k] = Sqrt(4 * sa / (2 * PI_SINGLE)) * sa * Sqr(B.SValues[k]) * Exp(-0.5f * sa * Sqr(B.SValues[k]));
+                                    for (k = 0; k <= C.Length - 1; k++) C.SValues[k] = Math387.Sqrtf(4 * sa / (2 * Math387.PI_SINGLE)) * sa * (B.SValues[k]* B.SValues[k]) * Math387.Expf(-0.5f * sa * (B.SValues[k]* B.SValues[k]));
                                     break;
                                 case 3:
                                     for (k = 0; k <= C.Length - 1; k++) sa = sa + C.SValues[k];
@@ -334,16 +342,16 @@ namespace MtxVecDemo
                             switch (functionBox.SelectedIndex)
                             {
                                 case 0:
-                                    for (k = 0; k <= C.Length - 1; k++) C[k] = C[k] * B[k];
+                                    for (k = 0; k <= C.Length - 1; k++) C.Values[k] = C.Values[k] * B.Values[k];
                                     break;
                                 case 1:
-                                    for (k = 0; k <= C.Length - 1; k++) C[k] = Sin(C[k]) + Sin(B[k]);
+                                    for (k = 0; k <= C.Length - 1; k++) C.Values[k] = Math.Sin(C.Values[k]) + Math.Sin(B.Values[k]);
                                     break;
                                 case 2:
-                                    for (k = 0; k <= C.Length - 1; k++) C[k] = Sqrt(4 * a / (2 * PI)) * a * Sqr(B[k]) * Exp(-0.5 * a * Sqr(B[k]));
+                                    for (k = 0; k <= C.Length - 1; k++) C.Values[k] = Math.Sqrt(4 * a / (2 * Math.PI)) * a * (B.Values[k]* B.Values[k]) * Math.Exp(-0.5 * a * (B.Values[k]* B.Values[k]));
                                     break;
                                 case 3:
-                                    for (k = 0; k <= C.Length - 1; k++) a = a + C[k];
+                                    for (k = 0; k <= C.Length - 1; k++) a = a + C.Values[k];
                                     break;
                             }
                             break;
@@ -354,10 +362,10 @@ namespace MtxVecDemo
                                     for (k = 0; k <= C.Length - 1; k++) C.SCValues[k] = C.SCValues[k] * B.SCValues[k];
                                     break;
                                 case 1:
-                                    for (k = 0; k <= C.Length - 1; k++) C.SCValues[k] = Sin(C.SCValues[k]) + Sin(B.SCValues[k]);
+                                    for (k = 0; k <= C.Length - 1; k++) C.SCValues[k] = Math387.Sin(C.SCValues[k]) + Math387.Sin(B.SCValues[k]);
                                     break;
                                 case 2:
-                                    for (k = 0; k <= C.Length - 1; k++) C.SCValues[k] = Sqrt(4 * sa / (2 * PI_SINGLE)) * sa * CSqr(B.SCValues[k]) * Exp(-0.5f * sa * CSqr(B.SCValues[k]));
+                                    for (k = 0; k <= C.Length - 1; k++) C.SCValues[k] = Math387.Sqrtf(4 * sa / (2 * Math387.PI_SINGLE)) * sa * Math387.CSqr(B.SCValues[k]) * Math387.Exp(-0.5f * sa * Math387.CSqr(B.SCValues[k]));
                                     break;
                                 case 3:
                                     for (k = 0; k <= C.Length - 1; k++) sac = sac + C.SCValues[k];
@@ -371,10 +379,10 @@ namespace MtxVecDemo
                                     for (k = 0; k <= C.Length - 1; k++) C.CValues[k] = C.CValues[k] * B.CValues[k];
                                     break;
                                 case 1:
-                                    for (k = 0; k <= C.Length - 1; k++) C.CValues[k] = Sin(C.CValues[k]) + Sin(B.CValues[k]);
+                                    for (k = 0; k <= C.Length - 1; k++) C.CValues[k] = Math387.Sin(C.CValues[k]) + Math387.Sin(B.CValues[k]);
                                     break;
                                 case 2:
-                                    for (k = 0; k <= C.Length - 1; k++) C.CValues[k] = Sqrt(4 * a / (2 * PI)) * a * CSqr(B.CValues[k]) * Exp(-0.5 * a * CSqr(B.CValues[k]));
+                                    for (k = 0; k <= C.Length - 1; k++) C.CValues[k] = Math.Sqrt(4 * a / (2 * Math387.PI)) * a * Math387.CSqr(B.CValues[k]) * Math387.Exp(-0.5 * a * Math387.CSqr(B.CValues[k]));
                                     break;
                                 case 3:
                                     for (k = 0; k <= C.Length - 1; k++) ac = ac + C.CValues[k];
@@ -383,7 +391,7 @@ namespace MtxVecDemo
                             break;
                     }
                 }
-                bTime = Math387.StopTimer() * 4; //simulate longer running time to allow comparison with older versions of this demo
+                bTime = Math387.StopTimer() * 4; //simulate longer running time
 
                 memo.AppendText("\n");
                 memo.AppendText("C# timings:\n");
@@ -395,9 +403,9 @@ namespace MtxVecDemo
             }
             finally
             {
-                clMtxVec.FreeIt(ref clA, ref clB, ref clC, ref clD);
+                ClMtxVec.FreeIt(ref clA, ref clB, ref clC, ref clD);
                 this.Cursor = Cursors.Default;
             }
-        }         
+        }
     }
 }

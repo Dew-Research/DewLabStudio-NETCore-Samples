@@ -25,7 +25,7 @@ namespace MtxVecDemo
         public clMultiDeviceForm()
         {
             InitializeComponent();
-            clPlatforms = clMtxVec.clPlatform();
+            clPlatforms = ClMtxVec.clPlatform();
         }
 
         private void clBenchmarkForm_Load(object sender, EventArgs e)
@@ -40,6 +40,7 @@ namespace MtxVecDemo
 
             floatPrecisionBox.SelectedIndex = 0;
             cpuFloatPrecisionLabel.Text = "CPU (MtxVec) float precision: " + i.ToString() + "bit";
+            //    ReportMemoryLeaksOnShutDown = True;
 
             for (i = 0; i < clPlatforms.Count; i++)
             {
@@ -77,6 +78,7 @@ namespace MtxVecDemo
             }
 
             functionBox.SelectedIndex = 0;
+
             VectorLen = (int) Math.Round(Math387.Exp2(19));
             vectorLengthBox.Text = VectorLen.ToString();
             IsFinished = true;
@@ -98,7 +100,7 @@ namespace MtxVecDemo
             for (i = 0; i < deviceListBox.Items.Count; i++)  //assign events to command queue threads
             {
                 aDevice = clPlatforms[platformListBox.SelectedIndex][i];
-                aDevice.CommandQueue[0].JobThread.OnExecute = null;
+                aDevice.CommandQueue[0].JobThread.OnExecute -= DoOnExecute;
                 aDevice.CommandQueue[0].JobThread.OnExecute += DoOnExecute;
                 aDevice.Cache.SetCacheSize(12, CacheLength, 12, 12, 12);
             }
@@ -143,9 +145,10 @@ namespace MtxVecDemo
             TOpenCLVector clA, clB, clC, clD;
             double a = 1;
 
-            clMtxVec.CreateIt(out clA, out clB,out clC, out clD);
+
+            ClMtxVec.CreateIt(out clA, out clB,out clC, out clD);
             try
-            {
+            {               
                 switch (functionSelected)
                 {
                     case 0:
@@ -157,14 +160,14 @@ namespace MtxVecDemo
                     case 2:
                         IterCount = 8192;
                         break;
+                    default: IterCount = 8192;
+                        break;
                 }
 
                 clB.Size(VectorLen, (TclFloatPrecision) floatPrecisionSelected, complexData);
                 clB.SetVal(ScalarB);
                 clC.Size(clB);
-                clC.SetVal(1);   
-             
-                IterCount = 8192;
+                clC.SetVal(1);               
 
                 for (i = 0; i < IterCount; i++)
                 {
@@ -193,7 +196,7 @@ namespace MtxVecDemo
                 }
                 finally
                 {
-                    clMtxVec.FreeIt(ref clA, ref clB, ref clC, ref clD);                    
+                    ClMtxVec.FreeIt(ref clA, ref clB, ref clC, ref clD);                    
                 }
          }
 

@@ -2,13 +2,20 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net8.0-windows</TargetFramework>
+	  <TargetFrameworks>net8.0-windows</TargetFrameworks>
+	  <LangVersion>Latest</LangVersion>
+	  <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+	  <Deterministic>true</Deterministic>
+	  <PublishRepositoryUrl>false</PublishRepositoryUrl>
+	  
     <UseWindowsForms>true</UseWindowsForms>
     <ApplicationIcon>MtxVec.ico</ApplicationIcon>
-	<GenerateResourceWarnOnBinaryFormatterUse>false</GenerateResourceWarnOnBinaryFormatterUse>
+    <StartupObject>MtxVecDemo.MainForm</StartupObject>
+	<RootNamespace>MtxVecDemo</RootNamespace>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <Optimize>false</Optimize>
     <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
   </PropertyGroup>
@@ -19,12 +26,35 @@
     <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
   </PropertyGroup>
 
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="mkdir &quot;$(TargetDir)Data\&quot;&#xD;&#xA;copy &quot;$(ProjectDir)Data\*.*&quot; &quot;$(TargetDir)Data\&quot;" />
-  </Target>
+  <ItemGroup>
+    <PackageReference Include="Dew.Math.TeePro" Version="6.3.6" />
+  </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Dew.Math" Version="6.2.2" />
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+	<Target Name="PostBuild" AfterTargets="Build" Condition="'$(DesignTimeBuild)' != 'true'">
+
+		<MakeDir Directories="$(TargetDir)Data" />
+
+		<ItemGroup>
+			<DataFiles Include="$(ProjectDir)Data\*.*" />
+		</ItemGroup>
+
+		<Copy SourceFiles="@(DataFiles)" DestinationFolder="$(TargetDir)Data\" />
+
+	</Target>
 
 </Project>

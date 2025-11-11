@@ -1,7 +1,7 @@
 using System;
 using System.IO;
 using System.Collections;
-using System.Xml;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Runtime.Serialization;
 using System.Xml.Serialization;
 
@@ -121,22 +121,18 @@ namespace MtxVecDemo
 		}
 
 		public void SaveToFile(string fileName) {
-			var serializer = new XmlSerializer(this.GetType());
-
+            XmlSerializer serializer = new XmlSerializer(typeof(BenchmarkResults));
 			Stream stream = new FileStream(fileName, FileMode.Create, FileAccess.Write, FileShare.None);
 			try {
-				serializer.Serialize(stream, this);	
+				serializer.Serialize(stream, this);
 			} finally {
 				stream.Close();
 			}
 		}
 		public static BenchmarkResults LoadFromFile (string fileName) {
-
-            var serializer = new XmlSerializer(typeof(BenchmarkResults));
-            BenchmarkResults br = null;
-
+            XmlSerializer serializer = new XmlSerializer(typeof(BenchmarkResults));
             Stream stream = new FileStream(fileName, FileMode.Open, FileAccess.Read, FileShare.Read);
-
+			BenchmarkResults br = null;
 			try {
 				br = (BenchmarkResults) serializer.Deserialize(stream);
 			} finally {

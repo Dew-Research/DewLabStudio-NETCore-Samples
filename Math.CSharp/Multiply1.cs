@@ -1536,7 +1536,6 @@ namespace MtxVecDemo {
             // 
             // 
             // 
-            this.NetLine.Marks.TailParams.CustomPointPos = ((System.Drawing.PointF)(resources.GetObject("resource.CustomPointPos")));
             this.NetLine.Marks.TailParams.Margin = 0F;
             this.NetLine.Marks.TailParams.PointerHeight = 8D;
             this.NetLine.Marks.TailParams.PointerWidth = 8D;
@@ -1727,7 +1726,6 @@ namespace MtxVecDemo {
             // 
             // 
             // 
-            this.MtxLine.Marks.TailParams.CustomPointPos = ((System.Drawing.PointF)(resources.GetObject("resource.CustomPointPos1")));
             this.MtxLine.Marks.TailParams.Margin = 0F;
             this.MtxLine.Marks.TailParams.PointerHeight = 8D;
             this.MtxLine.Marks.TailParams.PointerWidth = 8D;

@@ -1633,7 +1633,6 @@ namespace MtxVecDemo
             // 
             // 
             // 
-            this.series1.Marks.TailParams.CustomPointPos = ((System.Drawing.PointF)(resources.GetObject("resource.CustomPointPos")));
             this.series1.Marks.TailParams.Margin = 0F;
             this.series1.Marks.TailParams.PointerHeight = 8D;
             this.series1.Marks.TailParams.PointerWidth = 8D;
@@ -1802,7 +1801,6 @@ namespace MtxVecDemo
             // 
             // 
             // 
-            this.series2.Marks.TailParams.CustomPointPos = ((System.Drawing.PointF)(resources.GetObject("resource.CustomPointPos1")));
             this.series2.Marks.TailParams.Margin = 0F;
             this.series2.Marks.TailParams.PointerHeight = 8D;
             this.series2.Marks.TailParams.PointerWidth = 8D;

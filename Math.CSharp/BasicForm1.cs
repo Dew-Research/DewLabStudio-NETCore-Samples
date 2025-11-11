@@ -47,8 +47,8 @@ namespace MtxVecDemo
 			}
 			base.Dispose( disposing );
 		}
-		
-		public bool DownSize {
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        public bool DownSize {
 			get {
 				return downSize;
 			}
