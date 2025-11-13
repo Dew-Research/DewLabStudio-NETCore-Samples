@@ -17,7 +17,7 @@ namespace DSPDemo {
 		}
 
 		private void ModulatorForm_Load(object sender, EventArgs e) {
-			signalRead1.FileName = Utils.SourcePath() + @"\Data\bz.sfs";
+			signalRead1.FileName = Utils.SourcePath() + @"\Data\bz.dat";
 			richTextBox1.Text = "TSignalModulator component moves the selected bandwidth from 0Hz to any " +
 						"user defined frequency. It is the reverse procedure to the zoom-spectrum " +
 						"or demodulation. The linear phase modulator features exceptional performance " +

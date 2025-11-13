@@ -51,7 +51,7 @@ namespace DSPDemo
 			smt.MarkMode = SignalMarkMode.tmFreeStyle;
 			SignalChart1.Tools.Add(smt);
 
-            SignalRead1.FileName = Dew.Demo.Utils.SourcePath() + @"\Data\bz.sfs";
+            SignalRead1.FileName = Dew.Demo.Utils.SourcePath() + @"\Data\bz.dat";
             SignalRead1.RecordPosition = 0;
 			comboBox1.SelectedIndex = 0;
 		}

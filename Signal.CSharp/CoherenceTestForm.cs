@@ -71,7 +71,7 @@ namespace DSPDemo {
 			SignalUtils.KaiserImpulse(h,new double[]{0.2,0.25},0.001,TFilterType.ftLowpass,1,2,false);
 			SignalUtils.FirInit(h,ref firState,1,0,1,0);
 
-            SignalRead1.FileName = Utils.SourcePath() + @"\Data\bz.sfs";
+            SignalRead1.FileName = Utils.SourcePath() + @"\Data\bz.dat";
 			buttonUpdate_Click(null,EventArgs.Empty);
 		}
 

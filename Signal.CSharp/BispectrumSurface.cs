@@ -36,7 +36,7 @@ namespace DSPDemo
 			//
 			InitializeComponent();
 
-            SignalRead1.FileName = Dew.Demo.Utils.SourcePath() + @"\Data\bz.sfs";
+            SignalRead1.FileName = Dew.Demo.Utils.SourcePath() + @"\Data\bz.dat";
 			BiSpectrumAnalyzer1.Amplt.SetZero();
 			button1_Click(this, EventArgs.Empty);
 		}

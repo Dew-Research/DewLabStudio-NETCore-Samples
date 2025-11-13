@@ -17,7 +17,7 @@ namespace DSPDemo {
 		}
 
 		private void NarrowBandpassForm_Load(object sender, EventArgs e) {
-			signalRead1.FileName = Utils.SourcePath() + @"\Data\bz.sfs";
+			signalRead1.FileName = Utils.SourcePath() + @"\Data\bz.dat";
 			richTextBox1.Text = "TSignalBandpass applies a linear phase bandpass filter. " +
 						"It features exceptional performance " +
 						"and accuracy with up to 160dB SNR speed exceeding standard multi-rate implementations " +

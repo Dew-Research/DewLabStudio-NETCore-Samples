@@ -84,7 +84,7 @@ namespace DSPDemo
 			tool.Axis = SpectrumChart1.Axes.Left;
 			SpectrumChart1.Tools.Add(tool);
 
-            SignalRead1.FileName = Dew.Demo.Utils.SourcePath() + @"\Data\bz.sfs";
+            SignalRead1.FileName = Dew.Demo.Utils.SourcePath() + @"\Data\bz.dat";
             SignalRead1.OpenFile();
             SignalWrite1.FileName = Dew.Demo.Utils.SourcePath() + "\\bz.dat";
             SignalWrite1.PullUntilEnd();

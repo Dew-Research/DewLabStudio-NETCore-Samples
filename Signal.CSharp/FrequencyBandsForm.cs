@@ -53,7 +53,7 @@ namespace DSPDemo
 			tool.LabelHeaders = true;
 			tool.PeakZoomBand = false;
 			SpectrumChart1.Tools.Add(tool);
-            SignalRead1.FileName = Utils.SourcePath() + @"\Data\bz.sfs";
+            SignalRead1.FileName = Utils.SourcePath() + @"\Data\bz.dat";
 			SignalRead1.OpenFile();
 			SpectrumAnalyzer.Pull();
 			comboBox1.SelectedIndex = 0;

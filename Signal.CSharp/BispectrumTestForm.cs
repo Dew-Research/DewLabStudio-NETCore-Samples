@@ -99,7 +99,7 @@ namespace DSPDemo
             Series1.Color = Color.Navy;
             Series3.Color = Color.Navy;
 
-            SignalRead1.FileName = Dew.Demo.Utils.SourcePath() + @"\Data\bz.sfs";
+            SignalRead1.FileName = Dew.Demo.Utils.SourcePath() + @"\Data\bz.dat";
 			button1_Click(this, EventArgs.Empty);
 		}
 

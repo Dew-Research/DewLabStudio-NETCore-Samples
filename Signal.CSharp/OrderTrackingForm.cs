@@ -59,7 +59,7 @@ namespace DSPDemo
 
             Series1.Color = Color.Navy;
 
-            SignalRead1.FileName = Dew.Demo.Utils.SourcePath() + @"\Data\bz.sfs";
+            SignalRead1.FileName = Dew.Demo.Utils.SourcePath() + @"\Data\bz.dat";
 			SignalRead1.OpenFile();
 			comboBox1.SelectedIndex = 0;
 			SpectrumAnalyzer1.Pull();

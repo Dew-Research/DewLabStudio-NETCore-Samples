@@ -88,7 +88,7 @@ namespace DSPDemo
 			signalChart1.Tools.Add(signalMarkTool);
 
 			SignalRead1.Length = 4096;
-            SignalRead1.FileName = Utils.SourcePath() + @"\Data\bz.sfs";
+            SignalRead1.FileName = Utils.SourcePath() + @"\Data\bz.dat";
 			SignalRead1.OverlappingPercent = 50;
 			SignalRead1.OpenFile();
 			data = new TVec();

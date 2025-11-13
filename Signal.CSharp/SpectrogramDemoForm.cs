@@ -35,7 +35,7 @@ namespace DSPDemo {
 			series.ColorPalette.PaletteScale = PaletteScale.ppsPeakHold;
 
 
-			signalRead1.FileName = Dew.Demo.Utils.SourcePath() + @"\Data\bz.sfs";
+			signalRead1.FileName = Dew.Demo.Utils.SourcePath() + @"\Data\bz.dat";
 			signalRead1.OpenFile();
 			signalRead1.Length = 1024 * signalRead1.ChannelCount;
 			signalRead1.OverlappingPercent = 98;

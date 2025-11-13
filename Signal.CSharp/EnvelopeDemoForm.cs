@@ -79,7 +79,7 @@ namespace DSPDemo
             Series1.Color = Color.Navy;
             Series2.Color = Color.Navy;
 
-            SignalRead1.FileName = Dew.Demo.Utils.SourcePath() + @"\Data\bz.sfs";
+            SignalRead1.FileName = Dew.Demo.Utils.SourcePath() + @"\Data\bz.dat";
 			SignalIncBuffer2.SuspendNotifyUpdate = true; //prevent chart updates for every call to Update
 			SignalIncBuffer2.Factor = 13;  //increase the buffer by 13x, because SignalRead1.Length = 1024 and SignalRead1.RecordLength = 14000
 			SignalIncBuffer1.Factor = 11;  //increase the buffer of the decimator output only by 11x,

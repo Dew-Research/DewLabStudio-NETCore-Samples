@@ -109,7 +109,7 @@ namespace DSPDemo
 			SpectrumChart2.Tools.Add(tool);
             SpectrumChart2.Axes.Left.Automatic = true;
 
-            SignalRead1.FileName = Dew.Demo.Utils.SourcePath() + @"\Data\bz.sfs";
+            SignalRead1.FileName = Dew.Demo.Utils.SourcePath() + @"\Data\bz.dat";
 			bwEdit_TextChanged(this, EventArgs.Empty);
 		}
 

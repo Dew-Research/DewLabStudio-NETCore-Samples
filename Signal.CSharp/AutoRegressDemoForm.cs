@@ -35,7 +35,7 @@ namespace DSPDemo
 			//
 			InitializeComponent();
 
-            SignalRead1.FileName = Dew.Demo.Utils.SourcePath() + @"\Data\bz.sfs";
+            SignalRead1.FileName = Dew.Demo.Utils.SourcePath() + @"\Data\bz.dat";
 			SignalRead1.RecordPosition = 0;
 			SpectrumChart1.Spectrums.Add();
 			SpectrumChart1.Spectrums[0].InputsItemIndex = 0;

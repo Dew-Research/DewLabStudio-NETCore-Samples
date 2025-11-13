@@ -68,7 +68,7 @@ namespace DSPDemo
 			//smt.PeakZoomBand = false;
 			//SpectrumChart1.Tools.Add(smt);
 
-            SignalRead1.FileName = Dew.Demo.Utils.SourcePath() + @"\Data\bz.sfs";
+            SignalRead1.FileName = Dew.Demo.Utils.SourcePath() + @"\Data\bz.dat";
 			SignalRead1.OpenFile();
 			SpectrumAnalyzer.Method = TSpectrumMethod.smCZT;
 			SpectrumAnalyzer.Pull();

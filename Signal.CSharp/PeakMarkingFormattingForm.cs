@@ -67,7 +67,7 @@ namespace DSPDemo
             //Somehow the series.Color is not preserved by the IDE.
             smt.Series.Color = Color.Navy;
 
-            SignalRead1.FileName = Dew.Demo.Utils.SourcePath() + @"\Data\bz.sfs";
+            SignalRead1.FileName = Dew.Demo.Utils.SourcePath() + @"\Data\bz.dat";
 			SignalRead1.OpenFile();
 			SpectrumAnalyzer1.Pull();
 		}
