@@ -31,9 +31,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Dew.Math.Controls\Dew.Math.Controls.csproj" />
-    <ProjectReference Include="..\Dew.Math.TeePro\Dew.Math.TeePro.csproj" />
-    <ProjectReference Include="..\Dew.Math\Dew.Math.csproj" />
+    <ProjectReference Include="..\..\Dew NET90\Dew.Math.Controls\Dew.Math.Controls.csproj" />
+    <ProjectReference Include="..\..\Dew NET90\Dew.Math.TeePro\Dew.Math.TeePro.csproj" />
+    <ProjectReference Include="..\..\Dew NET90\Dew.Math\Dew.Math.csproj" />
   </ItemGroup>
 
   <ItemGroup>
