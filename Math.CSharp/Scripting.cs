@@ -337,214 +337,222 @@ namespace MtxVecDemo
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.listBoxHistory = new System.Windows.Forms.ListBox();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dataGridViewVariables = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.richTextBoxResult = new System.Windows.Forms.RichTextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
-            this.splitContainer1.Panel1.SuspendLayout();
-            this.splitContainer1.Panel2.SuspendLayout();
-            this.splitContainer1.SuspendLayout();
-            this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewVariables)).BeginInit();
-            this.panel3.SuspendLayout();
-            this.SuspendLayout();
+            components = new Container();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            splitContainer1 = new SplitContainer();
+            listBoxHistory = new ListBox();
+            panel4 = new Panel();
+            label1 = new Label();
+            dataGridViewVariables = new DataGridView();
+            Column1 = new DataGridViewTextBoxColumn();
+            Column2 = new DataGridViewTextBoxColumn();
+            Column3 = new DataGridViewTextBoxColumn();
+            panel3 = new Panel();
+            label2 = new Label();
+            richTextBoxResult = new RichTextBox();
+            textBox1 = new TextBox();
+            toolTip1 = new ToolTip(components);
+            toolTip2 = new ToolTip(components);
+            ((ISupportInitialize)splitContainer1).BeginInit();
+            splitContainer1.Panel1.SuspendLayout();
+            splitContainer1.Panel2.SuspendLayout();
+            splitContainer1.SuspendLayout();
+            panel4.SuspendLayout();
+            ((ISupportInitialize)dataGridViewVariables).BeginInit();
+            panel3.SuspendLayout();
+            SuspendLayout();
             // 
             // splitContainer1
             // 
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer1.Name = "splitContainer1";
+            splitContainer1.Dock = DockStyle.Fill;
+            splitContainer1.Location = new Point(0, 0);
+            splitContainer1.Margin = new Padding(4, 3, 4, 3);
+            splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.listBoxHistory);
-            this.splitContainer1.Panel1.Controls.Add(this.panel4);
-            this.splitContainer1.Panel1.Controls.Add(this.dataGridViewVariables);
-            this.splitContainer1.Panel1.Controls.Add(this.panel3);
+            splitContainer1.Panel1.Controls.Add(listBoxHistory);
+            splitContainer1.Panel1.Controls.Add(panel4);
+            splitContainer1.Panel1.Controls.Add(dataGridViewVariables);
+            splitContainer1.Panel1.Controls.Add(panel3);
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.richTextBoxResult);
-            this.splitContainer1.Panel2.Controls.Add(this.textBox1);
-            this.splitContainer1.Size = new System.Drawing.Size(882, 544);
-            this.splitContainer1.SplitterDistance = 291;
-            this.splitContainer1.TabIndex = 0;
+            splitContainer1.Panel2.Controls.Add(richTextBoxResult);
+            splitContainer1.Panel2.Controls.Add(textBox1);
+            splitContainer1.Size = new Size(1014, 627);
+            splitContainer1.SplitterDistance = 333;
+            splitContainer1.SplitterWidth = 5;
+            splitContainer1.TabIndex = 0;
             // 
             // listBoxHistory
             // 
-            this.listBoxHistory.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listBoxHistory.FormattingEnabled = true;
-            this.listBoxHistory.Location = new System.Drawing.Point(0, 201);
-            this.listBoxHistory.Name = "listBoxHistory";
-            this.listBoxHistory.Size = new System.Drawing.Size(291, 343);
-            this.listBoxHistory.TabIndex = 1;
-            this.toolTip2.SetToolTip(this.listBoxHistory, "Double click to select command");
-            this.listBoxHistory.DoubleClick += new System.EventHandler(this.listBoxHistory_DoubleClick);
+            listBoxHistory.Dock = DockStyle.Fill;
+            listBoxHistory.FormattingEnabled = true;
+            listBoxHistory.Location = new Point(0, 232);
+            listBoxHistory.Margin = new Padding(4, 3, 4, 3);
+            listBoxHistory.Name = "listBoxHistory";
+            listBoxHistory.Size = new Size(333, 395);
+            listBoxHistory.TabIndex = 1;
+            toolTip2.SetToolTip(listBoxHistory, "Double click to select command");
+            listBoxHistory.DoubleClick += listBoxHistory_DoubleClick;
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.label1);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 175);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(291, 26);
-            this.panel4.TabIndex = 2;
+            panel4.Controls.Add(label1);
+            panel4.Dock = DockStyle.Top;
+            panel4.Location = new Point(0, 202);
+            panel4.Margin = new Padding(4, 3, 4, 3);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(333, 30);
+            panel4.TabIndex = 2;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 3);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Command history";
+            label1.AutoSize = true;
+            label1.Location = new Point(4, 3);
+            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(103, 15);
+            label1.TabIndex = 0;
+            label1.Text = "Command history";
             // 
             // dataGridViewVariables
             // 
-            this.dataGridViewVariables.AllowUserToAddRows = false;
-            this.dataGridViewVariables.AllowUserToDeleteRows = false;
-            this.dataGridViewVariables.AllowUserToResizeColumns = false;
-            this.dataGridViewVariables.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(230)))));
-            this.dataGridViewVariables.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridViewVariables.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewVariables.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3});
-            this.dataGridViewVariables.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dataGridViewVariables.Location = new System.Drawing.Point(0, 15);
-            this.dataGridViewVariables.Name = "dataGridViewVariables";
-            this.dataGridViewVariables.ReadOnly = true;
-            this.dataGridViewVariables.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dataGridViewVariables.RowHeadersVisible = false;
-            this.dataGridViewVariables.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewVariables.ShowEditingIcon = false;
-            this.dataGridViewVariables.Size = new System.Drawing.Size(291, 160);
-            this.dataGridViewVariables.TabIndex = 1;
-            this.dataGridViewVariables.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewVariables_CellDoubleClick);
+            dataGridViewVariables.AllowUserToAddRows = false;
+            dataGridViewVariables.AllowUserToDeleteRows = false;
+            dataGridViewVariables.AllowUserToResizeColumns = false;
+            dataGridViewVariables.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(255, 255, 230);
+            dataGridViewVariables.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewVariables.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewVariables.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3 });
+            dataGridViewVariables.Dock = DockStyle.Top;
+            dataGridViewVariables.Location = new Point(0, 17);
+            dataGridViewVariables.Margin = new Padding(4, 3, 4, 3);
+            dataGridViewVariables.Name = "dataGridViewVariables";
+            dataGridViewVariables.ReadOnly = true;
+            dataGridViewVariables.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridViewVariables.RowHeadersVisible = false;
+            dataGridViewVariables.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridViewVariables.ShowEditingIcon = false;
+            dataGridViewVariables.Size = new Size(333, 185);
+            dataGridViewVariables.TabIndex = 1;
+            dataGridViewVariables.CellDoubleClick += dataGridViewVariables_CellDoubleClick;
             // 
             // Column1
             // 
-            this.Column1.Frozen = true;
-            this.Column1.HeaderText = "Name";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column1.Width = 70;
+            Column1.Frozen = true;
+            Column1.HeaderText = "Name";
+            Column1.Name = "Column1";
+            Column1.ReadOnly = true;
+            Column1.Resizable = DataGridViewTriState.False;
+            Column1.Width = 70;
             // 
             // Column2
             // 
-            this.Column2.Frozen = true;
-            this.Column2.HeaderText = "Type";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column2.Width = 50;
+            Column2.Frozen = true;
+            Column2.HeaderText = "Type";
+            Column2.Name = "Column2";
+            Column2.ReadOnly = true;
+            Column2.Resizable = DataGridViewTriState.False;
+            Column2.Width = 50;
             // 
             // Column3
             // 
-            this.Column3.HeaderText = "Value";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column3.Width = 60;
+            Column3.HeaderText = "Value";
+            Column3.Name = "Column3";
+            Column3.ReadOnly = true;
+            Column3.Resizable = DataGridViewTriState.False;
+            Column3.Width = 60;
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.label2);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(291, 15);
-            this.panel3.TabIndex = 3;
+            panel3.Controls.Add(label2);
+            panel3.Dock = DockStyle.Top;
+            panel3.Location = new Point(0, 0);
+            panel3.Margin = new Padding(4, 3, 4, 3);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(333, 17);
+            panel3.TabIndex = 3;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(107, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Workspace variables";
+            label2.AutoSize = true;
+            label2.Location = new Point(4, 0);
+            label2.Margin = new Padding(4, 0, 4, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(114, 15);
+            label2.TabIndex = 0;
+            label2.Text = "Workspace variables";
             // 
             // richTextBoxResult
             // 
-            this.richTextBoxResult.BackColor = System.Drawing.Color.FloralWhite;
-            this.richTextBoxResult.DetectUrls = false;
-            this.richTextBoxResult.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBoxResult.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.richTextBoxResult.Location = new System.Drawing.Point(0, 0);
-            this.richTextBoxResult.Name = "richTextBoxResult";
-            this.richTextBoxResult.ReadOnly = true;
-            this.richTextBoxResult.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
-            this.richTextBoxResult.ShortcutsEnabled = false;
-            this.richTextBoxResult.Size = new System.Drawing.Size(587, 524);
-            this.richTextBoxResult.TabIndex = 0;
-            this.richTextBoxResult.Text = "";
-            this.richTextBoxResult.WordWrap = false;
+            richTextBoxResult.BackColor = Color.FloralWhite;
+            richTextBoxResult.DetectUrls = false;
+            richTextBoxResult.Dock = DockStyle.Fill;
+            richTextBoxResult.Font = new Font("Courier New", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 238);
+            richTextBoxResult.Location = new Point(0, 0);
+            richTextBoxResult.Margin = new Padding(4, 3, 4, 3);
+            richTextBoxResult.Name = "richTextBoxResult";
+            richTextBoxResult.ReadOnly = true;
+            richTextBoxResult.ScrollBars = RichTextBoxScrollBars.Vertical;
+            richTextBoxResult.ShortcutsEnabled = false;
+            richTextBoxResult.Size = new Size(676, 604);
+            richTextBoxResult.TabIndex = 0;
+            richTextBoxResult.Text = "";
+            richTextBoxResult.WordWrap = false;
             // 
             // textBox1
             // 
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.textBox1.Location = new System.Drawing.Point(0, 524);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(587, 20);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
+            textBox1.Dock = DockStyle.Bottom;
+            textBox1.Location = new Point(0, 604);
+            textBox1.Margin = new Padding(4, 3, 4, 3);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(676, 23);
+            textBox1.TabIndex = 1;
+            textBox1.TextChanged += textBox1_TextChanged;
+            textBox1.KeyDown += textBox1_KeyDown;
             // 
             // toolTip1
             // 
-            this.toolTip1.AutomaticDelay = 100;
-            this.toolTip1.AutoPopDelay = 5000;
-            this.toolTip1.InitialDelay = 100;
-            this.toolTip1.ReshowDelay = 20;
-            this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
-            this.toolTip1.UseFading = false;
+            toolTip1.AutomaticDelay = 100;
+            toolTip1.AutoPopDelay = 5000;
+            toolTip1.InitialDelay = 100;
+            toolTip1.ReshowDelay = 20;
+            toolTip1.ToolTipIcon = ToolTipIcon.Info;
+            toolTip1.UseFading = false;
             // 
             // toolTip2
             // 
-            this.toolTip2.AutomaticDelay = 100;
-            this.toolTip2.AutoPopDelay = 5000;
-            this.toolTip2.InitialDelay = 100;
-            this.toolTip2.ReshowDelay = 20;
-            this.toolTip2.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
-            this.toolTip2.UseFading = false;
+            toolTip2.AutomaticDelay = 100;
+            toolTip2.AutoPopDelay = 5000;
+            toolTip2.InitialDelay = 100;
+            toolTip2.ReshowDelay = 20;
+            toolTip2.ToolTipIcon = ToolTipIcon.Info;
+            toolTip2.UseFading = false;
             // 
             // Scripting
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(882, 544);
-            this.Controls.Add(this.splitContainer1);
-            this.Name = "Scripting";
-            this.Text = "Scripting";
-            this.Load += new System.EventHandler(this.Scripting_Load);
-            this.splitContainer1.Panel1.ResumeLayout(false);
-            this.splitContainer1.Panel2.ResumeLayout(false);
-            this.splitContainer1.Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
-            this.splitContainer1.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewVariables)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.ResumeLayout(false);
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1014, 627);
+            Controls.Add(splitContainer1);
+            Margin = new Padding(4, 3, 4, 3);
+            Name = "Scripting";
+            Text = "Scripting";
+            Load += Scripting_Load;
+            splitContainer1.Panel1.ResumeLayout(false);
+            splitContainer1.Panel2.ResumeLayout(false);
+            splitContainer1.Panel2.PerformLayout();
+            ((ISupportInitialize)splitContainer1).EndInit();
+            splitContainer1.ResumeLayout(false);
+            panel4.ResumeLayout(false);
+            panel4.PerformLayout();
+            ((ISupportInitialize)dataGridViewVariables).EndInit();
+            panel3.ResumeLayout(false);
+            panel3.PerformLayout();
+            ResumeLayout(false);
 
         }
 

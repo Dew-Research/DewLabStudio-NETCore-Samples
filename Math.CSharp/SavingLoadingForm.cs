@@ -46,126 +46,124 @@ namespace MtxVecDemo
 			base.Dispose( disposing );
 		}
 
-		#region Designer generated code
-		/// <summary>
-		/// Required method for Designer support - do not modify
-		/// the contents of this method with the code editor.
-		/// </summary>
-		private void InitializeComponent()
-		{
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.panel2.SuspendLayout();
-            this.SuspendLayout();
+        #region Designer generated code
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            checkBox1 = new CheckBox();
+            textBox1 = new TextBox();
+            label1 = new Label();
+            button1 = new Button();
+            button2 = new Button();
+            button3 = new Button();
+            button4 = new Button();
+            panel2.SuspendLayout();
+            SuspendLayout();
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.button4);
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.textBox1);
-            this.panel2.Controls.Add(this.checkBox1);
-            this.panel2.Size = new System.Drawing.Size(731, 385);
+            panel2.Controls.Add(button4);
+            panel2.Controls.Add(button3);
+            panel2.Controls.Add(button2);
+            panel2.Controls.Add(button1);
+            panel2.Controls.Add(label1);
+            panel2.Controls.Add(textBox1);
+            panel2.Controls.Add(checkBox1);
+            panel2.Size = new Size(769, 362);
             // 
             // panel3
             // 
-            this.panel3.Location = new System.Drawing.Point(0, 497);
-            this.panel3.Size = new System.Drawing.Size(731, 48);
+            panel3.Location = new Point(0, 500);
+            panel3.Size = new Size(769, 59);
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Size = new System.Drawing.Size(731, 112);
+            richTextBox1.Size = new Size(769, 138);
             // 
             // checkBox1
             // 
-            this.checkBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.checkBox1.Location = new System.Drawing.Point(16, 8);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(128, 16);
-            this.checkBox1.TabIndex = 0;
-            this.checkBox1.Text = "View loaded values";
+            checkBox1.FlatStyle = FlatStyle.System;
+            checkBox1.Location = new Point(19, 10);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(154, 20);
+            checkBox1.TabIndex = 0;
+            checkBox1.Text = "View loaded values";
             // 
             // textBox1
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.Location = new System.Drawing.Point(160, 32);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(563, 348);
-            this.textBox1.TabIndex = 1;
+            textBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            textBox1.Font = new Font("Courier New", 9F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            textBox1.Location = new Point(192, 39);
+            textBox1.Multiline = true;
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(568, 317);
+            textBox1.TabIndex = 1;
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(160, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 16);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Code used:";
+            label1.Location = new Point(192, 20);
+            label1.Name = "label1";
+            label1.Size = new Size(115, 19);
+            label1.TabIndex = 2;
+            label1.Text = "Code used:";
             // 
             // button1
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button1.Location = new System.Drawing.Point(8, 32);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(144, 24);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Streams : Read/Write";
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            button1.FlatStyle = FlatStyle.System;
+            button1.Location = new Point(10, 39);
+            button1.Name = "button1";
+            button1.Size = new Size(172, 30);
+            button1.TabIndex = 3;
+            button1.Text = "Streams : Read/Write";
+            button1.Click += button1_Click;
             // 
             // button2
             // 
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button2.Location = new System.Drawing.Point(8, 64);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(144, 24);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Binary files : Read/Write";
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            button2.FlatStyle = FlatStyle.System;
+            button2.Location = new Point(10, 79);
+            button2.Name = "button2";
+            button2.Size = new Size(172, 29);
+            button2.TabIndex = 4;
+            button2.Text = "Binary files : Read/Write";
+            button2.Click += button2_Click;
             // 
             // button3
             // 
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button3.Location = new System.Drawing.Point(8, 96);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(144, 24);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "BLOB fields : Read/Write";
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            button3.FlatStyle = FlatStyle.System;
+            button3.Location = new Point(10, 118);
+            button3.Name = "button3";
+            button3.Size = new Size(172, 30);
+            button3.TabIndex = 5;
+            button3.Text = "BLOB fields : Read/Write";
+            button3.Click += button3_Click;
             // 
             // button4
             // 
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button4.Location = new System.Drawing.Point(8, 128);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(144, 24);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "Text files : Read/Write";
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            button4.FlatStyle = FlatStyle.System;
+            button4.Location = new Point(10, 158);
+            button4.Name = "button4";
+            button4.Size = new Size(172, 29);
+            button4.TabIndex = 6;
+            button4.Text = "Text files : Read/Write";
+            button4.Click += button4_Click;
             // 
             // SavingLoadingForm
             // 
-            this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
-            this.ClientSize = new System.Drawing.Size(731, 545);
-            this.Name = "SavingLoadingForm";
-            this.Load += new System.EventHandler(this.SavingLoadingForm_Load);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.ResumeLayout(false);
+            AutoScaleBaseSize = new Size(6, 16);
+            ClientSize = new Size(769, 559);
+            Name = "SavingLoadingForm";
+            Load += SavingLoadingForm_Load;
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
+            ResumeLayout(false);
 
-		}
-		#endregion
+        }
+        #endregion
 
-		private Matrix aMtx;
+        private Matrix aMtx;
 		private Vector aVec;
 		
 		private void Add2(String s) {

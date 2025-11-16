@@ -88,9 +88,9 @@ namespace DSPDemo
         private void InitializeComponent()
         {
             components = new Container();
+            ComponentResourceManager resources = new ComponentResourceManager(typeof(AmpltRatiosForm));
             Margins margins1 = new Margins();
             Steema.TeeChart.Drawing.Cursor cursor1 = new Steema.TeeChart.Drawing.Cursor();
-            ComponentResourceManager resources = new ComponentResourceManager(typeof(AmpltRatiosForm));
             richTextBox1 = new RichTextBox();
             panel1 = new System.Windows.Forms.Panel();
             ChartButton = new Button();
@@ -114,7 +114,7 @@ namespace DSPDemo
             richTextBox1.Dock = DockStyle.Top;
             richTextBox1.Location = new Point(0, 0);
             richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(710, 118);
+            richTextBox1.Size = new Size(1169, 118);
             richTextBox1.TabIndex = 0;
             richTextBox1.Text = "richTextBox1";
             // 
@@ -126,9 +126,9 @@ namespace DSPDemo
             panel1.Controls.Add(comboBox1);
             panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Bottom;
-            panel1.Location = new Point(0, 460);
+            panel1.Location = new Point(0, 852);
             panel1.Name = "panel1";
-            panel1.Size = new Size(710, 41);
+            panel1.Size = new Size(1169, 41);
             panel1.TabIndex = 1;
             // 
             // ChartButton
@@ -174,6 +174,7 @@ namespace DSPDemo
             // 
             SignalRead1.ChannelCount = 1;
             SignalRead1.Complex = false;
+            SignalRead1.DataSerialization = resources.GetString("SignalRead1.DataSerialization");
             SignalRead1.FloatPrecision = TMtxFloatPrecision.mvDouble;
             SignalRead1.FloatPrecisionLock = false;
             SignalRead1.FramesPerSecond = 0.0009765625D;
@@ -188,6 +189,7 @@ namespace DSPDemo
             // 
             SpectrumAnalyzer1.ArOrder = 100;
             SpectrumAnalyzer1.Bands.TemplateIndex = -1;
+            SpectrumAnalyzer1.Bands.TemplatesSerialization = "AAAAAA==";
             SpectrumAnalyzer1.Complex = false;
             SpectrumAnalyzer1.FloatPrecision = TMtxFloatPrecision.mvDouble;
             SpectrumAnalyzer1.FloatPrecisionLock = false;
@@ -1108,7 +1110,7 @@ namespace DSPDemo
             SpectrumChart1.Printer.Margins = margins1;
             SpectrumChart1.Series.Add(Series1);
             SpectrumChart1.Series.Add(Series2);
-            SpectrumChart1.Size = new Size(710, 342);
+            SpectrumChart1.Size = new Size(1169, 734);
             SpectrumChart1.SpectrumPart = SpectrumPart.sppAmplt;
             // 
             // 
@@ -1586,31 +1588,31 @@ namespace DSPDemo
             Series1.YValues.DataMember = "Y";
             Series1.YValues.Value = new double[]
     {
-    890D,
-    799D,
-    740D,
-    647D,
-    566D,
-    512D,
-    514D,
-    407D,
-    378D,
-    297D,
-    197D,
-    174D,
-    154D,
-    91D,
-    80D,
-    152D,
-    194D,
-    110D,
+    439D,
+    481D,
+    361D,
+    244D,
+    135D,
+    146D,
+    61D,
+    77D,
     117D,
-    17D,
-    96D,
-    27D,
     150D,
-    46D,
-    4D,
+    112D,
+    183D,
+    200D,
+    171D,
+    175D,
+    191D,
+    236D,
+    355D,
+    343D,
+    408D,
+    325D,
+    202D,
+    159D,
+    135D,
+    101D,
     0D,
     0D,
     0D,
@@ -1963,31 +1965,31 @@ namespace DSPDemo
             Series2.YValues.DataMember = "Y";
             Series2.YValues.Value = new double[]
     {
-    922D,
-    850D,
-    831D,
-    749D,
-    813D,
-    911D,
-    813D,
-    719D,
-    618D,
-    574D,
-    584D,
-    479D,
-    462D,
-    550D,
-    541D,
-    651D,
-    644D,
-    670D,
-    565D,
-    483D,
-    462D,
-    461D,
-    483D,
-    529D,
-    471D,
+    197D,
+    198D,
+    213D,
+    175D,
+    124D,
+    119D,
+    136D,
+    132D,
+    162D,
+    187D,
+    219D,
+    257D,
+    221D,
+    193D,
+    176D,
+    226D,
+    256D,
+    294D,
+    307D,
+    286D,
+    280D,
+    249D,
+    291D,
+    303D,
+    344D,
     0D,
     0D,
     0D,
@@ -2083,7 +2085,7 @@ namespace DSPDemo
             // AmpltRatiosForm
             // 
             AutoScaleBaseSize = new Size(6, 16);
-            ClientSize = new Size(710, 501);
+            ClientSize = new Size(1169, 893);
             Controls.Add(SpectrumChart1);
             Controls.Add(panel1);
             Controls.Add(richTextBox1);

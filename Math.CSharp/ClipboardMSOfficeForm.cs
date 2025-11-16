@@ -39,89 +39,87 @@ namespace MtxVecDemo
 			base.Dispose( disposing );
 		}
 
-		#region Designer generated code
-		/// <summary>
-		/// Required method for Designer support - do not modify
-		/// the contents of this method with the code editor.
-		/// </summary>
-		private void InitializeComponent()
-		{
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel2.SuspendLayout();
-            this.SuspendLayout();
+        #region Designer generated code
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            button2 = new Button();
+            button1 = new Button();
+            label1 = new Label();
+            panel2.SuspendLayout();
+            SuspendLayout();
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Size = new System.Drawing.Size(854, 447);
+            panel2.Controls.Add(label1);
+            panel2.Controls.Add(button2);
+            panel2.Controls.Add(button1);
+            panel2.Size = new Size(912, 419);
             // 
             // panel3
             // 
-            this.panel3.Location = new System.Drawing.Point(0, 559);
-            this.panel3.Size = new System.Drawing.Size(854, 48);
+            panel3.Location = new Point(0, 557);
+            panel3.Size = new Size(912, 59);
             // 
             // richTextBox1
             // 
-            this.richTextBox1.DetectUrls = false;
-            this.richTextBox1.Size = new System.Drawing.Size(854, 112);
+            richTextBox1.DetectUrls = false;
+            richTextBox1.Size = new Size(912, 138);
             // 
             // button2
             // 
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(16, 67);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(136, 37);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Paste from Word";
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            this.button2.MouseEnter += new System.EventHandler(this.button2_MouseEnter);
-            this.button2.MouseLeave += new System.EventHandler(this.button2_MouseLeave);
+            button2.ImageAlign = ContentAlignment.MiddleLeft;
+            button2.Location = new Point(19, 82);
+            button2.Name = "button2";
+            button2.Size = new Size(163, 46);
+            button2.TabIndex = 1;
+            button2.Text = "Paste from Word";
+            button2.TextImageRelation = TextImageRelation.ImageBeforeText;
+            button2.Click += button2_Click;
+            button2.MouseEnter += button2_MouseEnter;
+            button2.MouseLeave += button2_MouseLeave;
             // 
             // button1
             // 
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(16, 24);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(136, 37);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Copy to Excel";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseMnemonic = false;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            this.button1.MouseEnter += new System.EventHandler(this.button1_MouseEnter);
-            this.button1.MouseLeave += new System.EventHandler(this.button1_MouseLeave);
+            button1.ImageAlign = ContentAlignment.MiddleLeft;
+            button1.Location = new Point(19, 30);
+            button1.Name = "button1";
+            button1.Size = new Size(163, 45);
+            button1.TabIndex = 0;
+            button1.Text = "Copy to Excel";
+            button1.TextImageRelation = TextImageRelation.ImageBeforeText;
+            button1.UseMnemonic = false;
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            button1.MouseEnter += button1_MouseEnter;
+            button1.MouseLeave += button1_MouseLeave;
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(175, 24);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(667, 336);
-            this.label1.TabIndex = 2;
+            label1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            label1.BackColor = SystemColors.ControlDark;
+            label1.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 238);
+            label1.Location = new Point(210, 30);
+            label1.Name = "label1";
+            label1.Size = new Size(687, 282);
+            label1.TabIndex = 2;
             // 
             // ClipboardMSOfficeForm
             // 
-            this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
-            this.ClientSize = new System.Drawing.Size(854, 607);
-            this.Name = "ClipboardMSOfficeForm";
-            this.Load += new System.EventHandler(this.ClipboardMSOfficeForm_Load);
-            this.panel2.ResumeLayout(false);
-            this.ResumeLayout(false);
+            AutoScaleBaseSize = new Size(6, 16);
+            ClientSize = new Size(912, 616);
+            Name = "ClipboardMSOfficeForm";
+            Load += ClipboardMSOfficeForm_Load;
+            panel2.ResumeLayout(false);
+            ResumeLayout(false);
 
-		}
-		#endregion
+        }
+        #endregion
 
-		private Matrix aMtx;
+        private Matrix aMtx;
 
 		private void ClipboardMSOfficeForm_Load(object sender, System.EventArgs e) {
 			Add("MtxVecEdit form allows you to export/import TVec "

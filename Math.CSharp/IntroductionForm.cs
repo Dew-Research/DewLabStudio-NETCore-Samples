@@ -55,45 +55,45 @@ namespace MtxVecDemo
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.SuspendLayout();
+            label1 = new Label();
+            richTextBox1 = new RichTextBox();
+            SuspendLayout();
             // 
             // label1
             // 
-            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(729, 64);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Welcome to Dew Math";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            label1.Dock = DockStyle.Top;
+            label1.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            label1.ForeColor = Color.RoyalBlue;
+            label1.Location = new Point(0, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(841, 79);
+            label1.TabIndex = 0;
+            label1.Text = "Welcome to Dew Math";
+            label1.TextAlign = ContentAlignment.MiddleCenter;
+            label1.Click += label1_Click;
             // 
             // richTextBox1
             // 
-            this.richTextBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.richTextBox1.Location = new System.Drawing.Point(0, 64);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(729, 449);
-            this.richTextBox1.TabIndex = 1;
-            this.richTextBox1.Text = "";
+            richTextBox1.BackColor = SystemColors.Window;
+            richTextBox1.Dock = DockStyle.Fill;
+            richTextBox1.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            richTextBox1.Location = new Point(0, 79);
+            richTextBox1.Name = "richTextBox1";
+            richTextBox1.ReadOnly = true;
+            richTextBox1.Size = new Size(841, 472);
+            richTextBox1.TabIndex = 1;
+            richTextBox1.Text = "";
             // 
             // IntroductionForm
             // 
-            this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
-            this.ClientSize = new System.Drawing.Size(729, 513);
-            this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.label1);
-            this.Name = "IntroductionForm";
-            this.Text = "Introduction";
-            this.Load += new System.EventHandler(this.IntroductionForm_Load);
-            this.ResumeLayout(false);
+            AutoScaleBaseSize = new Size(6, 16);
+            ClientSize = new Size(841, 551);
+            Controls.Add(richTextBox1);
+            Controls.Add(label1);
+            Name = "IntroductionForm";
+            Text = "Introduction";
+            Load += IntroductionForm_Load;
+            ResumeLayout(false);
 
         }
         #endregion

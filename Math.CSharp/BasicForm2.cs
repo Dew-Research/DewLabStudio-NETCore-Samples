@@ -51,68 +51,68 @@ namespace MtxVecDemo
 			richTextBox1.SelectedText = s + "\n";
 		}
 
-		#region Windows Form Designer generated code
-		/// <summary>
-		/// Required method for Designer support - do not modify
-		/// the contents of this method with the code editor.
-		/// </summary>
-		private void InitializeComponent()
-		{
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel1.SuspendLayout();
-            this.SuspendLayout();
+        #region Windows Form Designer generated code
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            panel1 = new Panel();
+            richTextBox1 = new RichTextBox();
+            panel2 = new Panel();
+            panel3 = new Panel();
+            panel1.SuspendLayout();
+            SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.richTextBox1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(917, 112);
-            this.panel1.TabIndex = 0;
+            panel1.Controls.Add(richTextBox1);
+            panel1.Dock = DockStyle.Top;
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(924, 138);
+            panel1.TabIndex = 0;
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.richTextBox1.Location = new System.Drawing.Point(0, 0);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(917, 112);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "";
+            richTextBox1.Dock = DockStyle.Fill;
+            richTextBox1.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            richTextBox1.Location = new Point(0, 0);
+            richTextBox1.Name = "richTextBox1";
+            richTextBox1.Size = new Size(924, 138);
+            richTextBox1.TabIndex = 0;
+            richTextBox1.Text = "";
             // 
             // panel2
             // 
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 112);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(917, 567);
-            this.panel2.TabIndex = 1;
+            panel2.Dock = DockStyle.Fill;
+            panel2.Location = new Point(0, 138);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(924, 420);
+            panel2.TabIndex = 1;
             // 
             // panel3
             // 
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 679);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(917, 48);
-            this.panel3.TabIndex = 2;
+            panel3.Dock = DockStyle.Bottom;
+            panel3.Location = new Point(0, 558);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(924, 59);
+            panel3.TabIndex = 2;
             // 
             // BasicForm2
             // 
-            this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
-            this.ClientSize = new System.Drawing.Size(917, 727);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel1);
-            this.Name = "BasicForm2";
-            this.Text = "BasicForm2";
-            this.panel1.ResumeLayout(false);
-            this.ResumeLayout(false);
+            AutoScaleBaseSize = new Size(6, 16);
+            ClientSize = new Size(924, 617);
+            Controls.Add(panel2);
+            Controls.Add(panel3);
+            Controls.Add(panel1);
+            Name = "BasicForm2";
+            Text = "BasicForm2";
+            panel1.ResumeLayout(false);
+            ResumeLayout(false);
 
-		}
-		#endregion
-	}
+        }
+        #endregion
+    }
 }

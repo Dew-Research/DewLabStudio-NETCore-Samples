@@ -32,269 +32,260 @@ namespace MtxVecDemo
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.platformListBox = new System.Windows.Forms.ListBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.TimingsLabel = new System.Windows.Forms.Label();
-            this.deviceListLabel = new System.Windows.Forms.Label();
-            this.deviceListBox = new System.Windows.Forms.ListBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.functionBox = new System.Windows.Forms.ListBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.vectorLengthBox = new System.Windows.Forms.ComboBox();
-            this.vectorLengthLabel = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.floatPrecisionBox = new System.Windows.Forms.ComboBox();
-            this.cpuFloatPrecisionLabel = new System.Windows.Forms.Label();
-            this.complexBox = new System.Windows.Forms.CheckBox();
-            this.maximumJobCountEdit = new System.Windows.Forms.ComboBox();
-            this.currentJobCountLabel = new System.Windows.Forms.Label();
-            this.TotalRunningTimeLabel = new System.Windows.Forms.Label();
-            this.errorsLabel = new System.Windows.Forms.Label();
-            this.schedulerTimer = new System.Windows.Forms.Timer(this.components);
-            this.SuspendLayout();
+            components = new System.ComponentModel.Container();
+            richTextBox1 = new System.Windows.Forms.RichTextBox();
+            platformListBox = new System.Windows.Forms.ListBox();
+            label1 = new System.Windows.Forms.Label();
+            TimingsLabel = new System.Windows.Forms.Label();
+            deviceListLabel = new System.Windows.Forms.Label();
+            deviceListBox = new System.Windows.Forms.ListBox();
+            label2 = new System.Windows.Forms.Label();
+            functionBox = new System.Windows.Forms.ListBox();
+            button1 = new System.Windows.Forms.Button();
+            vectorLengthBox = new System.Windows.Forms.ComboBox();
+            vectorLengthLabel = new System.Windows.Forms.Label();
+            label3 = new System.Windows.Forms.Label();
+            floatPrecisionBox = new System.Windows.Forms.ComboBox();
+            cpuFloatPrecisionLabel = new System.Windows.Forms.Label();
+            complexBox = new System.Windows.Forms.CheckBox();
+            maximumJobCountEdit = new System.Windows.Forms.ComboBox();
+            currentJobCountLabel = new System.Windows.Forms.Label();
+            TotalRunningTimeLabel = new System.Windows.Forms.Label();
+            errorsLabel = new System.Windows.Forms.Label();
+            schedulerTimer = new System.Windows.Forms.Timer(components);
+            SuspendLayout();
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.richTextBox1.Location = new System.Drawing.Point(2, 2);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(844, 104);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "";
+            richTextBox1.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            richTextBox1.Location = new System.Drawing.Point(2, 2);
+            richTextBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            richTextBox1.Name = "richTextBox1";
+            richTextBox1.Size = new System.Drawing.Size(986, 119);
+            richTextBox1.TabIndex = 0;
+            richTextBox1.Text = "";
             // 
             // platformListBox
             // 
-            this.platformListBox.FormattingEnabled = true;
-            this.platformListBox.Location = new System.Drawing.Point(12, 126);
-            this.platformListBox.Name = "platformListBox";
-            this.platformListBox.Size = new System.Drawing.Size(362, 69);
-            this.platformListBox.TabIndex = 1;
-            this.platformListBox.SelectedIndexChanged += new System.EventHandler(this.platformListBox_SelectedIndexChanged);
+            platformListBox.FormattingEnabled = true;
+            platformListBox.Location = new System.Drawing.Point(14, 145);
+            platformListBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            platformListBox.Name = "platformListBox";
+            platformListBox.Size = new System.Drawing.Size(422, 79);
+            platformListBox.TabIndex = 1;
+            platformListBox.SelectedIndexChanged += platformListBox_SelectedIndexChanged;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 109);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Platform list:";
+            label1.AutoSize = true;
+            label1.Location = new System.Drawing.Point(14, 126);
+            label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(74, 15);
+            label1.TabIndex = 2;
+            label1.Text = "Platform list:";
             // 
             // TimingsLabel
             // 
-            this.TimingsLabel.AutoSize = true;
-            this.TimingsLabel.Location = new System.Drawing.Point(395, 126);
-            this.TimingsLabel.Name = "TimingsLabel";
-            this.TimingsLabel.Size = new System.Drawing.Size(101, 13);
-            this.TimingsLabel.TabIndex = 3;
-            this.TimingsLabel.Text = "Maximum job count:";
+            TimingsLabel.AutoSize = true;
+            TimingsLabel.Location = new System.Drawing.Point(461, 145);
+            TimingsLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            TimingsLabel.Name = "TimingsLabel";
+            TimingsLabel.Size = new System.Drawing.Size(119, 15);
+            TimingsLabel.TabIndex = 3;
+            TimingsLabel.Text = "Maximum job count:";
             // 
             // deviceListLabel
             // 
-            this.deviceListLabel.AutoSize = true;
-            this.deviceListLabel.Location = new System.Drawing.Point(12, 204);
-            this.deviceListLabel.Name = "deviceListLabel";
-            this.deviceListLabel.Size = new System.Drawing.Size(59, 13);
-            this.deviceListLabel.TabIndex = 6;
-            this.deviceListLabel.Text = "Device list:";
+            deviceListLabel.AutoSize = true;
+            deviceListLabel.Location = new System.Drawing.Point(14, 235);
+            deviceListLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            deviceListLabel.Name = "deviceListLabel";
+            deviceListLabel.Size = new System.Drawing.Size(63, 15);
+            deviceListLabel.TabIndex = 6;
+            deviceListLabel.Text = "Device list:";
             // 
             // deviceListBox
             // 
-            this.deviceListBox.FormattingEnabled = true;
-            this.deviceListBox.Location = new System.Drawing.Point(12, 221);
-            this.deviceListBox.Name = "deviceListBox";
-            this.deviceListBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
-            this.deviceListBox.Size = new System.Drawing.Size(362, 69);
-            this.deviceListBox.TabIndex = 5;
+            deviceListBox.FormattingEnabled = true;
+            deviceListBox.Location = new System.Drawing.Point(14, 255);
+            deviceListBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            deviceListBox.Name = "deviceListBox";
+            deviceListBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
+            deviceListBox.Size = new System.Drawing.Size(422, 79);
+            deviceListBox.TabIndex = 5;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 306);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 13);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Test function list:";
+            label2.AutoSize = true;
+            label2.Location = new System.Drawing.Point(14, 353);
+            label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(96, 15);
+            label2.TabIndex = 6;
+            label2.Text = "Test function list:";
             // 
             // functionBox
             // 
-            this.functionBox.FormattingEnabled = true;
-            this.functionBox.Items.AddRange(new object[] {
-            "c = c * b",
-            "a = sin(a)  + sinc(c)",
-            "c = sqrt(4 * a * INVTWOPI) * a * sqr(x) * Exp(-0.5 * a * sqr(x))",
-            "a = Mean(c)"});
-            this.functionBox.Location = new System.Drawing.Point(12, 322);
-            this.functionBox.Name = "functionBox";
-            this.functionBox.Size = new System.Drawing.Size(362, 134);
-            this.functionBox.TabIndex = 7;
-            this.functionBox.SelectedIndexChanged += new System.EventHandler(this.functionBox_SelectedIndexChanged);
+            functionBox.FormattingEnabled = true;
+            functionBox.Items.AddRange(new object[] { "c = c * b", "a = sin(a)  + sinc(c)", "c = sqrt(4 * a * INVTWOPI) * a * sqr(x) * Exp(-0.5 * a * sqr(x))", "a = Mean(c)" });
+            functionBox.Location = new System.Drawing.Point(14, 372);
+            functionBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            functionBox.Name = "functionBox";
+            functionBox.Size = new System.Drawing.Size(422, 154);
+            functionBox.TabIndex = 7;
+            functionBox.SelectedIndexChanged += functionBox_SelectedIndexChanged;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(636, 465);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(88, 26);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Run";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            button1.Location = new System.Drawing.Point(742, 537);
+            button1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            button1.Name = "button1";
+            button1.Size = new System.Drawing.Size(103, 30);
+            button1.TabIndex = 9;
+            button1.Text = "Run";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // vectorLengthBox
             // 
-            this.vectorLengthBox.FormattingEnabled = true;
-            this.vectorLengthBox.Items.AddRange(new object[] {
-            "4096",
-            "16384",
-            "32768",
-            "131072",
-            "262144",
-            "524288",
-            "1048576"});
-            this.vectorLengthBox.Location = new System.Drawing.Point(153, 464);
-            this.vectorLengthBox.Name = "vectorLengthBox";
-            this.vectorLengthBox.Size = new System.Drawing.Size(179, 21);
-            this.vectorLengthBox.TabIndex = 10;
+            vectorLengthBox.FormattingEnabled = true;
+            vectorLengthBox.Items.AddRange(new object[] { "4096", "16384", "32768", "131072", "262144", "524288", "1048576" });
+            vectorLengthBox.Location = new System.Drawing.Point(178, 535);
+            vectorLengthBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            vectorLengthBox.Name = "vectorLengthBox";
+            vectorLengthBox.Size = new System.Drawing.Size(208, 23);
+            vectorLengthBox.TabIndex = 10;
             // 
             // vectorLengthLabel
             // 
-            this.vectorLengthLabel.AutoSize = true;
-            this.vectorLengthLabel.Location = new System.Drawing.Point(12, 465);
-            this.vectorLengthLabel.Name = "vectorLengthLabel";
-            this.vectorLengthLabel.Size = new System.Drawing.Size(73, 13);
-            this.vectorLengthLabel.TabIndex = 11;
-            this.vectorLengthLabel.Text = "Vector length:";
+            vectorLengthLabel.AutoSize = true;
+            vectorLengthLabel.Location = new System.Drawing.Point(14, 537);
+            vectorLengthLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            vectorLengthLabel.Name = "vectorLengthLabel";
+            vectorLengthLabel.Size = new System.Drawing.Size(80, 15);
+            vectorLengthLabel.TabIndex = 11;
+            vectorLengthLabel.Text = "Vector length:";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 494);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(120, 13);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "Open CL float precision:";
+            label3.AutoSize = true;
+            label3.Location = new System.Drawing.Point(14, 570);
+            label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(134, 15);
+            label3.TabIndex = 12;
+            label3.Text = "Open CL float precision:";
             // 
             // floatPrecisionBox
             // 
-            this.floatPrecisionBox.FormattingEnabled = true;
-            this.floatPrecisionBox.Items.AddRange(new object[] {
-            "32bit single precision",
-            "64bit double precision"});
-            this.floatPrecisionBox.Location = new System.Drawing.Point(153, 491);
-            this.floatPrecisionBox.Name = "floatPrecisionBox";
-            this.floatPrecisionBox.Size = new System.Drawing.Size(179, 21);
-            this.floatPrecisionBox.TabIndex = 13;
-            this.floatPrecisionBox.SelectedIndexChanged += new System.EventHandler(this.floatPrecisionBox_SelectedIndexChanged);
+            floatPrecisionBox.FormattingEnabled = true;
+            floatPrecisionBox.Items.AddRange(new object[] { "32bit single precision", "64bit double precision" });
+            floatPrecisionBox.Location = new System.Drawing.Point(178, 567);
+            floatPrecisionBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            floatPrecisionBox.Name = "floatPrecisionBox";
+            floatPrecisionBox.Size = new System.Drawing.Size(208, 23);
+            floatPrecisionBox.TabIndex = 13;
+            floatPrecisionBox.SelectedIndexChanged += floatPrecisionBox_SelectedIndexChanged;
             // 
             // cpuFloatPrecisionLabel
             // 
-            this.cpuFloatPrecisionLabel.AutoSize = true;
-            this.cpuFloatPrecisionLabel.Location = new System.Drawing.Point(12, 521);
-            this.cpuFloatPrecisionLabel.Name = "cpuFloatPrecisionLabel";
-            this.cpuFloatPrecisionLabel.Size = new System.Drawing.Size(171, 13);
-            this.cpuFloatPrecisionLabel.TabIndex = 14;
-            this.cpuFloatPrecisionLabel.Text = "CPU (MtxVec) float precision: 64bit";
+            cpuFloatPrecisionLabel.AutoSize = true;
+            cpuFloatPrecisionLabel.Location = new System.Drawing.Point(14, 601);
+            cpuFloatPrecisionLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            cpuFloatPrecisionLabel.Name = "cpuFloatPrecisionLabel";
+            cpuFloatPrecisionLabel.Size = new System.Drawing.Size(190, 15);
+            cpuFloatPrecisionLabel.TabIndex = 14;
+            cpuFloatPrecisionLabel.Text = "CPU (MtxVec) float precision: 64bit";
             // 
             // complexBox
             // 
-            this.complexBox.AutoSize = true;
-            this.complexBox.Location = new System.Drawing.Point(338, 466);
-            this.complexBox.Name = "complexBox";
-            this.complexBox.Size = new System.Drawing.Size(66, 17);
-            this.complexBox.TabIndex = 15;
-            this.complexBox.Text = "Complex";
-            this.complexBox.UseVisualStyleBackColor = true;
-            this.complexBox.CheckedChanged += new System.EventHandler(this.complexBox_CheckedChanged);
+            complexBox.AutoSize = true;
+            complexBox.Location = new System.Drawing.Point(394, 538);
+            complexBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            complexBox.Name = "complexBox";
+            complexBox.Size = new System.Drawing.Size(74, 19);
+            complexBox.TabIndex = 15;
+            complexBox.Text = "Complex";
+            complexBox.UseVisualStyleBackColor = true;
+            complexBox.CheckedChanged += complexBox_CheckedChanged;
             // 
             // maximumJobCountEdit
             // 
-            this.maximumJobCountEdit.FormattingEnabled = true;
-            this.maximumJobCountEdit.Items.AddRange(new object[] {
-            "2",
-            "4",
-            "6",
-            "8",
-            "16",
-            "32",
-            "64",
-            "128",
-            "256",
-            "512",
-            "1024",
-            "2048",
-            "4096",
-            "8192",
-            "16384"});
-            this.maximumJobCountEdit.Location = new System.Drawing.Point(502, 123);
-            this.maximumJobCountEdit.MaxDropDownItems = 12;
-            this.maximumJobCountEdit.Name = "maximumJobCountEdit";
-            this.maximumJobCountEdit.Size = new System.Drawing.Size(154, 21);
-            this.maximumJobCountEdit.TabIndex = 16;
+            maximumJobCountEdit.FormattingEnabled = true;
+            maximumJobCountEdit.Items.AddRange(new object[] { "2", "4", "6", "8", "16", "32", "64", "128", "256", "512", "1024", "2048", "4096", "8192", "16384" });
+            maximumJobCountEdit.Location = new System.Drawing.Point(586, 142);
+            maximumJobCountEdit.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            maximumJobCountEdit.MaxDropDownItems = 12;
+            maximumJobCountEdit.Name = "maximumJobCountEdit";
+            maximumJobCountEdit.Size = new System.Drawing.Size(179, 23);
+            maximumJobCountEdit.TabIndex = 16;
             // 
             // currentJobCountLabel
             // 
-            this.currentJobCountLabel.AutoSize = true;
-            this.currentJobCountLabel.Location = new System.Drawing.Point(395, 160);
-            this.currentJobCountLabel.Name = "currentJobCountLabel";
-            this.currentJobCountLabel.Size = new System.Drawing.Size(91, 13);
-            this.currentJobCountLabel.TabIndex = 17;
-            this.currentJobCountLabel.Text = "Current job count:";
+            currentJobCountLabel.AutoSize = true;
+            currentJobCountLabel.Location = new System.Drawing.Point(461, 185);
+            currentJobCountLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            currentJobCountLabel.Name = "currentJobCountLabel";
+            currentJobCountLabel.Size = new System.Drawing.Size(104, 15);
+            currentJobCountLabel.TabIndex = 17;
+            currentJobCountLabel.Text = "Current job count:";
             // 
             // TotalRunningTimeLabel
             // 
-            this.TotalRunningTimeLabel.AutoSize = true;
-            this.TotalRunningTimeLabel.Location = new System.Drawing.Point(395, 195);
-            this.TotalRunningTimeLabel.Name = "TotalRunningTimeLabel";
-            this.TotalRunningTimeLabel.Size = new System.Drawing.Size(94, 13);
-            this.TotalRunningTimeLabel.TabIndex = 18;
-            this.TotalRunningTimeLabel.Text = "Total running time:";
+            TotalRunningTimeLabel.AutoSize = true;
+            TotalRunningTimeLabel.Location = new System.Drawing.Point(461, 225);
+            TotalRunningTimeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            TotalRunningTimeLabel.Name = "TotalRunningTimeLabel";
+            TotalRunningTimeLabel.Size = new System.Drawing.Size(107, 15);
+            TotalRunningTimeLabel.TabIndex = 18;
+            TotalRunningTimeLabel.Text = "Total running time:";
             // 
             // errorsLabel
             // 
-            this.errorsLabel.AutoSize = true;
-            this.errorsLabel.Location = new System.Drawing.Point(395, 221);
-            this.errorsLabel.Name = "errorsLabel";
-            this.errorsLabel.Size = new System.Drawing.Size(64, 13);
-            this.errorsLabel.TabIndex = 19;
-            this.errorsLabel.Text = "Errors: none";
+            errorsLabel.AutoSize = true;
+            errorsLabel.Location = new System.Drawing.Point(461, 255);
+            errorsLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            errorsLabel.Name = "errorsLabel";
+            errorsLabel.Size = new System.Drawing.Size(70, 15);
+            errorsLabel.TabIndex = 19;
+            errorsLabel.Text = "Errors: none";
             // 
             // schedulerTimer
             // 
-            this.schedulerTimer.Tick += new System.EventHandler(this.SchedulerTimer_Tick);
+            schedulerTimer.Tick += SchedulerTimer_Tick;
             // 
             // clMultiDeviceForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(848, 616);
-            this.Controls.Add(this.errorsLabel);
-            this.Controls.Add(this.TotalRunningTimeLabel);
-            this.Controls.Add(this.currentJobCountLabel);
-            this.Controls.Add(this.maximumJobCountEdit);
-            this.Controls.Add(this.complexBox);
-            this.Controls.Add(this.cpuFloatPrecisionLabel);
-            this.Controls.Add(this.floatPrecisionBox);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.vectorLengthLabel);
-            this.Controls.Add(this.vectorLengthBox);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.functionBox);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.deviceListLabel);
-            this.Controls.Add(this.deviceListBox);
-            this.Controls.Add(this.TimingsLabel);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.platformListBox);
-            this.Controls.Add(this.richTextBox1);
-            this.Name = "clMultiDeviceForm";
-            this.Text = "Multi-device benchmark";
-            this.Load += new System.EventHandler(this.clBenchmarkForm_Load);
-            this.Shown += new System.EventHandler(this.clMultiDeviceForm_Shown);
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            ClientSize = new System.Drawing.Size(991, 643);
+            Controls.Add(errorsLabel);
+            Controls.Add(TotalRunningTimeLabel);
+            Controls.Add(currentJobCountLabel);
+            Controls.Add(maximumJobCountEdit);
+            Controls.Add(complexBox);
+            Controls.Add(cpuFloatPrecisionLabel);
+            Controls.Add(floatPrecisionBox);
+            Controls.Add(label3);
+            Controls.Add(vectorLengthLabel);
+            Controls.Add(vectorLengthBox);
+            Controls.Add(button1);
+            Controls.Add(functionBox);
+            Controls.Add(label2);
+            Controls.Add(deviceListLabel);
+            Controls.Add(deviceListBox);
+            Controls.Add(TimingsLabel);
+            Controls.Add(label1);
+            Controls.Add(platformListBox);
+            Controls.Add(richTextBox1);
+            Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            Name = "clMultiDeviceForm";
+            Text = "Multi-device benchmark";
+            Load += clBenchmarkForm_Load;
+            Shown += clMultiDeviceForm_Shown;
+            ResumeLayout(false);
+            PerformLayout();
 
         }
 

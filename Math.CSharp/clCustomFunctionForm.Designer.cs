@@ -28,126 +28,128 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.platformListBox = new System.Windows.Forms.ListBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.deviceListLabel = new System.Windows.Forms.Label();
-            this.deviceListBox = new System.Windows.Forms.ListBox();
-            this.AutoDeviceButton = new System.Windows.Forms.Button();
-            this.vectorLengthBox = new System.Windows.Forms.ComboBox();
-            this.vectorLengthLabel = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.SuspendLayout();
+            richTextBox1 = new System.Windows.Forms.RichTextBox();
+            platformListBox = new System.Windows.Forms.ListBox();
+            label1 = new System.Windows.Forms.Label();
+            deviceListLabel = new System.Windows.Forms.Label();
+            deviceListBox = new System.Windows.Forms.ListBox();
+            AutoDeviceButton = new System.Windows.Forms.Button();
+            vectorLengthBox = new System.Windows.Forms.ComboBox();
+            vectorLengthLabel = new System.Windows.Forms.Label();
+            button2 = new System.Windows.Forms.Button();
+            SuspendLayout();
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.richTextBox1.Location = new System.Drawing.Point(2, 2);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(781, 104);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "";
+            richTextBox1.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            richTextBox1.Location = new System.Drawing.Point(2, 2);
+            richTextBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            richTextBox1.Name = "richTextBox1";
+            richTextBox1.Size = new System.Drawing.Size(898, 119);
+            richTextBox1.TabIndex = 0;
+            richTextBox1.Text = "";
             // 
             // platformListBox
             // 
-            this.platformListBox.FormattingEnabled = true;
-            this.platformListBox.Location = new System.Drawing.Point(12, 126);
-            this.platformListBox.Name = "platformListBox";
-            this.platformListBox.Size = new System.Drawing.Size(435, 69);
-            this.platformListBox.TabIndex = 1;
-            this.platformListBox.SelectedIndexChanged += new System.EventHandler(this.platformListBox_SelectedIndexChanged);
+            platformListBox.FormattingEnabled = true;
+            platformListBox.Location = new System.Drawing.Point(14, 145);
+            platformListBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            platformListBox.Name = "platformListBox";
+            platformListBox.Size = new System.Drawing.Size(507, 79);
+            platformListBox.TabIndex = 1;
+            platformListBox.SelectedIndexChanged += platformListBox_SelectedIndexChanged;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 109);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Platform list:";
+            label1.AutoSize = true;
+            label1.Location = new System.Drawing.Point(14, 126);
+            label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(74, 15);
+            label1.TabIndex = 2;
+            label1.Text = "Platform list:";
             // 
             // deviceListLabel
             // 
-            this.deviceListLabel.AutoSize = true;
-            this.deviceListLabel.Location = new System.Drawing.Point(12, 204);
-            this.deviceListLabel.Name = "deviceListLabel";
-            this.deviceListLabel.Size = new System.Drawing.Size(59, 13);
-            this.deviceListLabel.TabIndex = 6;
-            this.deviceListLabel.Text = "Device list:";
+            deviceListLabel.AutoSize = true;
+            deviceListLabel.Location = new System.Drawing.Point(14, 235);
+            deviceListLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            deviceListLabel.Name = "deviceListLabel";
+            deviceListLabel.Size = new System.Drawing.Size(63, 15);
+            deviceListLabel.TabIndex = 6;
+            deviceListLabel.Text = "Device list:";
             // 
             // deviceListBox
             // 
-            this.deviceListBox.FormattingEnabled = true;
-            this.deviceListBox.Location = new System.Drawing.Point(12, 221);
-            this.deviceListBox.Name = "deviceListBox";
-            this.deviceListBox.Size = new System.Drawing.Size(435, 69);
-            this.deviceListBox.TabIndex = 5;
+            deviceListBox.FormattingEnabled = true;
+            deviceListBox.Location = new System.Drawing.Point(14, 255);
+            deviceListBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            deviceListBox.Name = "deviceListBox";
+            deviceListBox.Size = new System.Drawing.Size(507, 79);
+            deviceListBox.TabIndex = 5;
             // 
             // AutoDeviceButton
             // 
-            this.AutoDeviceButton.Location = new System.Drawing.Point(466, 221);
-            this.AutoDeviceButton.Name = "AutoDeviceButton";
-            this.AutoDeviceButton.Size = new System.Drawing.Size(88, 26);
-            this.AutoDeviceButton.TabIndex = 9;
-            this.AutoDeviceButton.Text = "Auto select";
-            this.AutoDeviceButton.UseVisualStyleBackColor = true;
-            this.AutoDeviceButton.Click += new System.EventHandler(this.AutoDeviceButton_Click);
+            AutoDeviceButton.Location = new System.Drawing.Point(544, 255);
+            AutoDeviceButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            AutoDeviceButton.Name = "AutoDeviceButton";
+            AutoDeviceButton.Size = new System.Drawing.Size(103, 30);
+            AutoDeviceButton.TabIndex = 9;
+            AutoDeviceButton.Text = "Auto select";
+            AutoDeviceButton.UseVisualStyleBackColor = true;
+            AutoDeviceButton.Click += AutoDeviceButton_Click;
             // 
             // vectorLengthBox
             // 
-            this.vectorLengthBox.FormattingEnabled = true;
-            this.vectorLengthBox.Items.AddRange(new object[] {
-            "4096",
-            "16384",
-            "32768",
-            "131072",
-            "262144",
-            "524288",
-            "1048576"});
-            this.vectorLengthBox.Location = new System.Drawing.Point(155, 315);
-            this.vectorLengthBox.Name = "vectorLengthBox";
-            this.vectorLengthBox.Size = new System.Drawing.Size(151, 21);
-            this.vectorLengthBox.TabIndex = 10;
+            vectorLengthBox.FormattingEnabled = true;
+            vectorLengthBox.Items.AddRange(new object[] { "4096", "16384", "32768", "131072", "262144", "524288", "1048576" });
+            vectorLengthBox.Location = new System.Drawing.Point(181, 363);
+            vectorLengthBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            vectorLengthBox.Name = "vectorLengthBox";
+            vectorLengthBox.Size = new System.Drawing.Size(176, 23);
+            vectorLengthBox.TabIndex = 10;
             // 
             // vectorLengthLabel
             // 
-            this.vectorLengthLabel.AutoSize = true;
-            this.vectorLengthLabel.Location = new System.Drawing.Point(12, 318);
-            this.vectorLengthLabel.Name = "vectorLengthLabel";
-            this.vectorLengthLabel.Size = new System.Drawing.Size(73, 13);
-            this.vectorLengthLabel.TabIndex = 11;
-            this.vectorLengthLabel.Text = "Vector length:";
+            vectorLengthLabel.AutoSize = true;
+            vectorLengthLabel.Location = new System.Drawing.Point(14, 367);
+            vectorLengthLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            vectorLengthLabel.Name = "vectorLengthLabel";
+            vectorLengthLabel.Size = new System.Drawing.Size(80, 15);
+            vectorLengthLabel.TabIndex = 11;
+            vectorLengthLabel.Text = "Vector length:";
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(321, 310);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(88, 26);
-            this.button2.TabIndex = 12;
-            this.button2.Text = "Run";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            button2.Location = new System.Drawing.Point(374, 358);
+            button2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            button2.Name = "button2";
+            button2.Size = new System.Drawing.Size(103, 30);
+            button2.TabIndex = 12;
+            button2.Text = "Run";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // clCustomFunctionForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(785, 581);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.vectorLengthLabel);
-            this.Controls.Add(this.vectorLengthBox);
-            this.Controls.Add(this.AutoDeviceButton);
-            this.Controls.Add(this.deviceListLabel);
-            this.Controls.Add(this.deviceListBox);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.platformListBox);
-            this.Controls.Add(this.richTextBox1);
-            this.Name = "clCustomFunctionForm";
-            this.Text = "Benchmarks";
-            this.Load += new System.EventHandler(this.clCustomFunctionForm_Load);
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            ClientSize = new System.Drawing.Size(904, 648);
+            Controls.Add(button2);
+            Controls.Add(vectorLengthLabel);
+            Controls.Add(vectorLengthBox);
+            Controls.Add(AutoDeviceButton);
+            Controls.Add(deviceListLabel);
+            Controls.Add(deviceListBox);
+            Controls.Add(label1);
+            Controls.Add(platformListBox);
+            Controls.Add(richTextBox1);
+            Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            Name = "clCustomFunctionForm";
+            Text = "Benchmarks";
+            Load += clCustomFunctionForm_Load;
+            ResumeLayout(false);
+            PerformLayout();
 
         }
 

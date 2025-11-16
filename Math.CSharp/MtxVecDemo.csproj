@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-	  <TargetFrameworks>net8.0-windows</TargetFrameworks>
+	  <TargetFrameworks>net9.0-windows</TargetFrameworks>
 	  <LangVersion>Latest</LangVersion>
 	  <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
 	  <Deterministic>true</Deterministic>

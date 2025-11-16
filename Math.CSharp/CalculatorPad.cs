@@ -377,6 +377,7 @@ namespace MtxVecDemo
         private System.Windows.Forms.Button button18;
 
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Content)]
         public TextBox TextBox
         {
             get { return tbox; }

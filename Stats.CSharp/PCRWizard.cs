@@ -54,29 +54,34 @@ namespace StatsMasterDemo
         private NumericUpDown numericUpDown1;
         private Label label7;
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public Matrix A
         {
             get { return a; }
             set { a = value; }
         }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public Vector Y
         {
             get { return y; }
             set { y = value; }
         }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public Vector Weights
         {
             get { return w; }
             set { w = value; }
         }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public Vector B
         {
             get { return b; }
         }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public int NumOmmit
         {
             get { return (int)numericUpDown1.Value; }

@@ -80,28 +80,28 @@ namespace MtxVecDemo
         /// </summary>
         private void InitializeComponent()
         {
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.SuspendLayout();
+            richTextBox1 = new RichTextBox();
+            SuspendLayout();
             // 
             // richTextBox1
             // 
-            this.richTextBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.richTextBox1.Location = new System.Drawing.Point(0, 0);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(852, 599);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "";
+            richTextBox1.BackColor = SystemColors.Window;
+            richTextBox1.Dock = DockStyle.Fill;
+            richTextBox1.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 238);
+            richTextBox1.Location = new Point(0, 0);
+            richTextBox1.Name = "richTextBox1";
+            richTextBox1.ReadOnly = true;
+            richTextBox1.Size = new Size(924, 615);
+            richTextBox1.TabIndex = 0;
+            richTextBox1.Text = "";
             // 
             // IntroParser
             // 
-            this.ClientSize = new System.Drawing.Size(852, 599);
-            this.Controls.Add(this.richTextBox1);
-            this.Name = "IntroParser";
-            this.Load += new System.EventHandler(this.IntroParser_Load);
-            this.ResumeLayout(false);
+            ClientSize = new Size(924, 615);
+            Controls.Add(richTextBox1);
+            Name = "IntroParser";
+            Load += IntroParser_Load;
+            ResumeLayout(false);
 
         }
 

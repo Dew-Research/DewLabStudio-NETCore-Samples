@@ -74,335 +74,316 @@ namespace MtxVecDemo
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataSet1 = new System.Data.DataSet();
-            this.dataTablePars = new System.Data.DataTable();
-            this.dataColumn1 = new System.Data.DataColumn();
-            this.dataColumn2 = new System.Data.DataColumn();
-            this.dataColumn3 = new System.Data.DataColumn();
-            this.dataColumn4 = new System.Data.DataColumn();
-            this.dataTableResults = new System.Data.DataTable();
-            this.dataColumn5 = new System.Data.DataColumn();
-            this.dataColumn6 = new System.Data.DataColumn();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBoxFunction = new System.Windows.Forms.TextBox();
-            this.buttonDetect = new System.Windows.Forms.Button();
-            this.buttonMinimize = new System.Windows.Forms.Button();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataTablePars)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataTableResults)).BeginInit();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            this.SuspendLayout();
+            dataSet1 = new DataSet();
+            dataTablePars = new DataTable();
+            dataColumn1 = new DataColumn();
+            dataColumn2 = new DataColumn();
+            dataColumn3 = new DataColumn();
+            dataColumn4 = new DataColumn();
+            dataTableResults = new DataTable();
+            dataColumn5 = new DataColumn();
+            dataColumn6 = new DataColumn();
+            label1 = new Label();
+            textBoxFunction = new TextBox();
+            buttonDetect = new Button();
+            buttonMinimize = new Button();
+            richTextBox2 = new RichTextBox();
+            groupBox1 = new GroupBox();
+            checkBox1 = new CheckBox();
+            numericUpDown1 = new NumericUpDown();
+            label3 = new Label();
+            textBox1 = new TextBox();
+            label2 = new Label();
+            dataGridView1 = new DataGridView();
+            dataGridView2 = new DataGridView();
+            label4 = new Label();
+            label5 = new Label();
+            panel2.SuspendLayout();
+            ((ISupportInitialize)dataSet1).BeginInit();
+            ((ISupportInitialize)dataTablePars).BeginInit();
+            ((ISupportInitialize)dataTableResults).BeginInit();
+            groupBox1.SuspendLayout();
+            ((ISupportInitialize)numericUpDown1).BeginInit();
+            ((ISupportInitialize)dataGridView1).BeginInit();
+            ((ISupportInitialize)dataGridView2).BeginInit();
+            SuspendLayout();
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.dataGridView2);
-            this.panel2.Controls.Add(this.dataGridView1);
-            this.panel2.Controls.Add(this.groupBox1);
-            this.panel2.Controls.Add(this.richTextBox2);
-            this.panel2.Controls.Add(this.buttonMinimize);
-            this.panel2.Controls.Add(this.buttonDetect);
-            this.panel2.Controls.Add(this.textBoxFunction);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Size = new System.Drawing.Size(811, 431);
+            panel2.Controls.Add(label5);
+            panel2.Controls.Add(label4);
+            panel2.Controls.Add(dataGridView2);
+            panel2.Controls.Add(dataGridView1);
+            panel2.Controls.Add(groupBox1);
+            panel2.Controls.Add(richTextBox2);
+            panel2.Controls.Add(buttonMinimize);
+            panel2.Controls.Add(buttonDetect);
+            panel2.Controls.Add(textBoxFunction);
+            panel2.Controls.Add(label1);
+            panel2.Size = new Size(1009, 442);
             // 
             // panel3
             // 
-            this.panel3.Location = new System.Drawing.Point(0, 543);
-            this.panel3.Size = new System.Drawing.Size(811, 48);
+            panel3.Location = new Point(0, 580);
+            panel3.Size = new Size(1009, 48);
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Size = new System.Drawing.Size(811, 112);
+            richTextBox1.Size = new Size(1009, 138);
             // 
             // dataSet1
             // 
-            this.dataSet1.DataSetName = "NewDataSet";
-            this.dataSet1.Locale = new System.Globalization.CultureInfo("en-US");
-            this.dataSet1.Tables.AddRange(new System.Data.DataTable[] {
-            this.dataTablePars,
-            this.dataTableResults});
+            dataSet1.DataSetName = "NewDataSet";
+            dataSet1.Locale = new System.Globalization.CultureInfo("en-US");
+            dataSet1.Tables.AddRange(new DataTable[] { dataTablePars, dataTableResults });
             // 
             // dataTablePars
             // 
-            this.dataTablePars.Columns.AddRange(new System.Data.DataColumn[] {
-            this.dataColumn1,
-            this.dataColumn2,
-            this.dataColumn3,
-            this.dataColumn4});
-            this.dataTablePars.Constraints.AddRange(new System.Data.Constraint[] {
-            new System.Data.UniqueConstraint("Constraint1", new string[] {
-                        "Name"}, true)});
-            this.dataTablePars.Locale = new System.Globalization.CultureInfo("en-US");
-            this.dataTablePars.PrimaryKey = new System.Data.DataColumn[] {
-        this.dataColumn1};
-            this.dataTablePars.TableName = "TablePars";
+            dataTablePars.Columns.AddRange(new DataColumn[] { dataColumn1, dataColumn2, dataColumn3, dataColumn4 });
+            dataTablePars.Constraints.AddRange(new Constraint[] { new UniqueConstraint("Constraint1", new string[] { "Name" }, true) });
+            dataTablePars.Locale = new System.Globalization.CultureInfo("en-US");
+            dataTablePars.Namespace = "";
+            dataTablePars.PrimaryKey = new DataColumn[]
+    {
+    dataColumn1
+    };
+            dataTablePars.TableName = "TablePars";
             // 
             // dataColumn1
             // 
-            this.dataColumn1.AllowDBNull = false;
-            this.dataColumn1.Caption = "Name";
-            this.dataColumn1.ColumnName = "Name";
-            this.dataColumn1.ReadOnly = true;
+            dataColumn1.AllowDBNull = false;
+            dataColumn1.Caption = "Name";
+            dataColumn1.ColumnName = "Name";
+            dataColumn1.Namespace = "";
+            dataColumn1.ReadOnly = true;
             // 
             // dataColumn2
             // 
-            this.dataColumn2.Caption = "Lower bound";
-            this.dataColumn2.ColumnName = "Lower bound";
-            this.dataColumn2.DataType = typeof(double);
+            dataColumn2.Caption = "Lower bound";
+            dataColumn2.ColumnName = "Lower bound";
+            dataColumn2.DataType = typeof(double);
+            dataColumn2.Namespace = "";
             // 
             // dataColumn3
             // 
-            this.dataColumn3.Caption = "Upper bound";
-            this.dataColumn3.ColumnName = "Upper bound";
-            this.dataColumn3.DataType = typeof(double);
+            dataColumn3.Caption = "Upper bound";
+            dataColumn3.ColumnName = "Upper bound";
+            dataColumn3.DataType = typeof(double);
+            dataColumn3.Namespace = "";
             // 
             // dataColumn4
             // 
-            this.dataColumn4.Caption = "Initial value";
-            this.dataColumn4.ColumnName = "Initial value";
-            this.dataColumn4.DataType = typeof(double);
+            dataColumn4.Caption = "Initial value";
+            dataColumn4.ColumnName = "Initial value";
+            dataColumn4.DataType = typeof(double);
+            dataColumn4.Namespace = "";
             // 
             // dataTableResults
             // 
-            this.dataTableResults.Columns.AddRange(new System.Data.DataColumn[] {
-            this.dataColumn5,
-            this.dataColumn6});
-            this.dataTableResults.Constraints.AddRange(new System.Data.Constraint[] {
-            new System.Data.UniqueConstraint("Constraint1", new string[] {
-                        "Name"}, true)});
-            this.dataTableResults.Locale = new System.Globalization.CultureInfo("en-US");
-            this.dataTableResults.PrimaryKey = new System.Data.DataColumn[] {
-        this.dataColumn5};
-            this.dataTableResults.TableName = "TableResults";
+            dataTableResults.Columns.AddRange(new DataColumn[] { dataColumn5, dataColumn6 });
+            dataTableResults.Constraints.AddRange(new Constraint[] { new UniqueConstraint("Constraint1", new string[] { "Name" }, true) });
+            dataTableResults.Locale = new System.Globalization.CultureInfo("en-US");
+            dataTableResults.Namespace = "";
+            dataTableResults.PrimaryKey = new DataColumn[]
+    {
+    dataColumn5
+    };
+            dataTableResults.TableName = "TableResults";
             // 
             // dataColumn5
             // 
-            this.dataColumn5.AllowDBNull = false;
-            this.dataColumn5.ColumnName = "Name";
-            this.dataColumn5.ReadOnly = true;
+            dataColumn5.AllowDBNull = false;
+            dataColumn5.Caption = "Name";
+            dataColumn5.ColumnName = "Name";
+            dataColumn5.Namespace = "";
+            dataColumn5.ReadOnly = true;
             // 
             // dataColumn6
             // 
-            this.dataColumn6.ColumnName = "Value";
-            this.dataColumn6.DataType = typeof(double);
-            this.dataColumn6.ReadOnly = true;
+            dataColumn6.Caption = "Value";
+            dataColumn6.ColumnName = "Value";
+            dataColumn6.DataType = typeof(double);
+            dataColumn6.Namespace = "";
+            dataColumn6.ReadOnly = true;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 21);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Function";
+            label1.AutoSize = true;
+            label1.Location = new Point(12, 21);
+            label1.Name = "label1";
+            label1.Size = new Size(54, 15);
+            label1.TabIndex = 4;
+            label1.Text = "Function";
             // 
             // textBoxFunction
             // 
-            this.textBoxFunction.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxFunction.Location = new System.Drawing.Point(66, 18);
-            this.textBoxFunction.Name = "textBoxFunction";
-            this.textBoxFunction.Size = new System.Drawing.Size(733, 20);
-            this.textBoxFunction.TabIndex = 5;
-            this.textBoxFunction.Text = "100*Sqr(b-Sqr(a)) + Sqr(1-a)";
-            this.textBoxFunction.TextChanged += new System.EventHandler(this.textBoxFunction_TextChanged);
+            textBoxFunction.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            textBoxFunction.Location = new Point(66, 18);
+            textBoxFunction.Name = "textBoxFunction";
+            textBoxFunction.Size = new Size(931, 23);
+            textBoxFunction.TabIndex = 5;
+            textBoxFunction.Text = "100*Sqr(b-Sqr(a)) + Sqr(1-a)";
+            textBoxFunction.TextChanged += textBoxFunction_TextChanged;
             // 
             // buttonDetect
             // 
-            this.buttonDetect.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.buttonDetect.Location = new System.Drawing.Point(66, 44);
-            this.buttonDetect.Name = "buttonDetect";
-            this.buttonDetect.Size = new System.Drawing.Size(75, 23);
-            this.buttonDetect.TabIndex = 6;
-            this.buttonDetect.Text = "Detect";
-            this.buttonDetect.UseVisualStyleBackColor = true;
-            this.buttonDetect.Click += new System.EventHandler(this.buttonDetect_Click);
+            buttonDetect.FlatStyle = FlatStyle.System;
+            buttonDetect.Location = new Point(66, 44);
+            buttonDetect.Name = "buttonDetect";
+            buttonDetect.Size = new Size(75, 23);
+            buttonDetect.TabIndex = 6;
+            buttonDetect.Text = "Detect";
+            buttonDetect.UseVisualStyleBackColor = true;
+            buttonDetect.Click += buttonDetect_Click;
             // 
             // buttonMinimize
             // 
-            this.buttonMinimize.Enabled = false;
-            this.buttonMinimize.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.buttonMinimize.Location = new System.Drawing.Point(147, 44);
-            this.buttonMinimize.Name = "buttonMinimize";
-            this.buttonMinimize.Size = new System.Drawing.Size(75, 23);
-            this.buttonMinimize.TabIndex = 7;
-            this.buttonMinimize.Text = "Minimize";
-            this.buttonMinimize.UseVisualStyleBackColor = true;
-            this.buttonMinimize.Click += new System.EventHandler(this.buttonMinimize_Click);
+            buttonMinimize.Enabled = false;
+            buttonMinimize.FlatStyle = FlatStyle.System;
+            buttonMinimize.Location = new Point(147, 44);
+            buttonMinimize.Name = "buttonMinimize";
+            buttonMinimize.Size = new Size(75, 23);
+            buttonMinimize.TabIndex = 7;
+            buttonMinimize.Text = "Minimize";
+            buttonMinimize.UseVisualStyleBackColor = true;
+            buttonMinimize.Click += buttonMinimize_Click;
             // 
             // richTextBox2
             // 
-            this.richTextBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.richTextBox2.BackColor = System.Drawing.SystemColors.Window;
-            this.richTextBox2.Location = new System.Drawing.Point(15, 223);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.ReadOnly = true;
-            this.richTextBox2.Size = new System.Drawing.Size(556, 202);
-            this.richTextBox2.TabIndex = 8;
-            this.richTextBox2.Text = "";
+            richTextBox2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            richTextBox2.BackColor = SystemColors.Window;
+            richTextBox2.Location = new Point(15, 223);
+            richTextBox2.Name = "richTextBox2";
+            richTextBox2.ReadOnly = true;
+            richTextBox2.Size = new Size(754, 213);
+            richTextBox2.TabIndex = 8;
+            richTextBox2.Text = "";
             // 
             // groupBox1
             // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.checkBox1);
-            this.groupBox1.Controls.Add(this.numericUpDown1);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(590, 73);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(209, 144);
-            this.groupBox1.TabIndex = 9;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Settings";
+            groupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            groupBox1.Controls.Add(checkBox1);
+            groupBox1.Controls.Add(numericUpDown1);
+            groupBox1.Controls.Add(label3);
+            groupBox1.Controls.Add(textBox1);
+            groupBox1.Controls.Add(label2);
+            groupBox1.Location = new Point(788, 73);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(209, 144);
+            groupBox1.TabIndex = 9;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Settings";
             // 
             // checkBox1
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Checked = true;
-            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.checkBox1.Location = new System.Drawing.Point(67, 98);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(76, 18);
-            this.checkBox1.TabIndex = 4;
-            this.checkBox1.Text = "Show log";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            checkBox1.AutoSize = true;
+            checkBox1.Checked = true;
+            checkBox1.CheckState = CheckState.Checked;
+            checkBox1.FlatStyle = FlatStyle.System;
+            checkBox1.Location = new Point(67, 98);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(81, 20);
+            checkBox1.TabIndex = 4;
+            checkBox1.Text = "Show log";
+            checkBox1.UseVisualStyleBackColor = true;
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Increment = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.numericUpDown1.Location = new System.Drawing.Point(67, 59);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
-            2000,
-            0,
-            0,
-            0});
-            this.numericUpDown1.Minimum = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(100, 20);
-            this.numericUpDown1.TabIndex = 3;
-            this.numericUpDown1.Value = new decimal(new int[] {
-            500,
-            0,
-            0,
-            0});
+            numericUpDown1.Increment = new decimal(new int[] { 10, 0, 0, 0 });
+            numericUpDown1.Location = new Point(67, 59);
+            numericUpDown1.Maximum = new decimal(new int[] { 2000, 0, 0, 0 });
+            numericUpDown1.Minimum = new decimal(new int[] { 100, 0, 0, 0 });
+            numericUpDown1.Name = "numericUpDown1";
+            numericUpDown1.Size = new Size(100, 23);
+            numericUpDown1.TabIndex = 3;
+            numericUpDown1.Value = new decimal(new int[] { 500, 0, 0, 0 });
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 61);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Max. iter";
+            label3.AutoSize = true;
+            label3.Location = new Point(6, 61);
+            label3.Name = "label3";
+            label3.Size = new Size(53, 15);
+            label3.TabIndex = 2;
+            label3.Text = "Max. iter";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(67, 24);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 1;
+            textBox1.Location = new Point(67, 24);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(100, 23);
+            textBox1.TabIndex = 1;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 27);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Tolerance";
+            label2.AutoSize = true;
+            label2.Location = new Point(6, 27);
+            label2.Name = "label2";
+            label2.Size = new Size(57, 15);
+            label2.TabIndex = 0;
+            label2.Text = "Tolerance";
             // 
             // dataGridView1
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(15, 97);
-            this.dataGridView1.MultiSelect = false;
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(556, 120);
-            this.dataGridView1.TabIndex = 10;
+            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(15, 97);
+            dataGridView1.MultiSelect = false;
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.CellSelect;
+            dataGridView1.Size = new Size(754, 120);
+            dataGridView1.TabIndex = 10;
             // 
             // dataGridView2
             // 
-            this.dataGridView2.AllowUserToAddRows = false;
-            this.dataGridView2.AllowUserToDeleteRows = false;
-            this.dataGridView2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(590, 253);
-            this.dataGridView2.MultiSelect = false;
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView2.Size = new System.Drawing.Size(209, 172);
-            this.dataGridView2.TabIndex = 11;
+            dataGridView2.AllowUserToAddRows = false;
+            dataGridView2.AllowUserToDeleteRows = false;
+            dataGridView2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView2.Location = new Point(788, 253);
+            dataGridView2.MultiSelect = false;
+            dataGridView2.Name = "dataGridView2";
+            dataGridView2.ReadOnly = true;
+            dataGridView2.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridView2.Size = new Size(209, 183);
+            dataGridView2.TabIndex = 11;
             // 
             // label4
             // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(587, 226);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(97, 13);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "Optimization results";
+            label4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            label4.AutoSize = true;
+            label4.Location = new Point(785, 226);
+            label4.Name = "label4";
+            label4.Size = new Size(113, 15);
+            label4.TabIndex = 12;
+            label4.Text = "Optimization results";
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 73);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(93, 13);
-            this.label5.TabIndex = 13;
-            this.label5.Text = "Function variables";
+            label5.AutoSize = true;
+            label5.Location = new Point(12, 73);
+            label5.Name = "label5";
+            label5.Size = new Size(103, 15);
+            label5.TabIndex = 13;
+            label5.Text = "Function variables";
             // 
             // Optim_Bounded
             // 
-            this.ClientSize = new System.Drawing.Size(811, 591);
-            this.Name = "Optim_Bounded";
-            this.Load += new System.EventHandler(this.Optim_Bounded_Load);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataTablePars)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataTableResults)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            this.ResumeLayout(false);
+            ClientSize = new Size(1009, 628);
+            Name = "Optim_Bounded";
+            Load += Optim_Bounded_Load;
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
+            ((ISupportInitialize)dataSet1).EndInit();
+            ((ISupportInitialize)dataTablePars).EndInit();
+            ((ISupportInitialize)dataTableResults).EndInit();
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
+            ((ISupportInitialize)numericUpDown1).EndInit();
+            ((ISupportInitialize)dataGridView1).EndInit();
+            ((ISupportInitialize)dataGridView2).EndInit();
+            ResumeLayout(false);
 
         }
 

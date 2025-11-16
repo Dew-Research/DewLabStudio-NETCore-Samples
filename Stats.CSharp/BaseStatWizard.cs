@@ -32,6 +32,7 @@ namespace StatsMasterDemo
         protected internal CheckBox checkBoxCharts;
         private TChart aChart = null;
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public TChart Chart
         {
             get
@@ -99,12 +100,14 @@ namespace StatsMasterDemo
         }
 
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public string FmtString
         {
             get { return textBoxFmt.Text; }
             set { textBoxFmt.Text = value; }
         }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public double Alpha
         {
             get { return Convert.ToDouble(textBoxAlpha.Text); }

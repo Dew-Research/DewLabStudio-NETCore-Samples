@@ -71,360 +71,358 @@ namespace MtxVecDemo
 			base.Dispose( disposing );
 		}
 
-		#region Designer generated code
-		/// <summary>
-		/// Required method for Designer support - do not modify
-		/// the contents of this method with the code editor.
-		/// </summary>
-		private void InitializeComponent()
-		{
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.label4 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.mtxGridView4 = new Dew.Math.Controls.MtxGridView();
-            this.label8 = new System.Windows.Forms.Label();
-            this.mtxGridView1 = new Dew.Math.Controls.MtxGridView();
-            this.mtxGridView2 = new Dew.Math.Controls.MtxGridView();
-            this.mtxGridView3 = new Dew.Math.Controls.MtxGridView();
-            this.panel2.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.mtxGridView4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mtxGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mtxGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mtxGridView3)).BeginInit();
-            this.SuspendLayout();
+        #region Designer generated code
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            label4 = new Label();
+            comboBox1 = new ComboBox();
+            label5 = new Label();
+            label6 = new Label();
+            button1 = new Button();
+            panel4 = new Panel();
+            textBox1 = new TextBox();
+            label7 = new Label();
+            groupBox1 = new GroupBox();
+            radioButton3 = new RadioButton();
+            radioButton2 = new RadioButton();
+            radioButton1 = new RadioButton();
+            checkBox1 = new CheckBox();
+            panel5 = new Panel();
+            mtxGridView4 = new Dew.Math.Controls.MtxGridView();
+            label8 = new Label();
+            mtxGridView1 = new Dew.Math.Controls.MtxGridView();
+            mtxGridView2 = new Dew.Math.Controls.MtxGridView();
+            mtxGridView3 = new Dew.Math.Controls.MtxGridView();
+            panel2.SuspendLayout();
+            panel4.SuspendLayout();
+            groupBox1.SuspendLayout();
+            panel5.SuspendLayout();
+            ((ISupportInitialize)mtxGridView4).BeginInit();
+            ((ISupportInitialize)mtxGridView1).BeginInit();
+            ((ISupportInitialize)mtxGridView2).BeginInit();
+            ((ISupportInitialize)mtxGridView3).BeginInit();
+            SuspendLayout();
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.mtxGridView3);
-            this.panel2.Controls.Add(this.mtxGridView2);
-            this.panel2.Controls.Add(this.mtxGridView1);
-            this.panel2.Controls.Add(this.panel5);
-            this.panel2.Controls.Add(this.panel4);
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.comboBox1);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Size = new System.Drawing.Size(878, 430);
+            panel2.Controls.Add(mtxGridView3);
+            panel2.Controls.Add(mtxGridView2);
+            panel2.Controls.Add(mtxGridView1);
+            panel2.Controls.Add(panel5);
+            panel2.Controls.Add(panel4);
+            panel2.Controls.Add(button1);
+            panel2.Controls.Add(label5);
+            panel2.Controls.Add(comboBox1);
+            panel2.Controls.Add(label4);
+            panel2.Controls.Add(label6);
+            panel2.Size = new Size(881, 402);
             // 
             // panel3
             // 
-            this.panel3.Location = new System.Drawing.Point(0, 542);
-            this.panel3.Size = new System.Drawing.Size(878, 48);
+            panel3.Location = new Point(0, 540);
+            panel3.Size = new Size(881, 59);
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Size = new System.Drawing.Size(878, 112);
+            richTextBox1.Size = new Size(881, 138);
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(8, 152);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(48, 24);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Method";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            label4.Location = new Point(10, 187);
+            label4.Name = "label4";
+            label4.Size = new Size(57, 30);
+            label4.TabIndex = 6;
+            label4.Text = "Method";
+            label4.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // comboBox1
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Items.AddRange(new object[] {
-            "LUSolve",
-            "SVDSolve"});
-            this.comboBox1.Location = new System.Drawing.Point(56, 152);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 7;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox1.Items.AddRange(new object[] { "LUSolve", "SVDSolve" });
+            comboBox1.Location = new Point(67, 187);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(145, 23);
+            comboBox1.TabIndex = 7;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // label5
             // 
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label5.Location = new System.Drawing.Point(318, 72);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(16, 24);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "x";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            label5.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 238);
+            label5.Location = new Point(382, 89);
+            label5.Name = "label5";
+            label5.Size = new Size(19, 29);
+            label5.TabIndex = 8;
+            label5.Text = "x";
+            label5.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label6
             // 
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label6.Location = new System.Drawing.Point(482, 72);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(24, 24);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "=";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            label6.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 238);
+            label6.Location = new Point(578, 89);
+            label6.Name = "label6";
+            label6.Size = new Size(29, 29);
+            label6.TabIndex = 8;
+            label6.Text = "=";
+            label6.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // button1
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button1.Location = new System.Drawing.Point(458, 149);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(117, 24);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Solve";
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            button1.FlatStyle = FlatStyle.System;
+            button1.Location = new Point(550, 183);
+            button1.Name = "button1";
+            button1.Size = new Size(140, 30);
+            button1.TabIndex = 9;
+            button1.Text = "Solve";
+            button1.Click += button1_Click;
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.textBox1);
-            this.panel4.Controls.Add(this.label7);
-            this.panel4.Controls.Add(this.groupBox1);
-            this.panel4.Controls.Add(this.checkBox1);
-            this.panel4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.panel4.Location = new System.Drawing.Point(8, 176);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(360, 128);
-            this.panel4.TabIndex = 10;
+            panel4.Controls.Add(textBox1);
+            panel4.Controls.Add(label7);
+            panel4.Controls.Add(groupBox1);
+            panel4.Controls.Add(checkBox1);
+            panel4.ForeColor = SystemColors.ControlText;
+            panel4.Location = new Point(10, 217);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(432, 157);
+            panel4.TabIndex = 10;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(168, 24);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(184, 80);
-            this.textBox1.TabIndex = 3;
+            textBox1.Location = new Point(202, 30);
+            textBox1.Multiline = true;
+            textBox1.Name = "textBox1";
+            textBox1.ReadOnly = true;
+            textBox1.Size = new Size(220, 98);
+            textBox1.TabIndex = 3;
             // 
             // label7
             // 
-            this.label7.Location = new System.Drawing.Point(168, 8);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(100, 16);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "Report";
+            label7.Location = new Point(202, 10);
+            label7.Name = "label7";
+            label7.Size = new Size(120, 20);
+            label7.TabIndex = 2;
+            label7.Text = "Report";
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.radioButton3);
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Location = new System.Drawing.Point(8, 32);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(120, 72);
-            this.groupBox1.TabIndex = 1;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Condition Norm";
+            groupBox1.Controls.Add(radioButton3);
+            groupBox1.Controls.Add(radioButton2);
+            groupBox1.Controls.Add(radioButton1);
+            groupBox1.Location = new Point(10, 39);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(144, 89);
+            groupBox1.TabIndex = 1;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Condition Norm";
             // 
             // radioButton3
             // 
-            this.radioButton3.Location = new System.Drawing.Point(8, 48);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(96, 16);
-            this.radioButton3.TabIndex = 2;
-            this.radioButton3.Text = "cnNormInf";
-            this.radioButton3.Click += new System.EventHandler(this.radioButton1_Click);
+            radioButton3.Location = new Point(10, 59);
+            radioButton3.Name = "radioButton3";
+            radioButton3.Size = new Size(115, 20);
+            radioButton3.TabIndex = 2;
+            radioButton3.Text = "cnNormInf";
+            radioButton3.Click += radioButton1_Click;
             // 
             // radioButton2
             // 
-            this.radioButton2.Location = new System.Drawing.Point(8, 32);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(96, 16);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.Text = "cnNorm1";
-            this.radioButton2.Click += new System.EventHandler(this.radioButton1_Click);
+            radioButton2.Location = new Point(10, 39);
+            radioButton2.Name = "radioButton2";
+            radioButton2.Size = new Size(115, 20);
+            radioButton2.TabIndex = 1;
+            radioButton2.Text = "cnNorm1";
+            radioButton2.Click += radioButton1_Click;
             // 
             // radioButton1
             // 
-            this.radioButton1.Checked = true;
-            this.radioButton1.Location = new System.Drawing.Point(8, 16);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(96, 16);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "cnNone";
-            this.radioButton1.Click += new System.EventHandler(this.radioButton1_Click);
+            radioButton1.Checked = true;
+            radioButton1.Location = new Point(10, 20);
+            radioButton1.Name = "radioButton1";
+            radioButton1.Size = new Size(115, 19);
+            radioButton1.TabIndex = 0;
+            radioButton1.TabStop = true;
+            radioButton1.Text = "cnNone";
+            radioButton1.Click += radioButton1_Click;
             // 
             // checkBox1
             // 
-            this.checkBox1.Location = new System.Drawing.Point(8, 8);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(152, 16);
-            this.checkBox1.TabIndex = 0;
-            this.checkBox1.Text = "Refine solution";
-            this.checkBox1.Click += new System.EventHandler(this.checkBox1_Click);
+            checkBox1.Location = new Point(10, 10);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(182, 20);
+            checkBox1.TabIndex = 0;
+            checkBox1.Text = "Refine solution";
+            checkBox1.Click += checkBox1_Click;
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.mtxGridView4);
-            this.panel5.Controls.Add(this.label8);
-            this.panel5.Location = new System.Drawing.Point(8, 176);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(128, 136);
-            this.panel5.TabIndex = 11;
-            this.panel5.Visible = false;
+            panel5.Controls.Add(mtxGridView4);
+            panel5.Controls.Add(label8);
+            panel5.Location = new Point(10, 217);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(153, 167);
+            panel5.TabIndex = 11;
+            panel5.Visible = false;
             // 
             // mtxGridView4
             // 
-            this.mtxGridView4.AllowUserToAddRows = false;
-            this.mtxGridView4.AllowUserToDeleteRows = false;
-            this.mtxGridView4.AllowUserToResizeColumns = false;
-            this.mtxGridView4.AllowUserToResizeRows = false;
-            this.mtxGridView4.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCellsExceptHeader;
-            this.mtxGridView4.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
-            this.mtxGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            mtxGridView4.AllowUserToAddRows = false;
+            mtxGridView4.AllowUserToDeleteRows = false;
+            mtxGridView4.AllowUserToResizeColumns = false;
+            mtxGridView4.AllowUserToResizeRows = false;
+            mtxGridView4.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCellsExceptHeader;
+            mtxGridView4.ClipboardCopyMode = DataGridViewClipboardCopyMode.Disable;
+            mtxGridView4.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle4.BackColor = SystemColors.Window;
+            dataGridViewCellStyle4.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 238);
+            dataGridViewCellStyle4.ForeColor = SystemColors.ControlText;
             dataGridViewCellStyle4.Format = "0.0000";
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.mtxGridView4.DefaultCellStyle = dataGridViewCellStyle4;
-            this.mtxGridView4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mtxGridView4.Location = new System.Drawing.Point(0, 0);
-            this.mtxGridView4.MultiSelect = false;
-            this.mtxGridView4.Name = "mtxGridView4";
-            this.mtxGridView4.numberFormat = "0.0000";
-            this.mtxGridView4.ObjectInfoText = "";
-            this.mtxGridView4.ReadOnly = true;
-            this.mtxGridView4.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            this.mtxGridView4.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.mtxGridView4.Size = new System.Drawing.Size(128, 136);
-            this.mtxGridView4.TabIndex = 2;
-            this.mtxGridView4.VirtualMode = true;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
+            mtxGridView4.DefaultCellStyle = dataGridViewCellStyle4;
+            mtxGridView4.Dock = DockStyle.Fill;
+            mtxGridView4.Location = new Point(0, 0);
+            mtxGridView4.MultiSelect = false;
+            mtxGridView4.Name = "mtxGridView4";
+            mtxGridView4.numberFormat = "0.0000";
+            mtxGridView4.ObjectInfoText = "";
+            mtxGridView4.ReadOnly = true;
+            mtxGridView4.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            mtxGridView4.SelectionMode = DataGridViewSelectionMode.CellSelect;
+            mtxGridView4.Size = new Size(153, 167);
+            mtxGridView4.TabIndex = 2;
+            mtxGridView4.VirtualMode = true;
             // 
             // label8
             // 
-            this.label8.Location = new System.Drawing.Point(0, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(104, 16);
-            this.label8.TabIndex = 1;
-            this.label8.Text = "Singular values";
+            label8.Location = new Point(0, 0);
+            label8.Name = "label8";
+            label8.Size = new Size(125, 20);
+            label8.TabIndex = 1;
+            label8.Text = "Singular values";
             // 
             // mtxGridView1
             // 
-            this.mtxGridView1.AllowUserToAddRows = false;
-            this.mtxGridView1.AllowUserToDeleteRows = false;
-            this.mtxGridView1.AllowUserToResizeColumns = false;
-            this.mtxGridView1.AllowUserToResizeRows = false;
-            this.mtxGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCellsExceptHeader;
-            this.mtxGridView1.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
-            this.mtxGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            mtxGridView1.AllowUserToAddRows = false;
+            mtxGridView1.AllowUserToDeleteRows = false;
+            mtxGridView1.AllowUserToResizeColumns = false;
+            mtxGridView1.AllowUserToResizeRows = false;
+            mtxGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCellsExceptHeader;
+            mtxGridView1.ClipboardCopyMode = DataGridViewClipboardCopyMode.Disable;
+            mtxGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle3.BackColor = SystemColors.Window;
+            dataGridViewCellStyle3.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 238);
+            dataGridViewCellStyle3.ForeColor = SystemColors.ControlText;
             dataGridViewCellStyle3.Format = "0.0000";
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.mtxGridView1.DefaultCellStyle = dataGridViewCellStyle3;
-            this.mtxGridView1.Location = new System.Drawing.Point(8, 19);
-            this.mtxGridView1.MultiSelect = false;
-            this.mtxGridView1.Name = "mtxGridView1";
-            this.mtxGridView1.numberFormat = "0.0000";
-            this.mtxGridView1.ObjectInfoText = "A";
-            this.mtxGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            this.mtxGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.mtxGridView1.ShowObjectInfo = true;
-            this.mtxGridView1.Size = new System.Drawing.Size(304, 112);
-            this.mtxGridView1.TabIndex = 12;
-            this.mtxGridView1.VirtualMode = true;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            mtxGridView1.DefaultCellStyle = dataGridViewCellStyle3;
+            mtxGridView1.Location = new Point(10, 23);
+            mtxGridView1.MultiSelect = false;
+            mtxGridView1.Name = "mtxGridView1";
+            mtxGridView1.numberFormat = "0.0000";
+            mtxGridView1.ObjectInfoText = "A";
+            mtxGridView1.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            mtxGridView1.SelectionMode = DataGridViewSelectionMode.CellSelect;
+            mtxGridView1.ShowObjectInfo = true;
+            mtxGridView1.Size = new Size(364, 138);
+            mtxGridView1.TabIndex = 12;
+            mtxGridView1.VirtualMode = true;
             // 
             // mtxGridView2
             // 
-            this.mtxGridView2.AllowUserToAddRows = false;
-            this.mtxGridView2.AllowUserToDeleteRows = false;
-            this.mtxGridView2.AllowUserToResizeColumns = false;
-            this.mtxGridView2.AllowUserToResizeRows = false;
-            this.mtxGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCellsExceptHeader;
-            this.mtxGridView2.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
-            this.mtxGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            mtxGridView2.AllowUserToAddRows = false;
+            mtxGridView2.AllowUserToDeleteRows = false;
+            mtxGridView2.AllowUserToResizeColumns = false;
+            mtxGridView2.AllowUserToResizeRows = false;
+            mtxGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCellsExceptHeader;
+            mtxGridView2.ClipboardCopyMode = DataGridViewClipboardCopyMode.Disable;
+            mtxGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle2.BackColor = SystemColors.Window;
+            dataGridViewCellStyle2.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 238);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
             dataGridViewCellStyle2.Format = "0.0000";
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.mtxGridView2.DefaultCellStyle = dataGridViewCellStyle2;
-            this.mtxGridView2.Location = new System.Drawing.Point(341, 19);
-            this.mtxGridView2.MultiSelect = false;
-            this.mtxGridView2.Name = "mtxGridView2";
-            this.mtxGridView2.numberFormat = "0.0000";
-            this.mtxGridView2.ObjectInfoText = "X";
-            this.mtxGridView2.ReadOnly = true;
-            this.mtxGridView2.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.mtxGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.mtxGridView2.ShowObjectInfo = true;
-            this.mtxGridView2.Size = new System.Drawing.Size(135, 112);
-            this.mtxGridView2.TabIndex = 13;
-            this.mtxGridView2.VirtualMode = true;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            mtxGridView2.DefaultCellStyle = dataGridViewCellStyle2;
+            mtxGridView2.Location = new Point(409, 23);
+            mtxGridView2.MultiSelect = false;
+            mtxGridView2.Name = "mtxGridView2";
+            mtxGridView2.numberFormat = "0.0000";
+            mtxGridView2.ObjectInfoText = "X";
+            mtxGridView2.ReadOnly = true;
+            mtxGridView2.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            mtxGridView2.SelectionMode = DataGridViewSelectionMode.CellSelect;
+            mtxGridView2.ShowObjectInfo = true;
+            mtxGridView2.Size = new Size(162, 138);
+            mtxGridView2.TabIndex = 13;
+            mtxGridView2.VirtualMode = true;
             // 
             // mtxGridView3
             // 
-            this.mtxGridView3.AllowUserToAddRows = false;
-            this.mtxGridView3.AllowUserToDeleteRows = false;
-            this.mtxGridView3.AllowUserToResizeColumns = false;
-            this.mtxGridView3.AllowUserToResizeRows = false;
-            this.mtxGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCellsExceptHeader;
-            this.mtxGridView3.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
-            this.mtxGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            mtxGridView3.AllowUserToAddRows = false;
+            mtxGridView3.AllowUserToDeleteRows = false;
+            mtxGridView3.AllowUserToResizeColumns = false;
+            mtxGridView3.AllowUserToResizeRows = false;
+            mtxGridView3.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCellsExceptHeader;
+            mtxGridView3.ClipboardCopyMode = DataGridViewClipboardCopyMode.Disable;
+            mtxGridView3.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle1.BackColor = SystemColors.Window;
+            dataGridViewCellStyle1.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 238);
+            dataGridViewCellStyle1.ForeColor = SystemColors.ControlText;
             dataGridViewCellStyle1.Format = "0.0000";
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.mtxGridView3.DefaultCellStyle = dataGridViewCellStyle1;
-            this.mtxGridView3.Location = new System.Drawing.Point(512, 19);
-            this.mtxGridView3.MultiSelect = false;
-            this.mtxGridView3.Name = "mtxGridView3";
-            this.mtxGridView3.numberFormat = "0.0000";
-            this.mtxGridView3.ObjectInfoText = "B (RHS)";
-            this.mtxGridView3.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.mtxGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.mtxGridView3.ShowObjectInfo = true;
-            this.mtxGridView3.Size = new System.Drawing.Size(131, 112);
-            this.mtxGridView3.TabIndex = 14;
-            this.mtxGridView3.VirtualMode = true;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.False;
+            mtxGridView3.DefaultCellStyle = dataGridViewCellStyle1;
+            mtxGridView3.Location = new Point(614, 23);
+            mtxGridView3.MultiSelect = false;
+            mtxGridView3.Name = "mtxGridView3";
+            mtxGridView3.numberFormat = "0.0000";
+            mtxGridView3.ObjectInfoText = "B (RHS)";
+            mtxGridView3.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            mtxGridView3.SelectionMode = DataGridViewSelectionMode.CellSelect;
+            mtxGridView3.ShowObjectInfo = true;
+            mtxGridView3.Size = new Size(158, 138);
+            mtxGridView3.TabIndex = 14;
+            mtxGridView3.VirtualMode = true;
             // 
             // SysLinearForm
             // 
-            this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
-            this.ClientSize = new System.Drawing.Size(878, 590);
-            this.Name = "SysLinearForm";
-            this.Load += new System.EventHandler(this.SysLinearForm_Load);
-            this.panel2.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.mtxGridView4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mtxGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mtxGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mtxGridView3)).EndInit();
-            this.ResumeLayout(false);
+            AutoScaleBaseSize = new Size(6, 16);
+            ClientSize = new Size(881, 599);
+            Name = "SysLinearForm";
+            Load += SysLinearForm_Load;
+            panel2.ResumeLayout(false);
+            panel4.ResumeLayout(false);
+            panel4.PerformLayout();
+            groupBox1.ResumeLayout(false);
+            panel5.ResumeLayout(false);
+            ((ISupportInitialize)mtxGridView4).EndInit();
+            ((ISupportInitialize)mtxGridView1).EndInit();
+            ((ISupportInitialize)mtxGridView2).EndInit();
+            ((ISupportInitialize)mtxGridView3).EndInit();
+            ResumeLayout(false);
 
-		}
-		#endregion
+        }
+        #endregion
 
-		private void comboBox1_SelectedIndexChanged(object sender, System.EventArgs e) {
+        private void comboBox1_SelectedIndexChanged(object sender, System.EventArgs e) {
 			if (comboBox1.SelectedIndex == 0) {
 				panel4.Visible = true;
 				panel5.Visible = ! panel4.Visible;

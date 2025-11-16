@@ -139,16 +139,19 @@ namespace StatsMasterDemo
             base.Dispose(disposing);
         }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public TVec Data1
         {
             get { return hypControl.DataVec1; }
         }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public TVec Data2
         {
             get { return hypControl.DataVec2; }
         }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public int NumDataSets
         {
             get { return numdatasets; }

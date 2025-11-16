@@ -18,10 +18,10 @@ namespace MtxVecDemo
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Button buttonClear;
 		private System.Windows.Forms.Label labelTotal;
-		private System.Windows.Forms.DataGrid dataGrid1;
-		private System.Windows.Forms.DataGridTableStyle dataGridTableStyle1;
-		private System.Windows.Forms.DataGridTextBoxColumn dataGridTextBoxColumn1;
-		private System.Windows.Forms.DataGridTextBoxColumn dataGridTextBoxColumn2;
+		private System.Windows.Forms.DataGridView dataGrid1;
+		//private System.Windows.Forms.DataGridTableStyle dataGridTableStyle1;
+		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridTextBoxColumn1;
+		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridTextBoxColumn2;
 		/// <summary>
 		/// Required designer variable.
 		/// </summary>
@@ -53,132 +53,124 @@ namespace MtxVecDemo
 			base.Dispose( disposing );
 		}
 
-		#region Windows Form Designer generated code
-		/// <summary>
-		/// Required method for Designer support - do not modify
-		/// the contents of this method with the code editor.
-		/// </summary>
-		private void InitializeComponent()
-		{
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.labelTotal = new System.Windows.Forms.Label();
-            this.buttonClear = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBoxFilter = new System.Windows.Forms.TextBox();
-            this.dataGrid1 = new System.Windows.Forms.DataGrid();
-            this.dataGridTableStyle1 = new System.Windows.Forms.DataGridTableStyle();
-            this.dataGridTextBoxColumn1 = new System.Windows.Forms.DataGridTextBoxColumn();
-            this.dataGridTextBoxColumn2 = new System.Windows.Forms.DataGridTextBoxColumn();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGrid1)).BeginInit();
-            this.SuspendLayout();
+        #region Windows Form Designer generated code
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            panel1 = new Panel();
+            labelTotal = new Label();
+            buttonClear = new Button();
+            label1 = new Label();
+            textBoxFilter = new TextBox();
+            dataGrid1 = new DataGridView();
+            dataGridTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            dataGridTextBoxColumn2 = new DataGridViewTextBoxColumn();
+            panel1.SuspendLayout();
+            ((ISupportInitialize)dataGrid1).BeginInit();
+            SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.labelTotal);
-            this.panel1.Controls.Add(this.buttonClear);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.textBoxFilter);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(677, 72);
-            this.panel1.TabIndex = 0;
+            panel1.Controls.Add(labelTotal);
+            panel1.Controls.Add(buttonClear);
+            panel1.Controls.Add(label1);
+            panel1.Controls.Add(textBoxFilter);
+            panel1.Dock = DockStyle.Top;
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(869, 89);
+            panel1.TabIndex = 0;
             // 
             // labelTotal
             // 
-            this.labelTotal.Location = new System.Drawing.Point(8, 48);
-            this.labelTotal.Name = "labelTotal";
-            this.labelTotal.Size = new System.Drawing.Size(288, 16);
-            this.labelTotal.TabIndex = 3;
-            this.labelTotal.Text = "Total : ";
+            labelTotal.Location = new Point(10, 59);
+            labelTotal.Name = "labelTotal";
+            labelTotal.Size = new Size(345, 20);
+            labelTotal.TabIndex = 3;
+            labelTotal.Text = "Total : ";
             // 
             // buttonClear
             // 
-            this.buttonClear.Location = new System.Drawing.Point(224, 24);
-            this.buttonClear.Name = "buttonClear";
-            this.buttonClear.Size = new System.Drawing.Size(75, 23);
-            this.buttonClear.TabIndex = 2;
-            this.buttonClear.Text = "Clear";
-            this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
+            buttonClear.Location = new Point(269, 30);
+            buttonClear.Name = "buttonClear";
+            buttonClear.Size = new Size(90, 28);
+            buttonClear.TabIndex = 2;
+            buttonClear.Text = "Clear";
+            buttonClear.Click += buttonClear_Click;
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(8, 8);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(104, 16);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Filter";
+            label1.Location = new Point(10, 10);
+            label1.Name = "label1";
+            label1.Size = new Size(124, 20);
+            label1.TabIndex = 1;
+            label1.Text = "Filter";
             // 
             // textBoxFilter
             // 
-            this.textBoxFilter.Location = new System.Drawing.Point(8, 24);
-            this.textBoxFilter.Name = "textBoxFilter";
-            this.textBoxFilter.Size = new System.Drawing.Size(208, 20);
-            this.textBoxFilter.TabIndex = 0;
-            this.textBoxFilter.TextChanged += new System.EventHandler(this.textBoxFilter_TextChanged);
+            textBoxFilter.Location = new Point(10, 30);
+            textBoxFilter.Name = "textBoxFilter";
+            textBoxFilter.Size = new Size(249, 23);
+            textBoxFilter.TabIndex = 0;
+            textBoxFilter.TextChanged += textBoxFilter_TextChanged;
             // 
             // dataGrid1
             // 
-            this.dataGrid1.CaptionVisible = false;
-            this.dataGrid1.DataMember = "";
-            this.dataGrid1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGrid1.HeaderForeColor = System.Drawing.SystemColors.ControlText;
-            this.dataGrid1.Location = new System.Drawing.Point(0, 72);
-            this.dataGrid1.Name = "dataGrid1";
-            this.dataGrid1.ReadOnly = true;
-            this.dataGrid1.RowHeadersVisible = false;
-            this.dataGrid1.Size = new System.Drawing.Size(677, 320);
-            this.dataGrid1.TabIndex = 1;
-            this.dataGrid1.TableStyles.AddRange(new System.Windows.Forms.DataGridTableStyle[] {
-            this.dataGridTableStyle1});
-            // 
-            // dataGridTableStyle1
-            // 
-            this.dataGridTableStyle1.DataGrid = this.dataGrid1;
-            this.dataGridTableStyle1.GridColumnStyles.AddRange(new System.Windows.Forms.DataGridColumnStyle[] {
-            this.dataGridTextBoxColumn1,
-            this.dataGridTextBoxColumn2});
-            this.dataGridTableStyle1.HeaderForeColor = System.Drawing.SystemColors.ControlText;
-            this.dataGridTableStyle1.ReadOnly = true;
-            this.dataGridTableStyle1.RowHeadersVisible = false;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle1.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dataGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGrid1.Columns.AddRange(new DataGridViewColumn[] { dataGridTextBoxColumn1, dataGridTextBoxColumn2 });
+            dataGrid1.Dock = DockStyle.Fill;
+            dataGrid1.Location = new Point(0, 89);
+            dataGrid1.Name = "dataGrid1";
+            dataGrid1.ReadOnly = true;
+            dataGrid1.RowHeadersVisible = false;
+            dataGrid1.Size = new Size(869, 519);
+            dataGrid1.TabIndex = 1;
             // 
             // dataGridTextBoxColumn1
             // 
-            this.dataGridTextBoxColumn1.Format = "";
-            this.dataGridTextBoxColumn1.FormatInfo = null;
-            this.dataGridTextBoxColumn1.HeaderText = "Name";
-            this.dataGridTextBoxColumn1.MappingName = "Name";
-            this.dataGridTextBoxColumn1.NullText = "";
-            this.dataGridTextBoxColumn1.Width = 250;
+            dataGridTextBoxColumn1.DataPropertyName = "Name";
+            dataGridTextBoxColumn1.HeaderText = "Name";
+            dataGridTextBoxColumn1.Name = "dataGridTextBoxColumn1";
+            dataGridTextBoxColumn1.ReadOnly = true;
+            dataGridTextBoxColumn1.Width = 250;
             // 
             // dataGridTextBoxColumn2
             // 
-            this.dataGridTextBoxColumn2.Format = "";
-            this.dataGridTextBoxColumn2.FormatInfo = null;
-            this.dataGridTextBoxColumn2.HeaderText = "Description";
-            this.dataGridTextBoxColumn2.MappingName = "Description";
-            this.dataGridTextBoxColumn2.NullText = "";
-            this.dataGridTextBoxColumn2.Width = 500;
+            dataGridTextBoxColumn2.DataPropertyName = "Description";
+            dataGridTextBoxColumn2.HeaderText = "Description";
+            dataGridTextBoxColumn2.Name = "dataGridTextBoxColumn2";
+            dataGridTextBoxColumn2.ReadOnly = true;
+            dataGridTextBoxColumn2.Width = 500;
             // 
             // FunctionListForm
             // 
-            this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
-            this.ClientSize = new System.Drawing.Size(677, 392);
-            this.Controls.Add(this.dataGrid1);
-            this.Controls.Add(this.panel1);
-            this.Name = "FunctionListForm";
-            this.Text = "FunctionList";
-            this.Load += new System.EventHandler(this.FunctionListForm_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGrid1)).EndInit();
-            this.ResumeLayout(false);
+            AutoScaleBaseSize = new Size(6, 16);
+            ClientSize = new Size(869, 608);
+            Controls.Add(dataGrid1);
+            Controls.Add(panel1);
+            Name = "FunctionListForm";
+            Text = "FunctionList";
+            Load += FunctionListForm_Load;
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ((ISupportInitialize)dataGrid1).EndInit();
+            ResumeLayout(false);
 
-		}
-		#endregion
-		
-		DataTable functions;
+        }
+        #endregion
+
+        DataTable functions;
 		private void createDataTable() {
 			functions = new DataTable();
 			functions.Columns.Add("Name",typeof(String));

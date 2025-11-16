@@ -121,7 +121,7 @@ namespace DSPDemo
             richTextBox1.Dock = DockStyle.Top;
             richTextBox1.Location = new Point(0, 0);
             richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(948, 118);
+            richTextBox1.Size = new Size(1159, 118);
             richTextBox1.TabIndex = 0;
             richTextBox1.Text = "richTextBox1";
             // 
@@ -133,9 +133,9 @@ namespace DSPDemo
             panel1.Controls.Add(button2);
             panel1.Controls.Add(button1);
             panel1.Dock = DockStyle.Bottom;
-            panel1.Location = new Point(0, 607);
+            panel1.Location = new Point(0, 792);
             panel1.Name = "panel1";
-            panel1.Size = new Size(948, 51);
+            panel1.Size = new Size(1159, 51);
             panel1.TabIndex = 1;
             // 
             // phaseBox
@@ -1083,7 +1083,7 @@ namespace DSPDemo
             SpectrumChart.Printer.Margins = margins1;
             SpectrumChart.Series.Add(mtxFastLine1);
             SpectrumChart.Series.Add(points1);
-            SpectrumChart.Size = new Size(948, 489);
+            SpectrumChart.Size = new Size(1159, 674);
             SpectrumChart.SpectrumPart = SpectrumPart.sppAmplt;
             // 
             // 
@@ -1565,31 +1565,31 @@ namespace DSPDemo
             mtxFastLine1.YValues.DataMember = "Y";
             mtxFastLine1.YValues.Value = new double[]
     {
-    935D,
-    884D,
-    864D,
-    923D,
-    938D,
-    964D,
-    916D,
-    1030D,
-    1090D,
-    1179D,
-    1121D,
-    1195D,
-    1287D,
-    1314D,
-    1366D,
-    1268D,
-    1364D,
-    1364D,
-    1345D,
-    1230D,
-    1282D,
-    1362D,
-    1247D,
-    1350D,
-    1247D,
+    667D,
+    627D,
+    545D,
+    565D,
+    454D,
+    419D,
+    532D,
+    560D,
+    561D,
+    675D,
+    656D,
+    745D,
+    645D,
+    523D,
+    471D,
+    398D,
+    370D,
+    255D,
+    289D,
+    235D,
+    156D,
+    133D,
+    236D,
+    223D,
+    287D,
     0D,
     0D,
     0D,
@@ -1937,31 +1937,31 @@ namespace DSPDemo
             points1.YValues.DataMember = "Y";
             points1.YValues.Value = new double[]
     {
-    947D,
-    988D,
-    1006D,
-    1056D,
-    1106D,
-    1145D,
-    1096D,
-    1155D,
-    1190D,
-    1213D,
-    1210D,
-    1247D,
-    1250D,
-    1259D,
-    1322D,
-    1370D,
-    1374D,
-    1391D,
-    1424D,
-    1367D,
-    1347D,
-    1304D,
-    1327D,
-    1326D,
-    1345D,
+    116D,
+    42D,
+    97D,
+    166D,
+    190D,
+    208D,
+    233D,
+    248D,
+    180D,
+    129D,
+    58D,
+    88D,
+    59D,
+    77D,
+    24D,
+    94D,
+    147D,
+    164D,
+    232D,
+    197D,
+    136D,
+    72D,
+    105D,
+    146D,
+    195D,
     0D,
     0D,
     0D,
@@ -2053,6 +2053,7 @@ namespace DSPDemo
             // 
             SignalRead1.ChannelCount = 1;
             SignalRead1.Complex = false;
+            SignalRead1.DataSerialization = resources.GetString("SignalRead1.DataSerialization");
             SignalRead1.FloatPrecision = TMtxFloatPrecision.mvDouble;
             SignalRead1.FloatPrecisionLock = false;
             SignalRead1.FramesPerSecond = 0.0009765625D;
@@ -2067,6 +2068,7 @@ namespace DSPDemo
             // 
             SpectrumAnalyzer1.ArOrder = 100;
             SpectrumAnalyzer1.Bands.TemplateIndex = -1;
+            SpectrumAnalyzer1.Bands.TemplatesSerialization = "AAAAAA==";
             SpectrumAnalyzer1.Complex = false;
             SpectrumAnalyzer1.FloatPrecision = TMtxFloatPrecision.mvDouble;
             SpectrumAnalyzer1.FloatPrecisionLock = false;
@@ -2119,7 +2121,7 @@ namespace DSPDemo
             // PeakMarkingBasicForm
             // 
             AutoScaleBaseSize = new Size(6, 16);
-            ClientSize = new Size(948, 658);
+            ClientSize = new Size(1159, 843);
             Controls.Add(SpectrumChart);
             Controls.Add(panel1);
             Controls.Add(richTextBox1);

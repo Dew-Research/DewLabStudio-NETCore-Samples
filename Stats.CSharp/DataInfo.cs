@@ -25,12 +25,14 @@ namespace StatsMasterDemo
         private Steema.TeeChart.Styles.HorizBar horizBar1;
         private string stringformat = "0.0000";
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public string StringFormat
         {
             get { return stringformat; }
             set { stringformat = value; Update(); }
         }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         [DefaultValue(false)]
         public bool SettingsPanelVisible
         {
@@ -3097,19 +3099,22 @@ namespace StatsMasterDemo
 			}
 		}
 
-		public bool ShowStat
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        public bool ShowStat
 		{
 			get { return this.checkBoxStat.Checked;}
 			set { checkBoxStat.Checked = value;}
 		}
 
-		public bool ShowHistogram
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        public bool ShowHistogram
 		{
 			get{ return checkBoxHistogram.Checked; }
 			set { checkBoxHistogram.Checked = value; }
 		}
 
-		public bool ShowData
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        public bool ShowData
 		{
 			get { return checkBoxData.Checked;}
 			set { checkBoxData.Checked = value;}

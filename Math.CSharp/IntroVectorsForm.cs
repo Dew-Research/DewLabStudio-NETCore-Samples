@@ -42,39 +42,40 @@ namespace MtxVecDemo {
 			base.Dispose( disposing );
 		}
 
-		#region Windows Form Designer generated code
-		/// <summary>
-		/// Required method for Designer support - do not modify
-		/// the contents of this method with the code editor.
-		/// </summary>
-		private void InitializeComponent() {
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.SuspendLayout();
+        #region Windows Form Designer generated code
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            richTextBox1 = new RichTextBox();
+            SuspendLayout();
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.richTextBox1.Location = new System.Drawing.Point(0, 0);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(953, 587);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "";
+            richTextBox1.Dock = DockStyle.Fill;
+            richTextBox1.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            richTextBox1.Location = new Point(0, 0);
+            richTextBox1.Name = "richTextBox1";
+            richTextBox1.Size = new Size(949, 583);
+            richTextBox1.TabIndex = 0;
+            richTextBox1.Text = "";
             // 
             // IntroVectorsForm
             // 
-            this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
-            this.ClientSize = new System.Drawing.Size(953, 587);
-            this.Controls.Add(this.richTextBox1);
-            this.Name = "IntroVectorsForm";
-            this.Text = "IntroVectors";
-            this.Load += new System.EventHandler(this.IntroVectors_Load);
-            this.ResumeLayout(false);
+            AutoScaleBaseSize = new Size(6, 16);
+            ClientSize = new Size(949, 583);
+            Controls.Add(richTextBox1);
+            Name = "IntroVectorsForm";
+            Text = "IntroVectors";
+            Load += IntroVectors_Load;
+            ResumeLayout(false);
 
-		}
-		#endregion
+        }
+        #endregion
 
-		private void IntroVectors_Load(object sender, System.EventArgs e) {
+        private void IntroVectors_Load(object sender, System.EventArgs e) {
 			richTextBox1.Clear();
 			richTextBox1.SelectionFont = new Font(richTextBox1.SelectionFont.FontFamily,11,FontStyle.Bold);
 			richTextBox1.SelectionColor = Color.FromArgb(51,104,196);

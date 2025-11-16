@@ -47,189 +47,189 @@ namespace MtxVecDemo
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBoxFormat = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.checkBoxSci = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.mtxGridView1 = new Dew.Math.Controls.MtxGridView();
-            this.panel2.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.mtxGridView1)).BeginInit();
-            this.SuspendLayout();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            panel4 = new Panel();
+            groupBox1 = new GroupBox();
+            textBoxFormat = new TextBox();
+            label1 = new Label();
+            checkBoxSci = new CheckBox();
+            checkBox4 = new CheckBox();
+            checkBox3 = new CheckBox();
+            checkBox2 = new CheckBox();
+            checkBox1 = new CheckBox();
+            mtxGridView1 = new Dew.Math.Controls.MtxGridView();
+            panel2.SuspendLayout();
+            panel4.SuspendLayout();
+            groupBox1.SuspendLayout();
+            ((ISupportInitialize)mtxGridView1).BeginInit();
+            SuspendLayout();
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.mtxGridView1);
-            this.panel2.Controls.Add(this.panel4);
-            this.panel2.Size = new System.Drawing.Size(687, 372);
+            panel2.Controls.Add(mtxGridView1);
+            panel2.Controls.Add(panel4);
+            panel2.Size = new Size(763, 377);
             // 
             // panel3
             // 
-            this.panel3.Location = new System.Drawing.Point(0, 484);
-            this.panel3.Size = new System.Drawing.Size(687, 48);
+            panel3.Location = new Point(0, 515);
+            panel3.Size = new Size(763, 48);
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Size = new System.Drawing.Size(687, 112);
+            richTextBox1.Size = new Size(763, 138);
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.groupBox1);
-            this.panel4.Controls.Add(this.checkBox4);
-            this.panel4.Controls.Add(this.checkBox3);
-            this.panel4.Controls.Add(this.checkBox2);
-            this.panel4.Controls.Add(this.checkBox1);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(153, 372);
-            this.panel4.TabIndex = 0;
+            panel4.Controls.Add(groupBox1);
+            panel4.Controls.Add(checkBox4);
+            panel4.Controls.Add(checkBox3);
+            panel4.Controls.Add(checkBox2);
+            panel4.Controls.Add(checkBox1);
+            panel4.Dock = DockStyle.Left;
+            panel4.Location = new Point(0, 0);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(153, 377);
+            panel4.TabIndex = 0;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBoxFormat);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.checkBoxSci);
-            this.groupBox1.Location = new System.Drawing.Point(12, 131);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(127, 112);
-            this.groupBox1.TabIndex = 4;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Cell format";
+            groupBox1.Controls.Add(textBoxFormat);
+            groupBox1.Controls.Add(label1);
+            groupBox1.Controls.Add(checkBoxSci);
+            groupBox1.Location = new Point(12, 131);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(127, 112);
+            groupBox1.TabIndex = 4;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Cell format";
             // 
             // textBoxFormat
             // 
-            this.textBoxFormat.Location = new System.Drawing.Point(6, 86);
-            this.textBoxFormat.Name = "textBoxFormat";
-            this.textBoxFormat.Size = new System.Drawing.Size(100, 20);
-            this.textBoxFormat.TabIndex = 2;
-            this.textBoxFormat.TextChanged += new System.EventHandler(this.textBoxFormat_TextChanged);
+            textBoxFormat.Location = new Point(6, 86);
+            textBoxFormat.Name = "textBoxFormat";
+            textBoxFormat.Size = new Size(100, 23);
+            textBoxFormat.TabIndex = 2;
+            textBoxFormat.TextChanged += textBoxFormat_TextChanged;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 70);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Format";
+            label1.AutoSize = true;
+            label1.Location = new Point(6, 70);
+            label1.Name = "label1";
+            label1.Size = new Size(45, 15);
+            label1.TabIndex = 1;
+            label1.Text = "Format";
             // 
             // checkBoxSci
             // 
-            this.checkBoxSci.AutoSize = true;
-            this.checkBoxSci.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.checkBoxSci.Location = new System.Drawing.Point(6, 30);
-            this.checkBoxSci.Name = "checkBoxSci";
-            this.checkBoxSci.Size = new System.Drawing.Size(107, 18);
-            this.checkBoxSci.TabIndex = 0;
-            this.checkBoxSci.Text = "Scientific format";
-            this.checkBoxSci.UseVisualStyleBackColor = true;
-            this.checkBoxSci.CheckedChanged += new System.EventHandler(this.checkBoxSci_CheckedChanged);
+            checkBoxSci.AutoSize = true;
+            checkBoxSci.FlatStyle = FlatStyle.System;
+            checkBoxSci.Location = new Point(6, 30);
+            checkBoxSci.Name = "checkBoxSci";
+            checkBoxSci.Size = new Size(119, 20);
+            checkBoxSci.TabIndex = 0;
+            checkBoxSci.Text = "Scientific format";
+            checkBoxSci.UseVisualStyleBackColor = true;
+            checkBoxSci.CheckedChanged += checkBoxSci_CheckedChanged;
             // 
             // checkBox4
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Checked = true;
-            this.checkBox4.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox4.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.checkBox4.Location = new System.Drawing.Point(12, 87);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(127, 18);
-            this.checkBox4.TabIndex = 3;
-            this.checkBox4.Text = "Cplx as sigle column";
-            this.checkBox4.UseVisualStyleBackColor = true;
-            this.checkBox4.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged);
+            checkBox4.AutoSize = true;
+            checkBox4.Checked = true;
+            checkBox4.CheckState = CheckState.Checked;
+            checkBox4.FlatStyle = FlatStyle.System;
+            checkBox4.Location = new Point(12, 87);
+            checkBox4.Name = "checkBox4";
+            checkBox4.Size = new Size(141, 20);
+            checkBox4.TabIndex = 3;
+            checkBox4.Text = "Cplx as sigle column";
+            checkBox4.UseVisualStyleBackColor = true;
+            checkBox4.CheckedChanged += checkBox4_CheckedChanged;
             // 
             // checkBox3
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Checked = true;
-            this.checkBox3.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox3.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.checkBox3.Location = new System.Drawing.Point(12, 63);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(83, 18);
-            this.checkBox3.TabIndex = 2;
-            this.checkBox3.Text = "Object info";
-            this.checkBox3.UseVisualStyleBackColor = true;
-            this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
+            checkBox3.AutoSize = true;
+            checkBox3.Checked = true;
+            checkBox3.CheckState = CheckState.Checked;
+            checkBox3.FlatStyle = FlatStyle.System;
+            checkBox3.Location = new Point(12, 63);
+            checkBox3.Name = "checkBox3";
+            checkBox3.Size = new Size(91, 20);
+            checkBox3.TabIndex = 2;
+            checkBox3.Text = "Object info";
+            checkBox3.UseVisualStyleBackColor = true;
+            checkBox3.CheckedChanged += checkBox3_CheckedChanged;
             // 
             // checkBox2
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Checked = true;
-            this.checkBox2.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox2.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.checkBox2.Location = new System.Drawing.Point(12, 39);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(98, 18);
-            this.checkBox2.TabIndex = 1;
-            this.checkBox2.Text = "Show indexes";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
+            checkBox2.AutoSize = true;
+            checkBox2.Checked = true;
+            checkBox2.CheckState = CheckState.Checked;
+            checkBox2.FlatStyle = FlatStyle.System;
+            checkBox2.Location = new Point(12, 39);
+            checkBox2.Name = "checkBox2";
+            checkBox2.Size = new Size(104, 20);
+            checkBox2.TabIndex = 1;
+            checkBox2.Text = "Show indexes";
+            checkBox2.UseVisualStyleBackColor = true;
+            checkBox2.CheckedChanged += checkBox2_CheckedChanged;
             // 
             // checkBox1
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.checkBox1.Location = new System.Drawing.Point(12, 15);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(80, 18);
-            this.checkBox1.TabIndex = 0;
-            this.checkBox1.Text = "Read only";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            checkBox1.AutoSize = true;
+            checkBox1.FlatStyle = FlatStyle.System;
+            checkBox1.Location = new Point(12, 15);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(84, 20);
+            checkBox1.TabIndex = 0;
+            checkBox1.Text = "Read only";
+            checkBox1.UseVisualStyleBackColor = true;
+            checkBox1.CheckedChanged += checkBox1_CheckedChanged;
             // 
             // mtxGridView1
             // 
-            this.mtxGridView1.AllowUserToAddRows = false;
-            this.mtxGridView1.AllowUserToDeleteRows = false;
-            this.mtxGridView1.AllowUserToResizeColumns = false;
-            this.mtxGridView1.AllowUserToResizeRows = false;
-            this.mtxGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCellsExceptHeader;
-            this.mtxGridView1.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
-            this.mtxGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            mtxGridView1.AllowUserToAddRows = false;
+            mtxGridView1.AllowUserToDeleteRows = false;
+            mtxGridView1.AllowUserToResizeColumns = false;
+            mtxGridView1.AllowUserToResizeRows = false;
+            mtxGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCellsExceptHeader;
+            mtxGridView1.ClipboardCopyMode = DataGridViewClipboardCopyMode.Disable;
+            mtxGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle1.BackColor = SystemColors.Window;
+            dataGridViewCellStyle1.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 238);
+            dataGridViewCellStyle1.ForeColor = SystemColors.ControlText;
             dataGridViewCellStyle1.Format = "0.0000";
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.mtxGridView1.DefaultCellStyle = dataGridViewCellStyle1;
-            this.mtxGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mtxGridView1.Location = new System.Drawing.Point(153, 0);
-            this.mtxGridView1.MultiSelect = false;
-            this.mtxGridView1.Name = "mtxGridView1";
-            this.mtxGridView1.numberFormat = "0.0000";
-            this.mtxGridView1.ObjectInfoText = "";
-            this.mtxGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            this.mtxGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.mtxGridView1.ShowObjectInfo = true;
-            this.mtxGridView1.Size = new System.Drawing.Size(534, 372);
-            this.mtxGridView1.TabIndex = 1;
-            this.mtxGridView1.VirtualMode = true;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.False;
+            mtxGridView1.DefaultCellStyle = dataGridViewCellStyle1;
+            mtxGridView1.Dock = DockStyle.Fill;
+            mtxGridView1.Location = new Point(153, 0);
+            mtxGridView1.MultiSelect = false;
+            mtxGridView1.Name = "mtxGridView1";
+            mtxGridView1.numberFormat = "0.0000";
+            mtxGridView1.ObjectInfoText = "";
+            mtxGridView1.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            mtxGridView1.SelectionMode = DataGridViewSelectionMode.CellSelect;
+            mtxGridView1.ShowObjectInfo = true;
+            mtxGridView1.Size = new Size(610, 377);
+            mtxGridView1.TabIndex = 1;
+            mtxGridView1.VirtualMode = true;
             // 
             // MtxGridViewDemo
             // 
-            this.ClientSize = new System.Drawing.Size(687, 532);
-            this.Name = "MtxGridViewDemo";
-            this.Load += new System.EventHandler(this.MtxGridViewDemo_Load);
-            this.panel2.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.mtxGridView1)).EndInit();
-            this.ResumeLayout(false);
+            ClientSize = new Size(763, 563);
+            Name = "MtxGridViewDemo";
+            Load += MtxGridViewDemo_Load;
+            panel2.ResumeLayout(false);
+            panel4.ResumeLayout(false);
+            panel4.PerformLayout();
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
+            ((ISupportInitialize)mtxGridView1).EndInit();
+            ResumeLayout(false);
 
         }
 

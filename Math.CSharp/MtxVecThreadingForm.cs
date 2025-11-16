@@ -626,64 +626,66 @@ namespace MtxVecDemo
 
         private void InitializeComponent()
         {
-            this.btnBenchmark = new System.Windows.Forms.Button();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.RichTextBox();
-            this.SuspendLayout();
+            btnBenchmark = new Button();
+            richTextBox1 = new RichTextBox();
+            label1 = new Label();
+            textBox1 = new RichTextBox();
+            SuspendLayout();
             // 
             // btnBenchmark
             // 
-            this.btnBenchmark.Location = new System.Drawing.Point(12, 195);
-            this.btnBenchmark.Name = "btnBenchmark";
-            this.btnBenchmark.Size = new System.Drawing.Size(100, 30);
-            this.btnBenchmark.TabIndex = 3;
-            this.btnBenchmark.Text = "Benchmark";
-            this.btnBenchmark.UseVisualStyleBackColor = true;
-            this.btnBenchmark.Click += new System.EventHandler(this.btnBenchmark_Click);
+            btnBenchmark.Location = new System.Drawing.Point(14, 225);
+            btnBenchmark.Margin = new Padding(4, 3, 4, 3);
+            btnBenchmark.Name = "btnBenchmark";
+            btnBenchmark.Size = new System.Drawing.Size(117, 35);
+            btnBenchmark.TabIndex = 3;
+            btnBenchmark.Text = "Benchmark";
+            btnBenchmark.UseVisualStyleBackColor = true;
+            btnBenchmark.Click += btnBenchmark_Click;
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.richTextBox1.Location = new System.Drawing.Point(15, 32);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(830, 148);
-            this.richTextBox1.TabIndex = 1;
-            this.richTextBox1.Text = "";
+            richTextBox1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            richTextBox1.Location = new System.Drawing.Point(18, 37);
+            richTextBox1.Margin = new Padding(4, 3, 4, 3);
+            richTextBox1.Name = "richTextBox1";
+            richTextBox1.Size = new System.Drawing.Size(988, 170);
+            richTextBox1.TabIndex = 1;
+            richTextBox1.Text = "";
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(12, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Description";
+            label1.Location = new System.Drawing.Point(14, 10);
+            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(117, 23);
+            label1.TabIndex = 0;
+            label1.Text = "Description";
             // 
             // textBox1
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(128, 195);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(717, 427);
-            this.textBox1.TabIndex = 4;
-            this.textBox1.Text = "";
+            textBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            textBox1.Location = new System.Drawing.Point(149, 225);
+            textBox1.Margin = new Padding(4, 3, 4, 3);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new System.Drawing.Size(856, 468);
+            textBox1.TabIndex = 4;
+            textBox1.Text = "";
             // 
             // MtxVecThreadingForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(857, 634);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.btnBenchmark);
-            this.Name = "MtxVecThreadingForm";
-            this.Text = "MtxVec Threading Benchmark";
-            this.Load += new System.EventHandler(this.MtxVecThreadingForm_Load);
-            this.ResumeLayout(false);
+            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new System.Drawing.Size(1020, 708);
+            Controls.Add(textBox1);
+            Controls.Add(label1);
+            Controls.Add(richTextBox1);
+            Controls.Add(btnBenchmark);
+            Margin = new Padding(4, 3, 4, 3);
+            Name = "MtxVecThreadingForm";
+            Text = "MtxVec Threading Benchmark";
+            Load += MtxVecThreadingForm_Load;
+            ResumeLayout(false);
 
         }
 

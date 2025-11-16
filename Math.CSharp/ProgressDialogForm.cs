@@ -58,326 +58,304 @@ namespace MtxVecDemo
 			base.Dispose( disposing );
 		}
 
-		#region Designer generated code
-		/// <summary>
-		/// Required method for Designer support - do not modify
-		/// the contents of this method with the code editor.
-		/// </summary>
-		private void InitializeComponent()
-		{
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.InternalLoopButton = new System.Windows.Forms.RadioButton();
-            this.ExternalLoopButton = new System.Windows.Forms.RadioButton();
-            this.InProcedureButton = new System.Windows.Forms.RadioButton();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.ForLoopButton = new System.Windows.Forms.RadioButton();
-            this.WhileLoopButton = new System.Windows.Forms.RadioButton();
-            this.label1 = new System.Windows.Forms.Label();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.label4 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.progressDialog1 = new Dew.Math.Controls.TMtxProgressDialog();
-            this.panel2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            this.SuspendLayout();
+        #region Designer generated code
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            groupBox1 = new GroupBox();
+            InternalLoopButton = new RadioButton();
+            ExternalLoopButton = new RadioButton();
+            InProcedureButton = new RadioButton();
+            groupBox2 = new GroupBox();
+            ForLoopButton = new RadioButton();
+            WhileLoopButton = new RadioButton();
+            label1 = new Label();
+            progressBar1 = new ProgressBar();
+            checkBox1 = new CheckBox();
+            label2 = new Label();
+            comboBox1 = new ComboBox();
+            label3 = new Label();
+            numericUpDown1 = new NumericUpDown();
+            label4 = new Label();
+            groupBox3 = new GroupBox();
+            numericUpDown3 = new NumericUpDown();
+            numericUpDown2 = new NumericUpDown();
+            label5 = new Label();
+            label6 = new Label();
+            button1 = new Button();
+            progressDialog1 = new Dew.Math.Controls.TMtxProgressDialog();
+            panel2.SuspendLayout();
+            groupBox1.SuspendLayout();
+            groupBox2.SuspendLayout();
+            ((ISupportInitialize)numericUpDown1).BeginInit();
+            groupBox3.SuspendLayout();
+            ((ISupportInitialize)numericUpDown3).BeginInit();
+            ((ISupportInitialize)numericUpDown2).BeginInit();
+            SuspendLayout();
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.groupBox3);
-            this.panel2.Controls.Add(this.numericUpDown1);
-            this.panel2.Controls.Add(this.comboBox1);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.checkBox1);
-            this.panel2.Controls.Add(this.progressBar1);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.groupBox1);
-            this.panel2.Controls.Add(this.groupBox2);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Size = new System.Drawing.Size(986, 439);
+            panel2.Controls.Add(button1);
+            panel2.Controls.Add(groupBox3);
+            panel2.Controls.Add(numericUpDown1);
+            panel2.Controls.Add(comboBox1);
+            panel2.Controls.Add(label2);
+            panel2.Controls.Add(checkBox1);
+            panel2.Controls.Add(progressBar1);
+            panel2.Controls.Add(label1);
+            panel2.Controls.Add(groupBox1);
+            panel2.Controls.Add(groupBox2);
+            panel2.Controls.Add(label3);
+            panel2.Controls.Add(label4);
+            panel2.Size = new Size(998, 416);
             // 
             // panel3
             // 
-            this.panel3.Location = new System.Drawing.Point(0, 551);
-            this.panel3.Size = new System.Drawing.Size(986, 48);
+            panel3.Location = new Point(0, 554);
+            panel3.Size = new Size(998, 59);
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Size = new System.Drawing.Size(986, 112);
+            richTextBox1.Size = new Size(998, 138);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.InternalLoopButton);
-            this.groupBox1.Controls.Add(this.ExternalLoopButton);
-            this.groupBox1.Controls.Add(this.InProcedureButton);
-            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.groupBox1.Location = new System.Drawing.Point(12, 16);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(120, 83);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Iterator control";
+            groupBox1.Controls.Add(InternalLoopButton);
+            groupBox1.Controls.Add(ExternalLoopButton);
+            groupBox1.Controls.Add(InProcedureButton);
+            groupBox1.FlatStyle = FlatStyle.System;
+            groupBox1.Location = new Point(14, 20);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(144, 102);
+            groupBox1.TabIndex = 0;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Iterator control";
             // 
             // InternalLoopButton
             // 
-            this.InternalLoopButton.Checked = true;
-            this.InternalLoopButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.InternalLoopButton.Location = new System.Drawing.Point(8, 16);
-            this.InternalLoopButton.Name = "InternalLoopButton";
-            this.InternalLoopButton.Size = new System.Drawing.Size(104, 16);
-            this.InternalLoopButton.TabIndex = 0;
-            this.InternalLoopButton.TabStop = true;
-            this.InternalLoopButton.Text = "Internal loop";
-            this.InternalLoopButton.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            InternalLoopButton.Checked = true;
+            InternalLoopButton.FlatStyle = FlatStyle.System;
+            InternalLoopButton.Location = new Point(10, 20);
+            InternalLoopButton.Name = "InternalLoopButton";
+            InternalLoopButton.Size = new Size(124, 19);
+            InternalLoopButton.TabIndex = 0;
+            InternalLoopButton.TabStop = true;
+            InternalLoopButton.Text = "Internal loop";
+            InternalLoopButton.CheckedChanged += radioButton1_CheckedChanged;
             // 
             // ExternalLoopButton
             // 
-            this.ExternalLoopButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.ExternalLoopButton.Location = new System.Drawing.Point(8, 38);
-            this.ExternalLoopButton.Name = "ExternalLoopButton";
-            this.ExternalLoopButton.Size = new System.Drawing.Size(104, 16);
-            this.ExternalLoopButton.TabIndex = 0;
-            this.ExternalLoopButton.Text = "External loop";
-            this.ExternalLoopButton.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            ExternalLoopButton.FlatStyle = FlatStyle.System;
+            ExternalLoopButton.Location = new Point(10, 47);
+            ExternalLoopButton.Name = "ExternalLoopButton";
+            ExternalLoopButton.Size = new Size(124, 19);
+            ExternalLoopButton.TabIndex = 0;
+            ExternalLoopButton.Text = "External loop";
+            ExternalLoopButton.CheckedChanged += radioButton1_CheckedChanged;
             // 
             // InProcedureButton
             // 
-            this.InProcedureButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.InProcedureButton.Location = new System.Drawing.Point(8, 61);
-            this.InProcedureButton.Name = "InProcedureButton";
-            this.InProcedureButton.Size = new System.Drawing.Size(104, 16);
-            this.InProcedureButton.TabIndex = 0;
-            this.InProcedureButton.Text = "InProcedure";
-            this.InProcedureButton.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            InProcedureButton.FlatStyle = FlatStyle.System;
+            InProcedureButton.Location = new Point(10, 75);
+            InProcedureButton.Name = "InProcedureButton";
+            InProcedureButton.Size = new Size(124, 20);
+            InProcedureButton.TabIndex = 0;
+            InProcedureButton.Text = "InProcedure";
+            InProcedureButton.CheckedChanged += radioButton1_CheckedChanged;
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.ForLoopButton);
-            this.groupBox2.Controls.Add(this.WhileLoopButton);
-            this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.groupBox2.Location = new System.Drawing.Point(148, 16);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(120, 66);
-            this.groupBox2.TabIndex = 0;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Loop type";
+            groupBox2.Controls.Add(ForLoopButton);
+            groupBox2.Controls.Add(WhileLoopButton);
+            groupBox2.FlatStyle = FlatStyle.System;
+            groupBox2.Location = new Point(178, 20);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(144, 81);
+            groupBox2.TabIndex = 0;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "Loop type";
             // 
             // ForLoopButton
             // 
-            this.ForLoopButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.ForLoopButton.Location = new System.Drawing.Point(10, 19);
-            this.ForLoopButton.Name = "ForLoopButton";
-            this.ForLoopButton.Size = new System.Drawing.Size(104, 16);
-            this.ForLoopButton.TabIndex = 0;
-            this.ForLoopButton.Text = "For loop";
-            this.ForLoopButton.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
+            ForLoopButton.FlatStyle = FlatStyle.System;
+            ForLoopButton.Location = new Point(12, 23);
+            ForLoopButton.Name = "ForLoopButton";
+            ForLoopButton.Size = new Size(125, 20);
+            ForLoopButton.TabIndex = 0;
+            ForLoopButton.Text = "For loop";
+            ForLoopButton.CheckedChanged += radioButton4_CheckedChanged;
             // 
             // WhileLoopButton
             // 
-            this.WhileLoopButton.Checked = true;
-            this.WhileLoopButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.WhileLoopButton.Location = new System.Drawing.Point(10, 41);
-            this.WhileLoopButton.Name = "WhileLoopButton";
-            this.WhileLoopButton.Size = new System.Drawing.Size(104, 16);
-            this.WhileLoopButton.TabIndex = 0;
-            this.WhileLoopButton.TabStop = true;
-            this.WhileLoopButton.Text = "While loop";
-            this.WhileLoopButton.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
+            WhileLoopButton.Checked = true;
+            WhileLoopButton.FlatStyle = FlatStyle.System;
+            WhileLoopButton.Location = new Point(12, 50);
+            WhileLoopButton.Name = "WhileLoopButton";
+            WhileLoopButton.Size = new Size(125, 20);
+            WhileLoopButton.TabIndex = 0;
+            WhileLoopButton.TabStop = true;
+            WhileLoopButton.Text = "While loop";
+            WhileLoopButton.CheckedChanged += radioButton4_CheckedChanged;
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(299, 5);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(160, 16);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Progress indicator";
+            label1.Location = new Point(359, 6);
+            label1.Name = "label1";
+            label1.Size = new Size(192, 20);
+            label1.TabIndex = 1;
+            label1.Text = "Progress indicator";
             // 
             // progressBar1
             // 
-            this.progressBar1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.progressBar1.ForeColor = System.Drawing.Color.Lime;
-            this.progressBar1.Location = new System.Drawing.Point(302, 24);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(633, 27);
-            this.progressBar1.TabIndex = 2;
+            progressBar1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            progressBar1.ForeColor = Color.Lime;
+            progressBar1.Location = new Point(362, 30);
+            progressBar1.Name = "progressBar1";
+            progressBar1.Size = new Size(575, 33);
+            progressBar1.TabIndex = 2;
             // 
             // checkBox1
             // 
-            this.checkBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.checkBox1.Location = new System.Drawing.Point(20, 105);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(200, 24);
-            this.checkBox1.TabIndex = 3;
-            this.checkBox1.Text = "Show progress form";
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            checkBox1.FlatStyle = FlatStyle.System;
+            checkBox1.Location = new Point(24, 129);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(240, 30);
+            checkBox1.TabIndex = 3;
+            checkBox1.Text = "Show progress form";
+            checkBox1.CheckedChanged += checkBox1_CheckedChanged;
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(17, 162);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(120, 16);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Thread priority";
+            label2.Location = new Point(20, 199);
+            label2.Name = "label2";
+            label2.Size = new Size(144, 20);
+            label2.TabIndex = 4;
+            label2.Text = "Thread priority";
             // 
             // comboBox1
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Lowest",
-            "Below normal",
-            "Normal",
-            "Above normal",
-            "Highest"});
-            this.comboBox1.Location = new System.Drawing.Point(195, 162);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 5;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox1.FlatStyle = FlatStyle.System;
+            comboBox1.Items.AddRange(new object[] { "Lowest", "Below normal", "Normal", "Above normal", "Highest" });
+            comboBox1.Location = new Point(234, 199);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(145, 23);
+            comboBox1.TabIndex = 5;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(14, 204);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(176, 16);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Progress indicator update  interval";
+            label3.Location = new Point(17, 251);
+            label3.Name = "label3";
+            label3.Size = new Size(211, 20);
+            label3.TabIndex = 4;
+            label3.Text = "Progress indicator update  interval";
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(196, 200);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown1.TabIndex = 6;
-            this.numericUpDown1.Value = new decimal(new int[] {
-            200,
-            0,
-            0,
-            0});
-            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
+            numericUpDown1.Location = new Point(235, 246);
+            numericUpDown1.Maximum = new decimal(new int[] { 10000, 0, 0, 0 });
+            numericUpDown1.Name = "numericUpDown1";
+            numericUpDown1.Size = new Size(144, 23);
+            numericUpDown1.TabIndex = 6;
+            numericUpDown1.Value = new decimal(new int[] { 200, 0, 0, 0 });
+            numericUpDown1.ValueChanged += numericUpDown1_ValueChanged;
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(333, 202);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 16);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "ms";
+            label4.Location = new Point(400, 249);
+            label4.Name = "label4";
+            label4.Size = new Size(48, 19);
+            label4.TabIndex = 4;
+            label4.Text = "ms";
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.numericUpDown3);
-            this.groupBox3.Controls.Add(this.numericUpDown2);
-            this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Controls.Add(this.label6);
-            this.groupBox3.Location = new System.Drawing.Point(20, 267);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(296, 72);
-            this.groupBox3.TabIndex = 7;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Loop range";
+            groupBox3.Controls.Add(numericUpDown3);
+            groupBox3.Controls.Add(numericUpDown2);
+            groupBox3.Controls.Add(label5);
+            groupBox3.Controls.Add(label6);
+            groupBox3.Location = new Point(24, 329);
+            groupBox3.Name = "groupBox3";
+            groupBox3.Size = new Size(355, 88);
+            groupBox3.TabIndex = 7;
+            groupBox3.TabStop = false;
+            groupBox3.Text = "Loop range";
             // 
             // numericUpDown3
             // 
-            this.numericUpDown3.Location = new System.Drawing.Point(198, 28);
-            this.numericUpDown3.Maximum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(56, 20);
-            this.numericUpDown3.TabIndex = 2;
-            this.numericUpDown3.Value = new decimal(new int[] {
-            1500,
-            0,
-            0,
-            0});
-            this.numericUpDown3.ValueChanged += new System.EventHandler(this.numericUpDown3_ValueChanged);
+            numericUpDown3.Location = new Point(238, 34);
+            numericUpDown3.Maximum = new decimal(new int[] { 10000, 0, 0, 0 });
+            numericUpDown3.Name = "numericUpDown3";
+            numericUpDown3.Size = new Size(67, 23);
+            numericUpDown3.TabIndex = 2;
+            numericUpDown3.Value = new decimal(new int[] { 1500, 0, 0, 0 });
+            numericUpDown3.ValueChanged += numericUpDown3_ValueChanged;
             // 
             // numericUpDown2
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(56, 30);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(56, 20);
-            this.numericUpDown2.TabIndex = 1;
-            this.numericUpDown2.ValueChanged += new System.EventHandler(this.numericUpDown2_ValueChanged);
+            numericUpDown2.Location = new Point(67, 37);
+            numericUpDown2.Name = "numericUpDown2";
+            numericUpDown2.Size = new Size(67, 23);
+            numericUpDown2.TabIndex = 1;
+            numericUpDown2.ValueChanged += numericUpDown2_ValueChanged;
             // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(16, 34);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(36, 12);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "From";
+            label5.Location = new Point(19, 42);
+            label5.Name = "label5";
+            label5.Size = new Size(43, 15);
+            label5.TabIndex = 0;
+            label5.Text = "From";
             // 
             // label6
             // 
-            this.label6.Location = new System.Drawing.Point(156, 32);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(36, 12);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "To";
+            label6.Location = new Point(187, 39);
+            label6.Name = "label6";
+            label6.Size = new Size(43, 15);
+            label6.TabIndex = 0;
+            label6.Text = "To";
             // 
             // button1
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button1.Location = new System.Drawing.Point(353, 284);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(106, 31);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Start";
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            button1.FlatStyle = FlatStyle.System;
+            button1.Location = new Point(424, 350);
+            button1.Name = "button1";
+            button1.Size = new Size(127, 38);
+            button1.TabIndex = 8;
+            button1.Text = "Start";
+            button1.Click += button1_Click;
             // 
             // progressDialog1
             // 
-            this.progressDialog1.ShowDialog = false;
-            this.progressDialog1.ThreadName = "Test thread";
-            this.progressDialog1.UpdateInterval = 40;
-            this.progressDialog1.Compute += new Dew.Math.TComputeEvent(this.progressDialog1_Compute);
-            this.progressDialog1.ProgressUpdate += new Dew.Math.TProgressUpdateEvent(this.progressDialog1_ProgressUpdate);
+            progressDialog1.ShowDialog = false;
+            progressDialog1.ThreadName = "Test thread";
+            progressDialog1.UpdateInterval = 40;
+            progressDialog1.Compute += progressDialog1_Compute;
+            progressDialog1.ProgressUpdate += progressDialog1_ProgressUpdate;
             // 
             // ProgressDialogForm
             // 
-            this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
-            this.ClientSize = new System.Drawing.Size(986, 599);
-            this.Name = "ProgressDialogForm";
-            this.Load += new System.EventHandler(this.ProgressDialogForm_Load);
-            this.panel2.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            this.groupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            this.ResumeLayout(false);
+            AutoScaleBaseSize = new Size(6, 16);
+            ClientSize = new Size(998, 613);
+            Name = "ProgressDialogForm";
+            Load += ProgressDialogForm_Load;
+            panel2.ResumeLayout(false);
+            groupBox1.ResumeLayout(false);
+            groupBox2.ResumeLayout(false);
+            ((ISupportInitialize)numericUpDown1).EndInit();
+            groupBox3.ResumeLayout(false);
+            ((ISupportInitialize)numericUpDown3).EndInit();
+            ((ISupportInitialize)numericUpDown2).EndInit();
+            ResumeLayout(false);
 
-		}
-		#endregion
-		
-		private TMtx a,b,c;
+        }
+        #endregion
+
+        private TMtx a,b,c;
 
 		private void checkBox1_CheckedChanged(object sender, System.EventArgs e) 
         {

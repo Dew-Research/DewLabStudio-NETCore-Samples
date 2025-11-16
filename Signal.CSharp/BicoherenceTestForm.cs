@@ -101,1696 +101,2011 @@ namespace DSPDemo
 			base.Dispose( disposing );
 		}
 
-		#region Windows Form Designer generated code
-		/// <summary>
-		/// Required method for Designer support - do not modify
-		/// the contents of this method with the code editor.
-		/// </summary>
-		private void InitializeComponent()
-		{
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BicoherenceTestForm));
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.Freq2Edit = new Dew.Math.Controls.FloatEdit();
-            this.label2 = new System.Windows.Forms.Label();
-            this.Freq1Edit = new Dew.Math.Controls.FloatEdit();
-            this.label3 = new System.Windows.Forms.Label();
-            this.SpectrumButton = new System.Windows.Forms.Button();
-            this.ChartButton = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.SpectrumChart1 = new Dew.Signal.Tee.SpectrumChart();
-            this.Series1 = new Steema.TeeChart.Styles.FastLine();
-            this.Series2 = new Steema.TeeChart.Styles.Points();
-            this.splitter1 = new System.Windows.Forms.Splitter();
-            this.Chart1 = new Steema.TeeChart.TChart();
-            this.SpectrumAnalyzer1 = new Dew.Signal.TSpectrumAnalyzer(this.components);
-            this.Signal1 = new Dew.Signal.TSignal(this.components);
-            this.BiSpectrumAnalyzer1 = new Dew.Signal.TBiSpectrumAnalyzer(this.components);
-            this.ChartEditor = new Steema.TeeChart.Editor(this.components);
-            this.SpectrumAnalyzerDialog = new Dew.Signal.Editors.SpectrumAnalyzerDialog(this.components);
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.SpectrumChart1)).BeginInit();
-            this.SuspendLayout();
+        #region Windows Form Designer generated code
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            components = new Container();
+            Steema.TeeChart.Margins margins1 = new Steema.TeeChart.Margins();
+            Steema.TeeChart.Drawing.Cursor cursor1 = new Steema.TeeChart.Drawing.Cursor();
+            ComponentResourceManager resources = new ComponentResourceManager(typeof(BicoherenceTestForm));
+            Steema.TeeChart.Margins margins2 = new Steema.TeeChart.Margins();
+            richTextBox1 = new RichTextBox();
+            panel1 = new Panel();
+            button3 = new Button();
+            Freq2Edit = new FloatEdit();
+            label2 = new Label();
+            Freq1Edit = new FloatEdit();
+            label3 = new Label();
+            SpectrumButton = new Button();
+            ChartButton = new Button();
+            panel2 = new Panel();
+            SpectrumChart1 = new SpectrumChart();
+            Series1 = new Steema.TeeChart.Styles.FastLine();
+            Series2 = new Steema.TeeChart.Styles.Points();
+            splitter1 = new Splitter();
+            Chart1 = new Steema.TeeChart.TChart();
+            SpectrumAnalyzer1 = new TSpectrumAnalyzer(components);
+            Signal1 = new TSignal(components);
+            BiSpectrumAnalyzer1 = new TBiSpectrumAnalyzer(components);
+            ChartEditor = new Steema.TeeChart.Editor(components);
+            SpectrumAnalyzerDialog = new SpectrumAnalyzerDialog(components);
+            panel1.SuspendLayout();
+            panel2.SuspendLayout();
+            ((ISupportInitialize)SpectrumChart1).BeginInit();
+            SuspendLayout();
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.richTextBox1.Location = new System.Drawing.Point(0, 0);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(728, 72);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "richTextBox1";
+            richTextBox1.Dock = DockStyle.Top;
+            richTextBox1.Location = new Point(0, 0);
+            richTextBox1.Name = "richTextBox1";
+            richTextBox1.Size = new Size(1149, 89);
+            richTextBox1.TabIndex = 0;
+            richTextBox1.Text = "richTextBox1";
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.Freq2Edit);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.Freq1Edit);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.SpectrumButton);
-            this.panel1.Controls.Add(this.ChartButton);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 486);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(728, 39);
-            this.panel1.TabIndex = 1;
+            panel1.Controls.Add(button3);
+            panel1.Controls.Add(Freq2Edit);
+            panel1.Controls.Add(label2);
+            panel1.Controls.Add(Freq1Edit);
+            panel1.Controls.Add(label3);
+            panel1.Controls.Add(SpectrumButton);
+            panel1.Controls.Add(ChartButton);
+            panel1.Dock = DockStyle.Bottom;
+            panel1.Location = new Point(0, 820);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1149, 48);
+            panel1.TabIndex = 1;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(193, 9);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Recalculate";
+            button3.Location = new Point(232, 11);
+            button3.Name = "button3";
+            button3.Size = new Size(90, 28);
+            button3.TabIndex = 5;
+            button3.Text = "Recalculate";
             // 
             // Freq2Edit
             // 
-            this.Freq2Edit.Increment = "1";
-            this.Freq2Edit.Location = new System.Drawing.Point(473, 9);
-            this.Freq2Edit.Name = "Freq2Edit";
-            this.Freq2Edit.RegistryPath = "\\Software\\Dew Research\\MtxVec";
-            this.Freq2Edit.Scientific = false;
-            this.Freq2Edit.Size = new System.Drawing.Size(64, 20);
-            this.Freq2Edit.TabIndex = 4;
-            this.Freq2Edit.Value = "80.00";
-            this.Freq2Edit.TextChanged += new System.EventHandler(this.Freq2Edit_TextChanged);
+            Freq2Edit.Increment = "1";
+            Freq2Edit.Location = new Point(568, 11);
+            Freq2Edit.Name = "Freq2Edit";
+            Freq2Edit.RegistryPath = "\\Software\\Dew Research\\MtxVec";
+            Freq2Edit.Scientific = false;
+            Freq2Edit.Size = new Size(76, 23);
+            Freq2Edit.TabIndex = 4;
+            Freq2Edit.Value = "80.00";
+            Freq2Edit.TextChanged += Freq2Edit_TextChanged;
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(433, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 23);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Freq2:";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            label2.Location = new Point(520, 11);
+            label2.Name = "label2";
+            label2.Size = new Size(48, 28);
+            label2.TabIndex = 3;
+            label2.Text = "Freq2:";
+            label2.TextAlign = ContentAlignment.MiddleRight;
             // 
             // Freq1Edit
             // 
-            this.Freq1Edit.Increment = "1";
-            this.Freq1Edit.Location = new System.Drawing.Point(345, 9);
-            this.Freq1Edit.Name = "Freq1Edit";
-            this.Freq1Edit.RegistryPath = "\\Software\\Dew Research\\MtxVec";
-            this.Freq1Edit.Scientific = false;
-            this.Freq1Edit.Size = new System.Drawing.Size(64, 20);
-            this.Freq1Edit.TabIndex = 2;
-            this.Freq1Edit.Value = "20.00";
-            this.Freq1Edit.TextChanged += new System.EventHandler(this.Freq1Edit_TextChanged);
+            Freq1Edit.Increment = "1";
+            Freq1Edit.Location = new Point(414, 11);
+            Freq1Edit.Name = "Freq1Edit";
+            Freq1Edit.RegistryPath = "\\Software\\Dew Research\\MtxVec";
+            Freq1Edit.Scientific = false;
+            Freq1Edit.Size = new Size(77, 23);
+            Freq1Edit.TabIndex = 2;
+            Freq1Edit.Value = "20.00";
+            Freq1Edit.TextChanged += Freq1Edit_TextChanged;
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(273, 9);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(72, 23);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Freq1:";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            label3.Location = new Point(328, 11);
+            label3.Name = "label3";
+            label3.Size = new Size(86, 28);
+            label3.TabIndex = 1;
+            label3.Text = "Freq1:";
+            label3.TextAlign = ContentAlignment.MiddleRight;
             // 
             // SpectrumButton
             // 
-            this.SpectrumButton.Location = new System.Drawing.Point(12, 9);
-            this.SpectrumButton.Name = "SpectrumButton";
-            this.SpectrumButton.Size = new System.Drawing.Size(75, 23);
-            this.SpectrumButton.TabIndex = 0;
-            this.SpectrumButton.Text = "Spectrum...";
-            this.SpectrumButton.Click += new System.EventHandler(this.SpectrumButton_Click);
+            SpectrumButton.Location = new Point(14, 11);
+            SpectrumButton.Name = "SpectrumButton";
+            SpectrumButton.Size = new Size(90, 28);
+            SpectrumButton.TabIndex = 0;
+            SpectrumButton.Text = "Spectrum...";
+            SpectrumButton.Click += SpectrumButton_Click;
             // 
             // ChartButton
             // 
-            this.ChartButton.Location = new System.Drawing.Point(103, 9);
-            this.ChartButton.Name = "ChartButton";
-            this.ChartButton.Size = new System.Drawing.Size(75, 23);
-            this.ChartButton.TabIndex = 0;
-            this.ChartButton.Text = "Chart...";
-            this.ChartButton.Click += new System.EventHandler(this.ChartButton_Click);
+            ChartButton.Location = new Point(124, 11);
+            ChartButton.Name = "ChartButton";
+            ChartButton.Size = new Size(90, 28);
+            ChartButton.TabIndex = 0;
+            ChartButton.Text = "Chart...";
+            ChartButton.Click += ChartButton_Click;
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.SpectrumChart1);
-            this.panel2.Controls.Add(this.splitter1);
-            this.panel2.Controls.Add(this.Chart1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 72);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(728, 414);
-            this.panel2.TabIndex = 2;
-            this.panel2.SizeChanged += new System.EventHandler(this.panel2_SizeChanged);
+            panel2.Controls.Add(SpectrumChart1);
+            panel2.Controls.Add(splitter1);
+            panel2.Controls.Add(Chart1);
+            panel2.Dock = DockStyle.Fill;
+            panel2.Location = new Point(0, 89);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(1149, 731);
+            panel2.TabIndex = 2;
+            panel2.SizeChanged += panel2_SizeChanged;
             // 
             // SpectrumChart1
             // 
             // 
             // 
             // 
+            SpectrumChart1.Axes.Automatic = false;
             // 
             // 
             // 
             // 
             // 
             // 
-            this.SpectrumChart1.Axes.Bottom.Grid.DrawEvery = 1;
-            this.SpectrumChart1.Axes.Bottom.Grid.Visible = true;
+            SpectrumChart1.Axes.Bottom.Grid.DrawEvery = 1;
+            SpectrumChart1.Axes.Bottom.Grid.Visible = true;
             // 
             // 
             // 
             // 
             // 
             // 
-            this.SpectrumChart1.Axes.Bottom.Labels.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
+            SpectrumChart1.Axes.Bottom.Labels.Brush.Color = Color.White;
+            SpectrumChart1.Axes.Bottom.Labels.Brush.Solid = true;
+            SpectrumChart1.Axes.Bottom.Labels.Brush.Visible = true;
             // 
             // 
             // 
-            this.SpectrumChart1.Axes.Bottom.Labels.Brush.Color = System.Drawing.Color.White;
-            this.SpectrumChart1.Axes.Bottom.Labels.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Bottom.Labels.Brush.Visible = true;
+            SpectrumChart1.Axes.Bottom.Labels.Font.Bold = false;
             // 
             // 
             // 
-            this.SpectrumChart1.Axes.Bottom.Labels.Font.Bold = false;
+            SpectrumChart1.Axes.Bottom.Labels.Font.Brush.Color = Color.FromArgb(128, 128, 128);
+            SpectrumChart1.Axes.Bottom.Labels.Font.Brush.Solid = true;
+            SpectrumChart1.Axes.Bottom.Labels.Font.Brush.Visible = true;
             // 
             // 
             // 
-            this.SpectrumChart1.Axes.Bottom.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.SpectrumChart1.Axes.Bottom.Labels.Font.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Bottom.Labels.Font.Brush.Visible = true;
             // 
             // 
             // 
+            SpectrumChart1.Axes.Bottom.Labels.Font.Shadow.Brush.Color = Color.DarkGray;
+            SpectrumChart1.Axes.Bottom.Labels.Font.Shadow.Brush.Solid = true;
+            SpectrumChart1.Axes.Bottom.Labels.Font.Shadow.Brush.Visible = true;
+            SpectrumChart1.Axes.Bottom.Labels.Font.Size = 9;
+            SpectrumChart1.Axes.Bottom.Labels.Font.SizeFloat = 9F;
+            SpectrumChart1.Axes.Bottom.Labels.Font.Style = Steema.TeeChart.Drawing.FontStyle.Regular;
             // 
             // 
             // 
-            this.SpectrumChart1.Axes.Bottom.Labels.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SpectrumChart1.Axes.Bottom.Labels.Font.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Bottom.Labels.Font.Shadow.Brush.Visible = true;
-            this.SpectrumChart1.Axes.Bottom.Labels.Font.Size = 9;
-            this.SpectrumChart1.Axes.Bottom.Labels.Font.SizeFloat = 9F;
             // 
             // 
             // 
+            SpectrumChart1.Axes.Bottom.Labels.ImageBevel.Brush.Color = Color.LightGray;
+            SpectrumChart1.Axes.Bottom.Labels.ImageBevel.Brush.Solid = true;
+            SpectrumChart1.Axes.Bottom.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
-            this.SpectrumChart1.Axes.Bottom.Labels.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.SpectrumChart1.Axes.Bottom.Labels.ImageBevel.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Bottom.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
+            SpectrumChart1.Axes.Bottom.Labels.Shadow.Brush.Color = Color.DarkGray;
+            SpectrumChart1.Axes.Bottom.Labels.Shadow.Brush.Solid = true;
+            SpectrumChart1.Axes.Bottom.Labels.Shadow.Brush.Visible = true;
+            SpectrumChart1.Axes.Bottom.MaximumOffset = 4;
+            SpectrumChart1.Axes.Bottom.MinimumOffset = 4;
             // 
             // 
             // 
-            this.SpectrumChart1.Axes.Bottom.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SpectrumChart1.Axes.Bottom.Labels.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Bottom.Labels.Shadow.Brush.Visible = true;
-            this.SpectrumChart1.Axes.Bottom.MaximumOffset = 4;
-            this.SpectrumChart1.Axes.Bottom.MinimumOffset = 4;
             // 
             // 
             // 
-            this.SpectrumChart1.Axes.Bottom.Title.Angle = 0;
+            SpectrumChart1.Axes.Bottom.Title.Brush.Color = Color.Silver;
+            SpectrumChart1.Axes.Bottom.Title.Brush.Solid = true;
+            SpectrumChart1.Axes.Bottom.Title.Brush.Visible = true;
+            SpectrumChart1.Axes.Bottom.Title.Caption = "Frequency [Hz]";
             // 
             // 
             // 
-            this.SpectrumChart1.Axes.Bottom.Title.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
+            SpectrumChart1.Axes.Bottom.Title.Font.Bold = false;
             // 
             // 
             // 
-            this.SpectrumChart1.Axes.Bottom.Title.Brush.Color = System.Drawing.Color.Silver;
-            this.SpectrumChart1.Axes.Bottom.Title.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Bottom.Title.Brush.Visible = true;
-            this.SpectrumChart1.Axes.Bottom.Title.Caption = "Frequency [Hz]";
+            SpectrumChart1.Axes.Bottom.Title.Font.Brush.Color = Color.FromArgb(64, 64, 64);
+            SpectrumChart1.Axes.Bottom.Title.Font.Brush.Solid = true;
+            SpectrumChart1.Axes.Bottom.Title.Font.Brush.Visible = true;
             // 
             // 
             // 
-            this.SpectrumChart1.Axes.Bottom.Title.Font.Bold = false;
             // 
             // 
             // 
-            this.SpectrumChart1.Axes.Bottom.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.SpectrumChart1.Axes.Bottom.Title.Font.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Bottom.Title.Font.Brush.Visible = true;
+            SpectrumChart1.Axes.Bottom.Title.Font.Shadow.Brush.Color = Color.DarkGray;
+            SpectrumChart1.Axes.Bottom.Title.Font.Shadow.Brush.Solid = true;
+            SpectrumChart1.Axes.Bottom.Title.Font.Shadow.Brush.Visible = true;
+            SpectrumChart1.Axes.Bottom.Title.Font.Size = 11;
+            SpectrumChart1.Axes.Bottom.Title.Font.SizeFloat = 11F;
+            SpectrumChart1.Axes.Bottom.Title.Font.Style = Steema.TeeChart.Drawing.FontStyle.Regular;
             // 
             // 
             // 
             // 
             // 
             // 
-            this.SpectrumChart1.Axes.Bottom.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SpectrumChart1.Axes.Bottom.Title.Font.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Bottom.Title.Font.Shadow.Brush.Visible = true;
-            this.SpectrumChart1.Axes.Bottom.Title.Font.Size = 11;
-            this.SpectrumChart1.Axes.Bottom.Title.Font.SizeFloat = 11F;
+            SpectrumChart1.Axes.Bottom.Title.ImageBevel.Brush.Color = Color.LightGray;
+            SpectrumChart1.Axes.Bottom.Title.ImageBevel.Brush.Solid = true;
+            SpectrumChart1.Axes.Bottom.Title.ImageBevel.Brush.Visible = true;
+            SpectrumChart1.Axes.Bottom.Title.Lines = new string[]
+    {
+    "Frequency [Hz]"
+    };
             // 
             // 
             // 
             // 
             // 
             // 
-            this.SpectrumChart1.Axes.Bottom.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.SpectrumChart1.Axes.Bottom.Title.ImageBevel.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Bottom.Title.ImageBevel.Brush.Visible = true;
-            this.SpectrumChart1.Axes.Bottom.Title.Lines = new string[] {
-        "Frequency [Hz]"};
+            SpectrumChart1.Axes.Bottom.Title.Shadow.Brush.Color = Color.DarkGray;
+            SpectrumChart1.Axes.Bottom.Title.Shadow.Brush.Solid = true;
+            SpectrumChart1.Axes.Bottom.Title.Shadow.Brush.Visible = true;
             // 
             // 
             // 
             // 
             // 
             // 
-            this.SpectrumChart1.Axes.Bottom.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SpectrumChart1.Axes.Bottom.Title.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Bottom.Title.Shadow.Brush.Visible = true;
             // 
             // 
-           
             // 
+            SpectrumChart1.Axes.Depth.Labels.Brush.Color = Color.White;
+            SpectrumChart1.Axes.Depth.Labels.Brush.Solid = true;
+            SpectrumChart1.Axes.Depth.Labels.Brush.Visible = true;
             // 
             // 
             // 
+            SpectrumChart1.Axes.Depth.Labels.Font.Bold = false;
             // 
             // 
-            this.SpectrumChart1.Axes.Depth.Labels.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
             // 
+            SpectrumChart1.Axes.Depth.Labels.Font.Brush.Color = Color.FromArgb(128, 128, 128);
+            SpectrumChart1.Axes.Depth.Labels.Font.Brush.Solid = true;
+            SpectrumChart1.Axes.Depth.Labels.Font.Brush.Visible = true;
             // 
             // 
-            this.SpectrumChart1.Axes.Depth.Labels.Brush.Color = System.Drawing.Color.White;
-            this.SpectrumChart1.Axes.Depth.Labels.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Depth.Labels.Brush.Visible = true;
             // 
             // 
             // 
-            this.SpectrumChart1.Axes.Depth.Labels.Font.Bold = false;
             // 
+            SpectrumChart1.Axes.Depth.Labels.Font.Shadow.Brush.Color = Color.DarkGray;
+            SpectrumChart1.Axes.Depth.Labels.Font.Shadow.Brush.Solid = true;
+            SpectrumChart1.Axes.Depth.Labels.Font.Shadow.Brush.Visible = true;
+            SpectrumChart1.Axes.Depth.Labels.Font.Size = 9;
+            SpectrumChart1.Axes.Depth.Labels.Font.SizeFloat = 9F;
+            SpectrumChart1.Axes.Depth.Labels.Font.Style = Steema.TeeChart.Drawing.FontStyle.Regular;
             // 
             // 
-            this.SpectrumChart1.Axes.Depth.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.SpectrumChart1.Axes.Depth.Labels.Font.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Depth.Labels.Font.Brush.Visible = true;
             // 
             // 
             // 
             // 
+            SpectrumChart1.Axes.Depth.Labels.ImageBevel.Brush.Color = Color.LightGray;
+            SpectrumChart1.Axes.Depth.Labels.ImageBevel.Brush.Solid = true;
+            SpectrumChart1.Axes.Depth.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
-            this.SpectrumChart1.Axes.Depth.Labels.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SpectrumChart1.Axes.Depth.Labels.Font.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Depth.Labels.Font.Shadow.Brush.Visible = true;
-            this.SpectrumChart1.Axes.Depth.Labels.Font.Size = 9;
-            this.SpectrumChart1.Axes.Depth.Labels.Font.SizeFloat = 9F;
             // 
             // 
             // 
             // 
+            SpectrumChart1.Axes.Depth.Labels.Shadow.Brush.Color = Color.DarkGray;
+            SpectrumChart1.Axes.Depth.Labels.Shadow.Brush.Solid = true;
+            SpectrumChart1.Axes.Depth.Labels.Shadow.Brush.Visible = true;
             // 
             // 
-            this.SpectrumChart1.Axes.Depth.Labels.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.SpectrumChart1.Axes.Depth.Labels.ImageBevel.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Depth.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
             // 
+            SpectrumChart1.Axes.Depth.Title.Brush.Color = Color.Silver;
+            SpectrumChart1.Axes.Depth.Title.Brush.Solid = true;
+            SpectrumChart1.Axes.Depth.Title.Brush.Visible = true;
             // 
             // 
-            this.SpectrumChart1.Axes.Depth.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SpectrumChart1.Axes.Depth.Labels.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Depth.Labels.Shadow.Brush.Visible = true;
-            this.SpectrumChart1.Axes.Depth.Maximum = 0D;
-            this.SpectrumChart1.Axes.Depth.Minimum = 0D;
             // 
+            SpectrumChart1.Axes.Depth.Title.Font.Bold = false;
             // 
             // 
-            this.SpectrumChart1.Axes.Depth.Title.Angle = 0;
             // 
+            SpectrumChart1.Axes.Depth.Title.Font.Brush.Color = Color.FromArgb(64, 64, 64);
+            SpectrumChart1.Axes.Depth.Title.Font.Brush.Solid = true;
+            SpectrumChart1.Axes.Depth.Title.Font.Brush.Visible = true;
             // 
             // 
-            this.SpectrumChart1.Axes.Depth.Title.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
             // 
             // 
             // 
-            this.SpectrumChart1.Axes.Depth.Title.Brush.Color = System.Drawing.Color.Silver;
-            this.SpectrumChart1.Axes.Depth.Title.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Depth.Title.Brush.Visible = true;
             // 
+            SpectrumChart1.Axes.Depth.Title.Font.Shadow.Brush.Color = Color.DarkGray;
+            SpectrumChart1.Axes.Depth.Title.Font.Shadow.Brush.Solid = true;
+            SpectrumChart1.Axes.Depth.Title.Font.Shadow.Brush.Visible = true;
+            SpectrumChart1.Axes.Depth.Title.Font.Size = 11;
+            SpectrumChart1.Axes.Depth.Title.Font.SizeFloat = 11F;
+            SpectrumChart1.Axes.Depth.Title.Font.Style = Steema.TeeChart.Drawing.FontStyle.Regular;
             // 
             // 
-            this.SpectrumChart1.Axes.Depth.Title.Font.Bold = false;
             // 
             // 
             // 
-            this.SpectrumChart1.Axes.Depth.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.SpectrumChart1.Axes.Depth.Title.Font.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Depth.Title.Font.Brush.Visible = true;
             // 
+            SpectrumChart1.Axes.Depth.Title.ImageBevel.Brush.Color = Color.LightGray;
+            SpectrumChart1.Axes.Depth.Title.ImageBevel.Brush.Solid = true;
+            SpectrumChart1.Axes.Depth.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
             // 
             // 
-            this.SpectrumChart1.Axes.Depth.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SpectrumChart1.Axes.Depth.Title.Font.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Depth.Title.Font.Shadow.Brush.Visible = true;
-            this.SpectrumChart1.Axes.Depth.Title.Font.Size = 11;
-            this.SpectrumChart1.Axes.Depth.Title.Font.SizeFloat = 11F;
             // 
+            SpectrumChart1.Axes.Depth.Title.Shadow.Brush.Color = Color.DarkGray;
+            SpectrumChart1.Axes.Depth.Title.Shadow.Brush.Solid = true;
+            SpectrumChart1.Axes.Depth.Title.Shadow.Brush.Visible = true;
             // 
             // 
             // 
             // 
             // 
-            this.SpectrumChart1.Axes.Depth.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.SpectrumChart1.Axes.Depth.Title.ImageBevel.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Depth.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
             // 
+            SpectrumChart1.Axes.DepthTop.Labels.Brush.Color = Color.White;
+            SpectrumChart1.Axes.DepthTop.Labels.Brush.Solid = true;
+            SpectrumChart1.Axes.DepthTop.Labels.Brush.Visible = true;
             // 
             // 
-            this.SpectrumChart1.Axes.Depth.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SpectrumChart1.Axes.Depth.Title.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Depth.Title.Shadow.Brush.Visible = true;
             // 
+            SpectrumChart1.Axes.DepthTop.Labels.Font.Bold = false;
             // 
             // 
             // 
+            SpectrumChart1.Axes.DepthTop.Labels.Font.Brush.Color = Color.FromArgb(128, 128, 128);
+            SpectrumChart1.Axes.DepthTop.Labels.Font.Brush.Solid = true;
+            SpectrumChart1.Axes.DepthTop.Labels.Font.Brush.Visible = true;
             // 
             // 
             // 
             // 
             // 
-            this.SpectrumChart1.Axes.DepthTop.Labels.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
             // 
+            SpectrumChart1.Axes.DepthTop.Labels.Font.Shadow.Brush.Color = Color.DarkGray;
+            SpectrumChart1.Axes.DepthTop.Labels.Font.Shadow.Brush.Solid = true;
+            SpectrumChart1.Axes.DepthTop.Labels.Font.Shadow.Brush.Visible = true;
+            SpectrumChart1.Axes.DepthTop.Labels.Font.Size = 9;
+            SpectrumChart1.Axes.DepthTop.Labels.Font.SizeFloat = 9F;
+            SpectrumChart1.Axes.DepthTop.Labels.Font.Style = Steema.TeeChart.Drawing.FontStyle.Regular;
             // 
             // 
-            this.SpectrumChart1.Axes.DepthTop.Labels.Brush.Color = System.Drawing.Color.White;
-            this.SpectrumChart1.Axes.DepthTop.Labels.Brush.Solid = true;
-            this.SpectrumChart1.Axes.DepthTop.Labels.Brush.Visible = true;
             // 
             // 
             // 
-            this.SpectrumChart1.Axes.DepthTop.Labels.Font.Bold = false;
             // 
+            SpectrumChart1.Axes.DepthTop.Labels.ImageBevel.Brush.Color = Color.LightGray;
+            SpectrumChart1.Axes.DepthTop.Labels.ImageBevel.Brush.Solid = true;
+            SpectrumChart1.Axes.DepthTop.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
-            this.SpectrumChart1.Axes.DepthTop.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.SpectrumChart1.Axes.DepthTop.Labels.Font.Brush.Solid = true;
-            this.SpectrumChart1.Axes.DepthTop.Labels.Font.Brush.Visible = true;
             // 
             // 
             // 
             // 
+            SpectrumChart1.Axes.DepthTop.Labels.Shadow.Brush.Color = Color.DarkGray;
+            SpectrumChart1.Axes.DepthTop.Labels.Shadow.Brush.Solid = true;
+            SpectrumChart1.Axes.DepthTop.Labels.Shadow.Brush.Visible = true;
             // 
             // 
-            this.SpectrumChart1.Axes.DepthTop.Labels.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SpectrumChart1.Axes.DepthTop.Labels.Font.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.Axes.DepthTop.Labels.Font.Shadow.Brush.Visible = true;
-            this.SpectrumChart1.Axes.DepthTop.Labels.Font.Size = 9;
-            this.SpectrumChart1.Axes.DepthTop.Labels.Font.SizeFloat = 9F;
             // 
             // 
             // 
             // 
+            SpectrumChart1.Axes.DepthTop.Title.Brush.Color = Color.Silver;
+            SpectrumChart1.Axes.DepthTop.Title.Brush.Solid = true;
+            SpectrumChart1.Axes.DepthTop.Title.Brush.Visible = true;
             // 
             // 
-            this.SpectrumChart1.Axes.DepthTop.Labels.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.SpectrumChart1.Axes.DepthTop.Labels.ImageBevel.Brush.Solid = true;
-            this.SpectrumChart1.Axes.DepthTop.Labels.ImageBevel.Brush.Visible = true;
             // 
+            SpectrumChart1.Axes.DepthTop.Title.Font.Bold = false;
             // 
             // 
             // 
+            SpectrumChart1.Axes.DepthTop.Title.Font.Brush.Color = Color.FromArgb(64, 64, 64);
+            SpectrumChart1.Axes.DepthTop.Title.Font.Brush.Solid = true;
+            SpectrumChart1.Axes.DepthTop.Title.Font.Brush.Visible = true;
             // 
             // 
-            this.SpectrumChart1.Axes.DepthTop.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SpectrumChart1.Axes.DepthTop.Labels.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.Axes.DepthTop.Labels.Shadow.Brush.Visible = true;
-            this.SpectrumChart1.Axes.DepthTop.Maximum = 0D;
-            this.SpectrumChart1.Axes.DepthTop.Minimum = 0D;
             // 
             // 
             // 
-            this.SpectrumChart1.Axes.DepthTop.Title.Angle = 0;
             // 
+            SpectrumChart1.Axes.DepthTop.Title.Font.Shadow.Brush.Color = Color.DarkGray;
+            SpectrumChart1.Axes.DepthTop.Title.Font.Shadow.Brush.Solid = true;
+            SpectrumChart1.Axes.DepthTop.Title.Font.Shadow.Brush.Visible = true;
+            SpectrumChart1.Axes.DepthTop.Title.Font.Size = 11;
+            SpectrumChart1.Axes.DepthTop.Title.Font.SizeFloat = 11F;
+            SpectrumChart1.Axes.DepthTop.Title.Font.Style = Steema.TeeChart.Drawing.FontStyle.Regular;
             // 
             // 
-            this.SpectrumChart1.Axes.DepthTop.Title.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
             // 
             // 
             // 
-            this.SpectrumChart1.Axes.DepthTop.Title.Brush.Color = System.Drawing.Color.Silver;
-            this.SpectrumChart1.Axes.DepthTop.Title.Brush.Solid = true;
-            this.SpectrumChart1.Axes.DepthTop.Title.Brush.Visible = true;
             // 
+            SpectrumChart1.Axes.DepthTop.Title.ImageBevel.Brush.Color = Color.LightGray;
+            SpectrumChart1.Axes.DepthTop.Title.ImageBevel.Brush.Solid = true;
+            SpectrumChart1.Axes.DepthTop.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
-            this.SpectrumChart1.Axes.DepthTop.Title.Font.Bold = false;
             // 
             // 
             // 
-            this.SpectrumChart1.Axes.DepthTop.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.SpectrumChart1.Axes.DepthTop.Title.Font.Brush.Solid = true;
-            this.SpectrumChart1.Axes.DepthTop.Title.Font.Brush.Visible = true;
             // 
+            SpectrumChart1.Axes.DepthTop.Title.Shadow.Brush.Color = Color.DarkGray;
+            SpectrumChart1.Axes.DepthTop.Title.Shadow.Brush.Solid = true;
+            SpectrumChart1.Axes.DepthTop.Title.Shadow.Brush.Visible = true;
             // 
             // 
             // 
             // 
             // 
-            this.SpectrumChart1.Axes.DepthTop.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SpectrumChart1.Axes.DepthTop.Title.Font.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.Axes.DepthTop.Title.Font.Shadow.Brush.Visible = true;
-            this.SpectrumChart1.Axes.DepthTop.Title.Font.Size = 11;
-            this.SpectrumChart1.Axes.DepthTop.Title.Font.SizeFloat = 11F;
             // 
+            SpectrumChart1.Axes.Left.AxisPen.Visible = true;
             // 
             // 
             // 
             // 
             // 
-            this.SpectrumChart1.Axes.DepthTop.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.SpectrumChart1.Axes.DepthTop.Title.ImageBevel.Brush.Solid = true;
-            this.SpectrumChart1.Axes.DepthTop.Title.ImageBevel.Brush.Visible = true;
             // 
+            SpectrumChart1.Axes.Left.Labels.Brush.Color = Color.White;
+            SpectrumChart1.Axes.Left.Labels.Brush.Solid = true;
+            SpectrumChart1.Axes.Left.Labels.Brush.Visible = true;
             // 
             // 
             // 
+            SpectrumChart1.Axes.Left.Labels.Font.Bold = false;
             // 
             // 
-            this.SpectrumChart1.Axes.DepthTop.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SpectrumChart1.Axes.DepthTop.Title.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.Axes.DepthTop.Title.Shadow.Brush.Visible = true;
             // 
+            SpectrumChart1.Axes.Left.Labels.Font.Brush.Color = Color.FromArgb(128, 128, 128);
+            SpectrumChart1.Axes.Left.Labels.Font.Brush.Solid = true;
+            SpectrumChart1.Axes.Left.Labels.Font.Brush.Visible = true;
             // 
             // 
             // 
             // 
             // 
-            this.SpectrumChart1.Axes.Left.AxisPen.Visible = true;
             // 
+            SpectrumChart1.Axes.Left.Labels.Font.Shadow.Brush.Color = Color.DarkGray;
+            SpectrumChart1.Axes.Left.Labels.Font.Shadow.Brush.Solid = true;
+            SpectrumChart1.Axes.Left.Labels.Font.Shadow.Brush.Visible = true;
+            SpectrumChart1.Axes.Left.Labels.Font.Size = 9;
+            SpectrumChart1.Axes.Left.Labels.Font.SizeFloat = 9F;
+            SpectrumChart1.Axes.Left.Labels.Font.Style = Steema.TeeChart.Drawing.FontStyle.Regular;
             // 
             // 
             // 
             // 
             // 
-            this.SpectrumChart1.Axes.Left.Labels.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
             // 
+            SpectrumChart1.Axes.Left.Labels.ImageBevel.Brush.Color = Color.LightGray;
+            SpectrumChart1.Axes.Left.Labels.ImageBevel.Brush.Solid = true;
+            SpectrumChart1.Axes.Left.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
-            this.SpectrumChart1.Axes.Left.Labels.Brush.Color = System.Drawing.Color.White;
-            this.SpectrumChart1.Axes.Left.Labels.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Left.Labels.Brush.Visible = true;
             // 
             // 
             // 
-            this.SpectrumChart1.Axes.Left.Labels.Font.Bold = false;
             // 
+            SpectrumChart1.Axes.Left.Labels.Shadow.Brush.Color = Color.DarkGray;
+            SpectrumChart1.Axes.Left.Labels.Shadow.Brush.Solid = true;
+            SpectrumChart1.Axes.Left.Labels.Shadow.Brush.Visible = true;
+            SpectrumChart1.Axes.Left.MaximumOffset = 4;
+            SpectrumChart1.Axes.Left.MinimumOffset = 4;
             // 
             // 
-            this.SpectrumChart1.Axes.Left.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.SpectrumChart1.Axes.Left.Labels.Font.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Left.Labels.Font.Brush.Visible = true;
             // 
             // 
             // 
             // 
+            SpectrumChart1.Axes.Left.Title.Brush.Color = Color.Silver;
+            SpectrumChart1.Axes.Left.Title.Brush.Solid = true;
+            SpectrumChart1.Axes.Left.Title.Brush.Visible = true;
             // 
             // 
-            this.SpectrumChart1.Axes.Left.Labels.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SpectrumChart1.Axes.Left.Labels.Font.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Left.Labels.Font.Shadow.Brush.Visible = true;
-            this.SpectrumChart1.Axes.Left.Labels.Font.Size = 9;
-            this.SpectrumChart1.Axes.Left.Labels.Font.SizeFloat = 9F;
             // 
+            SpectrumChart1.Axes.Left.Title.Font.Bold = false;
             // 
             // 
             // 
+            SpectrumChart1.Axes.Left.Title.Font.Brush.Color = Color.FromArgb(64, 64, 64);
+            SpectrumChart1.Axes.Left.Title.Font.Brush.Solid = true;
+            SpectrumChart1.Axes.Left.Title.Font.Brush.Visible = true;
             // 
             // 
-            this.SpectrumChart1.Axes.Left.Labels.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.SpectrumChart1.Axes.Left.Labels.ImageBevel.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Left.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
             // 
+            SpectrumChart1.Axes.Left.Title.Font.Shadow.Brush.Color = Color.DarkGray;
+            SpectrumChart1.Axes.Left.Title.Font.Shadow.Brush.Solid = true;
+            SpectrumChart1.Axes.Left.Title.Font.Shadow.Brush.Visible = true;
+            SpectrumChart1.Axes.Left.Title.Font.Size = 11;
+            SpectrumChart1.Axes.Left.Title.Font.SizeFloat = 11F;
+            SpectrumChart1.Axes.Left.Title.Font.Style = Steema.TeeChart.Drawing.FontStyle.Regular;
             // 
             // 
-            this.SpectrumChart1.Axes.Left.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SpectrumChart1.Axes.Left.Labels.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Left.Labels.Shadow.Brush.Visible = true;
-            this.SpectrumChart1.Axes.Left.MaximumOffset = 4;
-            this.SpectrumChart1.Axes.Left.MinimumOffset = 4;
             // 
             // 
             // 
-            this.SpectrumChart1.Axes.Left.Title.Angle = 90;
             // 
+            SpectrumChart1.Axes.Left.Title.ImageBevel.Brush.Color = Color.LightGray;
+            SpectrumChart1.Axes.Left.Title.ImageBevel.Brush.Solid = true;
+            SpectrumChart1.Axes.Left.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
-            this.SpectrumChart1.Axes.Left.Title.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
             // 
             // 
             // 
-            this.SpectrumChart1.Axes.Left.Title.Brush.Color = System.Drawing.Color.Silver;
-            this.SpectrumChart1.Axes.Left.Title.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Left.Title.Brush.Visible = true;
             // 
+            SpectrumChart1.Axes.Left.Title.Shadow.Brush.Color = Color.DarkGray;
+            SpectrumChart1.Axes.Left.Title.Shadow.Brush.Solid = true;
+            SpectrumChart1.Axes.Left.Title.Shadow.Brush.Visible = true;
             // 
             // 
-            this.SpectrumChart1.Axes.Left.Title.Font.Bold = false;
             // 
+            SpectrumChart1.Axes.Right.Automatic = false;
+            SpectrumChart1.Axes.Right.AutomaticMaximum = false;
+            SpectrumChart1.Axes.Right.AutomaticMinimum = false;
             // 
             // 
-            this.SpectrumChart1.Axes.Left.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.SpectrumChart1.Axes.Left.Title.Font.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Left.Title.Font.Brush.Visible = true;
             // 
+            SpectrumChart1.Axes.Right.AxisPen.Visible = true;
             // 
             // 
             // 
             // 
             // 
-            this.SpectrumChart1.Axes.Left.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SpectrumChart1.Axes.Left.Title.Font.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Left.Title.Font.Shadow.Brush.Visible = true;
-            this.SpectrumChart1.Axes.Left.Title.Font.Size = 11;
-            this.SpectrumChart1.Axes.Left.Title.Font.SizeFloat = 11F;
             // 
+            SpectrumChart1.Axes.Right.Labels.Brush.Color = Color.White;
+            SpectrumChart1.Axes.Right.Labels.Brush.Solid = true;
+            SpectrumChart1.Axes.Right.Labels.Brush.Visible = true;
             // 
             // 
             // 
+            SpectrumChart1.Axes.Right.Labels.Font.Bold = false;
             // 
             // 
-            this.SpectrumChart1.Axes.Left.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.SpectrumChart1.Axes.Left.Title.ImageBevel.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Left.Title.ImageBevel.Brush.Visible = true;
             // 
+            SpectrumChart1.Axes.Right.Labels.Font.Brush.Color = Color.FromArgb(128, 128, 128);
+            SpectrumChart1.Axes.Right.Labels.Font.Brush.Solid = true;
+            SpectrumChart1.Axes.Right.Labels.Font.Brush.Visible = true;
             // 
             // 
             // 
             // 
             // 
-            this.SpectrumChart1.Axes.Left.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SpectrumChart1.Axes.Left.Title.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Left.Title.Shadow.Brush.Visible = true;
             // 
+            SpectrumChart1.Axes.Right.Labels.Font.Shadow.Brush.Color = Color.DarkGray;
+            SpectrumChart1.Axes.Right.Labels.Font.Shadow.Brush.Solid = true;
+            SpectrumChart1.Axes.Right.Labels.Font.Shadow.Brush.Visible = true;
+            SpectrumChart1.Axes.Right.Labels.Font.Size = 9;
+            SpectrumChart1.Axes.Right.Labels.Font.SizeFloat = 9F;
+            SpectrumChart1.Axes.Right.Labels.Font.Style = Steema.TeeChart.Drawing.FontStyle.Regular;
             // 
             // 
-            this.SpectrumChart1.Axes.Right.Automatic = false;
-            this.SpectrumChart1.Axes.Right.AutomaticMaximum = false;
-            this.SpectrumChart1.Axes.Right.AutomaticMinimum = false;
             // 
             // 
             // 
-            this.SpectrumChart1.Axes.Right.AxisPen.Visible = true;
             // 
+            SpectrumChart1.Axes.Right.Labels.ImageBevel.Brush.Color = Color.LightGray;
+            SpectrumChart1.Axes.Right.Labels.ImageBevel.Brush.Solid = true;
+            SpectrumChart1.Axes.Right.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
             // 
             // 
-            this.SpectrumChart1.Axes.Right.Labels.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
             // 
+            SpectrumChart1.Axes.Right.Labels.Shadow.Brush.Color = Color.DarkGray;
+            SpectrumChart1.Axes.Right.Labels.Shadow.Brush.Solid = true;
+            SpectrumChart1.Axes.Right.Labels.Shadow.Brush.Visible = true;
+            SpectrumChart1.Axes.Right.Maximum = 0D;
+            SpectrumChart1.Axes.Right.Minimum = 0D;
             // 
             // 
-            this.SpectrumChart1.Axes.Right.Labels.Brush.Color = System.Drawing.Color.White;
-            this.SpectrumChart1.Axes.Right.Labels.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Right.Labels.Brush.Visible = true;
             // 
             // 
             // 
-            this.SpectrumChart1.Axes.Right.Labels.Font.Bold = false;
             // 
+            SpectrumChart1.Axes.Right.Title.Brush.Color = Color.Silver;
+            SpectrumChart1.Axes.Right.Title.Brush.Solid = true;
+            SpectrumChart1.Axes.Right.Title.Brush.Visible = true;
             // 
             // 
-            this.SpectrumChart1.Axes.Right.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.SpectrumChart1.Axes.Right.Labels.Font.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Right.Labels.Font.Brush.Visible = true;
             // 
+            SpectrumChart1.Axes.Right.Title.Font.Bold = false;
             // 
             // 
             // 
+            SpectrumChart1.Axes.Right.Title.Font.Brush.Color = Color.FromArgb(64, 64, 64);
+            SpectrumChart1.Axes.Right.Title.Font.Brush.Solid = true;
+            SpectrumChart1.Axes.Right.Title.Font.Brush.Visible = true;
             // 
             // 
-            this.SpectrumChart1.Axes.Right.Labels.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SpectrumChart1.Axes.Right.Labels.Font.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Right.Labels.Font.Shadow.Brush.Visible = true;
-            this.SpectrumChart1.Axes.Right.Labels.Font.Size = 9;
-            this.SpectrumChart1.Axes.Right.Labels.Font.SizeFloat = 9F;
             // 
             // 
             // 
             // 
+            SpectrumChart1.Axes.Right.Title.Font.Shadow.Brush.Color = Color.DarkGray;
+            SpectrumChart1.Axes.Right.Title.Font.Shadow.Brush.Solid = true;
+            SpectrumChart1.Axes.Right.Title.Font.Shadow.Brush.Visible = true;
+            SpectrumChart1.Axes.Right.Title.Font.Size = 11;
+            SpectrumChart1.Axes.Right.Title.Font.SizeFloat = 11F;
+            SpectrumChart1.Axes.Right.Title.Font.Style = Steema.TeeChart.Drawing.FontStyle.Regular;
             // 
             // 
-            this.SpectrumChart1.Axes.Right.Labels.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.SpectrumChart1.Axes.Right.Labels.ImageBevel.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Right.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
             // 
+            SpectrumChart1.Axes.Right.Title.ImageBevel.Brush.Color = Color.LightGray;
+            SpectrumChart1.Axes.Right.Title.ImageBevel.Brush.Solid = true;
+            SpectrumChart1.Axes.Right.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
-            this.SpectrumChart1.Axes.Right.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SpectrumChart1.Axes.Right.Labels.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Right.Labels.Shadow.Brush.Visible = true;
-            this.SpectrumChart1.Axes.Right.Maximum = 0D;
-            this.SpectrumChart1.Axes.Right.Minimum = 0D;
             // 
             // 
             // 
-            this.SpectrumChart1.Axes.Right.Title.Angle = 270;
             // 
+            SpectrumChart1.Axes.Right.Title.Shadow.Brush.Color = Color.DarkGray;
+            SpectrumChart1.Axes.Right.Title.Shadow.Brush.Solid = true;
+            SpectrumChart1.Axes.Right.Title.Shadow.Brush.Visible = true;
             // 
             // 
-            this.SpectrumChart1.Axes.Right.Title.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
             // 
             // 
             // 
-            this.SpectrumChart1.Axes.Right.Title.Brush.Color = System.Drawing.Color.Silver;
-            this.SpectrumChart1.Axes.Right.Title.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Right.Title.Brush.Visible = true;
             // 
             // 
             // 
-            this.SpectrumChart1.Axes.Right.Title.Font.Bold = false;
             // 
+            SpectrumChart1.Axes.Top.Labels.Brush.Color = Color.White;
+            SpectrumChart1.Axes.Top.Labels.Brush.Solid = true;
+            SpectrumChart1.Axes.Top.Labels.Brush.Visible = true;
             // 
             // 
-            this.SpectrumChart1.Axes.Right.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.SpectrumChart1.Axes.Right.Title.Font.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Right.Title.Font.Brush.Visible = true;
             // 
+            SpectrumChart1.Axes.Top.Labels.Font.Bold = false;
             // 
             // 
             // 
+            SpectrumChart1.Axes.Top.Labels.Font.Brush.Color = Color.FromArgb(128, 128, 128);
+            SpectrumChart1.Axes.Top.Labels.Font.Brush.Solid = true;
+            SpectrumChart1.Axes.Top.Labels.Font.Brush.Visible = true;
             // 
             // 
-            this.SpectrumChart1.Axes.Right.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SpectrumChart1.Axes.Right.Title.Font.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Right.Title.Font.Shadow.Brush.Visible = true;
-            this.SpectrumChart1.Axes.Right.Title.Font.Size = 11;
-            this.SpectrumChart1.Axes.Right.Title.Font.SizeFloat = 11F;
             // 
             // 
             // 
             // 
+            SpectrumChart1.Axes.Top.Labels.Font.Shadow.Brush.Color = Color.DarkGray;
+            SpectrumChart1.Axes.Top.Labels.Font.Shadow.Brush.Solid = true;
+            SpectrumChart1.Axes.Top.Labels.Font.Shadow.Brush.Visible = true;
+            SpectrumChart1.Axes.Top.Labels.Font.Size = 9;
+            SpectrumChart1.Axes.Top.Labels.Font.SizeFloat = 9F;
+            SpectrumChart1.Axes.Top.Labels.Font.Style = Steema.TeeChart.Drawing.FontStyle.Regular;
             // 
             // 
-            this.SpectrumChart1.Axes.Right.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.SpectrumChart1.Axes.Right.Title.ImageBevel.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Right.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
             // 
+            SpectrumChart1.Axes.Top.Labels.ImageBevel.Brush.Color = Color.LightGray;
+            SpectrumChart1.Axes.Top.Labels.ImageBevel.Brush.Solid = true;
+            SpectrumChart1.Axes.Top.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
-            this.SpectrumChart1.Axes.Right.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SpectrumChart1.Axes.Right.Title.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Right.Title.Shadow.Brush.Visible = true;
             // 
             // 
             // 
             // 
+            SpectrumChart1.Axes.Top.Labels.Shadow.Brush.Color = Color.DarkGray;
+            SpectrumChart1.Axes.Top.Labels.Shadow.Brush.Solid = true;
+            SpectrumChart1.Axes.Top.Labels.Shadow.Brush.Visible = true;
             // 
             // 
             // 
             // 
             // 
-            this.SpectrumChart1.Axes.Top.Labels.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
             // 
+            SpectrumChart1.Axes.Top.Title.Brush.Color = Color.Silver;
+            SpectrumChart1.Axes.Top.Title.Brush.Solid = true;
+            SpectrumChart1.Axes.Top.Title.Brush.Visible = true;
             // 
             // 
-            this.SpectrumChart1.Axes.Top.Labels.Brush.Color = System.Drawing.Color.White;
-            this.SpectrumChart1.Axes.Top.Labels.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Top.Labels.Brush.Visible = true;
             // 
+            SpectrumChart1.Axes.Top.Title.Font.Bold = false;
             // 
             // 
-            this.SpectrumChart1.Axes.Top.Labels.Font.Bold = false;
             // 
+            SpectrumChart1.Axes.Top.Title.Font.Brush.Color = Color.FromArgb(64, 64, 64);
+            SpectrumChart1.Axes.Top.Title.Font.Brush.Solid = true;
+            SpectrumChart1.Axes.Top.Title.Font.Brush.Visible = true;
             // 
             // 
-            this.SpectrumChart1.Axes.Top.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.SpectrumChart1.Axes.Top.Labels.Font.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Top.Labels.Font.Brush.Visible = true;
             // 
             // 
             // 
             // 
+            SpectrumChart1.Axes.Top.Title.Font.Shadow.Brush.Color = Color.DarkGray;
+            SpectrumChart1.Axes.Top.Title.Font.Shadow.Brush.Solid = true;
+            SpectrumChart1.Axes.Top.Title.Font.Shadow.Brush.Visible = true;
+            SpectrumChart1.Axes.Top.Title.Font.Size = 11;
+            SpectrumChart1.Axes.Top.Title.Font.SizeFloat = 11F;
+            SpectrumChart1.Axes.Top.Title.Font.Style = Steema.TeeChart.Drawing.FontStyle.Regular;
             // 
             // 
-            this.SpectrumChart1.Axes.Top.Labels.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SpectrumChart1.Axes.Top.Labels.Font.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Top.Labels.Font.Shadow.Brush.Visible = true;
-            this.SpectrumChart1.Axes.Top.Labels.Font.Size = 9;
-            this.SpectrumChart1.Axes.Top.Labels.Font.SizeFloat = 9F;
             // 
             // 
             // 
             // 
+            SpectrumChart1.Axes.Top.Title.ImageBevel.Brush.Color = Color.LightGray;
+            SpectrumChart1.Axes.Top.Title.ImageBevel.Brush.Solid = true;
+            SpectrumChart1.Axes.Top.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
-            this.SpectrumChart1.Axes.Top.Labels.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.SpectrumChart1.Axes.Top.Labels.ImageBevel.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Top.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
             // 
+            SpectrumChart1.Axes.Top.Title.Shadow.Brush.Color = Color.DarkGray;
+            SpectrumChart1.Axes.Top.Title.Shadow.Brush.Solid = true;
+            SpectrumChart1.Axes.Top.Title.Shadow.Brush.Visible = true;
+            SpectrumChart1.Color = Color.Silver;
+            SpectrumChart1.Dock = DockStyle.Fill;
             // 
             // 
-            this.SpectrumChart1.Axes.Top.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SpectrumChart1.Axes.Top.Labels.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Top.Labels.Shadow.Brush.Visible = true;
-            this.SpectrumChart1.Axes.Top.Maximum = 0D;
-            this.SpectrumChart1.Axes.Top.Minimum = 0D;
             // 
             // 
             // 
-            this.SpectrumChart1.Axes.Top.Title.Angle = 0;
             // 
+            SpectrumChart1.Footer.Brush.Color = Color.Silver;
+            SpectrumChart1.Footer.Brush.Solid = true;
+            SpectrumChart1.Footer.Brush.Visible = true;
             // 
             // 
-            this.SpectrumChart1.Axes.Top.Title.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
             // 
+            SpectrumChart1.Footer.Font.Bold = false;
             // 
             // 
-            this.SpectrumChart1.Axes.Top.Title.Brush.Color = System.Drawing.Color.Silver;
-            this.SpectrumChart1.Axes.Top.Title.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Top.Title.Brush.Visible = true;
             // 
+            SpectrumChart1.Footer.Font.Brush.Color = Color.Red;
+            SpectrumChart1.Footer.Font.Brush.Solid = true;
+            SpectrumChart1.Footer.Font.Brush.Visible = true;
             // 
             // 
-            this.SpectrumChart1.Axes.Top.Title.Font.Bold = false;
             // 
             // 
             // 
-            this.SpectrumChart1.Axes.Top.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.SpectrumChart1.Axes.Top.Title.Font.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Top.Title.Font.Brush.Visible = true;
             // 
+            SpectrumChart1.Footer.Font.Shadow.Brush.Color = Color.DarkGray;
+            SpectrumChart1.Footer.Font.Shadow.Brush.Solid = true;
+            SpectrumChart1.Footer.Font.Shadow.Brush.Visible = true;
+            SpectrumChart1.Footer.Font.Size = 8;
+            SpectrumChart1.Footer.Font.SizeFloat = 8F;
+            SpectrumChart1.Footer.Font.Style = Steema.TeeChart.Drawing.FontStyle.Regular;
             // 
             // 
             // 
             // 
             // 
-            this.SpectrumChart1.Axes.Top.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SpectrumChart1.Axes.Top.Title.Font.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Top.Title.Font.Shadow.Brush.Visible = true;
-            this.SpectrumChart1.Axes.Top.Title.Font.Size = 11;
-            this.SpectrumChart1.Axes.Top.Title.Font.SizeFloat = 11F;
             // 
+            SpectrumChart1.Footer.ImageBevel.Brush.Color = Color.LightGray;
+            SpectrumChart1.Footer.ImageBevel.Brush.Solid = true;
+            SpectrumChart1.Footer.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
             // 
             // 
-            this.SpectrumChart1.Axes.Top.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.SpectrumChart1.Axes.Top.Title.ImageBevel.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Top.Title.ImageBevel.Brush.Visible = true;
             // 
+            SpectrumChart1.Footer.Shadow.Brush.Color = Color.DarkGray;
+            SpectrumChart1.Footer.Shadow.Brush.Solid = true;
+            SpectrumChart1.Footer.Shadow.Brush.Visible = true;
             // 
             // 
             // 
             // 
             // 
-            this.SpectrumChart1.Axes.Top.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SpectrumChart1.Axes.Top.Title.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.Axes.Top.Title.Shadow.Brush.Visible = true;
-            this.SpectrumChart1.Color = System.Drawing.Color.Silver;
-            this.SpectrumChart1.Dock = System.Windows.Forms.DockStyle.Fill;
             // 
+            SpectrumChart1.Header.Brush.Color = Color.FromArgb(192, 192, 192);
+            SpectrumChart1.Header.Brush.Solid = true;
+            SpectrumChart1.Header.Brush.Visible = true;
             // 
             // 
             // 
+            SpectrumChart1.Header.Font.Bold = false;
             // 
             // 
-            this.SpectrumChart1.Footer.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
             // 
+            SpectrumChart1.Header.Font.Brush.Color = Color.FromArgb(128, 128, 128);
+            SpectrumChart1.Header.Font.Brush.Solid = true;
+            SpectrumChart1.Header.Font.Brush.Visible = true;
             // 
             // 
-            this.SpectrumChart1.Footer.Brush.Color = System.Drawing.Color.Silver;
-            this.SpectrumChart1.Footer.Brush.Solid = true;
-            this.SpectrumChart1.Footer.Brush.Visible = true;
             // 
             // 
             // 
-            this.SpectrumChart1.Footer.Font.Bold = false;
             // 
+            SpectrumChart1.Header.Font.Shadow.Brush.Color = Color.DarkGray;
+            SpectrumChart1.Header.Font.Shadow.Brush.Solid = true;
+            SpectrumChart1.Header.Font.Shadow.Brush.Visible = true;
+            SpectrumChart1.Header.Font.Size = 12;
+            SpectrumChart1.Header.Font.SizeFloat = 12F;
+            SpectrumChart1.Header.Font.Style = Steema.TeeChart.Drawing.FontStyle.Regular;
             // 
             // 
-            this.SpectrumChart1.Footer.Font.Brush.Color = System.Drawing.Color.Red;
-            this.SpectrumChart1.Footer.Font.Brush.Solid = true;
-            this.SpectrumChart1.Footer.Font.Brush.Visible = true;
             // 
             // 
             // 
             // 
+            SpectrumChart1.Header.ImageBevel.Brush.Color = Color.LightGray;
+            SpectrumChart1.Header.ImageBevel.Brush.Solid = true;
+            SpectrumChart1.Header.ImageBevel.Brush.Visible = true;
+            SpectrumChart1.Header.Lines = new string[]
+    {
+    "Frequency spectrum"
+    };
             // 
             // 
-            this.SpectrumChart1.Footer.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SpectrumChart1.Footer.Font.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.Footer.Font.Shadow.Brush.Visible = true;
-            this.SpectrumChart1.Footer.Font.Size = 8;
-            this.SpectrumChart1.Footer.Font.SizeFloat = 8F;
             // 
             // 
             // 
             // 
+            SpectrumChart1.Header.Shadow.Brush.Color = Color.FromArgb(169, 169, 169);
+            SpectrumChart1.Header.Shadow.Brush.Solid = true;
+            SpectrumChart1.Header.Shadow.Brush.Visible = true;
             // 
             // 
-            this.SpectrumChart1.Footer.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.SpectrumChart1.Footer.ImageBevel.Brush.Solid = true;
-            this.SpectrumChart1.Footer.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
             // 
+            SpectrumChart1.Legend.Brush.Color = Color.White;
+            SpectrumChart1.Legend.Brush.Solid = true;
+            SpectrumChart1.Legend.Brush.Visible = true;
+            SpectrumChart1.Legend.CheckBoxes = false;
             // 
             // 
-            this.SpectrumChart1.Footer.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SpectrumChart1.Footer.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.Footer.Shadow.Brush.Visible = true;
             // 
+            SpectrumChart1.Legend.Font.Bold = false;
             // 
             // 
             // 
+            SpectrumChart1.Legend.Font.Brush.Color = Color.FromArgb(64, 64, 64);
+            SpectrumChart1.Legend.Font.Brush.Solid = true;
+            SpectrumChart1.Legend.Font.Brush.Visible = true;
             // 
             // 
-            this.SpectrumChart1.Header.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
             // 
             // 
             // 
-            this.SpectrumChart1.Header.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.SpectrumChart1.Header.Brush.Solid = true;
-            this.SpectrumChart1.Header.Brush.Visible = true;
             // 
+            SpectrumChart1.Legend.Font.Shadow.Brush.Color = Color.DarkGray;
+            SpectrumChart1.Legend.Font.Shadow.Brush.Solid = true;
+            SpectrumChart1.Legend.Font.Shadow.Brush.Visible = true;
+            SpectrumChart1.Legend.Font.Size = 9;
+            SpectrumChart1.Legend.Font.SizeFloat = 9F;
+            SpectrumChart1.Legend.Font.Style = Steema.TeeChart.Drawing.FontStyle.Regular;
             // 
             // 
-            this.SpectrumChart1.Header.Font.Bold = false;
             // 
             // 
             // 
-            this.SpectrumChart1.Header.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.SpectrumChart1.Header.Font.Brush.Solid = true;
-            this.SpectrumChart1.Header.Font.Brush.Visible = true;
             // 
+            SpectrumChart1.Legend.ImageBevel.Brush.Color = Color.LightGray;
+            SpectrumChart1.Legend.ImageBevel.Brush.Solid = true;
+            SpectrumChart1.Legend.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
             // 
             // 
-            this.SpectrumChart1.Header.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SpectrumChart1.Header.Font.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.Header.Font.Shadow.Brush.Visible = true;
-            this.SpectrumChart1.Header.Font.Size = 12;
-            this.SpectrumChart1.Header.Font.SizeFloat = 12F;
             // 
+            SpectrumChart1.Legend.Shadow.Brush.Color = Color.FromArgb(0, 0, 0);
+            SpectrumChart1.Legend.Shadow.Brush.Solid = true;
+            SpectrumChart1.Legend.Shadow.Brush.Visible = true;
             // 
             // 
             // 
             // 
             // 
-            this.SpectrumChart1.Header.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.SpectrumChart1.Header.ImageBevel.Brush.Solid = true;
-            this.SpectrumChart1.Header.ImageBevel.Brush.Visible = true;
-            this.SpectrumChart1.Header.Lines = new string[] {
-        "Frequency spectrum"};
             // 
             // 
             // 
             // 
+            SpectrumChart1.Legend.Symbol.Shadow.Brush.Color = Color.DarkGray;
+            SpectrumChart1.Legend.Symbol.Shadow.Brush.Solid = true;
+            SpectrumChart1.Legend.Symbol.Shadow.Brush.Visible = true;
             // 
             // 
-            this.SpectrumChart1.Header.Shadow.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.SpectrumChart1.Header.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.Header.Shadow.Brush.Visible = true;
             // 
             // 
             // 
             // 
+            SpectrumChart1.Legend.Title.Brush.Color = Color.White;
+            SpectrumChart1.Legend.Title.Brush.Solid = true;
+            SpectrumChart1.Legend.Title.Brush.Visible = true;
             // 
             // 
-            this.SpectrumChart1.Legend.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
             // 
+            SpectrumChart1.Legend.Title.Font.Bold = true;
             // 
             // 
-            this.SpectrumChart1.Legend.Brush.Color = System.Drawing.Color.White;
-            this.SpectrumChart1.Legend.Brush.Solid = true;
-            this.SpectrumChart1.Legend.Brush.Visible = true;
             // 
+            SpectrumChart1.Legend.Title.Font.Brush.Color = Color.Black;
+            SpectrumChart1.Legend.Title.Font.Brush.Solid = true;
+            SpectrumChart1.Legend.Title.Font.Brush.Visible = true;
             // 
             // 
-            this.SpectrumChart1.Legend.Font.Bold = false;
             // 
             // 
             // 
-            this.SpectrumChart1.Legend.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.SpectrumChart1.Legend.Font.Brush.Solid = true;
-            this.SpectrumChart1.Legend.Font.Brush.Visible = true;
             // 
+            SpectrumChart1.Legend.Title.Font.Shadow.Brush.Color = Color.DarkGray;
+            SpectrumChart1.Legend.Title.Font.Shadow.Brush.Solid = true;
+            SpectrumChart1.Legend.Title.Font.Shadow.Brush.Visible = true;
+            SpectrumChart1.Legend.Title.Font.Size = 8;
+            SpectrumChart1.Legend.Title.Font.SizeFloat = 8F;
+            SpectrumChart1.Legend.Title.Font.Style = Steema.TeeChart.Drawing.FontStyle.Bold;
             // 
             // 
             // 
             // 
             // 
-            this.SpectrumChart1.Legend.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SpectrumChart1.Legend.Font.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.Legend.Font.Shadow.Brush.Visible = true;
-            this.SpectrumChart1.Legend.Font.Size = 9;
-            this.SpectrumChart1.Legend.Font.SizeFloat = 9F;
             // 
+            SpectrumChart1.Legend.Title.ImageBevel.Brush.Color = Color.LightGray;
+            SpectrumChart1.Legend.Title.ImageBevel.Brush.Solid = true;
+            SpectrumChart1.Legend.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
             // 
             // 
-            this.SpectrumChart1.Legend.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.SpectrumChart1.Legend.ImageBevel.Brush.Solid = true;
-            this.SpectrumChart1.Legend.ImageBevel.Brush.Visible = true;
             // 
+            SpectrumChart1.Legend.Title.Shadow.Brush.Color = Color.DarkGray;
+            SpectrumChart1.Legend.Title.Shadow.Brush.Solid = true;
+            SpectrumChart1.Legend.Title.Shadow.Brush.Visible = true;
+            SpectrumChart1.Legend.Visible = false;
+            SpectrumChart1.Location = new Point(0, 240);
+            SpectrumChart1.Name = "SpectrumChart1";
             // 
             // 
             // 
             // 
             // 
-            this.SpectrumChart1.Legend.Shadow.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.SpectrumChart1.Legend.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.Legend.Shadow.Brush.Visible = true;
             // 
+            SpectrumChart1.Panel.Bevel.Inner = Steema.TeeChart.Drawing.BevelStyles.Lowered;
             // 
             // 
             // 
+            SpectrumChart1.Panel.Brush.Color = Color.Silver;
+            SpectrumChart1.Panel.Brush.Solid = true;
+            SpectrumChart1.Panel.Brush.Visible = true;
             // 
             // 
             // 
             // 
             // 
-            this.SpectrumChart1.Legend.Symbol.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SpectrumChart1.Legend.Symbol.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.Legend.Symbol.Shadow.Brush.Visible = true;
             // 
+            SpectrumChart1.Panel.ImageBevel.Brush.Color = Color.LightGray;
+            SpectrumChart1.Panel.ImageBevel.Brush.Solid = true;
+            SpectrumChart1.Panel.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
             // 
             // 
-            this.SpectrumChart1.Legend.Title.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
             // 
+            SpectrumChart1.Panel.Shadow.Brush.Color = Color.DarkGray;
+            SpectrumChart1.Panel.Shadow.Brush.Solid = true;
+            SpectrumChart1.Panel.Shadow.Brush.Visible = true;
             // 
             // 
-            this.SpectrumChart1.Legend.Title.Brush.Color = System.Drawing.Color.White;
-            this.SpectrumChart1.Legend.Title.Brush.Solid = true;
-            this.SpectrumChart1.Legend.Title.Brush.Visible = true;
             // 
+            margins1.Bottom = 100;
+            margins1.Left = 100;
+            margins1.Right = 100;
+            margins1.Top = 100;
+            SpectrumChart1.Printer.Margins = margins1;
+            SpectrumChart1.Series.Add(Series1);
+            SpectrumChart1.Series.Add(Series2);
+            SpectrumChart1.Size = new Size(1149, 491);
+            SpectrumChart1.SpectrumPart = SpectrumPart.sppAmplt;
             // 
             // 
-            this.SpectrumChart1.Legend.Title.Font.Bold = true;
             // 
             // 
             // 
-            this.SpectrumChart1.Legend.Title.Font.Brush.Color = System.Drawing.Color.Black;
-            this.SpectrumChart1.Legend.Title.Font.Brush.Solid = true;
-            this.SpectrumChart1.Legend.Title.Font.Brush.Visible = true;
             // 
+            SpectrumChart1.SubFooter.Brush.Color = Color.Silver;
+            SpectrumChart1.SubFooter.Brush.Solid = true;
+            SpectrumChart1.SubFooter.Brush.Visible = true;
             // 
             // 
             // 
+            SpectrumChart1.SubFooter.Font.Bold = false;
             // 
             // 
-            this.SpectrumChart1.Legend.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SpectrumChart1.Legend.Title.Font.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.Legend.Title.Font.Shadow.Brush.Visible = true;
-            this.SpectrumChart1.Legend.Title.Font.Size = 8;
-            this.SpectrumChart1.Legend.Title.Font.SizeFloat = 8F;
             // 
+            SpectrumChart1.SubFooter.Font.Brush.Color = Color.Red;
+            SpectrumChart1.SubFooter.Font.Brush.Solid = true;
+            SpectrumChart1.SubFooter.Font.Brush.Visible = true;
             // 
             // 
             // 
             // 
             // 
-            this.SpectrumChart1.Legend.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.SpectrumChart1.Legend.Title.ImageBevel.Brush.Solid = true;
-            this.SpectrumChart1.Legend.Title.ImageBevel.Brush.Visible = true;
             // 
+            SpectrumChart1.SubFooter.Font.Shadow.Brush.Color = Color.DarkGray;
+            SpectrumChart1.SubFooter.Font.Shadow.Brush.Solid = true;
+            SpectrumChart1.SubFooter.Font.Shadow.Brush.Visible = true;
+            SpectrumChart1.SubFooter.Font.Size = 8;
+            SpectrumChart1.SubFooter.Font.SizeFloat = 8F;
+            SpectrumChart1.SubFooter.Font.Style = Steema.TeeChart.Drawing.FontStyle.Regular;
             // 
             // 
             // 
             // 
             // 
-            this.SpectrumChart1.Legend.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SpectrumChart1.Legend.Title.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.Legend.Title.Shadow.Brush.Visible = true;
-            this.SpectrumChart1.Legend.Visible = false;
-            this.SpectrumChart1.Location = new System.Drawing.Point(0, 195);
-            this.SpectrumChart1.Name = "SpectrumChart1";
             // 
+            SpectrumChart1.SubFooter.ImageBevel.Brush.Color = Color.LightGray;
+            SpectrumChart1.SubFooter.ImageBevel.Brush.Solid = true;
+            SpectrumChart1.SubFooter.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
             // 
             // 
-            this.SpectrumChart1.Panel.Bevel.Inner = Steema.TeeChart.Drawing.BevelStyles.Lowered;
-            this.SpectrumChart1.Panel.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
             // 
+            SpectrumChart1.SubFooter.Shadow.Brush.Color = Color.DarkGray;
+            SpectrumChart1.SubFooter.Shadow.Brush.Solid = true;
+            SpectrumChart1.SubFooter.Shadow.Brush.Visible = true;
             // 
             // 
-            this.SpectrumChart1.Panel.Brush.Color = System.Drawing.Color.Silver;
-            this.SpectrumChart1.Panel.Brush.Solid = true;
-            this.SpectrumChart1.Panel.Brush.Visible = true;
             // 
             // 
             // 
             // 
+            SpectrumChart1.SubHeader.Brush.Color = Color.FromArgb(192, 192, 192);
+            SpectrumChart1.SubHeader.Brush.Solid = true;
+            SpectrumChart1.SubHeader.Brush.Visible = true;
             // 
             // 
-            this.SpectrumChart1.Panel.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.SpectrumChart1.Panel.ImageBevel.Brush.Solid = true;
-            this.SpectrumChart1.Panel.ImageBevel.Brush.Visible = true;
             // 
+            SpectrumChart1.SubHeader.Font.Bold = false;
             // 
             // 
             // 
+            SpectrumChart1.SubHeader.Font.Brush.Color = Color.FromArgb(128, 128, 128);
+            SpectrumChart1.SubHeader.Font.Brush.Solid = true;
+            SpectrumChart1.SubHeader.Font.Brush.Visible = true;
             // 
             // 
-            this.SpectrumChart1.Panel.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SpectrumChart1.Panel.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.Panel.Shadow.Brush.Visible = true;
-            this.SpectrumChart1.Series.Add(this.Series1);
-            this.SpectrumChart1.Series.Add(this.Series2);
-            this.SpectrumChart1.Size = new System.Drawing.Size(728, 219);
-            this.SpectrumChart1.SpectrumPart = Dew.Signal.Tee.SpectrumPart.sppAmplt;
             // 
             // 
             // 
             // 
+            SpectrumChart1.SubHeader.Font.Shadow.Brush.Color = Color.DarkGray;
+            SpectrumChart1.SubHeader.Font.Shadow.Brush.Solid = true;
+            SpectrumChart1.SubHeader.Font.Shadow.Brush.Visible = true;
+            SpectrumChart1.SubHeader.Font.Size = 12;
+            SpectrumChart1.SubHeader.Font.SizeFloat = 12F;
+            SpectrumChart1.SubHeader.Font.Style = Steema.TeeChart.Drawing.FontStyle.Regular;
             // 
             // 
-            this.SpectrumChart1.SubFooter.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
             // 
             // 
             // 
-            this.SpectrumChart1.SubFooter.Brush.Color = System.Drawing.Color.Silver;
-            this.SpectrumChart1.SubFooter.Brush.Solid = true;
-            this.SpectrumChart1.SubFooter.Brush.Visible = true;
             // 
+            SpectrumChart1.SubHeader.ImageBevel.Brush.Color = Color.LightGray;
+            SpectrumChart1.SubHeader.ImageBevel.Brush.Solid = true;
+            SpectrumChart1.SubHeader.ImageBevel.Brush.Visible = true;
             // 
             // 
-            this.SpectrumChart1.SubFooter.Font.Bold = false;
             // 
             // 
             // 
-            this.SpectrumChart1.SubFooter.Font.Brush.Color = System.Drawing.Color.Red;
-            this.SpectrumChart1.SubFooter.Font.Brush.Solid = true;
-            this.SpectrumChart1.SubFooter.Font.Brush.Visible = true;
             // 
+            SpectrumChart1.SubHeader.Shadow.Brush.Color = Color.FromArgb(169, 169, 169);
+            SpectrumChart1.SubHeader.Shadow.Brush.Solid = true;
+            SpectrumChart1.SubHeader.Shadow.Brush.Visible = true;
+            SpectrumChart1.TabIndex = 2;
             // 
             // 
             // 
             // 
             // 
-            this.SpectrumChart1.SubFooter.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SpectrumChart1.SubFooter.Font.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.SubFooter.Font.Shadow.Brush.Visible = true;
-            this.SpectrumChart1.SubFooter.Font.Size = 8;
-            this.SpectrumChart1.SubFooter.Font.SizeFloat = 8F;
             // 
             // 
             // 
             // 
+            SpectrumChart1.Walls.Back.Brush.Color = Color.Silver;
+            SpectrumChart1.Walls.Back.Brush.Solid = true;
+            SpectrumChart1.Walls.Back.Brush.Visible = false;
             // 
             // 
-            this.SpectrumChart1.SubFooter.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.SpectrumChart1.SubFooter.ImageBevel.Brush.Solid = true;
-            this.SpectrumChart1.SubFooter.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
             // 
+            SpectrumChart1.Walls.Back.ImageBevel.Brush.Color = Color.LightGray;
+            SpectrumChart1.Walls.Back.ImageBevel.Brush.Solid = true;
+            SpectrumChart1.Walls.Back.ImageBevel.Brush.Visible = true;
             // 
             // 
-            this.SpectrumChart1.SubFooter.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SpectrumChart1.SubFooter.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.SubFooter.Shadow.Brush.Visible = true;
             // 
             // 
             // 
             // 
+            SpectrumChart1.Walls.Back.Shadow.Brush.Color = Color.DarkGray;
+            SpectrumChart1.Walls.Back.Shadow.Brush.Solid = true;
+            SpectrumChart1.Walls.Back.Shadow.Brush.Visible = true;
             // 
             // 
-            this.SpectrumChart1.SubHeader.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
             // 
             // 
             // 
-            this.SpectrumChart1.SubHeader.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.SpectrumChart1.SubHeader.Brush.Solid = true;
-            this.SpectrumChart1.SubHeader.Brush.Visible = true;
             // 
+            SpectrumChart1.Walls.Bottom.Brush.Color = Color.White;
+            SpectrumChart1.Walls.Bottom.Brush.Solid = true;
+            SpectrumChart1.Walls.Bottom.Brush.Visible = true;
             // 
             // 
-            this.SpectrumChart1.SubHeader.Font.Bold = false;
             // 
             // 
             // 
-            this.SpectrumChart1.SubHeader.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.SpectrumChart1.SubHeader.Font.Brush.Solid = true;
-            this.SpectrumChart1.SubHeader.Font.Brush.Visible = true;
             // 
+            SpectrumChart1.Walls.Bottom.ImageBevel.Brush.Color = Color.LightGray;
+            SpectrumChart1.Walls.Bottom.ImageBevel.Brush.Solid = true;
+            SpectrumChart1.Walls.Bottom.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
             // 
             // 
-            this.SpectrumChart1.SubHeader.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SpectrumChart1.SubHeader.Font.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.SubHeader.Font.Shadow.Brush.Visible = true;
-            this.SpectrumChart1.SubHeader.Font.Size = 12;
-            this.SpectrumChart1.SubHeader.Font.SizeFloat = 12F;
             // 
+            SpectrumChart1.Walls.Bottom.Shadow.Brush.Color = Color.DarkGray;
+            SpectrumChart1.Walls.Bottom.Shadow.Brush.Solid = true;
+            SpectrumChart1.Walls.Bottom.Shadow.Brush.Visible = true;
             // 
             // 
             // 
             // 
             // 
-            this.SpectrumChart1.SubHeader.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.SpectrumChart1.SubHeader.ImageBevel.Brush.Solid = true;
-            this.SpectrumChart1.SubHeader.ImageBevel.Brush.Visible = true;
             // 
+            SpectrumChart1.Walls.Left.Brush.Color = Color.LightYellow;
+            SpectrumChart1.Walls.Left.Brush.Solid = true;
+            SpectrumChart1.Walls.Left.Brush.Visible = true;
             // 
             // 
             // 
             // 
             // 
-            this.SpectrumChart1.SubHeader.Shadow.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.SpectrumChart1.SubHeader.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.SubHeader.Shadow.Brush.Visible = true;
-            this.SpectrumChart1.TabIndex = 2;
             // 
+            SpectrumChart1.Walls.Left.ImageBevel.Brush.Color = Color.LightGray;
+            SpectrumChart1.Walls.Left.ImageBevel.Brush.Solid = true;
+            SpectrumChart1.Walls.Left.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
             // 
             // 
             // 
+            SpectrumChart1.Walls.Left.Shadow.Brush.Color = Color.DarkGray;
+            SpectrumChart1.Walls.Left.Shadow.Brush.Solid = true;
+            SpectrumChart1.Walls.Left.Shadow.Brush.Visible = true;
             // 
             // 
-            this.SpectrumChart1.Walls.Back.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
             // 
             // 
             // 
-            this.SpectrumChart1.Walls.Back.Brush.Color = System.Drawing.Color.Silver;
-            this.SpectrumChart1.Walls.Back.Brush.Solid = true;
-            this.SpectrumChart1.Walls.Back.Brush.Visible = false;
             // 
+            SpectrumChart1.Walls.Right.Brush.Color = Color.LightYellow;
+            SpectrumChart1.Walls.Right.Brush.Solid = true;
+            SpectrumChart1.Walls.Right.Brush.Visible = true;
             // 
             // 
             // 
             // 
             // 
-            this.SpectrumChart1.Walls.Back.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.SpectrumChart1.Walls.Back.ImageBevel.Brush.Solid = true;
-            this.SpectrumChart1.Walls.Back.ImageBevel.Brush.Visible = true;
             // 
+            SpectrumChart1.Walls.Right.ImageBevel.Brush.Color = Color.LightGray;
+            SpectrumChart1.Walls.Right.ImageBevel.Brush.Solid = true;
+            SpectrumChart1.Walls.Right.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
             // 
             // 
-            this.SpectrumChart1.Walls.Back.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SpectrumChart1.Walls.Back.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.Walls.Back.Shadow.Brush.Visible = true;
             // 
+            SpectrumChart1.Walls.Right.Shadow.Brush.Color = Color.DarkGray;
+            SpectrumChart1.Walls.Right.Shadow.Brush.Solid = true;
+            SpectrumChart1.Walls.Right.Shadow.Brush.Visible = true;
             // 
             // 
             // 
             // 
             // 
-            this.SpectrumChart1.Walls.Bottom.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
             // 
+            SpectrumChart1.Zoom.Brush.Color = Color.LightBlue;
+            SpectrumChart1.Zoom.Brush.Solid = true;
+            SpectrumChart1.Zoom.Brush.Visible = false;
             // 
             // 
-            this.SpectrumChart1.Walls.Bottom.Brush.Color = System.Drawing.Color.White;
-            this.SpectrumChart1.Walls.Bottom.Brush.Solid = true;
-            this.SpectrumChart1.Walls.Bottom.Brush.Visible = true;
             // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.SpectrumChart1.Walls.Bottom.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.SpectrumChart1.Walls.Bottom.ImageBevel.Brush.Solid = true;
-            this.SpectrumChart1.Walls.Bottom.ImageBevel.Brush.Visible = true;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.SpectrumChart1.Walls.Bottom.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SpectrumChart1.Walls.Bottom.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.Walls.Bottom.Shadow.Brush.Visible = true;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.SpectrumChart1.Walls.Left.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
-            // 
-            // 
-            // 
-            this.SpectrumChart1.Walls.Left.Brush.Color = System.Drawing.Color.LightYellow;
-            this.SpectrumChart1.Walls.Left.Brush.Solid = true;
-            this.SpectrumChart1.Walls.Left.Brush.Visible = true;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.SpectrumChart1.Walls.Left.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.SpectrumChart1.Walls.Left.ImageBevel.Brush.Solid = true;
-            this.SpectrumChart1.Walls.Left.ImageBevel.Brush.Visible = true;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.SpectrumChart1.Walls.Left.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SpectrumChart1.Walls.Left.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.Walls.Left.Shadow.Brush.Visible = true;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.SpectrumChart1.Walls.Right.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
-            // 
-            // 
-            // 
-            this.SpectrumChart1.Walls.Right.Brush.Color = System.Drawing.Color.LightYellow;
-            this.SpectrumChart1.Walls.Right.Brush.Solid = true;
-            this.SpectrumChart1.Walls.Right.Brush.Visible = true;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.SpectrumChart1.Walls.Right.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.SpectrumChart1.Walls.Right.ImageBevel.Brush.Solid = true;
-            this.SpectrumChart1.Walls.Right.ImageBevel.Brush.Visible = true;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.SpectrumChart1.Walls.Right.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.SpectrumChart1.Walls.Right.Shadow.Brush.Solid = true;
-            this.SpectrumChart1.Walls.Right.Shadow.Brush.Visible = true;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.SpectrumChart1.Zoom.Brush.Color = System.Drawing.Color.LightBlue;
-            this.SpectrumChart1.Zoom.Brush.Solid = true;
-            this.SpectrumChart1.Zoom.Brush.Visible = false;
-            this.SpectrumChart1.Zoom.FullRepaint = true;
-            // 
-            // 
-            // 
-            this.SpectrumChart1.Zoom.Pen.Visible = true;
+            SpectrumChart1.Zoom.Pen.Visible = true;
             // 
             // Series1
             // 
-            this.Series1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(102)))), ((int)(((byte)(163)))));
-            this.Series1.ColorEach = false;
             // 
             // 
             // 
+            Series1.Brush.Color = Color.Empty;
+            Series1.Brush.Solid = true;
+            Series1.Brush.Visible = true;
+            Series1.Color = Color.FromArgb(68, 102, 163);
+            Series1.Cursor = cursor1;
             // 
             // 
             // 
-            this.Series1.Legend.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
             // 
             // 
             // 
-            this.Series1.Legend.Brush.Color = System.Drawing.Color.White;
-            this.Series1.Legend.Brush.Solid = true;
-            this.Series1.Legend.Brush.Visible = true;
+            Series1.Legend.Brush.Color = Color.White;
+            Series1.Legend.Brush.Solid = true;
+            Series1.Legend.Brush.Visible = true;
             // 
             // 
             // 
-            this.Series1.Legend.Font.Bold = false;
+            Series1.Legend.Font.Bold = false;
             // 
             // 
             // 
-            this.Series1.Legend.Font.Brush.Color = System.Drawing.Color.Black;
-            this.Series1.Legend.Font.Brush.Solid = true;
-            this.Series1.Legend.Font.Brush.Visible = true;
+            Series1.Legend.Font.Brush.Color = Color.Black;
+            Series1.Legend.Font.Brush.Solid = true;
+            Series1.Legend.Font.Brush.Visible = true;
             // 
             // 
             // 
             // 
             // 
             // 
-            this.Series1.Legend.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.Series1.Legend.Font.Shadow.Brush.Solid = true;
-            this.Series1.Legend.Font.Shadow.Brush.Visible = true;
-            this.Series1.Legend.Font.Size = 8;
-            this.Series1.Legend.Font.SizeFloat = 8F;
+            Series1.Legend.Font.Shadow.Brush.Color = Color.DarkGray;
+            Series1.Legend.Font.Shadow.Brush.Solid = true;
+            Series1.Legend.Font.Shadow.Brush.Visible = true;
+            Series1.Legend.Font.Size = 8;
+            Series1.Legend.Font.SizeFloat = 8F;
+            Series1.Legend.Font.Style = Steema.TeeChart.Drawing.FontStyle.Regular;
             // 
             // 
             // 
             // 
             // 
             // 
-            this.Series1.Legend.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.Series1.Legend.ImageBevel.Brush.Solid = true;
-            this.Series1.Legend.ImageBevel.Brush.Visible = true;
+            Series1.Legend.ImageBevel.Brush.Color = Color.LightGray;
+            Series1.Legend.ImageBevel.Brush.Solid = true;
+            Series1.Legend.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
             // 
             // 
             // 
-            this.Series1.Legend.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.Series1.Legend.Shadow.Brush.Solid = true;
-            this.Series1.Legend.Shadow.Brush.Visible = true;
+            Series1.Legend.Shadow.Brush.Color = Color.DarkGray;
+            Series1.Legend.Shadow.Brush.Solid = true;
+            Series1.Legend.Shadow.Brush.Visible = true;
             // 
             // 
             // 
-            this.Series1.LinePen.Color = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(102)))), ((int)(((byte)(163)))));
             // 
             // 
             // 
+            Series1.Marks.Brush.Color = Color.FromArgb(255, 255, 255);
+            Series1.Marks.Brush.Solid = true;
+            Series1.Marks.Brush.Visible = true;
             // 
             // 
             // 
-            this.Series1.Marks.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
+            Series1.Marks.Font.Bold = false;
             // 
             // 
             // 
-            this.Series1.Marks.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.Series1.Marks.Brush.Solid = true;
-            this.Series1.Marks.Brush.Visible = true;
+            Series1.Marks.Font.Brush.Color = Color.Black;
+            Series1.Marks.Font.Brush.Solid = true;
+            Series1.Marks.Font.Brush.Visible = true;
             // 
             // 
             // 
-            this.Series1.Marks.Font.Bold = false;
             // 
             // 
             // 
-            this.Series1.Marks.Font.Brush.Color = System.Drawing.Color.Black;
-            this.Series1.Marks.Font.Brush.Solid = true;
-            this.Series1.Marks.Font.Brush.Visible = true;
+            Series1.Marks.Font.Shadow.Brush.Color = Color.DarkGray;
+            Series1.Marks.Font.Shadow.Brush.Solid = true;
+            Series1.Marks.Font.Shadow.Brush.Visible = true;
+            Series1.Marks.Font.Size = 8;
+            Series1.Marks.Font.SizeFloat = 8F;
+            Series1.Marks.Font.Style = Steema.TeeChart.Drawing.FontStyle.Regular;
             // 
             // 
             // 
             // 
             // 
             // 
-            this.Series1.Marks.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.Series1.Marks.Font.Shadow.Brush.Solid = true;
-            this.Series1.Marks.Font.Shadow.Brush.Visible = true;
-            this.Series1.Marks.Font.Size = 8;
-            this.Series1.Marks.Font.SizeFloat = 8F;
+            Series1.Marks.ImageBevel.Brush.Color = Color.LightGray;
+            Series1.Marks.ImageBevel.Brush.Solid = true;
+            Series1.Marks.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
             // 
             // 
             // 
-            this.Series1.Marks.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.Series1.Marks.ImageBevel.Brush.Solid = true;
-            this.Series1.Marks.ImageBevel.Brush.Visible = true;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.Series1.Marks.Shadow.Brush.Color = System.Drawing.Color.Gray;
-            this.Series1.Marks.Shadow.Brush.Solid = true;
-            this.Series1.Marks.Shadow.Brush.Visible = true;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.Series1.Marks.Symbol.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
-            // 
-            // 
-            // 
-            this.Series1.Marks.Symbol.Brush.Color = System.Drawing.Color.White;
-            this.Series1.Marks.Symbol.Brush.Solid = true;
-            this.Series1.Marks.Symbol.Brush.Visible = true;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.Series1.Marks.Symbol.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.Series1.Marks.Symbol.ImageBevel.Brush.Solid = true;
-            this.Series1.Marks.Symbol.ImageBevel.Brush.Visible = true;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.Series1.Marks.Symbol.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.Series1.Marks.Symbol.Shadow.Brush.Solid = true;
-            this.Series1.Marks.Symbol.Shadow.Brush.Visible = true;
-            // 
-            // 
-            // 
-            this.Series1.Marks.TailParams.Margin = 0F;
-            this.Series1.Marks.TailParams.PointerHeight = 8D;
-            this.Series1.Marks.TailParams.PointerWidth = 8D;
-            this.Series1.OriginalCursor = null;
-            this.Series1.Title = "fastLine1";
-            this.Series1.TreatNulls = Steema.TeeChart.Styles.TreatNullsStyle.Ignore;
-            this.Series1.UseExtendedNumRange = false;
-            // 
-            // 
-            // 
-            this.Series1.XValues.DataMember = "X";
-            this.Series1.XValues.Order = Steema.TeeChart.Styles.ValueListOrder.Ascending;
-            // 
-            // 
-            // 
-            this.Series1.YValues.DataMember = "Y";
+            Series1.Marks.Shadow.Brush.Color = Color.Gray;
+            Series1.Marks.Shadow.Brush.Solid = true;
+            Series1.Marks.Shadow.Brush.Visible = true;
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            Series1.Marks.Symbol.Brush.Color = Color.White;
+            Series1.Marks.Symbol.Brush.Solid = true;
+            Series1.Marks.Symbol.Brush.Visible = true;
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            Series1.Marks.Symbol.ImageBevel.Brush.Color = Color.LightGray;
+            Series1.Marks.Symbol.ImageBevel.Brush.Solid = true;
+            Series1.Marks.Symbol.ImageBevel.Brush.Visible = true;
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            Series1.Marks.Symbol.Shadow.Brush.Color = Color.DarkGray;
+            Series1.Marks.Symbol.Shadow.Brush.Solid = true;
+            Series1.Marks.Symbol.Shadow.Brush.Visible = true;
+            Series1.Title = "fastLine1";
+            Series1.TreatNulls = Steema.TeeChart.Styles.TreatNullsStyle.Ignore;
+            // 
+            // 
+            // 
+            Series1.XValues.DataMember = "X";
+            Series1.XValues.Order = Steema.TeeChart.Styles.ValueListOrder.Ascending;
+            Series1.XValues.Value = new double[]
+    {
+    0D,
+    1D,
+    2D,
+    3D,
+    4D,
+    5D,
+    6D,
+    7D,
+    8D,
+    9D,
+    10D,
+    11D,
+    12D,
+    13D,
+    14D,
+    15D,
+    16D,
+    17D,
+    18D,
+    19D,
+    20D,
+    21D,
+    22D,
+    23D,
+    24D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D
+    };
+            // 
+            // 
+            // 
+            Series1.YValues.DataMember = "Y";
+            Series1.YValues.Value = new double[]
+    {
+    320D,
+    382D,
+    461D,
+    443D,
+    378D,
+    267D,
+    279D,
+    338D,
+    408D,
+    495D,
+    536D,
+    598D,
+    722D,
+    796D,
+    899D,
+    999D,
+    1074D,
+    1032D,
+    961D,
+    948D,
+    973D,
+    877D,
+    967D,
+    966D,
+    892D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D
+    };
             // 
             // Series2
             // 
-            this.Series2.Color = System.Drawing.Color.Red;
-            this.Series2.ColorEach = false;
             // 
             // 
             // 
+            Series2.Brush.Color = Color.Empty;
+            Series2.Brush.Solid = true;
+            Series2.Brush.Visible = true;
+            Series2.Color = Color.Red;
+            Series2.Cursor = cursor1;
             // 
             // 
             // 
-            this.Series2.Legend.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
             // 
             // 
             // 
-            this.Series2.Legend.Brush.Color = System.Drawing.Color.White;
-            this.Series2.Legend.Brush.Solid = true;
-            this.Series2.Legend.Brush.Visible = true;
+            Series2.Legend.Brush.Color = Color.White;
+            Series2.Legend.Brush.Solid = true;
+            Series2.Legend.Brush.Visible = true;
             // 
             // 
             // 
-            this.Series2.Legend.Font.Bold = false;
+            Series2.Legend.Font.Bold = false;
             // 
             // 
             // 
-            this.Series2.Legend.Font.Brush.Color = System.Drawing.Color.Black;
-            this.Series2.Legend.Font.Brush.Solid = true;
-            this.Series2.Legend.Font.Brush.Visible = true;
+            Series2.Legend.Font.Brush.Color = Color.Black;
+            Series2.Legend.Font.Brush.Solid = true;
+            Series2.Legend.Font.Brush.Visible = true;
             // 
             // 
             // 
             // 
             // 
             // 
-            this.Series2.Legend.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.Series2.Legend.Font.Shadow.Brush.Solid = true;
-            this.Series2.Legend.Font.Shadow.Brush.Visible = true;
-            this.Series2.Legend.Font.Size = 8;
-            this.Series2.Legend.Font.SizeFloat = 8F;
+            Series2.Legend.Font.Shadow.Brush.Color = Color.DarkGray;
+            Series2.Legend.Font.Shadow.Brush.Solid = true;
+            Series2.Legend.Font.Shadow.Brush.Visible = true;
+            Series2.Legend.Font.Size = 8;
+            Series2.Legend.Font.SizeFloat = 8F;
+            Series2.Legend.Font.Style = Steema.TeeChart.Drawing.FontStyle.Regular;
             // 
             // 
             // 
             // 
             // 
             // 
-            this.Series2.Legend.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.Series2.Legend.ImageBevel.Brush.Solid = true;
-            this.Series2.Legend.ImageBevel.Brush.Visible = true;
+            Series2.Legend.ImageBevel.Brush.Color = Color.LightGray;
+            Series2.Legend.ImageBevel.Brush.Solid = true;
+            Series2.Legend.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
             // 
             // 
             // 
-            this.Series2.Legend.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.Series2.Legend.Shadow.Brush.Solid = true;
-            this.Series2.Legend.Shadow.Brush.Visible = true;
+            Series2.Legend.Shadow.Brush.Color = Color.DarkGray;
+            Series2.Legend.Shadow.Brush.Solid = true;
+            Series2.Legend.Shadow.Brush.Visible = true;
             // 
             // 
             // 
-            this.Series2.LinePen.Color = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             // 
             // 
             // 
+            Series2.Marks.Arrow.Visible = false;
+            Series2.Marks.ArrowLength = 10;
             // 
             // 
             // 
-            this.Series2.Marks.Arrow.Visible = false;
-            this.Series2.Marks.ArrowLength = 10;
+            Series2.Marks.Brush.Color = Color.FromArgb(255, 255, 255);
+            Series2.Marks.Brush.Solid = true;
+            Series2.Marks.Brush.Visible = false;
             // 
             // 
             // 
-            this.Series2.Marks.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
+            Series2.Marks.Font.Bold = false;
             // 
             // 
             // 
-            this.Series2.Marks.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.Series2.Marks.Brush.Solid = true;
-            this.Series2.Marks.Brush.Visible = false;
+            Series2.Marks.Font.Brush.Color = Color.Black;
+            Series2.Marks.Font.Brush.Solid = true;
+            Series2.Marks.Font.Brush.Visible = true;
             // 
             // 
             // 
-            this.Series2.Marks.Font.Bold = false;
             // 
             // 
             // 
-            this.Series2.Marks.Font.Brush.Color = System.Drawing.Color.Black;
-            this.Series2.Marks.Font.Brush.Solid = true;
-            this.Series2.Marks.Font.Brush.Visible = true;
+            Series2.Marks.Font.Shadow.Brush.Color = Color.DarkGray;
+            Series2.Marks.Font.Shadow.Brush.Solid = true;
+            Series2.Marks.Font.Shadow.Brush.Visible = true;
+            Series2.Marks.Font.Size = 8;
+            Series2.Marks.Font.SizeFloat = 8F;
+            Series2.Marks.Font.Style = Steema.TeeChart.Drawing.FontStyle.Regular;
             // 
             // 
             // 
             // 
             // 
             // 
-            this.Series2.Marks.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.Series2.Marks.Font.Shadow.Brush.Solid = true;
-            this.Series2.Marks.Font.Shadow.Brush.Visible = true;
-            this.Series2.Marks.Font.Size = 8;
-            this.Series2.Marks.Font.SizeFloat = 8F;
+            Series2.Marks.ImageBevel.Brush.Color = Color.LightGray;
+            Series2.Marks.ImageBevel.Brush.Solid = true;
+            Series2.Marks.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
             // 
             // 
             // 
-            this.Series2.Marks.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.Series2.Marks.ImageBevel.Brush.Solid = true;
-            this.Series2.Marks.ImageBevel.Brush.Visible = true;
+            Series2.Marks.Shadow.Brush.Color = Color.Gray;
+            Series2.Marks.Shadow.Brush.Solid = true;
+            Series2.Marks.Shadow.Brush.Visible = true;
             // 
             // 
             // 
             // 
             // 
             // 
-            this.Series2.Marks.Shadow.Brush.Color = System.Drawing.Color.Gray;
-            this.Series2.Marks.Shadow.Brush.Solid = true;
-            this.Series2.Marks.Shadow.Brush.Visible = true;
+            Series2.Marks.Symbol.Brush.Color = Color.White;
+            Series2.Marks.Symbol.Brush.Solid = true;
+            Series2.Marks.Symbol.Brush.Visible = true;
             // 
             // 
             // 
             // 
             // 
             // 
-            this.Series2.Marks.Symbol.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
+            Series2.Marks.Symbol.ImageBevel.Brush.Color = Color.LightGray;
+            Series2.Marks.Symbol.ImageBevel.Brush.Solid = true;
+            Series2.Marks.Symbol.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
-            this.Series2.Marks.Symbol.Brush.Color = System.Drawing.Color.White;
-            this.Series2.Marks.Symbol.Brush.Solid = true;
-            this.Series2.Marks.Symbol.Brush.Visible = true;
             // 
             // 
             // 
+            Series2.Marks.Symbol.Shadow.Brush.Color = Color.DarkGray;
+            Series2.Marks.Symbol.Shadow.Brush.Solid = true;
+            Series2.Marks.Symbol.Shadow.Brush.Visible = true;
+            Series2.Marks.Transparent = true;
+            Series2.Marks.Visible = true;
             // 
             // 
             // 
-            this.Series2.Marks.Symbol.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.Series2.Marks.Symbol.ImageBevel.Brush.Solid = true;
-            this.Series2.Marks.Symbol.ImageBevel.Brush.Visible = true;
             // 
             // 
-            // 
-            // 
-            // 
-            // 
-            this.Series2.Marks.Symbol.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.Series2.Marks.Symbol.Shadow.Brush.Solid = true;
-            this.Series2.Marks.Symbol.Shadow.Brush.Visible = true;
-            // 
-            // 
-            // 
-            this.Series2.Marks.TailParams.Margin = 0F;
-            this.Series2.Marks.TailParams.PointerHeight = 8D;
-            this.Series2.Marks.TailParams.PointerWidth = 8D;
-            this.Series2.Marks.Transparent = true;
-            this.Series2.Marks.Visible = true;
-            this.Series2.OriginalCursor = null;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.Series2.Pointer.Brush.Color = System.Drawing.Color.Red;
-            this.Series2.Pointer.Brush.Solid = true;
-            this.Series2.Pointer.Brush.Visible = true;
-            this.Series2.Pointer.HorizSize = 3;
-            // 
-            // 
-            // 
-            this.Series2.Pointer.Pen.Color = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.Series2.Pointer.SizeDouble = 0D;
-            this.Series2.Pointer.SizeUnits = Steema.TeeChart.Styles.PointerSizeUnits.Pixels;
-            this.Series2.Pointer.Style = Steema.TeeChart.Styles.PointerStyles.Circle;
-            this.Series2.Pointer.VertSize = 3;
-            this.Series2.Title = "point1";
-            this.Series2.UseExtendedNumRange = false;
-            // 
-            // 
-            // 
-            this.Series2.XValues.DataMember = "X";
-            this.Series2.XValues.Order = Steema.TeeChart.Styles.ValueListOrder.Ascending;
-            // 
-            // 
-            // 
-            this.Series2.YValues.DataMember = "Y";
+            // 
+            Series2.Pointer.Brush.Color = Color.Red;
+            Series2.Pointer.Brush.Solid = true;
+            Series2.Pointer.Brush.Visible = true;
+            Series2.Pointer.HorizSize = 3;
+            // 
+            // 
+            // 
+            Series2.Pointer.Pen.Color = Color.FromArgb(254, 0, 0, 0);
+            Series2.Pointer.Style = Steema.TeeChart.Styles.PointerStyles.Circle;
+            Series2.Pointer.VertSize = 3;
+            Series2.Title = "point1";
+            // 
+            // 
+            // 
+            Series2.XValues.DataMember = "X";
+            Series2.XValues.Order = Steema.TeeChart.Styles.ValueListOrder.Ascending;
+            Series2.XValues.Value = new double[]
+    {
+    0D,
+    1D,
+    2D,
+    3D,
+    4D,
+    5D,
+    6D,
+    7D,
+    8D,
+    9D,
+    10D,
+    11D,
+    12D,
+    13D,
+    14D,
+    15D,
+    16D,
+    17D,
+    18D,
+    19D,
+    20D,
+    21D,
+    22D,
+    23D,
+    24D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D
+    };
+            // 
+            // 
+            // 
+            Series2.YValues.DataMember = "Y";
+            Series2.YValues.Value = new double[]
+    {
+    999D,
+    965D,
+    982D,
+    964D,
+    1012D,
+    963D,
+    973D,
+    911D,
+    838D,
+    883D,
+    944D,
+    921D,
+    975D,
+    913D,
+    874D,
+    831D,
+    895D,
+    877D,
+    892D,
+    915D,
+    905D,
+    876D,
+    892D,
+    910D,
+    964D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D,
+    0D
+    };
             // 
             // splitter1
             // 
-            this.splitter1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.splitter1.Location = new System.Drawing.Point(0, 192);
-            this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(728, 3);
-            this.splitter1.TabIndex = 1;
-            this.splitter1.TabStop = false;
+            splitter1.Dock = DockStyle.Top;
+            splitter1.Location = new Point(0, 236);
+            splitter1.Name = "splitter1";
+            splitter1.Size = new Size(1149, 4);
+            splitter1.TabIndex = 1;
+            splitter1.TabStop = false;
             // 
             // Chart1
             // 
@@ -1803,1277 +2118,1231 @@ namespace DSPDemo
             // 
             // 
             // 
-            this.Chart1.Axes.Bottom.Grid.DrawEvery = 1;
-            this.Chart1.Axes.Bottom.Grid.Visible = true;
+            Chart1.Axes.Bottom.Grid.DrawEvery = 1;
+            Chart1.Axes.Bottom.Grid.Visible = true;
             // 
             // 
             // 
             // 
             // 
             // 
-            this.Chart1.Axes.Bottom.Labels.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
+            Chart1.Axes.Bottom.Labels.Brush.Color = Color.White;
+            Chart1.Axes.Bottom.Labels.Brush.Solid = true;
+            Chart1.Axes.Bottom.Labels.Brush.Visible = true;
             // 
             // 
             // 
-            this.Chart1.Axes.Bottom.Labels.Brush.Color = System.Drawing.Color.White;
-            this.Chart1.Axes.Bottom.Labels.Brush.Solid = true;
-            this.Chart1.Axes.Bottom.Labels.Brush.Visible = true;
+            Chart1.Axes.Bottom.Labels.Font.Bold = false;
             // 
             // 
             // 
-            this.Chart1.Axes.Bottom.Labels.Font.Bold = false;
+            Chart1.Axes.Bottom.Labels.Font.Brush.Color = Color.FromArgb(128, 128, 128);
+            Chart1.Axes.Bottom.Labels.Font.Brush.Solid = true;
+            Chart1.Axes.Bottom.Labels.Font.Brush.Visible = true;
             // 
             // 
             // 
-            this.Chart1.Axes.Bottom.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.Chart1.Axes.Bottom.Labels.Font.Brush.Solid = true;
-            this.Chart1.Axes.Bottom.Labels.Font.Brush.Visible = true;
             // 
             // 
             // 
+            Chart1.Axes.Bottom.Labels.Font.Shadow.Brush.Color = Color.DarkGray;
+            Chart1.Axes.Bottom.Labels.Font.Shadow.Brush.Solid = true;
+            Chart1.Axes.Bottom.Labels.Font.Shadow.Brush.Visible = true;
+            Chart1.Axes.Bottom.Labels.Font.Size = 9;
+            Chart1.Axes.Bottom.Labels.Font.SizeFloat = 9F;
+            Chart1.Axes.Bottom.Labels.Font.Style = Steema.TeeChart.Drawing.FontStyle.Regular;
             // 
             // 
             // 
-            this.Chart1.Axes.Bottom.Labels.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.Chart1.Axes.Bottom.Labels.Font.Shadow.Brush.Solid = true;
-            this.Chart1.Axes.Bottom.Labels.Font.Shadow.Brush.Visible = true;
-            this.Chart1.Axes.Bottom.Labels.Font.Size = 9;
-            this.Chart1.Axes.Bottom.Labels.Font.SizeFloat = 9F;
             // 
             // 
             // 
+            Chart1.Axes.Bottom.Labels.ImageBevel.Brush.Color = Color.LightGray;
+            Chart1.Axes.Bottom.Labels.ImageBevel.Brush.Solid = true;
+            Chart1.Axes.Bottom.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
-            this.Chart1.Axes.Bottom.Labels.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.Chart1.Axes.Bottom.Labels.ImageBevel.Brush.Solid = true;
-            this.Chart1.Axes.Bottom.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
+            Chart1.Axes.Bottom.Labels.Shadow.Brush.Color = Color.DarkGray;
+            Chart1.Axes.Bottom.Labels.Shadow.Brush.Solid = true;
+            Chart1.Axes.Bottom.Labels.Shadow.Brush.Visible = true;
             // 
             // 
             // 
-            this.Chart1.Axes.Bottom.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.Chart1.Axes.Bottom.Labels.Shadow.Brush.Solid = true;
-            this.Chart1.Axes.Bottom.Labels.Shadow.Brush.Visible = true;
             // 
             // 
             // 
-            this.Chart1.Axes.Bottom.Title.Angle = 0;
+            Chart1.Axes.Bottom.Title.Brush.Color = Color.Silver;
+            Chart1.Axes.Bottom.Title.Brush.Solid = true;
+            Chart1.Axes.Bottom.Title.Brush.Visible = true;
+            Chart1.Axes.Bottom.Title.Caption = "Frequency [Hz]";
             // 
             // 
             // 
-            this.Chart1.Axes.Bottom.Title.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
+            Chart1.Axes.Bottom.Title.Font.Bold = false;
             // 
             // 
             // 
-            this.Chart1.Axes.Bottom.Title.Brush.Color = System.Drawing.Color.Silver;
-            this.Chart1.Axes.Bottom.Title.Brush.Solid = true;
-            this.Chart1.Axes.Bottom.Title.Brush.Visible = true;
-            this.Chart1.Axes.Bottom.Title.Caption = "Frequency [Hz]";
+            Chart1.Axes.Bottom.Title.Font.Brush.Color = Color.FromArgb(64, 64, 64);
+            Chart1.Axes.Bottom.Title.Font.Brush.Solid = true;
+            Chart1.Axes.Bottom.Title.Font.Brush.Visible = true;
             // 
             // 
             // 
-            this.Chart1.Axes.Bottom.Title.Font.Bold = false;
             // 
             // 
             // 
-            this.Chart1.Axes.Bottom.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Chart1.Axes.Bottom.Title.Font.Brush.Solid = true;
-            this.Chart1.Axes.Bottom.Title.Font.Brush.Visible = true;
+            Chart1.Axes.Bottom.Title.Font.Shadow.Brush.Color = Color.DarkGray;
+            Chart1.Axes.Bottom.Title.Font.Shadow.Brush.Solid = true;
+            Chart1.Axes.Bottom.Title.Font.Shadow.Brush.Visible = true;
+            Chart1.Axes.Bottom.Title.Font.Size = 11;
+            Chart1.Axes.Bottom.Title.Font.SizeFloat = 11F;
+            Chart1.Axes.Bottom.Title.Font.Style = Steema.TeeChart.Drawing.FontStyle.Regular;
             // 
             // 
             // 
             // 
             // 
             // 
-            this.Chart1.Axes.Bottom.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.Chart1.Axes.Bottom.Title.Font.Shadow.Brush.Solid = true;
-            this.Chart1.Axes.Bottom.Title.Font.Shadow.Brush.Visible = true;
-            this.Chart1.Axes.Bottom.Title.Font.Size = 11;
-            this.Chart1.Axes.Bottom.Title.Font.SizeFloat = 11F;
+            Chart1.Axes.Bottom.Title.ImageBevel.Brush.Color = Color.LightGray;
+            Chart1.Axes.Bottom.Title.ImageBevel.Brush.Solid = true;
+            Chart1.Axes.Bottom.Title.ImageBevel.Brush.Visible = true;
+            Chart1.Axes.Bottom.Title.Lines = new string[]
+    {
+    "Frequency [Hz]"
+    };
             // 
             // 
             // 
             // 
             // 
             // 
-            this.Chart1.Axes.Bottom.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.Chart1.Axes.Bottom.Title.ImageBevel.Brush.Solid = true;
-            this.Chart1.Axes.Bottom.Title.ImageBevel.Brush.Visible = true;
-            this.Chart1.Axes.Bottom.Title.Lines = new string[] {
-        "Frequency [Hz]"};
+            Chart1.Axes.Bottom.Title.Shadow.Brush.Color = Color.DarkGray;
+            Chart1.Axes.Bottom.Title.Shadow.Brush.Solid = true;
+            Chart1.Axes.Bottom.Title.Shadow.Brush.Visible = true;
             // 
             // 
             // 
             // 
             // 
             // 
-            this.Chart1.Axes.Bottom.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.Chart1.Axes.Bottom.Title.Shadow.Brush.Solid = true;
-            this.Chart1.Axes.Bottom.Title.Shadow.Brush.Visible = true;
             // 
             // 
             // 
+            Chart1.Axes.Depth.Labels.Brush.Color = Color.White;
+            Chart1.Axes.Depth.Labels.Brush.Solid = true;
+            Chart1.Axes.Depth.Labels.Brush.Visible = true;
             // 
             // 
             // 
+            Chart1.Axes.Depth.Labels.Font.Bold = false;
             // 
             // 
             // 
-            this.Chart1.Axes.Depth.Labels.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
+            Chart1.Axes.Depth.Labels.Font.Brush.Color = Color.FromArgb(128, 128, 128);
+            Chart1.Axes.Depth.Labels.Font.Brush.Solid = true;
+            Chart1.Axes.Depth.Labels.Font.Brush.Visible = true;
             // 
             // 
             // 
-            this.Chart1.Axes.Depth.Labels.Brush.Color = System.Drawing.Color.White;
-            this.Chart1.Axes.Depth.Labels.Brush.Solid = true;
-            this.Chart1.Axes.Depth.Labels.Brush.Visible = true;
             // 
             // 
             // 
-            this.Chart1.Axes.Depth.Labels.Font.Bold = false;
+            Chart1.Axes.Depth.Labels.Font.Shadow.Brush.Color = Color.DarkGray;
+            Chart1.Axes.Depth.Labels.Font.Shadow.Brush.Solid = true;
+            Chart1.Axes.Depth.Labels.Font.Shadow.Brush.Visible = true;
+            Chart1.Axes.Depth.Labels.Font.Size = 9;
+            Chart1.Axes.Depth.Labels.Font.SizeFloat = 9F;
+            Chart1.Axes.Depth.Labels.Font.Style = Steema.TeeChart.Drawing.FontStyle.Regular;
             // 
             // 
             // 
-            this.Chart1.Axes.Depth.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.Chart1.Axes.Depth.Labels.Font.Brush.Solid = true;
-            this.Chart1.Axes.Depth.Labels.Font.Brush.Visible = true;
             // 
             // 
             // 
+            Chart1.Axes.Depth.Labels.ImageBevel.Brush.Color = Color.LightGray;
+            Chart1.Axes.Depth.Labels.ImageBevel.Brush.Solid = true;
+            Chart1.Axes.Depth.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
-            this.Chart1.Axes.Depth.Labels.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.Chart1.Axes.Depth.Labels.Font.Shadow.Brush.Solid = true;
-            this.Chart1.Axes.Depth.Labels.Font.Shadow.Brush.Visible = true;
-            this.Chart1.Axes.Depth.Labels.Font.Size = 9;
-            this.Chart1.Axes.Depth.Labels.Font.SizeFloat = 9F;
             // 
             // 
             // 
+            Chart1.Axes.Depth.Labels.Shadow.Brush.Color = Color.DarkGray;
+            Chart1.Axes.Depth.Labels.Shadow.Brush.Solid = true;
+            Chart1.Axes.Depth.Labels.Shadow.Brush.Visible = true;
             // 
             // 
             // 
-            this.Chart1.Axes.Depth.Labels.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.Chart1.Axes.Depth.Labels.ImageBevel.Brush.Solid = true;
-            this.Chart1.Axes.Depth.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
+            Chart1.Axes.Depth.Title.Brush.Color = Color.Silver;
+            Chart1.Axes.Depth.Title.Brush.Solid = true;
+            Chart1.Axes.Depth.Title.Brush.Visible = true;
             // 
             // 
             // 
-            this.Chart1.Axes.Depth.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.Chart1.Axes.Depth.Labels.Shadow.Brush.Solid = true;
-            this.Chart1.Axes.Depth.Labels.Shadow.Brush.Visible = true;
+            Chart1.Axes.Depth.Title.Font.Bold = false;
             // 
             // 
             // 
-            this.Chart1.Axes.Depth.Title.Angle = 0;
+            Chart1.Axes.Depth.Title.Font.Brush.Color = Color.FromArgb(64, 64, 64);
+            Chart1.Axes.Depth.Title.Font.Brush.Solid = true;
+            Chart1.Axes.Depth.Title.Font.Brush.Visible = true;
             // 
             // 
             // 
-            this.Chart1.Axes.Depth.Title.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
             // 
             // 
             // 
-            this.Chart1.Axes.Depth.Title.Brush.Color = System.Drawing.Color.Silver;
-            this.Chart1.Axes.Depth.Title.Brush.Solid = true;
-            this.Chart1.Axes.Depth.Title.Brush.Visible = true;
+            Chart1.Axes.Depth.Title.Font.Shadow.Brush.Color = Color.DarkGray;
+            Chart1.Axes.Depth.Title.Font.Shadow.Brush.Solid = true;
+            Chart1.Axes.Depth.Title.Font.Shadow.Brush.Visible = true;
+            Chart1.Axes.Depth.Title.Font.Size = 11;
+            Chart1.Axes.Depth.Title.Font.SizeFloat = 11F;
+            Chart1.Axes.Depth.Title.Font.Style = Steema.TeeChart.Drawing.FontStyle.Regular;
             // 
             // 
             // 
-            this.Chart1.Axes.Depth.Title.Font.Bold = false;
             // 
             // 
             // 
-            this.Chart1.Axes.Depth.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Chart1.Axes.Depth.Title.Font.Brush.Solid = true;
-            this.Chart1.Axes.Depth.Title.Font.Brush.Visible = true;
+            Chart1.Axes.Depth.Title.ImageBevel.Brush.Color = Color.LightGray;
+            Chart1.Axes.Depth.Title.ImageBevel.Brush.Solid = true;
+            Chart1.Axes.Depth.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
             // 
             // 
             // 
-            this.Chart1.Axes.Depth.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.Chart1.Axes.Depth.Title.Font.Shadow.Brush.Solid = true;
-            this.Chart1.Axes.Depth.Title.Font.Shadow.Brush.Visible = true;
-            this.Chart1.Axes.Depth.Title.Font.Size = 11;
-            this.Chart1.Axes.Depth.Title.Font.SizeFloat = 11F;
+            Chart1.Axes.Depth.Title.Shadow.Brush.Color = Color.DarkGray;
+            Chart1.Axes.Depth.Title.Shadow.Brush.Solid = true;
+            Chart1.Axes.Depth.Title.Shadow.Brush.Visible = true;
             // 
             // 
             // 
             // 
             // 
             // 
-            this.Chart1.Axes.Depth.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.Chart1.Axes.Depth.Title.ImageBevel.Brush.Solid = true;
-            this.Chart1.Axes.Depth.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
+            Chart1.Axes.DepthTop.Labels.Brush.Color = Color.White;
+            Chart1.Axes.DepthTop.Labels.Brush.Solid = true;
+            Chart1.Axes.DepthTop.Labels.Brush.Visible = true;
             // 
             // 
             // 
-            this.Chart1.Axes.Depth.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.Chart1.Axes.Depth.Title.Shadow.Brush.Solid = true;
-            this.Chart1.Axes.Depth.Title.Shadow.Brush.Visible = true;
+            Chart1.Axes.DepthTop.Labels.Font.Bold = false;
             // 
             // 
             // 
+            Chart1.Axes.DepthTop.Labels.Font.Brush.Color = Color.FromArgb(128, 128, 128);
+            Chart1.Axes.DepthTop.Labels.Font.Brush.Solid = true;
+            Chart1.Axes.DepthTop.Labels.Font.Brush.Visible = true;
             // 
             // 
             // 
             // 
             // 
             // 
-            this.Chart1.Axes.DepthTop.Labels.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
+            Chart1.Axes.DepthTop.Labels.Font.Shadow.Brush.Color = Color.DarkGray;
+            Chart1.Axes.DepthTop.Labels.Font.Shadow.Brush.Solid = true;
+            Chart1.Axes.DepthTop.Labels.Font.Shadow.Brush.Visible = true;
+            Chart1.Axes.DepthTop.Labels.Font.Size = 9;
+            Chart1.Axes.DepthTop.Labels.Font.SizeFloat = 9F;
+            Chart1.Axes.DepthTop.Labels.Font.Style = Steema.TeeChart.Drawing.FontStyle.Regular;
             // 
             // 
             // 
-            this.Chart1.Axes.DepthTop.Labels.Brush.Color = System.Drawing.Color.White;
-            this.Chart1.Axes.DepthTop.Labels.Brush.Solid = true;
-            this.Chart1.Axes.DepthTop.Labels.Brush.Visible = true;
             // 
             // 
             // 
-            this.Chart1.Axes.DepthTop.Labels.Font.Bold = false;
+            Chart1.Axes.DepthTop.Labels.ImageBevel.Brush.Color = Color.LightGray;
+            Chart1.Axes.DepthTop.Labels.ImageBevel.Brush.Solid = true;
+            Chart1.Axes.DepthTop.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
-            this.Chart1.Axes.DepthTop.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.Chart1.Axes.DepthTop.Labels.Font.Brush.Solid = true;
-            this.Chart1.Axes.DepthTop.Labels.Font.Brush.Visible = true;
             // 
             // 
             // 
+            Chart1.Axes.DepthTop.Labels.Shadow.Brush.Color = Color.DarkGray;
+            Chart1.Axes.DepthTop.Labels.Shadow.Brush.Solid = true;
+            Chart1.Axes.DepthTop.Labels.Shadow.Brush.Visible = true;
             // 
             // 
             // 
-            this.Chart1.Axes.DepthTop.Labels.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.Chart1.Axes.DepthTop.Labels.Font.Shadow.Brush.Solid = true;
-            this.Chart1.Axes.DepthTop.Labels.Font.Shadow.Brush.Visible = true;
-            this.Chart1.Axes.DepthTop.Labels.Font.Size = 9;
-            this.Chart1.Axes.DepthTop.Labels.Font.SizeFloat = 9F;
             // 
             // 
             // 
+            Chart1.Axes.DepthTop.Title.Brush.Color = Color.Silver;
+            Chart1.Axes.DepthTop.Title.Brush.Solid = true;
+            Chart1.Axes.DepthTop.Title.Brush.Visible = true;
             // 
             // 
             // 
-            this.Chart1.Axes.DepthTop.Labels.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.Chart1.Axes.DepthTop.Labels.ImageBevel.Brush.Solid = true;
-            this.Chart1.Axes.DepthTop.Labels.ImageBevel.Brush.Visible = true;
+            Chart1.Axes.DepthTop.Title.Font.Bold = false;
             // 
             // 
             // 
+            Chart1.Axes.DepthTop.Title.Font.Brush.Color = Color.FromArgb(64, 64, 64);
+            Chart1.Axes.DepthTop.Title.Font.Brush.Solid = true;
+            Chart1.Axes.DepthTop.Title.Font.Brush.Visible = true;
             // 
             // 
             // 
-            this.Chart1.Axes.DepthTop.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.Chart1.Axes.DepthTop.Labels.Shadow.Brush.Solid = true;
-            this.Chart1.Axes.DepthTop.Labels.Shadow.Brush.Visible = true;
             // 
             // 
             // 
-            this.Chart1.Axes.DepthTop.Title.Angle = 0;
+            Chart1.Axes.DepthTop.Title.Font.Shadow.Brush.Color = Color.DarkGray;
+            Chart1.Axes.DepthTop.Title.Font.Shadow.Brush.Solid = true;
+            Chart1.Axes.DepthTop.Title.Font.Shadow.Brush.Visible = true;
+            Chart1.Axes.DepthTop.Title.Font.Size = 11;
+            Chart1.Axes.DepthTop.Title.Font.SizeFloat = 11F;
+            Chart1.Axes.DepthTop.Title.Font.Style = Steema.TeeChart.Drawing.FontStyle.Regular;
             // 
             // 
             // 
-            this.Chart1.Axes.DepthTop.Title.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
             // 
             // 
             // 
-            this.Chart1.Axes.DepthTop.Title.Brush.Color = System.Drawing.Color.Silver;
-            this.Chart1.Axes.DepthTop.Title.Brush.Solid = true;
-            this.Chart1.Axes.DepthTop.Title.Brush.Visible = true;
+            Chart1.Axes.DepthTop.Title.ImageBevel.Brush.Color = Color.LightGray;
+            Chart1.Axes.DepthTop.Title.ImageBevel.Brush.Solid = true;
+            Chart1.Axes.DepthTop.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
-            this.Chart1.Axes.DepthTop.Title.Font.Bold = false;
             // 
             // 
             // 
-            this.Chart1.Axes.DepthTop.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Chart1.Axes.DepthTop.Title.Font.Brush.Solid = true;
-            this.Chart1.Axes.DepthTop.Title.Font.Brush.Visible = true;
+            Chart1.Axes.DepthTop.Title.Shadow.Brush.Color = Color.DarkGray;
+            Chart1.Axes.DepthTop.Title.Shadow.Brush.Solid = true;
+            Chart1.Axes.DepthTop.Title.Shadow.Brush.Visible = true;
             // 
             // 
             // 
             // 
             // 
             // 
-            this.Chart1.Axes.DepthTop.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.Chart1.Axes.DepthTop.Title.Font.Shadow.Brush.Solid = true;
-            this.Chart1.Axes.DepthTop.Title.Font.Shadow.Brush.Visible = true;
-            this.Chart1.Axes.DepthTop.Title.Font.Size = 11;
-            this.Chart1.Axes.DepthTop.Title.Font.SizeFloat = 11F;
+            Chart1.Axes.Left.AxisPen.Visible = true;
             // 
             // 
             // 
             // 
             // 
             // 
-            this.Chart1.Axes.DepthTop.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.Chart1.Axes.DepthTop.Title.ImageBevel.Brush.Solid = true;
-            this.Chart1.Axes.DepthTop.Title.ImageBevel.Brush.Visible = true;
+            Chart1.Axes.Left.Labels.Brush.Color = Color.White;
+            Chart1.Axes.Left.Labels.Brush.Solid = true;
+            Chart1.Axes.Left.Labels.Brush.Visible = true;
             // 
             // 
             // 
+            Chart1.Axes.Left.Labels.Font.Bold = false;
             // 
             // 
             // 
-            this.Chart1.Axes.DepthTop.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.Chart1.Axes.DepthTop.Title.Shadow.Brush.Solid = true;
-            this.Chart1.Axes.DepthTop.Title.Shadow.Brush.Visible = true;
+            Chart1.Axes.Left.Labels.Font.Brush.Color = Color.FromArgb(128, 128, 128);
+            Chart1.Axes.Left.Labels.Font.Brush.Solid = true;
+            Chart1.Axes.Left.Labels.Font.Brush.Visible = true;
             // 
             // 
             // 
             // 
             // 
             // 
-            this.Chart1.Axes.Left.AxisPen.Visible = true;
+            Chart1.Axes.Left.Labels.Font.Shadow.Brush.Color = Color.DarkGray;
+            Chart1.Axes.Left.Labels.Font.Shadow.Brush.Solid = true;
+            Chart1.Axes.Left.Labels.Font.Shadow.Brush.Visible = true;
+            Chart1.Axes.Left.Labels.Font.Size = 9;
+            Chart1.Axes.Left.Labels.Font.SizeFloat = 9F;
+            Chart1.Axes.Left.Labels.Font.Style = Steema.TeeChart.Drawing.FontStyle.Regular;
             // 
             // 
             // 
             // 
             // 
             // 
-            this.Chart1.Axes.Left.Labels.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
+            Chart1.Axes.Left.Labels.ImageBevel.Brush.Color = Color.LightGray;
+            Chart1.Axes.Left.Labels.ImageBevel.Brush.Solid = true;
+            Chart1.Axes.Left.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
-            this.Chart1.Axes.Left.Labels.Brush.Color = System.Drawing.Color.White;
-            this.Chart1.Axes.Left.Labels.Brush.Solid = true;
-            this.Chart1.Axes.Left.Labels.Brush.Visible = true;
             // 
             // 
             // 
-            this.Chart1.Axes.Left.Labels.Font.Bold = false;
+            Chart1.Axes.Left.Labels.Shadow.Brush.Color = Color.DarkGray;
+            Chart1.Axes.Left.Labels.Shadow.Brush.Solid = true;
+            Chart1.Axes.Left.Labels.Shadow.Brush.Visible = true;
             // 
             // 
             // 
-            this.Chart1.Axes.Left.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.Chart1.Axes.Left.Labels.Font.Brush.Solid = true;
-            this.Chart1.Axes.Left.Labels.Font.Brush.Visible = true;
             // 
             // 
             // 
+            Chart1.Axes.Left.Title.Brush.Color = Color.Silver;
+            Chart1.Axes.Left.Title.Brush.Solid = true;
+            Chart1.Axes.Left.Title.Brush.Visible = true;
+            Chart1.Axes.Left.Title.Caption = "Frequency [Hz]";
             // 
             // 
             // 
-            this.Chart1.Axes.Left.Labels.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.Chart1.Axes.Left.Labels.Font.Shadow.Brush.Solid = true;
-            this.Chart1.Axes.Left.Labels.Font.Shadow.Brush.Visible = true;
-            this.Chart1.Axes.Left.Labels.Font.Size = 9;
-            this.Chart1.Axes.Left.Labels.Font.SizeFloat = 9F;
+            Chart1.Axes.Left.Title.Font.Bold = false;
             // 
             // 
             // 
+            Chart1.Axes.Left.Title.Font.Brush.Color = Color.FromArgb(64, 64, 64);
+            Chart1.Axes.Left.Title.Font.Brush.Solid = true;
+            Chart1.Axes.Left.Title.Font.Brush.Visible = true;
             // 
             // 
             // 
-            this.Chart1.Axes.Left.Labels.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.Chart1.Axes.Left.Labels.ImageBevel.Brush.Solid = true;
-            this.Chart1.Axes.Left.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
+            Chart1.Axes.Left.Title.Font.Shadow.Brush.Color = Color.DarkGray;
+            Chart1.Axes.Left.Title.Font.Shadow.Brush.Solid = true;
+            Chart1.Axes.Left.Title.Font.Shadow.Brush.Visible = true;
+            Chart1.Axes.Left.Title.Font.Size = 11;
+            Chart1.Axes.Left.Title.Font.SizeFloat = 11F;
+            Chart1.Axes.Left.Title.Font.Style = Steema.TeeChart.Drawing.FontStyle.Regular;
             // 
             // 
             // 
-            this.Chart1.Axes.Left.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.Chart1.Axes.Left.Labels.Shadow.Brush.Solid = true;
-            this.Chart1.Axes.Left.Labels.Shadow.Brush.Visible = true;
             // 
             // 
             // 
-            this.Chart1.Axes.Left.Title.Angle = 90;
+            Chart1.Axes.Left.Title.ImageBevel.Brush.Color = Color.LightGray;
+            Chart1.Axes.Left.Title.ImageBevel.Brush.Solid = true;
+            Chart1.Axes.Left.Title.ImageBevel.Brush.Visible = true;
+            Chart1.Axes.Left.Title.Lines = new string[]
+    {
+    "Frequency [Hz]"
+    };
             // 
             // 
             // 
-            this.Chart1.Axes.Left.Title.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
             // 
             // 
             // 
-            this.Chart1.Axes.Left.Title.Brush.Color = System.Drawing.Color.Silver;
-            this.Chart1.Axes.Left.Title.Brush.Solid = true;
-            this.Chart1.Axes.Left.Title.Brush.Visible = true;
-            this.Chart1.Axes.Left.Title.Caption = "Frequency [Hz]";
+            Chart1.Axes.Left.Title.Shadow.Brush.Color = Color.DarkGray;
+            Chart1.Axes.Left.Title.Shadow.Brush.Solid = true;
+            Chart1.Axes.Left.Title.Shadow.Brush.Visible = true;
             // 
             // 
             // 
-            this.Chart1.Axes.Left.Title.Font.Bold = false;
             // 
             // 
             // 
-            this.Chart1.Axes.Left.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Chart1.Axes.Left.Title.Font.Brush.Solid = true;
-            this.Chart1.Axes.Left.Title.Font.Brush.Visible = true;
+            Chart1.Axes.Right.AxisPen.Visible = true;
             // 
             // 
             // 
             // 
             // 
             // 
-            this.Chart1.Axes.Left.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.Chart1.Axes.Left.Title.Font.Shadow.Brush.Solid = true;
-            this.Chart1.Axes.Left.Title.Font.Shadow.Brush.Visible = true;
-            this.Chart1.Axes.Left.Title.Font.Size = 11;
-            this.Chart1.Axes.Left.Title.Font.SizeFloat = 11F;
+            Chart1.Axes.Right.Labels.Brush.Color = Color.White;
+            Chart1.Axes.Right.Labels.Brush.Solid = true;
+            Chart1.Axes.Right.Labels.Brush.Visible = true;
             // 
             // 
             // 
+            Chart1.Axes.Right.Labels.Font.Bold = false;
             // 
             // 
             // 
-            this.Chart1.Axes.Left.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.Chart1.Axes.Left.Title.ImageBevel.Brush.Solid = true;
-            this.Chart1.Axes.Left.Title.ImageBevel.Brush.Visible = true;
-            this.Chart1.Axes.Left.Title.Lines = new string[] {
-        "Frequency [Hz]"};
+            Chart1.Axes.Right.Labels.Font.Brush.Color = Color.FromArgb(128, 128, 128);
+            Chart1.Axes.Right.Labels.Font.Brush.Solid = true;
+            Chart1.Axes.Right.Labels.Font.Brush.Visible = true;
             // 
             // 
             // 
             // 
             // 
             // 
-            this.Chart1.Axes.Left.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.Chart1.Axes.Left.Title.Shadow.Brush.Solid = true;
-            this.Chart1.Axes.Left.Title.Shadow.Brush.Visible = true;
+            Chart1.Axes.Right.Labels.Font.Shadow.Brush.Color = Color.DarkGray;
+            Chart1.Axes.Right.Labels.Font.Shadow.Brush.Solid = true;
+            Chart1.Axes.Right.Labels.Font.Shadow.Brush.Visible = true;
+            Chart1.Axes.Right.Labels.Font.Size = 9;
+            Chart1.Axes.Right.Labels.Font.SizeFloat = 9F;
+            Chart1.Axes.Right.Labels.Font.Style = Steema.TeeChart.Drawing.FontStyle.Regular;
             // 
             // 
             // 
             // 
             // 
             // 
-            this.Chart1.Axes.Right.AxisPen.Visible = true;
+            Chart1.Axes.Right.Labels.ImageBevel.Brush.Color = Color.LightGray;
+            Chart1.Axes.Right.Labels.ImageBevel.Brush.Solid = true;
+            Chart1.Axes.Right.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
             // 
             // 
             // 
-            this.Chart1.Axes.Right.Labels.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
+            Chart1.Axes.Right.Labels.Shadow.Brush.Color = Color.DarkGray;
+            Chart1.Axes.Right.Labels.Shadow.Brush.Solid = true;
+            Chart1.Axes.Right.Labels.Shadow.Brush.Visible = true;
             // 
             // 
             // 
-            this.Chart1.Axes.Right.Labels.Brush.Color = System.Drawing.Color.White;
-            this.Chart1.Axes.Right.Labels.Brush.Solid = true;
-            this.Chart1.Axes.Right.Labels.Brush.Visible = true;
             // 
             // 
             // 
-            this.Chart1.Axes.Right.Labels.Font.Bold = false;
+            Chart1.Axes.Right.Title.Brush.Color = Color.Silver;
+            Chart1.Axes.Right.Title.Brush.Solid = true;
+            Chart1.Axes.Right.Title.Brush.Visible = true;
             // 
             // 
             // 
-            this.Chart1.Axes.Right.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.Chart1.Axes.Right.Labels.Font.Brush.Solid = true;
-            this.Chart1.Axes.Right.Labels.Font.Brush.Visible = true;
+            Chart1.Axes.Right.Title.Font.Bold = false;
             // 
             // 
             // 
+            Chart1.Axes.Right.Title.Font.Brush.Color = Color.FromArgb(64, 64, 64);
+            Chart1.Axes.Right.Title.Font.Brush.Solid = true;
+            Chart1.Axes.Right.Title.Font.Brush.Visible = true;
             // 
             // 
             // 
-            this.Chart1.Axes.Right.Labels.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.Chart1.Axes.Right.Labels.Font.Shadow.Brush.Solid = true;
-            this.Chart1.Axes.Right.Labels.Font.Shadow.Brush.Visible = true;
-            this.Chart1.Axes.Right.Labels.Font.Size = 9;
-            this.Chart1.Axes.Right.Labels.Font.SizeFloat = 9F;
             // 
             // 
             // 
+            Chart1.Axes.Right.Title.Font.Shadow.Brush.Color = Color.DarkGray;
+            Chart1.Axes.Right.Title.Font.Shadow.Brush.Solid = true;
+            Chart1.Axes.Right.Title.Font.Shadow.Brush.Visible = true;
+            Chart1.Axes.Right.Title.Font.Size = 11;
+            Chart1.Axes.Right.Title.Font.SizeFloat = 11F;
+            Chart1.Axes.Right.Title.Font.Style = Steema.TeeChart.Drawing.FontStyle.Regular;
             // 
             // 
             // 
-            this.Chart1.Axes.Right.Labels.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.Chart1.Axes.Right.Labels.ImageBevel.Brush.Solid = true;
-            this.Chart1.Axes.Right.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
+            Chart1.Axes.Right.Title.ImageBevel.Brush.Color = Color.LightGray;
+            Chart1.Axes.Right.Title.ImageBevel.Brush.Solid = true;
+            Chart1.Axes.Right.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
-            this.Chart1.Axes.Right.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.Chart1.Axes.Right.Labels.Shadow.Brush.Solid = true;
-            this.Chart1.Axes.Right.Labels.Shadow.Brush.Visible = true;
             // 
             // 
             // 
-            this.Chart1.Axes.Right.Title.Angle = 270;
+            Chart1.Axes.Right.Title.Shadow.Brush.Color = Color.DarkGray;
+            Chart1.Axes.Right.Title.Shadow.Brush.Solid = true;
+            Chart1.Axes.Right.Title.Shadow.Brush.Visible = true;
             // 
             // 
             // 
-            this.Chart1.Axes.Right.Title.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
             // 
             // 
             // 
-            this.Chart1.Axes.Right.Title.Brush.Color = System.Drawing.Color.Silver;
-            this.Chart1.Axes.Right.Title.Brush.Solid = true;
-            this.Chart1.Axes.Right.Title.Brush.Visible = true;
             // 
             // 
             // 
-            this.Chart1.Axes.Right.Title.Font.Bold = false;
+            Chart1.Axes.Top.Labels.Brush.Color = Color.White;
+            Chart1.Axes.Top.Labels.Brush.Solid = true;
+            Chart1.Axes.Top.Labels.Brush.Visible = true;
             // 
             // 
             // 
-            this.Chart1.Axes.Right.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Chart1.Axes.Right.Title.Font.Brush.Solid = true;
-            this.Chart1.Axes.Right.Title.Font.Brush.Visible = true;
+            Chart1.Axes.Top.Labels.Font.Bold = false;
             // 
             // 
             // 
+            Chart1.Axes.Top.Labels.Font.Brush.Color = Color.FromArgb(128, 128, 128);
+            Chart1.Axes.Top.Labels.Font.Brush.Solid = true;
+            Chart1.Axes.Top.Labels.Font.Brush.Visible = true;
             // 
             // 
             // 
-            this.Chart1.Axes.Right.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.Chart1.Axes.Right.Title.Font.Shadow.Brush.Solid = true;
-            this.Chart1.Axes.Right.Title.Font.Shadow.Brush.Visible = true;
-            this.Chart1.Axes.Right.Title.Font.Size = 11;
-            this.Chart1.Axes.Right.Title.Font.SizeFloat = 11F;
             // 
             // 
             // 
+            Chart1.Axes.Top.Labels.Font.Shadow.Brush.Color = Color.DarkGray;
+            Chart1.Axes.Top.Labels.Font.Shadow.Brush.Solid = true;
+            Chart1.Axes.Top.Labels.Font.Shadow.Brush.Visible = true;
+            Chart1.Axes.Top.Labels.Font.Size = 9;
+            Chart1.Axes.Top.Labels.Font.SizeFloat = 9F;
+            Chart1.Axes.Top.Labels.Font.Style = Steema.TeeChart.Drawing.FontStyle.Regular;
             // 
             // 
             // 
-            this.Chart1.Axes.Right.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.Chart1.Axes.Right.Title.ImageBevel.Brush.Solid = true;
-            this.Chart1.Axes.Right.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
+            Chart1.Axes.Top.Labels.ImageBevel.Brush.Color = Color.LightGray;
+            Chart1.Axes.Top.Labels.ImageBevel.Brush.Solid = true;
+            Chart1.Axes.Top.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
-            this.Chart1.Axes.Right.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.Chart1.Axes.Right.Title.Shadow.Brush.Solid = true;
-            this.Chart1.Axes.Right.Title.Shadow.Brush.Visible = true;
             // 
             // 
             // 
+            Chart1.Axes.Top.Labels.Shadow.Brush.Color = Color.DarkGray;
+            Chart1.Axes.Top.Labels.Shadow.Brush.Solid = true;
+            Chart1.Axes.Top.Labels.Shadow.Brush.Visible = true;
             // 
             // 
             // 
             // 
             // 
             // 
-            this.Chart1.Axes.Top.Labels.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
+            Chart1.Axes.Top.Title.Brush.Color = Color.Silver;
+            Chart1.Axes.Top.Title.Brush.Solid = true;
+            Chart1.Axes.Top.Title.Brush.Visible = true;
             // 
             // 
             // 
-            this.Chart1.Axes.Top.Labels.Brush.Color = System.Drawing.Color.White;
-            this.Chart1.Axes.Top.Labels.Brush.Solid = true;
-            this.Chart1.Axes.Top.Labels.Brush.Visible = true;
+            Chart1.Axes.Top.Title.Font.Bold = false;
             // 
             // 
             // 
-            this.Chart1.Axes.Top.Labels.Font.Bold = false;
+            Chart1.Axes.Top.Title.Font.Brush.Color = Color.FromArgb(64, 64, 64);
+            Chart1.Axes.Top.Title.Font.Brush.Solid = true;
+            Chart1.Axes.Top.Title.Font.Brush.Visible = true;
             // 
             // 
             // 
-            this.Chart1.Axes.Top.Labels.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.Chart1.Axes.Top.Labels.Font.Brush.Solid = true;
-            this.Chart1.Axes.Top.Labels.Font.Brush.Visible = true;
             // 
             // 
             // 
+            Chart1.Axes.Top.Title.Font.Shadow.Brush.Color = Color.DarkGray;
+            Chart1.Axes.Top.Title.Font.Shadow.Brush.Solid = true;
+            Chart1.Axes.Top.Title.Font.Shadow.Brush.Visible = true;
+            Chart1.Axes.Top.Title.Font.Size = 11;
+            Chart1.Axes.Top.Title.Font.SizeFloat = 11F;
+            Chart1.Axes.Top.Title.Font.Style = Steema.TeeChart.Drawing.FontStyle.Regular;
             // 
             // 
             // 
-            this.Chart1.Axes.Top.Labels.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.Chart1.Axes.Top.Labels.Font.Shadow.Brush.Solid = true;
-            this.Chart1.Axes.Top.Labels.Font.Shadow.Brush.Visible = true;
-            this.Chart1.Axes.Top.Labels.Font.Size = 9;
-            this.Chart1.Axes.Top.Labels.Font.SizeFloat = 9F;
             // 
             // 
             // 
+            Chart1.Axes.Top.Title.ImageBevel.Brush.Color = Color.LightGray;
+            Chart1.Axes.Top.Title.ImageBevel.Brush.Solid = true;
+            Chart1.Axes.Top.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
-            this.Chart1.Axes.Top.Labels.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.Chart1.Axes.Top.Labels.ImageBevel.Brush.Solid = true;
-            this.Chart1.Axes.Top.Labels.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
+            Chart1.Axes.Top.Title.Shadow.Brush.Color = Color.DarkGray;
+            Chart1.Axes.Top.Title.Shadow.Brush.Solid = true;
+            Chart1.Axes.Top.Title.Shadow.Brush.Visible = true;
+            Chart1.Dock = DockStyle.Top;
             // 
             // 
             // 
-            this.Chart1.Axes.Top.Labels.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.Chart1.Axes.Top.Labels.Shadow.Brush.Solid = true;
-            this.Chart1.Axes.Top.Labels.Shadow.Brush.Visible = true;
             // 
             // 
             // 
-            this.Chart1.Axes.Top.Title.Angle = 0;
+            Chart1.Footer.Brush.Color = Color.Silver;
+            Chart1.Footer.Brush.Solid = true;
+            Chart1.Footer.Brush.Visible = true;
             // 
             // 
             // 
-            this.Chart1.Axes.Top.Title.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
+            Chart1.Footer.Font.Bold = false;
             // 
             // 
             // 
-            this.Chart1.Axes.Top.Title.Brush.Color = System.Drawing.Color.Silver;
-            this.Chart1.Axes.Top.Title.Brush.Solid = true;
-            this.Chart1.Axes.Top.Title.Brush.Visible = true;
+            Chart1.Footer.Font.Brush.Color = Color.Red;
+            Chart1.Footer.Font.Brush.Solid = true;
+            Chart1.Footer.Font.Brush.Visible = true;
             // 
             // 
             // 
-            this.Chart1.Axes.Top.Title.Font.Bold = false;
             // 
             // 
             // 
-            this.Chart1.Axes.Top.Title.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Chart1.Axes.Top.Title.Font.Brush.Solid = true;
-            this.Chart1.Axes.Top.Title.Font.Brush.Visible = true;
+            Chart1.Footer.Font.Shadow.Brush.Color = Color.DarkGray;
+            Chart1.Footer.Font.Shadow.Brush.Solid = true;
+            Chart1.Footer.Font.Shadow.Brush.Visible = true;
+            Chart1.Footer.Font.Size = 8;
+            Chart1.Footer.Font.SizeFloat = 8F;
+            Chart1.Footer.Font.Style = Steema.TeeChart.Drawing.FontStyle.Regular;
             // 
             // 
             // 
             // 
             // 
             // 
-            this.Chart1.Axes.Top.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.Chart1.Axes.Top.Title.Font.Shadow.Brush.Solid = true;
-            this.Chart1.Axes.Top.Title.Font.Shadow.Brush.Visible = true;
-            this.Chart1.Axes.Top.Title.Font.Size = 11;
-            this.Chart1.Axes.Top.Title.Font.SizeFloat = 11F;
+            Chart1.Footer.ImageBevel.Brush.Color = Color.LightGray;
+            Chart1.Footer.ImageBevel.Brush.Solid = true;
+            Chart1.Footer.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
             // 
             // 
             // 
-            this.Chart1.Axes.Top.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.Chart1.Axes.Top.Title.ImageBevel.Brush.Solid = true;
-            this.Chart1.Axes.Top.Title.ImageBevel.Brush.Visible = true;
+            Chart1.Footer.Shadow.Brush.Color = Color.DarkGray;
+            Chart1.Footer.Shadow.Brush.Solid = true;
+            Chart1.Footer.Shadow.Brush.Visible = true;
             // 
             // 
             // 
             // 
             // 
             // 
-            this.Chart1.Axes.Top.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.Chart1.Axes.Top.Title.Shadow.Brush.Solid = true;
-            this.Chart1.Axes.Top.Title.Shadow.Brush.Visible = true;
-            this.Chart1.Dock = System.Windows.Forms.DockStyle.Top;
+            Chart1.Header.Brush.Color = Color.FromArgb(192, 192, 192);
+            Chart1.Header.Brush.Solid = true;
+            Chart1.Header.Brush.Visible = true;
             // 
             // 
             // 
+            Chart1.Header.Font.Bold = false;
             // 
             // 
             // 
-            this.Chart1.Footer.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
+            Chart1.Header.Font.Brush.Color = Color.FromArgb(128, 128, 128);
+            Chart1.Header.Font.Brush.Solid = true;
+            Chart1.Header.Font.Brush.Visible = true;
             // 
             // 
             // 
-            this.Chart1.Footer.Brush.Color = System.Drawing.Color.Silver;
-            this.Chart1.Footer.Brush.Solid = true;
-            this.Chart1.Footer.Brush.Visible = true;
             // 
             // 
             // 
-            this.Chart1.Footer.Font.Bold = false;
+            Chart1.Header.Font.Shadow.Brush.Color = Color.DarkGray;
+            Chart1.Header.Font.Shadow.Brush.Solid = true;
+            Chart1.Header.Font.Shadow.Brush.Visible = true;
+            Chart1.Header.Font.Size = 12;
+            Chart1.Header.Font.SizeFloat = 12F;
+            Chart1.Header.Font.Style = Steema.TeeChart.Drawing.FontStyle.Regular;
             // 
             // 
             // 
-            this.Chart1.Footer.Font.Brush.Color = System.Drawing.Color.Red;
-            this.Chart1.Footer.Font.Brush.Solid = true;
-            this.Chart1.Footer.Font.Brush.Visible = true;
             // 
             // 
             // 
+            Chart1.Header.ImageBevel.Brush.Color = Color.LightGray;
+            Chart1.Header.ImageBevel.Brush.Solid = true;
+            Chart1.Header.ImageBevel.Brush.Visible = true;
+            Chart1.Header.Lines = new string[]
+    {
+    "Bicoherence"
+    };
             // 
             // 
             // 
-            this.Chart1.Footer.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.Chart1.Footer.Font.Shadow.Brush.Solid = true;
-            this.Chart1.Footer.Font.Shadow.Brush.Visible = true;
-            this.Chart1.Footer.Font.Size = 8;
-            this.Chart1.Footer.Font.SizeFloat = 8F;
             // 
             // 
             // 
+            Chart1.Header.Shadow.Brush.Color = Color.FromArgb(169, 169, 169);
+            Chart1.Header.Shadow.Brush.Solid = true;
+            Chart1.Header.Shadow.Brush.Visible = true;
             // 
             // 
             // 
-            this.Chart1.Footer.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.Chart1.Footer.ImageBevel.Brush.Solid = true;
-            this.Chart1.Footer.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
+            Chart1.Legend.Brush.Color = Color.White;
+            Chart1.Legend.Brush.Solid = true;
+            Chart1.Legend.Brush.Visible = true;
+            Chart1.Legend.CheckBoxes = false;
             // 
             // 
             // 
-            this.Chart1.Footer.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.Chart1.Footer.Shadow.Brush.Solid = true;
-            this.Chart1.Footer.Shadow.Brush.Visible = true;
+            Chart1.Legend.Font.Bold = false;
             // 
             // 
             // 
+            Chart1.Legend.Font.Brush.Color = Color.FromArgb(64, 64, 64);
+            Chart1.Legend.Font.Brush.Solid = true;
+            Chart1.Legend.Font.Brush.Visible = true;
             // 
             // 
             // 
-            this.Chart1.Header.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
             // 
             // 
             // 
-            this.Chart1.Header.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.Chart1.Header.Brush.Solid = true;
-            this.Chart1.Header.Brush.Visible = true;
+            Chart1.Legend.Font.Shadow.Brush.Color = Color.DarkGray;
+            Chart1.Legend.Font.Shadow.Brush.Solid = true;
+            Chart1.Legend.Font.Shadow.Brush.Visible = true;
+            Chart1.Legend.Font.Size = 9;
+            Chart1.Legend.Font.SizeFloat = 9F;
+            Chart1.Legend.Font.Style = Steema.TeeChart.Drawing.FontStyle.Regular;
             // 
             // 
             // 
-            this.Chart1.Header.Font.Bold = false;
             // 
             // 
             // 
-            this.Chart1.Header.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.Chart1.Header.Font.Brush.Solid = true;
-            this.Chart1.Header.Font.Brush.Visible = true;
+            Chart1.Legend.ImageBevel.Brush.Color = Color.LightGray;
+            Chart1.Legend.ImageBevel.Brush.Solid = true;
+            Chart1.Legend.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
             // 
             // 
             // 
-            this.Chart1.Header.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.Chart1.Header.Font.Shadow.Brush.Solid = true;
-            this.Chart1.Header.Font.Shadow.Brush.Visible = true;
-            this.Chart1.Header.Font.Size = 12;
-            this.Chart1.Header.Font.SizeFloat = 12F;
+            Chart1.Legend.Shadow.Brush.Color = Color.FromArgb(0, 0, 0);
+            Chart1.Legend.Shadow.Brush.Solid = true;
+            Chart1.Legend.Shadow.Brush.Visible = true;
             // 
             // 
             // 
             // 
             // 
             // 
-            this.Chart1.Header.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.Chart1.Header.ImageBevel.Brush.Solid = true;
-            this.Chart1.Header.ImageBevel.Brush.Visible = true;
-            this.Chart1.Header.Lines = new string[] {
-        "Bicoherence"};
             // 
             // 
             // 
+            Chart1.Legend.Symbol.Shadow.Brush.Color = Color.DarkGray;
+            Chart1.Legend.Symbol.Shadow.Brush.Solid = true;
+            Chart1.Legend.Symbol.Shadow.Brush.Visible = true;
             // 
             // 
             // 
-            this.Chart1.Header.Shadow.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Chart1.Header.Shadow.Brush.Solid = true;
-            this.Chart1.Header.Shadow.Brush.Visible = true;
             // 
             // 
             // 
+            Chart1.Legend.Title.Brush.Color = Color.White;
+            Chart1.Legend.Title.Brush.Solid = true;
+            Chart1.Legend.Title.Brush.Visible = true;
             // 
             // 
             // 
-            this.Chart1.Legend.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
+            Chart1.Legend.Title.Font.Bold = true;
             // 
             // 
             // 
-            this.Chart1.Legend.Brush.Color = System.Drawing.Color.White;
-            this.Chart1.Legend.Brush.Solid = true;
-            this.Chart1.Legend.Brush.Visible = true;
+            Chart1.Legend.Title.Font.Brush.Color = Color.Black;
+            Chart1.Legend.Title.Font.Brush.Solid = true;
+            Chart1.Legend.Title.Font.Brush.Visible = true;
             // 
             // 
             // 
-            this.Chart1.Legend.Font.Bold = false;
             // 
             // 
             // 
-            this.Chart1.Legend.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Chart1.Legend.Font.Brush.Solid = true;
-            this.Chart1.Legend.Font.Brush.Visible = true;
+            Chart1.Legend.Title.Font.Shadow.Brush.Color = Color.DarkGray;
+            Chart1.Legend.Title.Font.Shadow.Brush.Solid = true;
+            Chart1.Legend.Title.Font.Shadow.Brush.Visible = true;
+            Chart1.Legend.Title.Font.Size = 8;
+            Chart1.Legend.Title.Font.SizeFloat = 8F;
+            Chart1.Legend.Title.Font.Style = Steema.TeeChart.Drawing.FontStyle.Bold;
             // 
             // 
             // 
             // 
             // 
             // 
-            this.Chart1.Legend.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.Chart1.Legend.Font.Shadow.Brush.Solid = true;
-            this.Chart1.Legend.Font.Shadow.Brush.Visible = true;
-            this.Chart1.Legend.Font.Size = 9;
-            this.Chart1.Legend.Font.SizeFloat = 9F;
+            Chart1.Legend.Title.ImageBevel.Brush.Color = Color.LightGray;
+            Chart1.Legend.Title.ImageBevel.Brush.Solid = true;
+            Chart1.Legend.Title.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
             // 
             // 
             // 
-            this.Chart1.Legend.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.Chart1.Legend.ImageBevel.Brush.Solid = true;
-            this.Chart1.Legend.ImageBevel.Brush.Visible = true;
+            Chart1.Legend.Title.Shadow.Brush.Color = Color.DarkGray;
+            Chart1.Legend.Title.Shadow.Brush.Solid = true;
+            Chart1.Legend.Title.Shadow.Brush.Visible = true;
+            Chart1.Location = new Point(0, 0);
+            Chart1.Name = "Chart1";
             // 
             // 
             // 
             // 
             // 
             // 
-            this.Chart1.Legend.Shadow.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.Chart1.Legend.Shadow.Brush.Solid = true;
-            this.Chart1.Legend.Shadow.Brush.Visible = true;
+            Chart1.Panel.Bevel.Inner = Steema.TeeChart.Drawing.BevelStyles.Lowered;
             // 
             // 
             // 
+            Chart1.Panel.Brush.Color = Color.Silver;
+            Chart1.Panel.Brush.Solid = true;
+            Chart1.Panel.Brush.Visible = true;
             // 
             // 
             // 
             // 
             // 
             // 
-            this.Chart1.Legend.Symbol.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.Chart1.Legend.Symbol.Shadow.Brush.Solid = true;
-            this.Chart1.Legend.Symbol.Shadow.Brush.Visible = true;
+            Chart1.Panel.ImageBevel.Brush.Color = Color.LightGray;
+            Chart1.Panel.ImageBevel.Brush.Solid = true;
+            Chart1.Panel.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
             // 
             // 
             // 
-            this.Chart1.Legend.Title.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
+            Chart1.Panel.Shadow.Brush.Color = Color.DarkGray;
+            Chart1.Panel.Shadow.Brush.Solid = true;
+            Chart1.Panel.Shadow.Brush.Visible = true;
             // 
             // 
             // 
-            this.Chart1.Legend.Title.Brush.Color = System.Drawing.Color.White;
-            this.Chart1.Legend.Title.Brush.Solid = true;
-            this.Chart1.Legend.Title.Brush.Visible = true;
+            margins2.Bottom = 100;
+            margins2.Left = 100;
+            margins2.Right = 100;
+            margins2.Top = 100;
+            Chart1.Printer.Margins = margins2;
+            Chart1.Size = new Size(1149, 236);
             // 
             // 
             // 
-            this.Chart1.Legend.Title.Font.Bold = true;
             // 
             // 
             // 
-            this.Chart1.Legend.Title.Font.Brush.Color = System.Drawing.Color.Black;
-            this.Chart1.Legend.Title.Font.Brush.Solid = true;
-            this.Chart1.Legend.Title.Font.Brush.Visible = true;
+            Chart1.SubFooter.Brush.Color = Color.Silver;
+            Chart1.SubFooter.Brush.Solid = true;
+            Chart1.SubFooter.Brush.Visible = true;
             // 
             // 
             // 
+            Chart1.SubFooter.Font.Bold = false;
             // 
             // 
             // 
-            this.Chart1.Legend.Title.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.Chart1.Legend.Title.Font.Shadow.Brush.Solid = true;
-            this.Chart1.Legend.Title.Font.Shadow.Brush.Visible = true;
-            this.Chart1.Legend.Title.Font.Size = 8;
-            this.Chart1.Legend.Title.Font.SizeFloat = 8F;
+            Chart1.SubFooter.Font.Brush.Color = Color.Red;
+            Chart1.SubFooter.Font.Brush.Solid = true;
+            Chart1.SubFooter.Font.Brush.Visible = true;
             // 
             // 
             // 
             // 
             // 
             // 
-            this.Chart1.Legend.Title.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.Chart1.Legend.Title.ImageBevel.Brush.Solid = true;
-            this.Chart1.Legend.Title.ImageBevel.Brush.Visible = true;
+            Chart1.SubFooter.Font.Shadow.Brush.Color = Color.DarkGray;
+            Chart1.SubFooter.Font.Shadow.Brush.Solid = true;
+            Chart1.SubFooter.Font.Shadow.Brush.Visible = true;
+            Chart1.SubFooter.Font.Size = 8;
+            Chart1.SubFooter.Font.SizeFloat = 8F;
+            Chart1.SubFooter.Font.Style = Steema.TeeChart.Drawing.FontStyle.Regular;
             // 
             // 
             // 
             // 
             // 
             // 
-            this.Chart1.Legend.Title.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.Chart1.Legend.Title.Shadow.Brush.Solid = true;
-            this.Chart1.Legend.Title.Shadow.Brush.Visible = true;
-            this.Chart1.Location = new System.Drawing.Point(0, 0);
-            this.Chart1.Name = "Chart1";
+            Chart1.SubFooter.ImageBevel.Brush.Color = Color.LightGray;
+            Chart1.SubFooter.ImageBevel.Brush.Solid = true;
+            Chart1.SubFooter.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
             // 
             // 
             // 
-            this.Chart1.Panel.Bevel.Inner = Steema.TeeChart.Drawing.BevelStyles.Lowered;
-            this.Chart1.Panel.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
+            Chart1.SubFooter.Shadow.Brush.Color = Color.DarkGray;
+            Chart1.SubFooter.Shadow.Brush.Solid = true;
+            Chart1.SubFooter.Shadow.Brush.Visible = true;
             // 
             // 
             // 
-            this.Chart1.Panel.Brush.Color = System.Drawing.Color.Silver;
-            this.Chart1.Panel.Brush.Solid = true;
-            this.Chart1.Panel.Brush.Visible = true;
             // 
             // 
             // 
+            Chart1.SubHeader.Brush.Color = Color.FromArgb(192, 192, 192);
+            Chart1.SubHeader.Brush.Solid = true;
+            Chart1.SubHeader.Brush.Visible = true;
             // 
             // 
             // 
-            this.Chart1.Panel.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.Chart1.Panel.ImageBevel.Brush.Solid = true;
-            this.Chart1.Panel.ImageBevel.Brush.Visible = true;
+            Chart1.SubHeader.Font.Bold = false;
             // 
             // 
             // 
+            Chart1.SubHeader.Font.Brush.Color = Color.FromArgb(128, 128, 128);
+            Chart1.SubHeader.Font.Brush.Solid = true;
+            Chart1.SubHeader.Font.Brush.Visible = true;
             // 
             // 
             // 
-            this.Chart1.Panel.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.Chart1.Panel.Shadow.Brush.Solid = true;
-            this.Chart1.Panel.Shadow.Brush.Visible = true;
-            this.Chart1.Size = new System.Drawing.Size(728, 192);
             // 
             // 
             // 
+            Chart1.SubHeader.Font.Shadow.Brush.Color = Color.DarkGray;
+            Chart1.SubHeader.Font.Shadow.Brush.Solid = true;
+            Chart1.SubHeader.Font.Shadow.Brush.Visible = true;
+            Chart1.SubHeader.Font.Size = 12;
+            Chart1.SubHeader.Font.SizeFloat = 12F;
+            Chart1.SubHeader.Font.Style = Steema.TeeChart.Drawing.FontStyle.Regular;
             // 
             // 
             // 
-            this.Chart1.SubFooter.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
             // 
             // 
             // 
-            this.Chart1.SubFooter.Brush.Color = System.Drawing.Color.Silver;
-            this.Chart1.SubFooter.Brush.Solid = true;
-            this.Chart1.SubFooter.Brush.Visible = true;
+            Chart1.SubHeader.ImageBevel.Brush.Color = Color.LightGray;
+            Chart1.SubHeader.ImageBevel.Brush.Solid = true;
+            Chart1.SubHeader.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
-            this.Chart1.SubFooter.Font.Bold = false;
             // 
             // 
             // 
-            this.Chart1.SubFooter.Font.Brush.Color = System.Drawing.Color.Red;
-            this.Chart1.SubFooter.Font.Brush.Solid = true;
-            this.Chart1.SubFooter.Font.Brush.Visible = true;
+            Chart1.SubHeader.Shadow.Brush.Color = Color.FromArgb(169, 169, 169);
+            Chart1.SubHeader.Shadow.Brush.Solid = true;
+            Chart1.SubHeader.Shadow.Brush.Visible = true;
+            Chart1.TabIndex = 0;
             // 
             // 
             // 
             // 
             // 
             // 
-            this.Chart1.SubFooter.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.Chart1.SubFooter.Font.Shadow.Brush.Solid = true;
-            this.Chart1.SubFooter.Font.Shadow.Brush.Visible = true;
-            this.Chart1.SubFooter.Font.Size = 8;
-            this.Chart1.SubFooter.Font.SizeFloat = 8F;
             // 
             // 
             // 
+            Chart1.Walls.Back.Brush.Color = Color.Silver;
+            Chart1.Walls.Back.Brush.Solid = true;
+            Chart1.Walls.Back.Brush.Visible = false;
             // 
             // 
             // 
-            this.Chart1.SubFooter.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.Chart1.SubFooter.ImageBevel.Brush.Solid = true;
-            this.Chart1.SubFooter.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
+            Chart1.Walls.Back.ImageBevel.Brush.Color = Color.LightGray;
+            Chart1.Walls.Back.ImageBevel.Brush.Solid = true;
+            Chart1.Walls.Back.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
-            this.Chart1.SubFooter.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.Chart1.SubFooter.Shadow.Brush.Solid = true;
-            this.Chart1.SubFooter.Shadow.Brush.Visible = true;
             // 
             // 
             // 
+            Chart1.Walls.Back.Shadow.Brush.Color = Color.DarkGray;
+            Chart1.Walls.Back.Shadow.Brush.Solid = true;
+            Chart1.Walls.Back.Shadow.Brush.Visible = true;
             // 
             // 
             // 
-            this.Chart1.SubHeader.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
             // 
             // 
             // 
-            this.Chart1.SubHeader.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.Chart1.SubHeader.Brush.Solid = true;
-            this.Chart1.SubHeader.Brush.Visible = true;
+            Chart1.Walls.Bottom.Brush.Color = Color.White;
+            Chart1.Walls.Bottom.Brush.Solid = true;
+            Chart1.Walls.Bottom.Brush.Visible = true;
             // 
             // 
             // 
-            this.Chart1.SubHeader.Font.Bold = false;
             // 
             // 
             // 
-            this.Chart1.SubHeader.Font.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.Chart1.SubHeader.Font.Brush.Solid = true;
-            this.Chart1.SubHeader.Font.Brush.Visible = true;
+            Chart1.Walls.Bottom.ImageBevel.Brush.Color = Color.LightGray;
+            Chart1.Walls.Bottom.ImageBevel.Brush.Solid = true;
+            Chart1.Walls.Bottom.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
             // 
             // 
             // 
-            this.Chart1.SubHeader.Font.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.Chart1.SubHeader.Font.Shadow.Brush.Solid = true;
-            this.Chart1.SubHeader.Font.Shadow.Brush.Visible = true;
-            this.Chart1.SubHeader.Font.Size = 12;
-            this.Chart1.SubHeader.Font.SizeFloat = 12F;
+            Chart1.Walls.Bottom.Shadow.Brush.Color = Color.DarkGray;
+            Chart1.Walls.Bottom.Shadow.Brush.Solid = true;
+            Chart1.Walls.Bottom.Shadow.Brush.Visible = true;
             // 
             // 
             // 
             // 
             // 
             // 
-            this.Chart1.SubHeader.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.Chart1.SubHeader.ImageBevel.Brush.Solid = true;
-            this.Chart1.SubHeader.ImageBevel.Brush.Visible = true;
+            Chart1.Walls.Left.Brush.Color = Color.LightYellow;
+            Chart1.Walls.Left.Brush.Solid = true;
+            Chart1.Walls.Left.Brush.Visible = true;
             // 
             // 
             // 
             // 
             // 
             // 
-            this.Chart1.SubHeader.Shadow.Brush.Color = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Chart1.SubHeader.Shadow.Brush.Solid = true;
-            this.Chart1.SubHeader.Shadow.Brush.Visible = true;
-            this.Chart1.TabIndex = 0;
+            Chart1.Walls.Left.ImageBevel.Brush.Color = Color.LightGray;
+            Chart1.Walls.Left.ImageBevel.Brush.Solid = true;
+            Chart1.Walls.Left.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
             // 
             // 
             // 
+            Chart1.Walls.Left.Shadow.Brush.Color = Color.DarkGray;
+            Chart1.Walls.Left.Shadow.Brush.Solid = true;
+            Chart1.Walls.Left.Shadow.Brush.Visible = true;
             // 
             // 
             // 
-            this.Chart1.Walls.Back.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
             // 
             // 
             // 
-            this.Chart1.Walls.Back.Brush.Color = System.Drawing.Color.Silver;
-            this.Chart1.Walls.Back.Brush.Solid = true;
-            this.Chart1.Walls.Back.Brush.Visible = false;
+            Chart1.Walls.Right.Brush.Color = Color.LightYellow;
+            Chart1.Walls.Right.Brush.Solid = true;
+            Chart1.Walls.Right.Brush.Visible = true;
             // 
             // 
             // 
             // 
             // 
             // 
-            this.Chart1.Walls.Back.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.Chart1.Walls.Back.ImageBevel.Brush.Solid = true;
-            this.Chart1.Walls.Back.ImageBevel.Brush.Visible = true;
+            Chart1.Walls.Right.ImageBevel.Brush.Color = Color.LightGray;
+            Chart1.Walls.Right.ImageBevel.Brush.Solid = true;
+            Chart1.Walls.Right.ImageBevel.Brush.Visible = true;
             // 
             // 
             // 
             // 
             // 
             // 
-            this.Chart1.Walls.Back.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.Chart1.Walls.Back.Shadow.Brush.Solid = true;
-            this.Chart1.Walls.Back.Shadow.Brush.Visible = true;
+            Chart1.Walls.Right.Shadow.Brush.Color = Color.DarkGray;
+            Chart1.Walls.Right.Shadow.Brush.Solid = true;
+            Chart1.Walls.Right.Shadow.Brush.Visible = true;
             // 
             // 
             // 
             // 
             // 
             // 
-            this.Chart1.Walls.Bottom.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
+            Chart1.Zoom.Brush.Color = Color.LightBlue;
+            Chart1.Zoom.Brush.Solid = true;
+            Chart1.Zoom.Brush.Visible = false;
             // 
             // 
             // 
-            this.Chart1.Walls.Bottom.Brush.Color = System.Drawing.Color.White;
-            this.Chart1.Walls.Bottom.Brush.Solid = true;
-            this.Chart1.Walls.Bottom.Brush.Visible = true;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.Chart1.Walls.Bottom.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.Chart1.Walls.Bottom.ImageBevel.Brush.Solid = true;
-            this.Chart1.Walls.Bottom.ImageBevel.Brush.Visible = true;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.Chart1.Walls.Bottom.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.Chart1.Walls.Bottom.Shadow.Brush.Solid = true;
-            this.Chart1.Walls.Bottom.Shadow.Brush.Visible = true;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.Chart1.Walls.Left.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
-            // 
-            // 
-            // 
-            this.Chart1.Walls.Left.Brush.Color = System.Drawing.Color.LightYellow;
-            this.Chart1.Walls.Left.Brush.Solid = true;
-            this.Chart1.Walls.Left.Brush.Visible = true;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.Chart1.Walls.Left.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.Chart1.Walls.Left.ImageBevel.Brush.Solid = true;
-            this.Chart1.Walls.Left.ImageBevel.Brush.Visible = true;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.Chart1.Walls.Left.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.Chart1.Walls.Left.Shadow.Brush.Solid = true;
-            this.Chart1.Walls.Left.Shadow.Brush.Visible = true;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.Chart1.Walls.Right.Bevel.Outer = Steema.TeeChart.Drawing.BevelStyles.None;
-            // 
-            // 
-            // 
-            this.Chart1.Walls.Right.Brush.Color = System.Drawing.Color.LightYellow;
-            this.Chart1.Walls.Right.Brush.Solid = true;
-            this.Chart1.Walls.Right.Brush.Visible = true;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.Chart1.Walls.Right.ImageBevel.Brush.Color = System.Drawing.Color.LightGray;
-            this.Chart1.Walls.Right.ImageBevel.Brush.Solid = true;
-            this.Chart1.Walls.Right.ImageBevel.Brush.Visible = true;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.Chart1.Walls.Right.Shadow.Brush.Color = System.Drawing.Color.DarkGray;
-            this.Chart1.Walls.Right.Shadow.Brush.Solid = true;
-            this.Chart1.Walls.Right.Shadow.Brush.Visible = true;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.Chart1.Zoom.Brush.Color = System.Drawing.Color.LightBlue;
-            this.Chart1.Zoom.Brush.Solid = true;
-            this.Chart1.Zoom.Brush.Visible = false;
-            this.Chart1.Zoom.FullRepaint = true;
-            // 
-            // 
-            // 
-            this.Chart1.Zoom.Pen.Visible = true;
-            this.Chart1.Click += new System.EventHandler(this.Chart1_Click);
+            Chart1.Zoom.Pen.Visible = true;
+            Chart1.Click += Chart1_Click;
             // 
             // SpectrumAnalyzer1
             // 
-            this.SpectrumAnalyzer1.Bands.TemplateIndex = -1;
-            this.SpectrumAnalyzer1.Bands.Templates = new Dew.Signal.TStringStreamList(System.Convert.FromBase64String("AAAAAA=="));
-            this.SpectrumAnalyzer1.BlockAssign = false;
-            this.SpectrumAnalyzer1.Complex = false;
-            this.SpectrumAnalyzer1.FloatPrecision = Dew.Math.TMtxFloatPrecision.mvDouble;
-            this.SpectrumAnalyzer1.FloatPrecisionLock = false;
-            this.SpectrumAnalyzer1.Input = this.Signal1;
-            this.SpectrumAnalyzer1.IsDouble = true;
-            this.SpectrumAnalyzer1.LogBase = 0D;
-            this.SpectrumAnalyzer1.LogScale = 0D;
-            this.SpectrumAnalyzer1.Name = "";
-            this.SpectrumAnalyzer1.Output = null;
-            this.SpectrumAnalyzer1.Peaks.Interpolation.RecursiveHarmonics = Dew.Signal.TRecursiveHarmonics.rhNone;
-            this.SpectrumAnalyzer1.Peaks.LargestCount = 4;
-            this.SpectrumAnalyzer1.Peaks.TraceMethod = Dew.Signal.TPeakTraceMethod.ptLargest;
-            this.SpectrumAnalyzer1.Report.AmplitudeFormat = null;
-            this.SpectrumAnalyzer1.Report.FrequencyFormat = null;
-            this.SpectrumAnalyzer1.Report.PhaseFormat = null;
-            this.SpectrumAnalyzer1.Report.UseTab = false;
-            this.SpectrumAnalyzer1.SpectrumScale = 0D;
-            this.SpectrumAnalyzer1.Window = Dew.Signal.TSignalWindowType.wtHanning;
+            SpectrumAnalyzer1.ArOrder = 100;
+            SpectrumAnalyzer1.Bands.TemplateIndex = -1;
+            SpectrumAnalyzer1.Bands.TemplatesSerialization = "AAAAAA==";
+            SpectrumAnalyzer1.Complex = false;
+            SpectrumAnalyzer1.FloatPrecision = TMtxFloatPrecision.mvDouble;
+            SpectrumAnalyzer1.FloatPrecisionLock = false;
+            SpectrumAnalyzer1.Harmonics = 10;
+            SpectrumAnalyzer1.Input = Signal1;
+            SpectrumAnalyzer1.IsDouble = true;
+            SpectrumAnalyzer1.Length = 64;
+            SpectrumAnalyzer1.LogBase = 0D;
+            SpectrumAnalyzer1.LogScale = 0D;
+            SpectrumAnalyzer1.MainlobeWidth = 8;
+            SpectrumAnalyzer1.Peaks.HarmonicsCount = 10;
+            SpectrumAnalyzer1.Peaks.Interpolation.RecursiveHarmonics = TRecursiveHarmonics.rhNone;
+            SpectrumAnalyzer1.Peaks.LargestCount = 4;
+            SpectrumAnalyzer1.Peaks.LargestRatio = 1E+15D;
+            SpectrumAnalyzer1.Peaks.NormalizedAmplt.PeakNumber = 1;
+            SpectrumAnalyzer1.Peaks.NormalizedFreq.PeakNumber = 1;
+            SpectrumAnalyzer1.Peaks.TraceMethod = TPeakTraceMethod.ptLargest;
+            SpectrumAnalyzer1.Report.AmplitudeFormat = null;
+            SpectrumAnalyzer1.Report.FrequencyFormat = null;
+            SpectrumAnalyzer1.Report.PhaseFormat = null;
+            SpectrumAnalyzer1.Report.UseTab = false;
+            SpectrumAnalyzer1.Rotation = 0;
+            SpectrumAnalyzer1.Stats.Averaged = 0;
+            SpectrumAnalyzer1.Stats.Averages = 30;
+            SpectrumAnalyzer1.Stats.ExpDecay = 5;
+            SpectrumAnalyzer1.Window = TSignalWindowType.wtHanning;
+            SpectrumAnalyzer1.ZeroPadding = 1;
             // 
             // Signal1
             // 
-            this.Signal1.BandwidthL = 0D;
-            this.Signal1.BlockAssign = false;
-            this.Signal1.Complex = false;
-            this.Signal1.Continuous = false;
-            this.Signal1.FloatPrecision = Dew.Math.TMtxFloatPrecision.mvDouble;
-            this.Signal1.FloatPrecisionLock = false;
-            this.Signal1.Input = null;
-            this.Signal1.IsDouble = true;
-            this.Signal1.Length = 256;
-            this.Signal1.Name = "";
-            this.Signal1.SamplingFrequency = 256D;
-            this.Signal1.OnAfterUpdateEvent += new Dew.Math.TNotifyEvent(this.Signal1_OnAfterUpdate);
+            Signal1.ChannelCount = 1;
+            Signal1.Complex = false;
+            Signal1.Continuous = false;
+            Signal1.DataSerialization = resources.GetString("Signal1.DataSerialization");
+            Signal1.FloatPrecision = TMtxFloatPrecision.mvDouble;
+            Signal1.FloatPrecisionLock = false;
+            Signal1.IsDouble = true;
+            Signal1.Length = 256;
+            Signal1.SamplingFrequency = 256D;
+            Signal1.OnAfterUpdateEvent += Signal1_OnAfterUpdate;
             // 
             // BiSpectrumAnalyzer1
             // 
-            this.BiSpectrumAnalyzer1.Bands.TemplateIndex = -1;
-            this.BiSpectrumAnalyzer1.Bands.Templates = new Dew.Signal.TStringStreamList(System.Convert.FromBase64String("AAAAAA=="));
-            this.BiSpectrumAnalyzer1.BiAnalyzer.Recursive = false;
-            this.BiSpectrumAnalyzer1.BlockAssign = false;
-            this.BiSpectrumAnalyzer1.Complex = false;
-            this.BiSpectrumAnalyzer1.FloatPrecision = Dew.Math.TMtxFloatPrecision.mvDouble;
-            this.BiSpectrumAnalyzer1.FloatPrecisionLock = false;
-            this.BiSpectrumAnalyzer1.Input = this.Signal1;
-            this.BiSpectrumAnalyzer1.IsDouble = true;
-            this.BiSpectrumAnalyzer1.LogBase = 0D;
-            this.BiSpectrumAnalyzer1.LogScale = 0D;
-            this.BiSpectrumAnalyzer1.Name = "";
-            this.BiSpectrumAnalyzer1.Output = null;
-            this.BiSpectrumAnalyzer1.Peaks.Interpolation.Method = Dew.Signal.TInterpolationMethod.imNone;
-            this.BiSpectrumAnalyzer1.Peaks.Interpolation.RecursiveHarmonics = Dew.Signal.TRecursiveHarmonics.rhNone;
-            this.BiSpectrumAnalyzer1.Report.AmplitudeFormat = null;
-            this.BiSpectrumAnalyzer1.Report.FrequencyFormat = null;
-            this.BiSpectrumAnalyzer1.Report.PhaseFormat = null;
-            this.BiSpectrumAnalyzer1.Report.UseTab = false;
-            this.BiSpectrumAnalyzer1.SidelobeAtt = 60D;
-            this.BiSpectrumAnalyzer1.SpectrumScale = 0D;
-            this.BiSpectrumAnalyzer1.Stats.Averaging = Dew.Signal.TAveraging.avLinearInf;
-            this.BiSpectrumAnalyzer1.Window = Dew.Signal.TSignalWindowType.wtKaiser;
+            BiSpectrumAnalyzer1.ArOrder = 100;
+            BiSpectrumAnalyzer1.Bands.TemplateIndex = -1;
+            BiSpectrumAnalyzer1.Bands.TemplatesSerialization = "AAAAAA==";
+            BiSpectrumAnalyzer1.BiAnalyzer.LinesSerialization = "AAAAAAAAAAAAAAAAAACAPwAAAAAAgB9EAAAAQQAAAAAAE3pHAAAAAAAAAAAAAAAA";
+            BiSpectrumAnalyzer1.BiAnalyzer.Recursive = false;
+            BiSpectrumAnalyzer1.Complex = false;
+            BiSpectrumAnalyzer1.FloatPrecision = TMtxFloatPrecision.mvDouble;
+            BiSpectrumAnalyzer1.FloatPrecisionLock = false;
+            BiSpectrumAnalyzer1.Harmonics = 10;
+            BiSpectrumAnalyzer1.Input = Signal1;
+            BiSpectrumAnalyzer1.IsDouble = true;
+            BiSpectrumAnalyzer1.Length = 64;
+            BiSpectrumAnalyzer1.LogBase = 0D;
+            BiSpectrumAnalyzer1.LogScale = 0D;
+            BiSpectrumAnalyzer1.MainlobeWidth = 8;
+            BiSpectrumAnalyzer1.Peaks.HarmonicsCount = 10;
+            BiSpectrumAnalyzer1.Peaks.Interpolation.Method = TInterpolationMethod.imNone;
+            BiSpectrumAnalyzer1.Peaks.Interpolation.RecursiveHarmonics = TRecursiveHarmonics.rhNone;
+            BiSpectrumAnalyzer1.Peaks.LargestCount = 1;
+            BiSpectrumAnalyzer1.Peaks.LargestRatio = 1E+15D;
+            BiSpectrumAnalyzer1.Peaks.NormalizedAmplt.PeakNumber = 1;
+            BiSpectrumAnalyzer1.Peaks.NormalizedFreq.PeakNumber = 1;
+            BiSpectrumAnalyzer1.Report.AmplitudeFormat = null;
+            BiSpectrumAnalyzer1.Report.FrequencyFormat = null;
+            BiSpectrumAnalyzer1.Report.PhaseFormat = null;
+            BiSpectrumAnalyzer1.Report.UseTab = false;
+            BiSpectrumAnalyzer1.Rotation = 0;
+            BiSpectrumAnalyzer1.SidelobeAtt = 60D;
+            BiSpectrumAnalyzer1.Stats.Averaged = 0;
+            BiSpectrumAnalyzer1.Stats.Averages = 30;
+            BiSpectrumAnalyzer1.Stats.Averaging = TAveraging.avLinearInf;
+            BiSpectrumAnalyzer1.Stats.ExpDecay = 5;
+            BiSpectrumAnalyzer1.Window = TSignalWindowType.wtKaiser;
+            BiSpectrumAnalyzer1.ZeroPadding = 1;
             // 
             // ChartEditor
             // 
-            this.ChartEditor.Chart = this.Chart1;
-            this.ChartEditor.HighLightTabs = false;
-            this.ChartEditor.Location = new System.Drawing.Point(0, 0);
-            this.ChartEditor.Name = "ChartEditor";
-            this.ChartEditor.Options = null;
-            this.ChartEditor.TabIndex = 0;
+            ChartEditor.AlwaysShowFuncSrc = false;
+            ChartEditor.Chart = Chart1;
+            ChartEditor.HighLightTabs = false;
+            ChartEditor.Location = new Point(0, 0);
+            ChartEditor.Name = "ChartEditor";
+            ChartEditor.Options = null;
+            ChartEditor.TabIndex = 0;
             // 
             // SpectrumAnalyzerDialog
             // 
-            this.SpectrumAnalyzerDialog.BlockAssign = false;
-            this.SpectrumAnalyzerDialog.Docking = false;
-            this.SpectrumAnalyzerDialog.FormCaption = null;
-            this.SpectrumAnalyzerDialog.Name = null;
-            this.SpectrumAnalyzerDialog.RegistryPath = "\\Software\\Dew Research\\MtxVec";
-            this.SpectrumAnalyzerDialog.ShowLive = false;
-            this.SpectrumAnalyzerDialog.Source = this.SpectrumAnalyzer1;
-            this.SpectrumAnalyzerDialog.SourceListIndex = 0;
+            SpectrumAnalyzerDialog.Docking = false;
+            SpectrumAnalyzerDialog.FormCaption = null;
+            SpectrumAnalyzerDialog.RegistryPath = "\\Software\\Dew Research\\MtxVec";
+            SpectrumAnalyzerDialog.ShowLive = false;
+            SpectrumAnalyzerDialog.Source = SpectrumAnalyzer1;
+            SpectrumAnalyzerDialog.SourceListIndex = 0;
             // 
             // BicoherenceTestForm
             // 
-            this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
-            this.ClientSize = new System.Drawing.Size(728, 525);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.richTextBox1);
-            this.Name = "BicoherenceTestForm";
-            this.Text = "BicoherenceTestForm";
-            this.Load += new System.EventHandler(this.BicoherenceTestForm_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.SpectrumChart1)).EndInit();
-            this.ResumeLayout(false);
+            AutoScaleBaseSize = new Size(6, 16);
+            ClientSize = new Size(1149, 868);
+            Controls.Add(panel2);
+            Controls.Add(panel1);
+            Controls.Add(richTextBox1);
+            Name = "BicoherenceTestForm";
+            Text = "BicoherenceTestForm";
+            Load += BicoherenceTestForm_Load;
+            panel1.ResumeLayout(false);
+            panel2.ResumeLayout(false);
+            ((ISupportInitialize)SpectrumChart1).EndInit();
+            ResumeLayout(false);
 
-		}
-		#endregion
+        }
+        #endregion
 
-		private void button1_Click(object sender, System.EventArgs e) {
+        private void button1_Click(object sender, System.EventArgs e) {
 			SignalUtils.ToneInit(Freq1Edit.Position/Signal1.SamplingFrequency,0,1,ref toneState1, false);
 			SignalUtils.ToneInit(Freq2Edit.Position/Signal1.SamplingFrequency,0,1,ref toneState2, false);
 			BiSpectrumAnalyzer1.ResetAveraging();

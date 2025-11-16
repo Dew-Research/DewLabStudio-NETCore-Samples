@@ -3,6 +3,7 @@ using System.IO;
 using System.Collections;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Runtime.Serialization;
+using System.Xml.Serialization;
 
 namespace MtxVecDemo
 {
@@ -120,20 +121,20 @@ namespace MtxVecDemo
 		}
 
 		public void SaveToFile(string fileName) {
-			IFormatter formatter = new BinaryFormatter();
+            XmlSerializer serializer = new XmlSerializer(typeof(BenchmarkResults));
 			Stream stream = new FileStream(fileName, FileMode.Create, FileAccess.Write, FileShare.None);
 			try {
-				formatter.Serialize(stream,this);
+				serializer.Serialize(stream, this);
 			} finally {
 				stream.Close();
 			}
 		}
 		public static BenchmarkResults LoadFromFile (string fileName) {
-			IFormatter formatter = new BinaryFormatter();
-			Stream stream = new FileStream(fileName, FileMode.Open, FileAccess.Read, FileShare.Read);
+            XmlSerializer serializer = new XmlSerializer(typeof(BenchmarkResults));
+            Stream stream = new FileStream(fileName, FileMode.Open, FileAccess.Read, FileShare.Read);
 			BenchmarkResults br = null;
 			try {
-				br = (BenchmarkResults) formatter.Deserialize(stream);
+				br = (BenchmarkResults) serializer.Deserialize(stream);
 			} finally {
 				stream.Close();
 			}

@@ -89,7 +89,7 @@ namespace DSPDemo
             richTextBox1.Dock = DockStyle.Top;
             richTextBox1.Location = new Point(0, 0);
             richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(895, 79);
+            richTextBox1.Size = new Size(1145, 79);
             richTextBox1.TabIndex = 0;
             richTextBox1.Text = "richTextBox1";
             // 
@@ -101,9 +101,9 @@ namespace DSPDemo
             panel1.Controls.Add(firLengthEdit);
             panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Bottom;
-            panel1.Location = new Point(0, 502);
+            panel1.Location = new Point(0, 787);
             panel1.Name = "panel1";
-            panel1.Size = new Size(895, 41);
+            panel1.Size = new Size(1145, 41);
             panel1.TabIndex = 1;
             // 
             // ChartButton
@@ -166,7 +166,7 @@ namespace DSPDemo
             panel2.Dock = DockStyle.Fill;
             panel2.Location = new Point(0, 79);
             panel2.Name = "panel2";
-            panel2.Size = new Size(895, 423);
+            panel2.Size = new Size(1145, 708);
             panel2.TabIndex = 2;
             // 
             // SignalChart1
@@ -1061,7 +1061,7 @@ namespace DSPDemo
             margins1.Right = 100;
             margins1.Top = 100;
             SignalChart1.Printer.Margins = margins1;
-            SignalChart1.Size = new Size(895, 423);
+            SignalChart1.Size = new Size(1145, 708);
             // 
             // 
             // 
@@ -1301,7 +1301,7 @@ namespace DSPDemo
             // PhaseDemoForm
             // 
             AutoScaleBaseSize = new Size(6, 16);
-            ClientSize = new Size(895, 543);
+            ClientSize = new Size(1145, 828);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Controls.Add(richTextBox1);

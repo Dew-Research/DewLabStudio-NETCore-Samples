@@ -147,21 +147,28 @@ namespace StatsMasterDemo
             #endregion
 
             #region Public Properties
+            [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
             public string FormCaption
             {
                 get { return formCaption; }
                 set { formCaption = value; }
             } // property FormCaption
+
+            [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
             public string FormPrompt
             {
                 get { return formPrompt; }
                 set { formPrompt = value; }
             } // property FormPrompt
+
+            [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
             public string InputResponse
             {
                 get { return inputResponse; }
                 set { inputResponse = value; }
             } // property InputResponse
+
+            [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
             public string DefaultValue
             {
                 get { return defaultValue; }

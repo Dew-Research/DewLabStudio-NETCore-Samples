@@ -95,9 +95,9 @@ namespace DSPDemo
         private void InitializeComponent()
         {
             components = new Container();
+            ComponentResourceManager resources = new ComponentResourceManager(typeof(PeakMarkingFormattingForm));
             Steema.TeeChart.Margins margins1 = new Steema.TeeChart.Margins();
             Steema.TeeChart.Drawing.Cursor cursor1 = new Steema.TeeChart.Drawing.Cursor();
-            ComponentResourceManager resources = new ComponentResourceManager(typeof(PeakMarkingFormattingForm));
             richTextBox1 = new RichTextBox();
             panel1 = new Panel();
             ChartButton = new Button();
@@ -118,7 +118,7 @@ namespace DSPDemo
             richTextBox1.Dock = DockStyle.Top;
             richTextBox1.Location = new Point(0, 0);
             richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(934, 118);
+            richTextBox1.Size = new Size(1208, 118);
             richTextBox1.TabIndex = 0;
             richTextBox1.Text = "richTextBox1";
             // 
@@ -127,9 +127,9 @@ namespace DSPDemo
             panel1.Controls.Add(ChartButton);
             panel1.Controls.Add(SpectrumButton);
             panel1.Dock = DockStyle.Bottom;
-            panel1.Location = new Point(0, 615);
+            panel1.Location = new Point(0, 807);
             panel1.Name = "panel1";
-            panel1.Size = new Size(934, 48);
+            panel1.Size = new Size(1208, 48);
             panel1.TabIndex = 1;
             // 
             // ChartButton
@@ -156,6 +156,7 @@ namespace DSPDemo
             // 
             SignalRead1.ChannelCount = 1;
             SignalRead1.Complex = false;
+            SignalRead1.DataSerialization = resources.GetString("SignalRead1.DataSerialization");
             SignalRead1.FloatPrecision = TMtxFloatPrecision.mvDouble;
             SignalRead1.FloatPrecisionLock = false;
             SignalRead1.FramesPerSecond = 0.0009765625D;
@@ -170,6 +171,7 @@ namespace DSPDemo
             // 
             SpectrumAnalyzer1.ArOrder = 100;
             SpectrumAnalyzer1.Bands.TemplateIndex = -1;
+            SpectrumAnalyzer1.Bands.TemplatesSerialization = "AAAAAA==";
             SpectrumAnalyzer1.Complex = false;
             SpectrumAnalyzer1.FloatPrecision = TMtxFloatPrecision.mvDouble;
             SpectrumAnalyzer1.FloatPrecisionLock = false;
@@ -1099,7 +1101,7 @@ namespace DSPDemo
             SpectrumChart.Printer.Margins = margins1;
             SpectrumChart.Series.Add(Series1);
             SpectrumChart.Series.Add(Series2);
-            SpectrumChart.Size = new Size(934, 497);
+            SpectrumChart.Size = new Size(1208, 689);
             SpectrumChart.SpectrumPart = SpectrumPart.sppAmplt;
             // 
             // 
@@ -1586,31 +1588,31 @@ namespace DSPDemo
             Series1.YValues.DataMember = "Y";
             Series1.YValues.Value = new double[]
     {
-    935D,
-    840D,
-    740D,
-    795D,
-    854D,
-    735D,
-    655D,
-    665D,
-    720D,
-    722D,
-    604D,
-    540D,
-    569D,
-    679D,
-    667D,
-    731D,
-    668D,
-    553D,
-    616D,
-    624D,
+    137D,
+    222D,
+    175D,
+    284D,
+    311D,
+    330D,
+    209D,
+    257D,
+    270D,
+    299D,
+    365D,
+    423D,
+    538D,
+    490D,
+    516D,
+    582D,
+    648D,
     663D,
-    564D,
-    574D,
-    580D,
-    551D,
+    656D,
+    706D,
+    719D,
+    806D,
+    765D,
+    788D,
+    776D,
     0D,
     0D,
     0D,
@@ -1971,31 +1973,31 @@ namespace DSPDemo
             Series2.YValues.DataMember = "Y";
             Series2.YValues.Value = new double[]
     {
-    593D,
-    640D,
-    658D,
-    625D,
-    612D,
-    621D,
-    622D,
+    510D,
+    459D,
+    516D,
     598D,
-    580D,
-    587D,
-    618D,
-    651D,
-    662D,
-    641D,
-    660D,
-    695D,
-    661D,
-    657D,
-    627D,
-    647D,
-    652D,
-    685D,
-    728D,
-    761D,
-    772D,
+    544D,
+    496D,
+    520D,
+    447D,
+    464D,
+    464D,
+    535D,
+    515D,
+    514D,
+    556D,
+    522D,
+    592D,
+    542D,
+    620D,
+    628D,
+    578D,
+    540D,
+    473D,
+    465D,
+    426D,
+    459D,
     0D,
     0D,
     0D,
@@ -2087,7 +2089,7 @@ namespace DSPDemo
             // PeakMarkingFormattingForm
             // 
             AutoScaleBaseSize = new Size(6, 16);
-            ClientSize = new Size(934, 663);
+            ClientSize = new Size(1208, 855);
             Controls.Add(SpectrumChart);
             Controls.Add(panel1);
             Controls.Add(richTextBox1);
