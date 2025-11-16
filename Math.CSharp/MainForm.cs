@@ -54,131 +54,132 @@ namespace MtxVecDemo
 			base.Dispose( disposing );
 		}
 
-        #region Windows Form Designer generated code
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
-        private void InitializeComponent()
-        {
-            ComponentResourceManager resources = new ComponentResourceManager(typeof(MainForm));
-            panel1 = new Panel();
-            labelCurrent = new Label();
-            panel2 = new Panel();
-            treeView1 = new TreeView();
-            tabControl1 = new TabControl();
-            tabPageExample = new TabPage();
-            tabPageSource = new TabPage();
-            richTextBox1 = new RichTextBox();
-            panel1.SuspendLayout();
-            tabControl1.SuspendLayout();
-            tabPageSource.SuspendLayout();
-            SuspendLayout();
+		#region Windows Form Designer generated code
+		/// <summary>
+		/// Required method for Designer support - do not modify
+		/// the contents of this method with the code editor.
+		/// </summary>
+		private void InitializeComponent()
+		{
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.labelCurrent = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.treeView1 = new System.Windows.Forms.TreeView();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPageExample = new System.Windows.Forms.TabPage();
+            this.tabPageSource = new System.Windows.Forms.TabPage();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.panel1.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.tabPageSource.SuspendLayout();
+            this.SuspendLayout();
             // 
             // panel1
             // 
-            panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
-            panel1.Controls.Add(labelCurrent);
-            panel1.Dock = DockStyle.Top;
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1040, 79);
-            panel1.TabIndex = 0;
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.Controls.Add(this.labelCurrent);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(891, 79);
+            this.panel1.TabIndex = 0;
             // 
             // labelCurrent
             // 
-            labelCurrent.BackColor = Color.Transparent;
-            labelCurrent.Font = new Font("Arial", 15F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            labelCurrent.Location = new Point(190, 36);
-            labelCurrent.Name = "labelCurrent";
-            labelCurrent.Size = new Size(516, 26);
-            labelCurrent.TabIndex = 0;
-            labelCurrent.Text = "label1";
-            labelCurrent.TextAlign = ContentAlignment.MiddleLeft;
+            this.labelCurrent.BackColor = System.Drawing.Color.Transparent;
+            this.labelCurrent.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelCurrent.Location = new System.Drawing.Point(190, 36);
+            this.labelCurrent.Name = "labelCurrent";
+            this.labelCurrent.Size = new System.Drawing.Size(516, 26);
+            this.labelCurrent.TabIndex = 0;
+            this.labelCurrent.Text = "label1";
+            this.labelCurrent.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel2
             // 
-            panel2.BackgroundImage = (Image)resources.GetObject("panel2.BackgroundImage");
-            panel2.Dock = DockStyle.Bottom;
-            panel2.Location = new Point(0, 589);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(1040, 30);
-            panel2.TabIndex = 1;
+            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 483);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(891, 30);
+            this.panel2.TabIndex = 1;
             // 
             // treeView1
             // 
-            treeView1.Dock = DockStyle.Left;
-            treeView1.Location = new Point(0, 79);
-            treeView1.Name = "treeView1";
-            treeView1.Size = new Size(168, 510);
-            treeView1.TabIndex = 2;
-            treeView1.AfterSelect += treeView1_AfterSelect;
+            this.treeView1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.treeView1.Location = new System.Drawing.Point(0, 79);
+            this.treeView1.Name = "treeView1";
+            this.treeView1.Size = new System.Drawing.Size(168, 404);
+            this.treeView1.TabIndex = 2;
+            this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
             // 
             // tabControl1
             // 
-            tabControl1.Alignment = TabAlignment.Bottom;
-            tabControl1.Controls.Add(tabPageExample);
-            tabControl1.Controls.Add(tabPageSource);
-            tabControl1.Dock = DockStyle.Fill;
-            tabControl1.Location = new Point(168, 79);
-            tabControl1.Name = "tabControl1";
-            tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(872, 510);
-            tabControl1.TabIndex = 3;
-            tabControl1.SelectedIndexChanged += tabControl1_SelectedIndexChanged;
+            this.tabControl1.Alignment = System.Windows.Forms.TabAlignment.Bottom;
+            this.tabControl1.Controls.Add(this.tabPageExample);
+            this.tabControl1.Controls.Add(this.tabPageSource);
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.Location = new System.Drawing.Point(168, 79);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(723, 404);
+            this.tabControl1.TabIndex = 3;
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
             // tabPageExample
             // 
-            tabPageExample.Location = new Point(4, 4);
-            tabPageExample.Name = "tabPageExample";
-            tabPageExample.Size = new Size(864, 482);
-            tabPageExample.TabIndex = 0;
-            tabPageExample.Text = "Example";
+            this.tabPageExample.Location = new System.Drawing.Point(4, 4);
+            this.tabPageExample.Name = "tabPageExample";
+            this.tabPageExample.Size = new System.Drawing.Size(715, 378);
+            this.tabPageExample.TabIndex = 0;
+            this.tabPageExample.Text = "Example";
             // 
             // tabPageSource
             // 
-            tabPageSource.Controls.Add(richTextBox1);
-            tabPageSource.Location = new Point(4, 4);
-            tabPageSource.Name = "tabPageSource";
-            tabPageSource.Size = new Size(552, 260);
-            tabPageSource.TabIndex = 1;
-            tabPageSource.Text = "Source";
+            this.tabPageSource.Controls.Add(this.richTextBox1);
+            this.tabPageSource.Location = new System.Drawing.Point(4, 4);
+            this.tabPageSource.Name = "tabPageSource";
+            this.tabPageSource.Size = new System.Drawing.Size(552, 262);
+            this.tabPageSource.TabIndex = 1;
+            this.tabPageSource.Text = "Source";
             // 
             // richTextBox1
             // 
-            richTextBox1.Dock = DockStyle.Fill;
-            richTextBox1.Location = new Point(0, 0);
-            richTextBox1.Name = "richTextBox1";
-            richTextBox1.ReadOnly = true;
-            richTextBox1.Size = new Size(552, 260);
-            richTextBox1.TabIndex = 0;
-            richTextBox1.Text = "";
+            this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.richTextBox1.Location = new System.Drawing.Point(0, 0);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.ReadOnly = true;
+            this.richTextBox1.Size = new System.Drawing.Size(552, 262);
+            this.richTextBox1.TabIndex = 0;
+            this.richTextBox1.Text = "";
             // 
             // MainForm
             // 
-            AutoScaleDimensions = new SizeF(96F, 96F);
-            AutoScaleMode = AutoScaleMode.Dpi;
-            ClientSize = new Size(1040, 619);
-            Controls.Add(tabControl1);
-            Controls.Add(treeView1);
-            Controls.Add(panel2);
-            Controls.Add(panel1);
-            Name = "MainForm";
-            Text = "Dew Lab Studio for .NET - MtxVec Demo";
-            WindowState = FormWindowState.Maximized;
-            Load += MainForm_Load;
-            panel1.ResumeLayout(false);
-            tabControl1.ResumeLayout(false);
-            tabPageSource.ResumeLayout(false);
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.ClientSize = new System.Drawing.Size(891, 513);
+            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.treeView1);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "MainForm";
+            this.Text = "Dew Lab Studio for .NET - MtxVec Demo";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.MainForm_Load);
+            this.panel1.ResumeLayout(false);
+            this.tabControl1.ResumeLayout(false);
+            this.tabPageSource.ResumeLayout(false);
+            this.ResumeLayout(false);
 
-        }
-        #endregion
+		}
+		#endregion
 
-        /// <summary>
-        /// The main entry point for the application.
-        /// </summary>
-        [STAThread]
+		/// <summary>
+		/// The main entry point for the application.
+		/// </summary>
+		[STAThread]
 		static void Main() 
 		{
             Application.EnableVisualStyles(); // XP themes support

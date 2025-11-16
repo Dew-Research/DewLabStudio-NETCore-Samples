@@ -120,25 +120,21 @@ namespace MtxVecDemo
             // panel2
             // 
             this.panel2.Controls.Add(this.splitContainer1);
-            this.panel2.Size = new System.Drawing.Size(931, 491);
+            this.panel2.Size = new System.Drawing.Size(918, 425);
             // 
             // panel3
             // 
-            this.panel3.Location = new System.Drawing.Point(0, 629);
-            this.panel3.Size = new System.Drawing.Size(931, 48);
+            this.panel3.Location = new System.Drawing.Point(0, 537);
+            this.panel3.Size = new System.Drawing.Size(918, 48);
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Size = new System.Drawing.Size(931, 138);
+            this.richTextBox1.Size = new System.Drawing.Size(918, 112);
             // 
             // tMtxLP1
             // 
             this.tMtxLP1.Algorithm = Dew.Math.TLPAlgorithm.LPAlgoTwoPhaseSimplex;
-            this.tMtxLP1.BlockAssign = false;
-            this.tMtxLP1.Dirty = false;
-            this.tMtxLP1.Name = null;
             this.tMtxLP1.Relations = null;
-            this.tMtxLP1.Verbose = null;
             // 
             // splitContainer1
             // 
@@ -160,7 +156,7 @@ namespace MtxVecDemo
             // 
             this.splitContainer1.Panel2.Controls.Add(this.richTextBoxLog);
             this.splitContainer1.Panel2.Controls.Add(this.panelSystem);
-            this.splitContainer1.Size = new System.Drawing.Size(931, 491);
+            this.splitContainer1.Size = new System.Drawing.Size(918, 425);
             this.splitContainer1.SplitterDistance = 186;
             this.splitContainer1.TabIndex = 3;
             // 
@@ -192,7 +188,7 @@ namespace MtxVecDemo
             // 
             this.numericUpDownConstraints.Location = new System.Drawing.Point(96, 59);
             this.numericUpDownConstraints.Name = "numericUpDownConstraints";
-            this.numericUpDownConstraints.Size = new System.Drawing.Size(59, 23);
+            this.numericUpDownConstraints.Size = new System.Drawing.Size(59, 20);
             this.numericUpDownConstraints.TabIndex = 3;
             this.numericUpDownConstraints.ValueChanged += new System.EventHandler(this.numericUpDownConstraints_ValueChanged);
             // 
@@ -201,7 +197,7 @@ namespace MtxVecDemo
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(12, 61);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(89, 15);
+            this.label6.Size = new System.Drawing.Size(80, 13);
             this.label6.TabIndex = 2;
             this.label6.Text = "# of constraints";
             // 
@@ -209,7 +205,7 @@ namespace MtxVecDemo
             // 
             this.numericUpDownEquations.Location = new System.Drawing.Point(96, 25);
             this.numericUpDownEquations.Name = "numericUpDownEquations";
-            this.numericUpDownEquations.Size = new System.Drawing.Size(59, 23);
+            this.numericUpDownEquations.Size = new System.Drawing.Size(59, 20);
             this.numericUpDownEquations.TabIndex = 1;
             this.numericUpDownEquations.ValueChanged += new System.EventHandler(this.numericUpDownEquations_ValueChanged);
             // 
@@ -218,7 +214,7 @@ namespace MtxVecDemo
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(12, 27);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(83, 15);
+            this.label5.Size = new System.Drawing.Size(75, 13);
             this.label5.TabIndex = 0;
             this.label5.Text = "# of equations";
             // 
@@ -229,7 +225,7 @@ namespace MtxVecDemo
             this.checkBoxLog.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBoxLog.Location = new System.Drawing.Point(34, 73);
             this.checkBoxLog.Name = "checkBoxLog";
-            this.checkBoxLog.Size = new System.Drawing.Size(75, 19);
+            this.checkBoxLog.Size = new System.Drawing.Size(70, 17);
             this.checkBoxLog.TabIndex = 6;
             this.checkBoxLog.Text = "Show log";
             this.checkBoxLog.UseVisualStyleBackColor = true;
@@ -243,7 +239,7 @@ namespace MtxVecDemo
             this.checkBoxMinimize.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.checkBoxMinimize.Location = new System.Drawing.Point(34, 49);
             this.checkBoxMinimize.Name = "checkBoxMinimize";
-            this.checkBoxMinimize.Size = new System.Drawing.Size(111, 20);
+            this.checkBoxMinimize.Size = new System.Drawing.Size(95, 18);
             this.checkBoxMinimize.TabIndex = 5;
             this.checkBoxMinimize.Text = "Find minimum";
             this.checkBoxMinimize.UseVisualStyleBackColor = true;
@@ -260,7 +256,7 @@ namespace MtxVecDemo
             "Gomory\' CPA"});
             this.comboBoxAlgorithm.Location = new System.Drawing.Point(87, 18);
             this.comboBoxAlgorithm.Name = "comboBoxAlgorithm";
-            this.comboBoxAlgorithm.Size = new System.Drawing.Size(92, 23);
+            this.comboBoxAlgorithm.Size = new System.Drawing.Size(92, 21);
             this.comboBoxAlgorithm.TabIndex = 4;
             this.comboBoxAlgorithm.SelectedIndexChanged += new System.EventHandler(this.comboBoxAlgorithm_SelectedIndexChanged);
             // 
@@ -269,7 +265,7 @@ namespace MtxVecDemo
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(31, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 15);
+            this.label1.Size = new System.Drawing.Size(50, 13);
             this.label1.TabIndex = 3;
             this.label1.Text = "Algorithm";
             // 
@@ -277,11 +273,11 @@ namespace MtxVecDemo
             // 
             this.richTextBoxLog.BackColor = System.Drawing.SystemColors.Window;
             this.richTextBoxLog.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBoxLog.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.richTextBoxLog.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.richTextBoxLog.Location = new System.Drawing.Point(0, 226);
             this.richTextBoxLog.Name = "richTextBoxLog";
             this.richTextBoxLog.ReadOnly = true;
-            this.richTextBoxLog.Size = new System.Drawing.Size(741, 265);
+            this.richTextBoxLog.Size = new System.Drawing.Size(728, 199);
             this.richTextBoxLog.TabIndex = 1;
             this.richTextBoxLog.Text = "";
             this.richTextBoxLog.WordWrap = false;
@@ -299,14 +295,14 @@ namespace MtxVecDemo
             this.panelSystem.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelSystem.Location = new System.Drawing.Point(0, 0);
             this.panelSystem.Name = "panelSystem";
-            this.panelSystem.Size = new System.Drawing.Size(741, 226);
+            this.panelSystem.Size = new System.Drawing.Size(728, 226);
             this.panelSystem.TabIndex = 0;
             // 
             // textBoxRelations
             // 
             this.textBoxRelations.Location = new System.Drawing.Point(67, 203);
             this.textBoxRelations.Name = "textBoxRelations";
-            this.textBoxRelations.Size = new System.Drawing.Size(135, 23);
+            this.textBoxRelations.Size = new System.Drawing.Size(135, 20);
             this.textBoxRelations.TabIndex = 7;
             this.textBoxRelations.TextChanged += new System.EventHandler(this.textBoxRelations_TextChanged);
             // 
@@ -315,7 +311,7 @@ namespace MtxVecDemo
             this.labelRelations.AutoSize = true;
             this.labelRelations.Location = new System.Drawing.Point(10, 206);
             this.labelRelations.Name = "labelRelations";
-            this.labelRelations.Size = new System.Drawing.Size(55, 15);
+            this.labelRelations.Size = new System.Drawing.Size(51, 13);
             this.labelRelations.TabIndex = 6;
             this.labelRelations.Text = "Relations";
             // 
@@ -330,7 +326,7 @@ namespace MtxVecDemo
             this.mtxGridViewc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle1.Format = "0.0000";
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
@@ -340,6 +336,7 @@ namespace MtxVecDemo
             this.mtxGridViewc.Location = new System.Drawing.Point(341, 34);
             this.mtxGridViewc.MultiSelect = false;
             this.mtxGridViewc.Name = "mtxGridViewc";
+            this.mtxGridViewc.numberFormat = "0.0000";
             this.mtxGridViewc.ObjectInfoText = "";
             this.mtxGridViewc.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.mtxGridViewc.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
@@ -352,7 +349,7 @@ namespace MtxVecDemo
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(338, 18);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(87, 15);
+            this.label4.Size = new System.Drawing.Size(77, 13);
             this.label4.TabIndex = 4;
             this.label4.Text = "c in f(x) = c(T)x";
             // 
@@ -367,7 +364,7 @@ namespace MtxVecDemo
             this.mtxGridViewb.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.Format = "0.0000";
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
@@ -377,6 +374,7 @@ namespace MtxVecDemo
             this.mtxGridViewb.Location = new System.Drawing.Point(220, 34);
             this.mtxGridViewb.MultiSelect = false;
             this.mtxGridViewb.Name = "mtxGridViewb";
+            this.mtxGridViewb.numberFormat = "0.0000";
             this.mtxGridViewb.ObjectInfoText = "";
             this.mtxGridViewb.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.mtxGridViewb.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
@@ -389,7 +387,7 @@ namespace MtxVecDemo
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(217, 18);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 15);
+            this.label3.Size = new System.Drawing.Size(57, 13);
             this.label3.TabIndex = 2;
             this.label3.Text = "b in Ax<=b";
             // 
@@ -404,7 +402,7 @@ namespace MtxVecDemo
             this.mtxGridViewA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle3.Format = "0.0000";
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
@@ -414,6 +412,7 @@ namespace MtxVecDemo
             this.mtxGridViewA.Location = new System.Drawing.Point(6, 34);
             this.mtxGridViewA.MultiSelect = false;
             this.mtxGridViewA.Name = "mtxGridViewA";
+            this.mtxGridViewA.numberFormat = "0.0000";
             this.mtxGridViewA.ObjectInfoText = "";
             this.mtxGridViewA.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.mtxGridViewA.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
@@ -426,13 +425,13 @@ namespace MtxVecDemo
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(3, 18);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 15);
+            this.label2.Size = new System.Drawing.Size(58, 13);
             this.label2.TabIndex = 0;
             this.label2.Text = "A in Ax<=b";
             // 
             // LPDemo
             // 
-            this.ClientSize = new System.Drawing.Size(931, 677);
+            this.ClientSize = new System.Drawing.Size(918, 585);
             this.Name = "LPDemo";
             this.Load += new System.EventHandler(this.LPDemo_Load);
             this.panel2.ResumeLayout(false);

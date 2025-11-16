@@ -61,7 +61,7 @@ namespace MtxVecDemo
             | System.Windows.Forms.AnchorStyles.Right)));
             this.richTextBox1.Location = new System.Drawing.Point(2, 2);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(732, 104);
+            this.richTextBox1.Size = new System.Drawing.Size(844, 104);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "";
             // 
@@ -269,7 +269,7 @@ namespace MtxVecDemo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(736, 558);
+            this.ClientSize = new System.Drawing.Size(848, 616);
             this.Controls.Add(this.errorsLabel);
             this.Controls.Add(this.TotalRunningTimeLabel);
             this.Controls.Add(this.currentJobCountLabel);

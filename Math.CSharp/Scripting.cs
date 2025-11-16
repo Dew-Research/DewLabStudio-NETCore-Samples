@@ -353,12 +353,12 @@ namespace MtxVecDemo
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
-            //((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit(); //only framework v4 or newer
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
-            this.splitContainer1.SuspendLayout(); 
+            this.splitContainer1.SuspendLayout();
             this.panel4.SuspendLayout();
-            //((System.ComponentModel.ISupportInitialize)(this.dataGridViewVariables)).BeginInit(); //only framework v4 or newer
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewVariables)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -379,8 +379,8 @@ namespace MtxVecDemo
             // 
             this.splitContainer1.Panel2.Controls.Add(this.richTextBoxResult);
             this.splitContainer1.Panel2.Controls.Add(this.textBox1);
-            this.splitContainer1.Size = new System.Drawing.Size(572, 434);
-            this.splitContainer1.SplitterDistance = 189;
+            this.splitContainer1.Size = new System.Drawing.Size(882, 544);
+            this.splitContainer1.SplitterDistance = 291;
             this.splitContainer1.TabIndex = 0;
             // 
             // listBoxHistory
@@ -389,7 +389,7 @@ namespace MtxVecDemo
             this.listBoxHistory.FormattingEnabled = true;
             this.listBoxHistory.Location = new System.Drawing.Point(0, 201);
             this.listBoxHistory.Name = "listBoxHistory";
-            this.listBoxHistory.Size = new System.Drawing.Size(189, 233);
+            this.listBoxHistory.Size = new System.Drawing.Size(291, 343);
             this.listBoxHistory.TabIndex = 1;
             this.toolTip2.SetToolTip(this.listBoxHistory, "Double click to select command");
             this.listBoxHistory.DoubleClick += new System.EventHandler(this.listBoxHistory_DoubleClick);
@@ -400,7 +400,7 @@ namespace MtxVecDemo
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 175);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(189, 26);
+            this.panel4.Size = new System.Drawing.Size(291, 26);
             this.panel4.TabIndex = 2;
             // 
             // label1
@@ -433,7 +433,7 @@ namespace MtxVecDemo
             this.dataGridViewVariables.RowHeadersVisible = false;
             this.dataGridViewVariables.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewVariables.ShowEditingIcon = false;
-            this.dataGridViewVariables.Size = new System.Drawing.Size(189, 160);
+            this.dataGridViewVariables.Size = new System.Drawing.Size(291, 160);
             this.dataGridViewVariables.TabIndex = 1;
             this.dataGridViewVariables.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewVariables_CellDoubleClick);
             // 
@@ -469,7 +469,7 @@ namespace MtxVecDemo
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(189, 15);
+            this.panel3.Size = new System.Drawing.Size(291, 15);
             this.panel3.TabIndex = 3;
             // 
             // label2
@@ -492,7 +492,7 @@ namespace MtxVecDemo
             this.richTextBoxResult.ReadOnly = true;
             this.richTextBoxResult.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
             this.richTextBoxResult.ShortcutsEnabled = false;
-            this.richTextBoxResult.Size = new System.Drawing.Size(379, 414);
+            this.richTextBoxResult.Size = new System.Drawing.Size(587, 524);
             this.richTextBoxResult.TabIndex = 0;
             this.richTextBoxResult.Text = "";
             this.richTextBoxResult.WordWrap = false;
@@ -500,9 +500,9 @@ namespace MtxVecDemo
             // textBox1
             // 
             this.textBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.textBox1.Location = new System.Drawing.Point(0, 414);
+            this.textBox1.Location = new System.Drawing.Point(0, 524);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(379, 20);
+            this.textBox1.Size = new System.Drawing.Size(587, 20);
             this.textBox1.TabIndex = 1;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
@@ -529,7 +529,7 @@ namespace MtxVecDemo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(572, 434);
+            this.ClientSize = new System.Drawing.Size(882, 544);
             this.Controls.Add(this.splitContainer1);
             this.Name = "Scripting";
             this.Text = "Scripting";
@@ -537,11 +537,11 @@ namespace MtxVecDemo
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             this.splitContainer1.Panel2.PerformLayout();
-            //((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            //((System.ComponentModel.ISupportInitialize)(this.dataGridViewVariables)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewVariables)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.ResumeLayout(false);

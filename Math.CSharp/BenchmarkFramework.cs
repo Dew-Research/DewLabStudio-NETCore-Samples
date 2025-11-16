@@ -53,25 +53,20 @@ namespace MtxVecDemo {
 			TCplx cVal1;
 			cVal1.Re = 0.5;
 			cVal1.Im = 0.5;
-
-			addFunc("Sin", val1, cVal1, new SmplFunc(Math.Sin), new CplxFunc(Math387.Sin), new VecMethod(dst.Sin));
-			addFunc("Cos", val1, cVal1, new SmplFunc(Math.Cos), new CplxFunc(Math387.Cos), new VecMethod(dst.Cos));
 			addFunc("Exp",val1,cVal1,new SmplFunc(Math.Exp), new CplxFunc(Math387.Exp),new VecMethod(dst.Exp) );
 			addFunc("Ln",val1,cVal1,new SmplFunc(Math.Log), new CplxFunc(Math387.Ln),new VecMethod(dst.Ln) );
-            addFunc("Log10",val1,cVal1,new SmplFunc(Math.Log10),new CplxFunc(Math387.Log10),new VecMethod(dst.Log10));            
+            addFunc("Log10",val1,cVal1,new SmplFunc(Math.Log10),new CplxFunc(Math387.Log10),new VecMethod(dst.Log10));
+            
             addFunc("Tan",val1,cVal1,new SmplFunc(Math.Tan),new CplxFunc(Math387.Tan),new VecMethod(dst.Tan));
+            addFunc("Sin", val1, cVal1, new SmplFunc(Math.Sin), new CplxFunc(Math387.Sin), new VecMethod(dst.Sin));
+            addFunc("Cos", val1, cVal1, new SmplFunc(Math.Cos), new CplxFunc(Math387.Cos), new VecMethod(dst.Cos));
+            addFunc("ArcTan", val1, cVal1, new SmplFunc(Math.Atan), new CplxFunc(Math387.ArcTan), new VecMethod(dst.ArcTan));
+            addFunc("ArcSin",val1,cVal1,new SmplFunc(Math.Asin),new CplxFunc(Math387.ArcSin),new VecMethod(dst.ArcSin));
+            addFunc("ArcCos",val1,cVal1,new SmplFunc(Math.Acos),new CplxFunc(Math387.ArcCos),new VecMethod(dst.ArcCos));
 
-			addFunc("ArcSin", val1, cVal1, new SmplFunc(Math.Asin), new CplxFunc(Math387.ArcSin), new VecMethod(dst.ArcSin));
-			addFunc("ArcCos", val1, cVal1, new SmplFunc(Math.Acos), new CplxFunc(Math387.ArcCos), new VecMethod(dst.ArcCos));
-			addFunc("ArcTan", val1, cVal1, new SmplFunc(Math.Atan), new CplxFunc(Math387.ArcTan), new VecMethod(dst.ArcTan));
-		
-			addFunc("Sinh", val1, cVal1, new SmplFunc(Math.Sinh), new CplxFunc(Math387.Sinh), new VecMethod(dst.Sinh));
-			addFunc("Cosh", val1, cVal1, new SmplFunc(Math.Cosh), new CplxFunc(Math387.Cosh), new VecMethod(dst.Cosh));
-			addFunc("Tanh", val1, cVal1, new SmplFunc(Math.Tanh), new CplxFunc(Math387.Tanh), new VecMethod(dst.Tanh));
-
-			addFunc("ArcSinh", val1, cVal1, new SmplFunc(Math.Asinh), new CplxFunc(Math387.ArcSinh), new VecMethod(dst.ArcSinh));
-			addFunc("ArcCosh", val1, cVal1, new SmplFunc(Math.Acosh), new CplxFunc(Math387.ArcCosh), new VecMethod(dst.ArcCosh));
-			addFunc("ArcTanh", val1, cVal1, new SmplFunc(Math.Atanh), new CplxFunc(Math387.ArcTanh), new VecMethod(dst.ArcTanh));
+            addFunc("Tanh",val1,cVal1,new SmplFunc(Math.Tanh),new CplxFunc(Math387.Tanh),new VecMethod(dst.Tanh));
+            addFunc("Sinh",val1,cVal1,new SmplFunc(Math.Sinh),new CplxFunc(Math387.Sinh),new VecMethod(dst.Sinh));
+            addFunc("Cosh",val1,cVal1,new SmplFunc(Math.Cosh),new CplxFunc(Math387.Cosh),new VecMethod(dst.Cosh));
         }
 
 		public int FindFuncByName(String name) {

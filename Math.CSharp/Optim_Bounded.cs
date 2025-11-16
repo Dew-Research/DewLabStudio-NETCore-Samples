@@ -74,7 +74,6 @@ namespace MtxVecDemo
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Optim_Bounded));
             this.dataSet1 = new System.Data.DataSet();
             this.dataTablePars = new System.Data.DataTable();
             this.dataColumn1 = new System.Data.DataColumn();
@@ -121,16 +120,16 @@ namespace MtxVecDemo
             this.panel2.Controls.Add(this.buttonDetect);
             this.panel2.Controls.Add(this.textBoxFunction);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Size = new System.Drawing.Size(767, 444);
+            this.panel2.Size = new System.Drawing.Size(811, 431);
             // 
             // panel3
             // 
-            this.panel3.Location = new System.Drawing.Point(0, 582);
-            this.panel3.Size = new System.Drawing.Size(767, 48);
+            this.panel3.Location = new System.Drawing.Point(0, 543);
+            this.panel3.Size = new System.Drawing.Size(811, 48);
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Size = new System.Drawing.Size(767, 138);
+            this.richTextBox1.Size = new System.Drawing.Size(811, 112);
             // 
             // dataSet1
             // 
@@ -151,7 +150,6 @@ namespace MtxVecDemo
             new System.Data.UniqueConstraint("Constraint1", new string[] {
                         "Name"}, true)});
             this.dataTablePars.Locale = new System.Globalization.CultureInfo("en-US");
-            this.dataTablePars.Namespace = "";
             this.dataTablePars.PrimaryKey = new System.Data.DataColumn[] {
         this.dataColumn1};
             this.dataTablePars.TableName = "TablePars";
@@ -161,8 +159,6 @@ namespace MtxVecDemo
             this.dataColumn1.AllowDBNull = false;
             this.dataColumn1.Caption = "Name";
             this.dataColumn1.ColumnName = "Name";
-            this.dataColumn1.DefaultValue = ((object)(resources.GetObject("dataColumn1.DefaultValue")));
-            this.dataColumn1.Namespace = "";
             this.dataColumn1.ReadOnly = true;
             // 
             // dataColumn2
@@ -170,24 +166,18 @@ namespace MtxVecDemo
             this.dataColumn2.Caption = "Lower bound";
             this.dataColumn2.ColumnName = "Lower bound";
             this.dataColumn2.DataType = typeof(double);
-            this.dataColumn2.DefaultValue = ((object)(resources.GetObject("dataColumn2.DefaultValue")));
-            this.dataColumn2.Namespace = "";
             // 
             // dataColumn3
             // 
             this.dataColumn3.Caption = "Upper bound";
             this.dataColumn3.ColumnName = "Upper bound";
             this.dataColumn3.DataType = typeof(double);
-            this.dataColumn3.DefaultValue = ((object)(resources.GetObject("dataColumn3.DefaultValue")));
-            this.dataColumn3.Namespace = "";
             // 
             // dataColumn4
             // 
             this.dataColumn4.Caption = "Initial value";
             this.dataColumn4.ColumnName = "Initial value";
             this.dataColumn4.DataType = typeof(double);
-            this.dataColumn4.DefaultValue = ((object)(resources.GetObject("dataColumn4.DefaultValue")));
-            this.dataColumn4.Namespace = "";
             // 
             // dataTableResults
             // 
@@ -198,7 +188,6 @@ namespace MtxVecDemo
             new System.Data.UniqueConstraint("Constraint1", new string[] {
                         "Name"}, true)});
             this.dataTableResults.Locale = new System.Globalization.CultureInfo("en-US");
-            this.dataTableResults.Namespace = "";
             this.dataTableResults.PrimaryKey = new System.Data.DataColumn[] {
         this.dataColumn5};
             this.dataTableResults.TableName = "TableResults";
@@ -206,19 +195,13 @@ namespace MtxVecDemo
             // dataColumn5
             // 
             this.dataColumn5.AllowDBNull = false;
-            this.dataColumn5.Caption = "Name";
             this.dataColumn5.ColumnName = "Name";
-            this.dataColumn5.DefaultValue = ((object)(resources.GetObject("dataColumn5.DefaultValue")));
-            this.dataColumn5.Namespace = "";
             this.dataColumn5.ReadOnly = true;
             // 
             // dataColumn6
             // 
-            this.dataColumn6.Caption = "Value";
             this.dataColumn6.ColumnName = "Value";
             this.dataColumn6.DataType = typeof(double);
-            this.dataColumn6.DefaultValue = ((object)(resources.GetObject("dataColumn6.DefaultValue")));
-            this.dataColumn6.Namespace = "";
             this.dataColumn6.ReadOnly = true;
             // 
             // label1
@@ -226,7 +209,7 @@ namespace MtxVecDemo
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(54, 15);
+            this.label1.Size = new System.Drawing.Size(48, 13);
             this.label1.TabIndex = 4;
             this.label1.Text = "Function";
             // 
@@ -236,7 +219,7 @@ namespace MtxVecDemo
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxFunction.Location = new System.Drawing.Point(66, 18);
             this.textBoxFunction.Name = "textBoxFunction";
-            this.textBoxFunction.Size = new System.Drawing.Size(689, 23);
+            this.textBoxFunction.Size = new System.Drawing.Size(733, 20);
             this.textBoxFunction.TabIndex = 5;
             this.textBoxFunction.Text = "100*Sqr(b-Sqr(a)) + Sqr(1-a)";
             this.textBoxFunction.TextChanged += new System.EventHandler(this.textBoxFunction_TextChanged);
@@ -273,7 +256,7 @@ namespace MtxVecDemo
             this.richTextBox2.Location = new System.Drawing.Point(15, 223);
             this.richTextBox2.Name = "richTextBox2";
             this.richTextBox2.ReadOnly = true;
-            this.richTextBox2.Size = new System.Drawing.Size(512, 215);
+            this.richTextBox2.Size = new System.Drawing.Size(556, 202);
             this.richTextBox2.TabIndex = 8;
             this.richTextBox2.Text = "";
             // 
@@ -285,7 +268,7 @@ namespace MtxVecDemo
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(546, 73);
+            this.groupBox1.Location = new System.Drawing.Point(590, 73);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(209, 144);
             this.groupBox1.TabIndex = 9;
@@ -300,7 +283,7 @@ namespace MtxVecDemo
             this.checkBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.checkBox1.Location = new System.Drawing.Point(67, 98);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(81, 20);
+            this.checkBox1.Size = new System.Drawing.Size(76, 18);
             this.checkBox1.TabIndex = 4;
             this.checkBox1.Text = "Show log";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -324,7 +307,7 @@ namespace MtxVecDemo
             0,
             0});
             this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(100, 23);
+            this.numericUpDown1.Size = new System.Drawing.Size(100, 20);
             this.numericUpDown1.TabIndex = 3;
             this.numericUpDown1.Value = new decimal(new int[] {
             500,
@@ -337,7 +320,7 @@ namespace MtxVecDemo
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(6, 61);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 15);
+            this.label3.Size = new System.Drawing.Size(47, 13);
             this.label3.TabIndex = 2;
             this.label3.Text = "Max. iter";
             // 
@@ -345,7 +328,7 @@ namespace MtxVecDemo
             // 
             this.textBox1.Location = new System.Drawing.Point(67, 24);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 23);
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 1;
             // 
             // label2
@@ -353,7 +336,7 @@ namespace MtxVecDemo
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(6, 27);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 15);
+            this.label2.Size = new System.Drawing.Size(55, 13);
             this.label2.TabIndex = 0;
             this.label2.Text = "Tolerance";
             // 
@@ -366,7 +349,7 @@ namespace MtxVecDemo
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(512, 120);
+            this.dataGridView1.Size = new System.Drawing.Size(556, 120);
             this.dataGridView1.TabIndex = 10;
             // 
             // dataGridView2
@@ -377,21 +360,21 @@ namespace MtxVecDemo
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(546, 253);
+            this.dataGridView2.Location = new System.Drawing.Point(590, 253);
             this.dataGridView2.MultiSelect = false;
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView2.Size = new System.Drawing.Size(209, 185);
+            this.dataGridView2.Size = new System.Drawing.Size(209, 172);
             this.dataGridView2.TabIndex = 11;
             // 
             // label4
             // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(543, 226);
+            this.label4.Location = new System.Drawing.Point(587, 226);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(113, 15);
+            this.label4.Size = new System.Drawing.Size(97, 13);
             this.label4.TabIndex = 12;
             this.label4.Text = "Optimization results";
             // 
@@ -400,13 +383,13 @@ namespace MtxVecDemo
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(12, 73);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(103, 15);
+            this.label5.Size = new System.Drawing.Size(93, 13);
             this.label5.TabIndex = 13;
             this.label5.Text = "Function variables";
             // 
             // Optim_Bounded
             // 
-            this.ClientSize = new System.Drawing.Size(767, 630);
+            this.ClientSize = new System.Drawing.Size(811, 591);
             this.Name = "Optim_Bounded";
             this.Load += new System.EventHandler(this.Optim_Bounded_Load);
             this.panel2.ResumeLayout(false);

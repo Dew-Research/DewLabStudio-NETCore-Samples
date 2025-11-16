@@ -91,15 +91,16 @@ namespace MtxVecDemo
             this.panel2.Controls.Add(this.mtxGridView1);
             this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.button1);
-            this.panel2.Size = new System.Drawing.Size(528, 285);
+            this.panel2.Size = new System.Drawing.Size(895, 387);
             // 
             // panel3
             // 
-            this.panel3.Size = new System.Drawing.Size(528, 48);
+            this.panel3.Location = new System.Drawing.Point(0, 499);
+            this.panel3.Size = new System.Drawing.Size(895, 48);
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Size = new System.Drawing.Size(528, 112);
+            this.richTextBox1.Size = new System.Drawing.Size(895, 112);
             // 
             // dataSet1
             // 
@@ -165,8 +166,9 @@ namespace MtxVecDemo
             this.mtxGridView1.AllowUserToDeleteRows = false;
             this.mtxGridView1.AllowUserToResizeColumns = false;
             this.mtxGridView1.AllowUserToResizeRows = false;
-            this.mtxGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.mtxGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.mtxGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCellsExceptHeader;
             this.mtxGridView1.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             this.mtxGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
@@ -178,22 +180,24 @@ namespace MtxVecDemo
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.mtxGridView1.DefaultCellStyle = dataGridViewCellStyle1;
-            this.mtxGridView1.Location = new System.Drawing.Point(327, 38);
+            this.mtxGridView1.Location = new System.Drawing.Point(694, 38);
             this.mtxGridView1.MultiSelect = false;
             this.mtxGridView1.Name = "mtxGridView1";
+            this.mtxGridView1.numberFormat = "0.0000";
             this.mtxGridView1.ObjectInfoText = "";
             this.mtxGridView1.ReadOnly = true;
             this.mtxGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.mtxGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.mtxGridView1.ShowObjectInfo = true;
-            this.mtxGridView1.Size = new System.Drawing.Size(189, 247);
+            this.mtxGridView1.Size = new System.Drawing.Size(189, 349);
             this.mtxGridView1.TabIndex = 5;
+            this.mtxGridView1.VirtualMode = true;
             // 
             // label1
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(324, 16);
+            this.label1.Location = new System.Drawing.Point(691, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(116, 13);
             this.label1.TabIndex = 6;
@@ -203,9 +207,9 @@ namespace MtxVecDemo
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.DataSource = this.dataSet1;
@@ -213,7 +217,7 @@ namespace MtxVecDemo
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(168, 247);
+            this.dataGridView1.Size = new System.Drawing.Size(535, 349);
             this.dataGridView1.TabIndex = 7;
             this.dataGridView1.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_RowEnter);
             // 
@@ -250,7 +254,7 @@ namespace MtxVecDemo
             // DataSetDemo
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
-            this.ClientSize = new System.Drawing.Size(528, 445);
+            this.ClientSize = new System.Drawing.Size(895, 547);
             this.Name = "DataSetDemo";
             this.Load += new System.EventHandler(this.DataSetDemo_Load);
             this.panel2.ResumeLayout(false);

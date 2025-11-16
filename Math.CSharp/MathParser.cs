@@ -93,24 +93,24 @@ namespace MtxVecDemo
             this.panel2.Controls.Add(this.panelEditor);
             this.panel2.Controls.Add(this.panel5);
             this.panel2.Controls.Add(this.panel4);
-            this.panel2.Size = new System.Drawing.Size(798, 437);
+            this.panel2.Size = new System.Drawing.Size(1018, 432);
             // 
             // panel3
             // 
-            this.panel3.Location = new System.Drawing.Point(0, 575);
-            this.panel3.Size = new System.Drawing.Size(798, 42);
+            this.panel3.Location = new System.Drawing.Point(0, 544);
+            this.panel3.Size = new System.Drawing.Size(1018, 42);
             this.panel3.Visible = false;
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Size = new System.Drawing.Size(798, 138);
+            this.richTextBox1.Size = new System.Drawing.Size(1018, 112);
             // 
             // panelEditor
             // 
             this.panelEditor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelEditor.Location = new System.Drawing.Point(0, 29);
             this.panelEditor.Name = "panelEditor";
-            this.panelEditor.Size = new System.Drawing.Size(798, 331);
+            this.panelEditor.Size = new System.Drawing.Size(1018, 326);
             this.panelEditor.TabIndex = 21;
             // 
             // panel4
@@ -120,7 +120,7 @@ namespace MtxVecDemo
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(798, 29);
+            this.panel4.Size = new System.Drawing.Size(1018, 29);
             this.panel4.TabIndex = 22;
             // 
             // comboBox1
@@ -134,9 +134,9 @@ namespace MtxVecDemo
             "v1*v2\'",
             "A*B",
             "Custom (user)"});
-            this.comboBox1.Location = new System.Drawing.Point(147, 0);
+            this.comboBox1.Location = new System.Drawing.Point(125, 0);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(340, 23);
+            this.comboBox1.Size = new System.Drawing.Size(340, 21);
             this.comboBox1.TabIndex = 6;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -145,7 +145,7 @@ namespace MtxVecDemo
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(14, 3);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(117, 15);
+            this.label2.Size = new System.Drawing.Size(105, 13);
             this.label2.TabIndex = 5;
             this.label2.Text = "Predefined examples";
             // 
@@ -157,9 +157,9 @@ namespace MtxVecDemo
             this.panel5.Controls.Add(this.label4);
             this.panel5.Controls.Add(this.listBoxResults);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel5.Location = new System.Drawing.Point(0, 360);
+            this.panel5.Location = new System.Drawing.Point(0, 355);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(798, 77);
+            this.panel5.Size = new System.Drawing.Size(1018, 77);
             this.panel5.TabIndex = 23;
             // 
             // buttonEvaluate
@@ -191,7 +191,7 @@ namespace MtxVecDemo
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(305, 11);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(40, 15);
+            this.label5.Size = new System.Drawing.Size(37, 13);
             this.label5.TabIndex = 20;
             this.label5.Text = "Errors:";
             // 
@@ -200,22 +200,21 @@ namespace MtxVecDemo
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(3, 11);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(44, 15);
+            this.label4.Size = new System.Drawing.Size(42, 13);
             this.label4.TabIndex = 19;
             this.label4.Text = "Results";
             // 
             // listBoxResults
             // 
             this.listBoxResults.FormattingEnabled = true;
-            this.listBoxResults.ItemHeight = 15;
             this.listBoxResults.Location = new System.Drawing.Point(51, 11);
             this.listBoxResults.Name = "listBoxResults";
-            this.listBoxResults.Size = new System.Drawing.Size(201, 49);
+            this.listBoxResults.Size = new System.Drawing.Size(201, 56);
             this.listBoxResults.TabIndex = 18;
             // 
             // MathParser
             // 
-            this.ClientSize = new System.Drawing.Size(798, 617);
+            this.ClientSize = new System.Drawing.Size(1018, 586);
             this.Name = "MathParser";
             this.Load += new System.EventHandler(this.MathParser_Load);
             this.panel2.ResumeLayout(false);
