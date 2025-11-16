@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+	  <TargetFrameworks>net8.0-windows;net9.0-windows</TargetFrameworks>
+	  <LangVersion>Latest</LangVersion>
+	  <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+	  <Deterministic>true</Deterministic>
+	  <PublishRepositoryUrl>false</PublishRepositoryUrl>
+	  
+    <UseWindowsForms>true</UseWindowsForms>
+    <ApplicationIcon>App.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Dew.Math.Controls\Dew.Math.Controls.csproj" />
+    <ProjectReference Include="..\Dew.Math\Dew.Math.csproj" />
+    <ProjectReference Include="..\Dew.Stats.Tee\Dew.Stats.Tee.csproj" />
+    <ProjectReference Include="..\Dew.Stats\Dew.Stats.csproj" />
+  </ItemGroup>
+
+	<Target Name="PostBuild"
+		  AfterTargets="Build"
+		  Condition="'$(DesignTimeBuild)' != 'true'">
+
+		<MakeDir Directories="$(TargetDir)Data" />
+		<ItemGroup>
+			<_DataFiles Include="$(ProjectDir)Data\*.*" />
+		</ItemGroup>
+
+		<Copy SourceFiles="@(_DataFiles)"
+			  DestinationFolder="$(TargetDir)Data\" />
+	</Target>
+
+</Project>

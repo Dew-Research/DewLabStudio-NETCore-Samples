@@ -651,7 +651,7 @@ namespace StatsMasterDemo
                     DoTransformationVector(x, tx, xtrans);
                     dataInfo2.tChartData.Axes.Bottom.Title.Text = xtrans.Description;
                     // Find and remove nan's and inf's from xtr
-                    AbstractMtxVec.FindMask(maskx, tx, "<>", Math387.NAN);
+                    AbstractMtxVec.FindMask(maskx, tx, TMtxCompareOp.cmpNot_EQ, Math387.NAN);
 
                     // next, transform y
                     DoTransformationVector(y, ty, ytrans);
@@ -659,7 +659,7 @@ namespace StatsMasterDemo
 
                     // Find and remove nan's y
                     // Now remove all points (x,y) with either tx or ty being nan                    
-                    AbstractMtxVec.FindMask(masky, ty, "<>", Math387.NAN);
+                    AbstractMtxVec.FindMask(masky, ty, TMtxCompareOp.cmpNot_EQ, Math387.NAN);
                     for (int i = 0; i < masky.Length; i++)
                     {
 

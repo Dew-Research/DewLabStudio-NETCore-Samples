@@ -7,7 +7,8 @@
 	<ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
 	<Deterministic>true</Deterministic>
 	<PublishRepositoryUrl>false</PublishRepositoryUrl>
-	<UseWindowsForms>true</UseWindowsForms>
+	  
+    <UseWindowsForms>true</UseWindowsForms>
     <ApplicationIcon>FFTProp5.ico</ApplicationIcon>
     <RootNamespace>DSPDemo</RootNamespace>
   </PropertyGroup>
@@ -22,6 +23,16 @@
     <Optimize>False</Optimize>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Dew.Math.Controls\Dew.Math.Controls.csproj" />
+    <ProjectReference Include="..\Dew.Math.TeePro\Dew.Math.TeePro.csproj" />
+    <ProjectReference Include="..\Dew.Math\Dew.Math.csproj" />
+    <ProjectReference Include="..\Dew.Signal.Audio\Dew.Signal.Audio.csproj" />
+    <ProjectReference Include="..\Dew.Signal.Editors\Dew.Signal.Editors.csproj" />
+    <ProjectReference Include="..\Dew.Signal.Tee\Dew.Signal.Tee.csproj" />
+    <ProjectReference Include="..\Dew.Signal\Dew.Signal.csproj" />
+  </ItemGroup>
+
 	<Target Name="PostBuild" AfterTargets="Build" Condition="'$(DesignTimeBuild)' != 'true'">
 
 		<MakeDir Directories="$(TargetDir)Data" />
@@ -33,9 +44,5 @@
 		<Copy SourceFiles="@(DataFiles)" DestinationFolder="$(TargetDir)Data\" />
 
 	</Target>
-
-	<ItemGroup>
-	  <PackageReference Include="Dew.Signal.Tee" Version="6.3.7" />
-	</ItemGroup>
 
 </Project>

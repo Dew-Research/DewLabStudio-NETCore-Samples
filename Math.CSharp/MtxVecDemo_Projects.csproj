@@ -27,7 +27,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Dew.Math.TeePro" Version="6.3.7" />
+    <PackageReference Include="Steema.TeeChart.NET" Version="4.2025.5.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Dew.Math.Controls\Dew.Math.Controls.csproj" />
+    <ProjectReference Include="..\Dew.Math.TeePro\Dew.Math.TeePro.csproj" />
+    <ProjectReference Include="..\Dew.Math\Dew.Math.csproj" />
   </ItemGroup>
 
   <ItemGroup>
