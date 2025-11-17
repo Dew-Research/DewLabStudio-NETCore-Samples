@@ -10,6 +10,7 @@
 	<UseWindowsForms>true</UseWindowsForms>
     <ApplicationIcon>FFTProp5.ico</ApplicationIcon>
     <RootNamespace>DSPDemo</RootNamespace>
+    <NoWarn>$(NoWarn);0618</NoWarn>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">

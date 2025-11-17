@@ -12,6 +12,7 @@
     <ApplicationIcon>MtxVec.ico</ApplicationIcon>
     <StartupObject>MtxVecDemo.MainForm</StartupObject>
 	<RootNamespace>MtxVecDemo</RootNamespace>
+	<NoWarn>$(NoWarn);0618</NoWarn>
   </PropertyGroup>
 
 

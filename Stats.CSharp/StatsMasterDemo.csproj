@@ -6,6 +6,7 @@
     <UseWindowsForms>true</UseWindowsForms>
     <ApplicationIcon>App.ico</ApplicationIcon>
 	<GenerateResourceWarnOnBinaryFormatterUse>false</GenerateResourceWarnOnBinaryFormatterUse>
+	<NoWarn>$(NoWarn);0618</NoWarn>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
