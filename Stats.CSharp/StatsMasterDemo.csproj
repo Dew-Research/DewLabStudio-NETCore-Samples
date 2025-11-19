@@ -16,7 +16,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Dew.Stats.Tee" Version="6.3.8" />
+    <PackageReference Include="Dew.Stats.Tee" Version="6.3.9" />
   </ItemGroup>
 
   <ItemGroup>

@@ -1,6 +1,7 @@
 using System;
 using System.Drawing;
 using System.Windows.Forms;
+using Dew.Stats.Tee;
 using System.Data;
 
 namespace StatsMasterDemo
@@ -27,6 +28,10 @@ namespace StatsMasterDemo
 
         public MainForm()
         {
+            // Get Dew.Stats.Tee series registered with TeeChart
+            // Without this registration, Chart Editor would raise errors when displaying series editors
+            //
+            StatsTee.RegisterSeries();
             //
             // Required for Windows Form Designer support
             //

@@ -10,7 +10,6 @@ namespace MtxVecDemo
 	/// <summary>
 	/// Summary description for BenchmarkResults.
 	/// </summary>
-	[Serializable]
 	public class BenchmarkItem	{
 		public BenchmarkItem() {
 		}
@@ -80,7 +79,6 @@ namespace MtxVecDemo
 		}
 	}
 	
-	[Serializable]
 	public class BenchmarkResults : CollectionBase {
 		public BenchmarkItem this[ int index ]  {
 			get  {

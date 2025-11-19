@@ -28,7 +28,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Dew.Math.TeePro" Version="6.3.8" />
+    <PackageReference Include="Dew.Math.TeePro" Version="6.3.9" />
   </ItemGroup>
 
   <ItemGroup>

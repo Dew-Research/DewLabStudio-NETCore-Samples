@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-	<TargetFrameworks>net8.0-windows</TargetFrameworks>
+	<TargetFrameworks>net9.0-windows</TargetFrameworks>
 	<LangVersion>Latest</LangVersion>
 	<ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
 	<Deterministic>true</Deterministic>
@@ -11,6 +11,7 @@
     <UseWindowsForms>true</UseWindowsForms>
     <ApplicationIcon>FFTProp5.ico</ApplicationIcon>
     <RootNamespace>DSPDemo</RootNamespace>
+    <NoWarn>CS0618</NoWarn>	  
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">

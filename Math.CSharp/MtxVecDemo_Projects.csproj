@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-	  <TargetFrameworks>net8.0-windows</TargetFrameworks>
+	  <TargetFrameworks>net9.0-windows</TargetFrameworks>
 	  <LangVersion>Latest</LangVersion>
 	  <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
 	  <Deterministic>true</Deterministic>
@@ -12,6 +12,7 @@
     <ApplicationIcon>MtxVec.ico</ApplicationIcon>
     <StartupObject>MtxVecDemo.MainForm</StartupObject>
 	<RootNamespace>MtxVecDemo</RootNamespace>
+	<NoWarn>CS0618</NoWarn>
   </PropertyGroup>
 
 
