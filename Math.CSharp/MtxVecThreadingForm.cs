@@ -41,7 +41,7 @@ namespace MtxVecDemo
                 "The algorithm is based on the article: Fast computation of scattering maps of nanostructures using graphical processing units. Published in Journal of Applied Crystallography, Vol. 44, part 3, 2011.");
 
             firstRun = true;
-            cpuCores = MtxVec.Controller.CpuCores;
+            cpuCores = MtxVec.Controller.CpuCoresLogical;
             if (MtxForLoop.mtxThreadPool == null)
             {
                 MtxForLoop.mtxThreadPool = new TMtxForLoop();
