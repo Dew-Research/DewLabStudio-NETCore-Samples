@@ -45,6 +45,8 @@ namespace MtxVecDemo
             if (MtxForLoop.mtxThreadPool == null)
             {
                 MtxForLoop.mtxThreadPool = new TMtxForLoop();
+                MtxForLoop.mtxThreadPool.ThreadCount = cpuCores;
+                MtxVec.Controller.ThreadDimension = MtxForLoop.mtxThreadPool.ThreadCount + 2;
             }
 
             // Configure thread pool for TParallel.For equivalent

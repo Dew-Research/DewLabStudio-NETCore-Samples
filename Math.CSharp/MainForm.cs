@@ -33,8 +33,7 @@ namespace MtxVecDemo
 			// Required for Windows Form Designer support
 			//
 			InitializeComponent();
-
-            //Math387.LoadParams("1111-2222");
+            Math387.LoadParams("1111-2222");
 
 		}
 
