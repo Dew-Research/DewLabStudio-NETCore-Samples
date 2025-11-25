@@ -32,7 +32,7 @@ namespace MtxVecDemo
 			//
 			// Required for Windows Form Designer support
 			//
-			InitializeComponent();            
+			InitializeComponent();
 		}
 
 		/// <summary>
